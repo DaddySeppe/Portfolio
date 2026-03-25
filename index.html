@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seppe | Home</title>
+  <meta name="description" content="Personal portfolio homepage of Seppe." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="home-page">
+  <header class="site-header">
+    <a class="brand" href="index.html">SEPPE</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+    </nav>
+  </header>
+
+  <div class="home-progress" aria-hidden="true">
+    <span id="homeProgressBar"></span>
+  </div>
+
+  <!-- Immersive background -->
+  <div class="immersive-bg">
+    <img class="bg-scene active" data-scene="1" src="./assets/images/scene1.svg" alt="Scene 1" />
+    <img class="bg-scene" data-scene="2" src="./assets/images/scene2.svg" alt="Scene 2" />
+    <img class="bg-scene" data-scene="3" src="./assets/images/scene3.svg" alt="Scene 3" />
+    <div class="bg-vignette"></div>
+  </div>
+
+  <div class="home-atmosphere" aria-hidden="true">
+    <span class="beam beam-a"></span>
+    <span class="beam beam-b"></span>
+    <span class="glow glow-a"></span>
+    <span class="glow glow-b"></span>
+  </div>
+
+  <div class="portfolio-overlay">
+    <div class="overlay-card">
+      <p class="overlay-tag" id="sceneTag">SEPPE PORTFOLIO</p>
+      <h1 class="overlay-title" id="sceneTitle">Creative Developer</h1>
+      <p class="overlay-subtitle" id="sceneSubtitle">Building polished, human-centered web experiences.</p>
+      <div class="overlay-chips" aria-label="Profile highlights">
+        <span>Second-year student</span>
+        <span>Frontend focus</span>
+        <span>UI + code</span>
+      </div>
+      <p class="overlay-scroll">Scroll to explore</p>
+    </div>
+  </div>
+
+  <main class="home-content">
+    <section class="home-panel scroll-trigger" data-scene="1">
+      <article class="panel-card reveal">
+        <p class="eyebrow">Home</p>
+        <h2>I am Seppe, a second-year student building clean and memorable digital experiences.</h2>
+        <p>
+          My personal style combines clear structure, bold visual rhythm and subtle motion that supports the story.
+        </p>
+        <div class="home-showcase" aria-label="Home highlights">
+          <div class="home-showcase-track">
+            <span>Creative direction</span>
+            <span>UI systems</span>
+            <span>Frontend craft</span>
+            <span>Portfolio energy</span>
+            <span>Creative direction</span>
+            <span>UI systems</span>
+            <span>Frontend craft</span>
+            <span>Portfolio energy</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="home-panel scroll-trigger" data-scene="2">
+      <article class="panel-card reveal">
+        <p class="eyebrow">Projects</p>
+        <h2>I design and build practical concepts that look strong and stay usable.</h2>
+        <div class="mini-grid">
+          <div>
+            <h3>UI Concepts</h3>
+            <p>Page layouts, visual systems and branded interfaces with clear hierarchy.</p>
+          </div>
+          <div>
+            <h3>Frontend</h3>
+            <p>Responsive websites with HTML, CSS and JavaScript, focused on smooth interaction.</p>
+          </div>
+          <div>
+            <h3>School Projects</h3>
+            <p>Team and solo assignments where concept, UX and presentation come together.</p>
+          </div>
+          <div>
+            <h3>Visual Direction</h3>
+            <p>I like high contrast, clear typography and distinctive scene-based storytelling.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="home-panel scroll-trigger" data-scene="3">
+      <article class="panel-card reveal">
+        <p class="eyebrow">About Me</p>
+        <h2>I focus on craft, consistency and improving every iteration.</h2>
+        <p>
+          Want the full story, my strengths and what I am currently improving? Visit my about page.
+        </p>
+        <div class="panel-actions">
+          <a class="btn-link" href="about.html">Go to About Me</a>
+          <a class="btn-link btn-link-secondary" href="mailto:seppe@example.com">Contact Me</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer home-footer">
+    <p>Seppe Portfolio - Home & About in my own visual style.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
