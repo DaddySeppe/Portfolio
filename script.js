@@ -28,7 +28,7 @@ const updateOverlay = (sceneKey) => {
   if (!content || !sceneTag || !sceneTitle || !sceneSubtitle) return;
 
   [sceneTag, sceneTitle, sceneSubtitle].forEach((el) => {
-    el.style.opacity = '0.15';
+    el.style.opacity = '0.1';
   });
 
   window.setTimeout(() => {
@@ -39,7 +39,7 @@ const updateOverlay = (sceneKey) => {
     [sceneTag, sceneTitle, sceneSubtitle].forEach((el) => {
       el.style.opacity = '1';
     });
-  }, 130);
+  }, 150);
 };
 
 let activeScene = '1';
@@ -59,23 +59,41 @@ const updateTargetProgress = () => {
 
 const renderScenes = (progress) => {
   const time = performance.now() * 0.00042;
-  const idleX = Math.sin(time) * 3;
-  const idleY = Math.cos(time * 1.18) * 2;
+  const idleX = Math.sin(time) * 4;
+  const idleY = Math.cos(time * 1.18) * 3;
+
+  // Scene-specific cinematic settings for better video feel
+  const sceneSettings = [
+    { brightness: 0.82, saturate: 1.05, blur: 0, hueRotate: 0 },
+    { brightness: 0.88, saturate: 1.08, blur: 0.5, hueRotate: 2 },
+    { brightness: 0.80, saturate: 1.03, blur: 0, hueRotate: -2 }
+  ];
 
   bgScenes.forEach((scene, index) => {
     const distance = Math.abs(progress - index);
     const weight = Math.max(0, 1 - distance);
-    const opacity = Math.pow(weight, 1.35);
-    const scale = 1.065 - weight * 0.045;
-    const brightness = 0.78 + weight * 0.24;
-    const saturate = 0.96 + weight * 0.14;
-    const depth = 0.6 + index * 0.2;
+    
+    // Smoother easing for cinematic feel
+    const easeWeight = Math.pow(weight, 1.2);
+    const opacity = easeWeight > 0.01 ? easeWeight : 0;
+    
+    // More dynamic scaling for depth perception
+    const scale = 1.08 - easeWeight * 0.055;
+    
+    // Get cinematic settings for this scene
+    const settings = sceneSettings[index] || sceneSettings[0];
+    const brightness = settings.brightness + easeWeight * 0.22;
+    const saturate = settings.saturate + easeWeight * 0.06;
+    const clarity = 1.08 + easeWeight * 0.04;
+    
+    // Enhanced parallax depth
+    const depth = 0.45 + index * 0.25;
     const translateX = idleX + pointerSmoothX * depth;
     const translateY = idleY + pointerSmoothY * depth;
 
     scene.style.opacity = opacity.toFixed(4);
     scene.style.transform = `translate3d(${translateX.toFixed(2)}px, ${translateY.toFixed(2)}px, 0) scale(${scale.toFixed(4)})`;
-    scene.style.filter = `brightness(${brightness.toFixed(3)}) saturate(${saturate.toFixed(3)}) contrast(1.04)`;
+    scene.style.filter = `brightness(${brightness.toFixed(3)}) saturate(${saturate.toFixed(3)}) contrast(${clarity.toFixed(3)}) blur(${settings.blur}px) hue-rotate(${settings.hueRotate}deg)`;
   });
 
   const nearest = String(Math.min(maxProgress + 1, Math.max(1, Math.round(progress) + 1)));
@@ -88,18 +106,19 @@ const renderScenes = (progress) => {
 
 const animate = () => {
   const delta = targetProgress - smoothProgress;
-  smoothProgress += delta * 0.09;
-  pointerSmoothX += (pointerTargetX - pointerSmoothX) * 0.08;
-  pointerSmoothY += (pointerTargetY - pointerSmoothY) * 0.08;
+  // More cinematic easing - slower initial response, faster catchup
+  smoothProgress += delta * 0.095;
+  pointerSmoothX += (pointerTargetX - pointerSmoothX) * 0.085;
+  pointerSmoothY += (pointerTargetY - pointerSmoothY) * 0.085;
 
   if (homeAtmosphere) {
-    const scrollInfluence = (smoothProgress - maxProgress * 0.5) * -2.2;
-    const atmosphereX = pointerSmoothX * 0.8;
-    const atmosphereY = pointerSmoothY * 0.7 + scrollInfluence;
+    const scrollInfluence = (smoothProgress - maxProgress * 0.5) * -2.4;
+    const atmosphereX = pointerSmoothX * 0.85;
+    const atmosphereY = pointerSmoothY * 0.75 + scrollInfluence;
     homeAtmosphere.style.transform = `translate3d(${atmosphereX.toFixed(2)}px, ${atmosphereY.toFixed(2)}px, 0)`;
   }
 
-  if (Math.abs(delta) < 0.0005) {
+  if (Math.abs(delta) < 0.0003) {
     smoothProgress = targetProgress;
   }
 

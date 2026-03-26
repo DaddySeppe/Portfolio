@@ -99,12 +99,41 @@ h3,
   transition: width 140ms linear;
 }
 
+.home-page .site-header {
+  background: rgba(3, 7, 18, 0.66);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+  backdrop-filter: blur(12px);
+}
+
 .immersive-bg {
   pointer-events: none;
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: #020617;
+  background: radial-gradient(ellipse 2200px 1400px at 50% 50%, #0a1525 0%, #020617 60%);
+}
+
+.immersive-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 1600px 900px at 30% 20%, rgba(56, 189, 248, 0.08), transparent),
+    radial-gradient(ellipse 1600px 900px at 70% 80%, rgba(167, 139, 250, 0.06), transparent);
+  pointer-events: none;
+  animation: cinematicGradientShift 32s ease-in-out infinite;
+}
+
+@keyframes cinematicGradientShift {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.6;
+  }
 }
 
 .home-atmosphere {
@@ -128,13 +157,15 @@ h3,
 }
 
 .home-atmosphere::before {
-  background: conic-gradient(from 90deg, rgba(56, 189, 248, 0.38), rgba(16, 185, 129, 0.2), rgba(167, 139, 250, 0.3), rgba(56, 189, 248, 0.38));
-  animation: homeAuraSpin 32s linear infinite;
+  background: conic-gradient(from 90deg, rgba(56, 189, 248, 0.42), rgba(16, 185, 129, 0.24), rgba(167, 139, 250, 0.38), rgba(56, 189, 248, 0.42));
+  animation: homeAuraSpin 40s linear infinite;
+  filter: blur(64px);
 }
 
 .home-atmosphere::after {
-  background: radial-gradient(circle at 30% 30%, rgba(125, 211, 252, 0.3), rgba(125, 211, 252, 0));
-  animation: homeAuraPulse 14s ease-in-out infinite;
+  background: radial-gradient(circle at 35% 35%, rgba(125, 211, 252, 0.38), rgba(125, 211, 252, 0.1) 35%, rgba(125, 211, 252, 0));
+  animation: homeAuraPulse 16s ease-in-out infinite;
+  filter: blur(56px);
 }
 
 .home-atmosphere .beam,
@@ -142,49 +173,50 @@ h3,
   position: absolute;
   pointer-events: none;
 }
-
-.home-atmosphere .beam {
-  width: 40vw;
-  max-width: 500px;
-  height: 2px;
+5vw;
+  max-width: 640px;
+  height: 3px;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(56, 189, 248, 0), rgba(56, 189, 248, 0.55), rgba(167, 139, 250, 0));
-  filter: blur(0.4px);
-  opacity: 0.6;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0), rgba(56, 189, 248, 0.65), rgba(167, 139, 250, 0.4), rgba(56, 189, 248, 0));
+  filter: blur(1.2px);
+  opacity: 0.72;
+  box-shadow: 0 0 32px rgba(56, 189, 248, 0.35), 0 0 64px rgba(167, 139, 250, 0.18);
 }
 
 .home-atmosphere .beam-a {
-  top: 22%;
-  left: -25vw;
-  transform: rotate(-8deg);
-  animation: beamSweepA 14s ease-in-out infinite;
+  top: 18%;
+  left: -28vw;
+  transform: rotate(-12deg);
+  animation: beamSweepA 16s ease-in-out infinite;
 }
 
 .home-atmosphere .beam-b {
-  top: 68%;
-  right: -28vw;
+  top: 72%;
+  right: -32vw;
+  transform: rotate(9deg);
+  animation: beamSweepB 18
   transform: rotate(7deg);
   animation: beamSweepB 16s ease-in-out infinite;
 }
-
-.home-atmosphere .glow {
-  width: 340px;
-  height: 340px;
+520px;
+  height: 520px;
   border-radius: 999px;
-  filter: blur(18px);
-  opacity: 0.34;
+  filter: blur(48px);
+  opacity: 0.38;
 }
 
 .home-atmosphere .glow-a {
-  top: -80px;
-  left: -100px;
-  background: radial-gradient(circle at 55% 45%, rgba(103, 232, 249, 0.42), rgba(103, 232, 249, 0));
-  animation: glowFloatA 12s ease-in-out infinite;
+  top: -120px;
+  left: -140px;
+  background: radial-gradient(circle at 55% 45%, rgba(103, 232, 249, 0.48), rgba(103, 232, 249, 0.12) 40%, rgba(103, 232, 249, 0));
+  animation: glowFloatA 14s ease-in-out infinite;
 }
 
 .home-atmosphere .glow-b {
-  bottom: -120px;
-  right: -90px;
+  bottom: -160px;
+  right: -120px;
+  background: radial-gradient(circle at 45% 55%, rgba(167, 139, 250, 0.44), rgba(167, 139, 250, 0.08) 40%, rgba(167, 139, 250, 0));
+  animation: glowFloatB 18
   background: radial-gradient(circle at 45% 55%, rgba(167, 139, 250, 0.38), rgba(167, 139, 250, 0));
   animation: glowFloatB 15s ease-in-out infinite;
 }
@@ -197,18 +229,25 @@ h3,
   object-fit: cover;
   object-position: center;
   opacity: 0;
-  transform: scale(1.055);
+  transform: scale(1.08);
   filter: brightness(0.8) saturate(1.02) contrast(1.03);
-  transition: opacity 280ms linear, transform 280ms linear, filter 280ms linear;
+  transition: opacity 360ms cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 360ms cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              filter 360ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: opacity, transform, filter;
 }
 
 .bg-vignette {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
-    linear-gradient(to bottom, rgba(2, 6, 23, 0.18), rgba(2, 6, 23, 0.52)),
-    radial-gradient(circle at 16% 18%, rgba(248, 250, 252, 0.12), transparent 52%);
+    linear-gradient(180deg, rgba(2, 6, 23, 0.35) 0%, rgba(2, 6, 23, 0.08) 40%, rgba(2, 6, 23, 0.42) 100%),
+    radial-gradient(ellipse 1200px 800px at 20% 25%, rgba(248, 250, 252, 0.12), transparent 45%),
+    radial-gradient(ellipse 1000px 700px at 80% 70%, rgba(147, 51, 234, 0.06), transparent 50%),
+    radial-gradient(ellipse 600px 400px at 15% 85%, rgba(16, 185, 129, 0.04), transparent 40%);
+  pointer-events: none;
+  box-shadow: inset 0 0 140px rgba(2, 6, 23, 0.6), inset 0 0 80px rgba(2, 6, 23, 0.3);
 }
 
 .portfolio-overlay {
@@ -285,7 +324,7 @@ h3,
 #sceneTag,
 #sceneTitle,
 #sceneSubtitle {
-  transition: opacity 200ms ease;
+  transition: opacity 280ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .home-content {
@@ -1288,63 +1327,99 @@ h3,
 
 @keyframes beamSweepA {
   0% {
-    transform: translateX(0) rotate(-8deg);
-    opacity: 0.2;
+    transform: translateX(-10vw) rotate(-12deg);
+    opacity: 0.1;
+  }
+
+  25% {
+    transform: translateX(20vw) rotate(-10deg);
+    opacity: 0.45;
   }
 
   50% {
-    transform: translateX(70vw) rotate(-6deg);
-    opacity: 0.72;
+    transform: translateX(80vw) rotate(-12deg);
+    opacity: 0.75;
+  }
+
+  75% {
+    transform: translateX(100vw) rotate(-11deg);
+    opacity: 0.35;
   }
 
   100% {
-    transform: translateX(130vw) rotate(-8deg);
-    opacity: 0.15;
+    transform: translateX(130vw) rotate(-12deg);
+    opacity: 0.08;
   }
 }
 
 @keyframes beamSweepB {
   0% {
-    transform: translateX(0) rotate(7deg);
-    opacity: 0.18;
+    transform: translateX(10vw) rotate(9deg);
+    opacity: 0.08;
+  }
+
+  25% {
+    transform: translateX(-20vw) rotate(11deg);
+    opacity: 0.42;
   }
 
   50% {
-    transform: translateX(-65vw) rotate(9deg);
-    opacity: 0.68;
+    transform: translateX(-75vw) rotate(9deg);
+    opacity: 0.72;
+  }
+
+  75% {
+    transform: translateX(-95vw) rotate(10deg);
+    opacity: 0.38;
   }
 
   100% {
-    transform: translateX(-130vw) rotate(7deg);
-    opacity: 0.14;
+    transform: translateX(-130vw) rotate(9deg);
+    opacity: 0.05;
   }
 }
 
 @keyframes glowFloatA {
   0% {
     transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.38;
   }
 
-  50% {
-    transform: translate3d(30px, 20px, 0) scale(1.08);
+  33% {
+    transform: translate3d(35px, 28px, 0) scale(1.12);
+    opacity: 0.42;
+  }
+
+  66% {
+    transform: translate3d(-20px, 35px, 0) scale(1.08);
+    opacity: 0.40;
   }
 
   100% {
     transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.38;
   }
 }
 
 @keyframes glowFloatB {
   0% {
     transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.44;
   }
 
-  50% {
-    transform: translate3d(-28px, -18px, 0) scale(1.06);
+  33% {
+    transform: translate3d(-32px, -24px, 0) scale(1.10);
+    opacity: 0.46;
+  }
+
+  66% {
+    transform: translate3d(24px, -30px, 0) scale(1.06);
+    opacity: 0.44;
   }
 
   100% {
     transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.44;
   }
 }
 
@@ -1354,7 +1429,7 @@ h3,
   }
 
   50% {
-    transform: rotate(180deg) scale(1.05);
+    transform: rotate(180deg) scale(1.08);
   }
 
   100% {
@@ -1364,18 +1439,18 @@ h3,
 
 @keyframes homeAuraPulse {
   0% {
-    transform: scale(1);
-    opacity: 0.2;
+    transform: scale(0.95);
+    opacity: 0.24;
   }
 
   50% {
-    transform: scale(1.08);
-    opacity: 0.34;
+    transform: scale(1.12);
+    opacity: 0.38;
   }
 
   100% {
-    transform: scale(1);
-    opacity: 0.2;
+    transform: scale(0.95);
+    opacity: 0.24;
   }
 }
 

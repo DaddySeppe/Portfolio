@@ -1,40 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <linearGradient id="intro_bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060d1f"/>
-      <stop offset="45%" stop-color="#0b1c3f"/>
-      <stop offset="100%" stop-color="#132f63"/>
+    <linearGradient id="blendBg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a1810;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3d2415;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1f1208;stop-opacity:1" />
     </linearGradient>
-    <radialGradient id="intro_glow_a" cx="78%" cy="15%" r="52%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.62"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="intro_glow_b" cx="20%" cy="88%" r="46%">
-      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#f472b6" stop-opacity="0"/>
+    <filter id="blendGlow1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="1920" height="1080" fill="url(#blendBg1)"/>
+  
+  <!-- Warm organic blobs (from B) with cosmic reach (from A) -->
+  <ellipse cx="400" cy="340" rx="300" ry="270" fill="#ea580c" opacity="0.22" filter="url(#blendGlow1)"/>
+  <ellipse cx="1500" cy="260" rx="350" ry="290" fill="#f97316" opacity="0.20" filter="url(#blendGlow1)"/>
+  <ellipse cx="850" cy="800" rx="320" ry="300" fill="#d97706" opacity="0.18" filter="url(#blendGlow1)"/>
+  
+  <!-- Cosmic accent glow (from A) -->
+  <circle cx="960" cy="540" r="420" fill="#eab308" opacity="0.08" filter="url(#blendGlow1)"/>
+  
+  <!-- Flowing curves -->
+  <path d="M0,400 Q480,280 960,450 T1920,380" fill="#fb923c" opacity="0.07"/>
+  <path d="M0,720 Q480,620 960,780 T1920,700" fill="#f97316" opacity="0.05"/>
+  
+  <!-- Soft particles (from A's cosmic feel) -->
+  <circle cx="480" cy="220" r="6" fill="#fcd34d" opacity="0.6" filter="url(#blendGlow1)"/>
+  <circle cx="1350" cy="880" r="8" fill="#fb923c" opacity="0.55" filter="url(#blendGlow1)"/>
+  <circle cx="300" cy="750" r="5" fill="#f97316" opacity="0.5" filter="url(#blendGlow1)"/>
+  <circle cx="1650" cy="320" r="7" fill="#ea580c" opacity="0.52" filter="url(#blendGlow1)"/>
+  
+  <!-- Vignette -->
+  <defs>
+    <radialGradient id="vigBlend1" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0.12" />
+      <stop offset="70%" style="stop-color:#000000;stop-opacity:0.28" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.48" />
     </radialGradient>
   </defs>
-
-  <rect width="1920" height="1080" fill="url(#intro_bg)"/>
-  <circle cx="1530" cy="180" r="590" fill="url(#intro_glow_a)"/>
-  <circle cx="240" cy="980" r="520" fill="url(#intro_glow_b)"/>
-
-  <g opacity="0.22" stroke="#7dd3fc" stroke-width="1">
-    <line x1="0" y1="140" x2="1920" y2="140"/>
-    <line x1="0" y1="320" x2="1920" y2="320"/>
-    <line x1="0" y1="500" x2="1920" y2="500"/>
-    <line x1="0" y1="680" x2="1920" y2="680"/>
-    <line x1="0" y1="860" x2="1920" y2="860"/>
-  </g>
-
-  <path d="M-120 730 C 210 570, 520 570, 860 700 C 1200 830, 1500 840, 2040 660" fill="none" stroke="#67e8f9" stroke-width="5" opacity="0.65"/>
-  <path d="M-120 850 C 200 730, 630 760, 1020 860 C 1320 940, 1670 950, 2040 870" fill="none" stroke="#f472b6" stroke-width="3.6" opacity="0.48"/>
-
-  <rect x="90" y="90" width="700" height="390" rx="30" fill="#0f172a" opacity="0.64" stroke="#22d3ee" stroke-width="1.8"/>
-  <circle cx="710" cy="410" r="110" fill="#22d3ee" opacity="0.62"/>
-
-  <text x="175" y="220" font-size="98" font-weight="800" fill="#e2e8f0" letter-spacing="2">S</text>
-  <text x="175" y="300" font-size="40" font-weight="700" fill="#94a3b8" letter-spacing="5">INTRO</text>
-
-  <text x="960" y="1020" font-size="20" font-weight="600" text-anchor="middle" fill="#cbd5e1" opacity="0.62" letter-spacing="4">SCENE 01</text>
+  <rect width="1920" height="1080" fill="url(#vigBlend1)"/>
 </svg>
