@@ -27,8 +27,11 @@ const updateOverlay = (sceneKey) => {
   const content = sceneCopy[sceneKey];
   if (!content || !sceneTag || !sceneTitle || !sceneSubtitle) return;
 
+  // Cinematic fade out with subtle scale and shift
   [sceneTag, sceneTitle, sceneSubtitle].forEach((el) => {
-    el.style.opacity = '0.1';
+    el.style.transition = 'opacity 280ms cubic-bezier(0.4, 0, 0.6, 1), transform 280ms cubic-bezier(0.4, 0, 0.6, 1)';
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(8px) scale(0.98)';
   });
 
   window.setTimeout(() => {
@@ -36,10 +39,15 @@ const updateOverlay = (sceneKey) => {
     sceneTitle.textContent = content.title;
     sceneSubtitle.textContent = content.subtitle;
 
+    // Force reflow for animation trigger
+    void sceneTag.offsetHeight;
+
+    // Cinematic fade in with motion
     [sceneTag, sceneTitle, sceneSubtitle].forEach((el) => {
       el.style.opacity = '1';
+      el.style.transform = 'translateY(0) scale(1)';
     });
-  }, 150);
+  }, 240);
 };
 
 let activeScene = '1';
@@ -62,38 +70,46 @@ const renderScenes = (progress) => {
   const idleX = Math.sin(time) * 4;
   const idleY = Math.cos(time * 1.18) * 3;
 
-  // Scene-specific cinematic settings for better video feel
+  // Cinematic scene settings with rich color grading
   const sceneSettings = [
-    { brightness: 0.82, saturate: 1.05, blur: 0, hueRotate: 0 },
-    { brightness: 0.88, saturate: 1.08, blur: 0.5, hueRotate: 2 },
-    { brightness: 0.80, saturate: 1.03, blur: 0, hueRotate: -2 }
+    { brightness: 0.82, saturate: 1.05, blur: 0, hueRotate: 0, motionBlur: 0.8 },
+    { brightness: 0.88, saturate: 1.08, blur: 0.5, hueRotate: 2, motionBlur: 1.2 },
+    { brightness: 0.80, saturate: 1.03, blur: 0, hueRotate: -2, motionBlur: 0.9 }
   ];
 
   bgScenes.forEach((scene, index) => {
     const distance = Math.abs(progress - index);
     const weight = Math.max(0, 1 - distance);
     
-    // Smoother easing for cinematic feel
-    const easeWeight = Math.pow(weight, 1.2);
+    // Cubic easing for more cinematic feel - slower at start and end
+    const easeWeight = weight < 0.5 
+      ? 4 * weight * weight * weight 
+      : 1 - Math.pow(-2 * weight + 2, 3) / 2;
+    
     const opacity = easeWeight > 0.01 ? easeWeight : 0;
     
-    // More dynamic scaling for depth perception
-    const scale = 1.08 - easeWeight * 0.055;
+    // Much more dramatic scaling for cinematic depth - zooms in when active
+    const scale = 1.18 - easeWeight * 0.12;
     
-    // Get cinematic settings for this scene
+    // Get cinematic settings
     const settings = sceneSettings[index] || sceneSettings[0];
-    const brightness = settings.brightness + easeWeight * 0.22;
-    const saturate = settings.saturate + easeWeight * 0.06;
-    const clarity = 1.08 + easeWeight * 0.04;
+    const brightness = settings.brightness + easeWeight * 0.28;
+    const saturate = settings.saturate + easeWeight * 0.12;
+    const clarity = 1.08 + easeWeight * 0.08;
     
-    // Enhanced parallax depth
-    const depth = 0.45 + index * 0.25;
+    // Calculate motion blur based on transition progress for film-like quality
+    const transitionProgress = Math.abs((progress - index) % 1);
+    const isTransitioning = transitionProgress > 0.05 && transitionProgress < 0.95;
+    const motionBlurAmount = isTransitioning ? settings.motionBlur : 0;
+    
+    // Deep parallax for immersive feel
+    const depth = 0.55 + index * 0.35;
     const translateX = idleX + pointerSmoothX * depth;
     const translateY = idleY + pointerSmoothY * depth;
 
     scene.style.opacity = opacity.toFixed(4);
     scene.style.transform = `translate3d(${translateX.toFixed(2)}px, ${translateY.toFixed(2)}px, 0) scale(${scale.toFixed(4)})`;
-    scene.style.filter = `brightness(${brightness.toFixed(3)}) saturate(${saturate.toFixed(3)}) contrast(${clarity.toFixed(3)}) blur(${settings.blur}px) hue-rotate(${settings.hueRotate}deg)`;
+    scene.style.filter = `brightness(${brightness.toFixed(3)}) saturate(${saturate.toFixed(3)}) contrast(${clarity.toFixed(3)}) blur(${settings.blur}px) hue-rotate(${settings.hueRotate}deg) drop-shadow(0 0 ${motionBlurAmount.toFixed(1)}px rgba(56, 189, 248, 0.15))`;
   });
 
   const nearest = String(Math.min(maxProgress + 1, Math.max(1, Math.round(progress) + 1)));
@@ -106,10 +122,11 @@ const renderScenes = (progress) => {
 
 const animate = () => {
   const delta = targetProgress - smoothProgress;
-  // More cinematic easing - slower initial response, faster catchup
-  smoothProgress += delta * 0.095;
-  pointerSmoothX += (pointerTargetX - pointerSmoothX) * 0.085;
-  pointerSmoothY += (pointerTargetY - pointerSmoothY) * 0.085;
+  // Cinematic spring-like easing - creates smooth, elegant transitions
+  const easeStrength = Math.abs(delta) > 0.15 ? 0.068 : 0.042;
+  smoothProgress += delta * easeStrength;
+  pointerSmoothX += (pointerTargetX - pointerSmoothX) * 0.0785;
+  pointerSmoothY += (pointerTargetY - pointerSmoothY) * 0.0785;
 
   if (homeAtmosphere) {
     const scrollInfluence = (smoothProgress - maxProgress * 0.5) * -2.4;
