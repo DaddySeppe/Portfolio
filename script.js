@@ -239,7 +239,7 @@ const initAboutEffects = () => {
   if (!document.body.classList.contains('about-page')) return;
 
   const progressBar = document.getElementById('aboutProgressBar');
-  const interactiveCards = Array.from(document.querySelectorAll('.about-showcase, .about-card, .timeline, .portfolio-section, .project-card, .skill-card'));
+  const interactiveCards = Array.from(document.querySelectorAll('.about-showcase, .signature-panel, .about-card, .timeline, .portfolio-section, .project-card, .skill-card'));
 
   const updateProgress = () => {
     if (!progressBar) return;
@@ -276,7 +276,7 @@ const initAboutEffects = () => {
 const initAboutCenterZoom = () => {
   if (!document.body.classList.contains('about-page')) return;
 
-  const zoomTargets = Array.from(document.querySelectorAll('.about-hero, .about-showcase, .about-grid, .timeline, .portfolio-section'));
+  const zoomTargets = Array.from(document.querySelectorAll('.about-hero, .about-showcase, .signature-layout, .about-grid, .timeline, .portfolio-section'));
   if (zoomTargets.length === 0) return;
 
   zoomTargets.forEach((target) => target.classList.add('focus-zoom-target'));
@@ -294,8 +294,8 @@ const initAboutCenterZoom = () => {
       const ratio = Math.max(0, 1 - Math.min(1, distance / influenceRange));
       const eased = Math.pow(ratio, 1.6);
 
-      const scale = 1 + eased * 0.06;
-      const bright = 1 + eased * 0.09;
+      const scale = 1 + eased * 0.032;
+      const bright = 1 + eased * 0.045;
 
       target.style.setProperty('--focus-scale', scale.toFixed(3));
       target.style.setProperty('--focus-bright', bright.toFixed(3));
@@ -329,14 +329,14 @@ const initAboutWheelMotion = () => {
     const scrollRange = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
     const progress = Math.min(1, Math.max(0, window.scrollY / scrollRange));
 
-    smoothX += (pointerX - smoothX) * 0.08;
-    smoothY += (pointerY - smoothY) * 0.08;
+    smoothX += (pointerX - smoothX) * 0.06;
+    smoothY += (pointerY - smoothY) * 0.06;
 
-    rot = progress * 220;
+    rot = progress * 150;
 
-    const wheelX = smoothX * 14;
-    const wheelY = smoothY * 11 - progress * 8;
-    const wheelScale = 0.92 + progress * 0.22;
+    const wheelX = smoothX * 9;
+    const wheelY = smoothY * 7 - progress * 5;
+    const wheelScale = 0.95 + progress * 0.12;
 
     document.body.style.setProperty('--wheel-x', `${wheelX.toFixed(2)}px`);
     document.body.style.setProperty('--wheel-y', `${wheelY.toFixed(2)}px`);
