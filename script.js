@@ -7,6 +7,7 @@ const homeAtmosphere = document.querySelector('.home-atmosphere');
 const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const performanceMode = isSmallScreen || prefersReducedMotion;
+const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
 const sceneCopy = {
   '1': {
@@ -30,6 +31,18 @@ const updateOverlay = (sceneKey) => {
   const content = sceneCopy[sceneKey];
   if (!content || !sceneTag || !sceneTitle || !sceneSubtitle) return;
 
+  if (overlayUpdateTimer) {
+    window.clearTimeout(overlayUpdateTimer);
+    overlayUpdateTimer = 0;
+  }
+
+  if (performanceMode) {
+    sceneTag.textContent = content.tag;
+    sceneTitle.textContent = content.title;
+    sceneSubtitle.textContent = content.subtitle;
+    return;
+  }
+
   // Cinematic fade out with subtle scale and shift
   [sceneTag, sceneTitle, sceneSubtitle].forEach((el) => {
     el.style.transition = 'opacity 280ms cubic-bezier(0.4, 0, 0.6, 1), transform 280ms cubic-bezier(0.4, 0, 0.6, 1)';
@@ -37,7 +50,7 @@ const updateOverlay = (sceneKey) => {
     el.style.transform = 'translateY(8px) scale(0.98)';
   });
 
-  window.setTimeout(() => {
+  overlayUpdateTimer = window.setTimeout(() => {
     sceneTag.textContent = content.tag;
     sceneTitle.textContent = content.title;
     sceneSubtitle.textContent = content.subtitle;
@@ -50,6 +63,8 @@ const updateOverlay = (sceneKey) => {
       el.style.opacity = '1';
       el.style.transform = 'translateY(0) scale(1)';
     });
+
+    overlayUpdateTimer = 0;
   }, 240);
 };
 
@@ -63,6 +78,7 @@ let pointerSmoothX = 0;
 let pointerSmoothY = 0;
 let homeRafId = 0;
 let isHomeAnimating = false;
+let overlayUpdateTimer = 0;
 
 const updateTargetProgress = () => {
   const scrollRange = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
@@ -75,11 +91,11 @@ const renderScenes = (progress) => {
   const idleX = performanceMode ? 0 : Math.sin(time) * 4;
   const idleY = performanceMode ? 0 : Math.cos(time * 1.18) * 3;
 
-  // Cinematic scene settings with rich color grading
+  // Keep color grading lightweight to reduce GPU cost during scrolling.
   const sceneSettings = [
-    { brightness: 0.82, saturate: 1.05, blur: 0, hueRotate: 0, motionBlur: 0.8 },
-    { brightness: 0.88, saturate: 1.08, blur: 0.5, hueRotate: 2, motionBlur: 1.2 },
-    { brightness: 0.80, saturate: 1.03, blur: 0, hueRotate: -2, motionBlur: 0.9 }
+    { brightness: 0.82, saturate: 1.05 },
+    { brightness: 0.88, saturate: 1.08 },
+    { brightness: 0.80, saturate: 1.03 }
   ];
 
   bgScenes.forEach((scene, index) => {
@@ -102,11 +118,6 @@ const renderScenes = (progress) => {
     const saturate = settings.saturate + easeWeight * (performanceMode ? 0.06 : 0.12);
     const clarity = 1.08 + easeWeight * (performanceMode ? 0.03 : 0.08);
     
-    // Calculate motion blur based on transition progress for film-like quality
-    const transitionProgress = Math.abs((progress - index) % 1);
-    const isTransitioning = transitionProgress > 0.05 && transitionProgress < 0.95;
-    const motionBlurAmount = performanceMode ? 0 : (isTransitioning ? settings.motionBlur : 0);
-    
     // Deep parallax for immersive feel
     const depth = performanceMode ? 0 : 0.55 + index * 0.35;
     const translateX = idleX + pointerSmoothX * depth;
@@ -114,13 +125,30 @@ const renderScenes = (progress) => {
 
     scene.style.opacity = opacity.toFixed(4);
     scene.style.transform = `translate3d(${translateX.toFixed(2)}px, ${translateY.toFixed(2)}px, 0) scale(${scale.toFixed(4)})`;
-    scene.style.filter = performanceMode
-      ? `brightness(${brightness.toFixed(3)}) saturate(${saturate.toFixed(3)}) contrast(${clarity.toFixed(3)})`
-      : `brightness(${brightness.toFixed(3)}) saturate(${saturate.toFixed(3)}) contrast(${clarity.toFixed(3)}) blur(${settings.blur}px) hue-rotate(${settings.hueRotate}deg) drop-shadow(0 0 ${motionBlurAmount.toFixed(1)}px rgba(56, 189, 248, 0.15))`;
+    scene.style.filter = `brightness(${brightness.toFixed(3)}) saturate(${saturate.toFixed(3)}) contrast(${clarity.toFixed(3)})`;
   });
 
   const nearest = String(Math.min(maxProgress + 1, Math.max(1, Math.round(progress) + 1)));
 
+  if (nearest !== activeScene) {
+    activeScene = nearest;
+    updateOverlay(nearest);
+  }
+};
+
+const renderScenesFast = (progress) => {
+  bgScenes.forEach((scene, index) => {
+    const distance = Math.abs(progress - index);
+    const weight = Math.max(0, 1 - distance);
+    const opacity = weight > 0.001 ? weight : 0;
+    const scale = 1.04 - weight * 0.04;
+
+    scene.style.opacity = opacity.toFixed(4);
+    scene.style.transform = `translate3d(0, 0, 0) scale(${scale.toFixed(4)})`;
+    scene.style.filter = 'none';
+  });
+
+  const nearest = String(Math.min(maxProgress + 1, Math.max(1, Math.round(progress) + 1)));
   if (nearest !== activeScene) {
     activeScene = nearest;
     updateOverlay(nearest);
@@ -176,6 +204,26 @@ const initHomePage = () => {
 
   initializeLayoutHeight();
   updateTargetProgress();
+  if (performanceMode) {
+    smoothProgress = targetProgress;
+    renderScenesFast(smoothProgress);
+
+    window.addEventListener('scroll', () => {
+      updateTargetProgress();
+      smoothProgress = targetProgress;
+      renderScenesFast(smoothProgress);
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
+      maxProgress = Math.max(0, bgScenes.length - 1);
+      updateTargetProgress();
+      smoothProgress = targetProgress;
+      renderScenesFast(smoothProgress);
+    });
+
+    return;
+  }
+
   renderScenes(smoothProgress);
 
   window.addEventListener('scroll', () => {
@@ -230,13 +278,20 @@ const initHomeEffects = () => {
 
   const progressBar = document.getElementById('homeProgressBar');
   const interactiveCards = Array.from(document.querySelectorAll('.panel-card, .mini-grid div'));
+  let progressRafId = 0;
 
   const updateProgress = () => {
+    progressRafId = 0;
     if (!progressBar) return;
 
     const scrollRange = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
     const progress = Math.min(1, Math.max(0, window.scrollY / scrollRange));
     progressBar.style.width = `${(progress * 100).toFixed(2)}%`;
+  };
+
+  const requestProgressUpdate = () => {
+    if (progressRafId) return;
+    progressRafId = window.requestAnimationFrame(updateProgress);
   };
 
   const updateCardPointer = (event, card) => {
@@ -247,20 +302,22 @@ const initHomeEffects = () => {
     card.style.setProperty('--py', `${y.toFixed(2)}%`);
   };
 
-  interactiveCards.forEach((card) => {
-    card.addEventListener('pointermove', (event) => {
-      card.classList.add('is-active');
-      updateCardPointer(event, card);
-    });
+  if (supportsHover) {
+    interactiveCards.forEach((card) => {
+      card.addEventListener('pointermove', (event) => {
+        card.classList.add('is-active');
+        updateCardPointer(event, card);
+      });
 
-    card.addEventListener('pointerleave', () => {
-      card.classList.remove('is-active');
+      card.addEventListener('pointerleave', () => {
+        card.classList.remove('is-active');
+      });
     });
-  });
+  }
 
-  updateProgress();
-  window.addEventListener('scroll', updateProgress, { passive: true });
-  window.addEventListener('resize', updateProgress);
+  requestProgressUpdate();
+  window.addEventListener('scroll', requestProgressUpdate, { passive: true });
+  window.addEventListener('resize', requestProgressUpdate);
 };
 
 const initReveal = () => {
@@ -286,13 +343,20 @@ const initAboutEffects = () => {
 
   const progressBar = document.getElementById('aboutProgressBar');
   const interactiveCards = Array.from(document.querySelectorAll('.about-showcase, .signature-panel, .about-card, .timeline, .portfolio-section, .project-card, .skill-card'));
+  let progressRafId = 0;
 
   const updateProgress = () => {
+    progressRafId = 0;
     if (!progressBar) return;
 
     const scrollRange = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
     const progress = Math.min(1, Math.max(0, window.scrollY / scrollRange));
     progressBar.style.width = `${(progress * 100).toFixed(2)}%`;
+  };
+
+  const requestProgressUpdate = () => {
+    if (progressRafId) return;
+    progressRafId = window.requestAnimationFrame(updateProgress);
   };
 
   const updateCardPointer = (event, card) => {
@@ -303,24 +367,27 @@ const initAboutEffects = () => {
     card.style.setProperty('--py', `${y.toFixed(2)}%`);
   };
 
-  interactiveCards.forEach((card) => {
-    card.addEventListener('pointermove', (event) => {
-      card.classList.add('is-active');
-      updateCardPointer(event, card);
-    });
+  if (supportsHover) {
+    interactiveCards.forEach((card) => {
+      card.addEventListener('pointermove', (event) => {
+        card.classList.add('is-active');
+        updateCardPointer(event, card);
+      });
 
-    card.addEventListener('pointerleave', () => {
-      card.classList.remove('is-active');
+      card.addEventListener('pointerleave', () => {
+        card.classList.remove('is-active');
+      });
     });
-  });
+  }
 
-  updateProgress();
-  window.addEventListener('scroll', updateProgress, { passive: true });
-  window.addEventListener('resize', updateProgress);
+  requestProgressUpdate();
+  window.addEventListener('scroll', requestProgressUpdate, { passive: true });
+  window.addEventListener('resize', requestProgressUpdate);
 };
 
 const initAboutCenterZoom = () => {
   if (!document.body.classList.contains('about-page')) return;
+  if (performanceMode) return;
 
   const zoomTargets = Array.from(document.querySelectorAll('.about-hero, .about-showcase, .signature-layout, .about-grid, .timeline, .portfolio-section'));
   if (zoomTargets.length === 0) return;
