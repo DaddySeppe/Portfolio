@@ -4,6 +4,9 @@ const sceneTag = document.getElementById('sceneTag');
 const sceneTitle = document.getElementById('sceneTitle');
 const sceneSubtitle = document.getElementById('sceneSubtitle');
 const homeAtmosphere = document.querySelector('.home-atmosphere');
+const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const performanceMode = isSmallScreen || prefersReducedMotion;
 
 const sceneCopy = {
   '1': {
@@ -58,6 +61,8 @@ let pointerTargetX = 0;
 let pointerTargetY = 0;
 let pointerSmoothX = 0;
 let pointerSmoothY = 0;
+let homeRafId = 0;
+let isHomeAnimating = false;
 
 const updateTargetProgress = () => {
   const scrollRange = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
@@ -67,8 +72,8 @@ const updateTargetProgress = () => {
 
 const renderScenes = (progress) => {
   const time = performance.now() * 0.00042;
-  const idleX = Math.sin(time) * 4;
-  const idleY = Math.cos(time * 1.18) * 3;
+  const idleX = performanceMode ? 0 : Math.sin(time) * 4;
+  const idleY = performanceMode ? 0 : Math.cos(time * 1.18) * 3;
 
   // Cinematic scene settings with rich color grading
   const sceneSettings = [
@@ -93,23 +98,25 @@ const renderScenes = (progress) => {
     
     // Get cinematic settings
     const settings = sceneSettings[index] || sceneSettings[0];
-    const brightness = settings.brightness + easeWeight * 0.28;
-    const saturate = settings.saturate + easeWeight * 0.12;
-    const clarity = 1.08 + easeWeight * 0.08;
+    const brightness = settings.brightness + easeWeight * (performanceMode ? 0.16 : 0.28);
+    const saturate = settings.saturate + easeWeight * (performanceMode ? 0.06 : 0.12);
+    const clarity = 1.08 + easeWeight * (performanceMode ? 0.03 : 0.08);
     
     // Calculate motion blur based on transition progress for film-like quality
     const transitionProgress = Math.abs((progress - index) % 1);
     const isTransitioning = transitionProgress > 0.05 && transitionProgress < 0.95;
-    const motionBlurAmount = isTransitioning ? settings.motionBlur : 0;
+    const motionBlurAmount = performanceMode ? 0 : (isTransitioning ? settings.motionBlur : 0);
     
     // Deep parallax for immersive feel
-    const depth = 0.55 + index * 0.35;
+    const depth = performanceMode ? 0 : 0.55 + index * 0.35;
     const translateX = idleX + pointerSmoothX * depth;
     const translateY = idleY + pointerSmoothY * depth;
 
     scene.style.opacity = opacity.toFixed(4);
     scene.style.transform = `translate3d(${translateX.toFixed(2)}px, ${translateY.toFixed(2)}px, 0) scale(${scale.toFixed(4)})`;
-    scene.style.filter = `brightness(${brightness.toFixed(3)}) saturate(${saturate.toFixed(3)}) contrast(${clarity.toFixed(3)}) blur(${settings.blur}px) hue-rotate(${settings.hueRotate}deg) drop-shadow(0 0 ${motionBlurAmount.toFixed(1)}px rgba(56, 189, 248, 0.15))`;
+    scene.style.filter = performanceMode
+      ? `brightness(${brightness.toFixed(3)}) saturate(${saturate.toFixed(3)}) contrast(${clarity.toFixed(3)})`
+      : `brightness(${brightness.toFixed(3)}) saturate(${saturate.toFixed(3)}) contrast(${clarity.toFixed(3)}) blur(${settings.blur}px) hue-rotate(${settings.hueRotate}deg) drop-shadow(0 0 ${motionBlurAmount.toFixed(1)}px rgba(56, 189, 248, 0.15))`;
   });
 
   const nearest = String(Math.min(maxProgress + 1, Math.max(1, Math.round(progress) + 1)));
@@ -123,12 +130,14 @@ const renderScenes = (progress) => {
 const animate = () => {
   const delta = targetProgress - smoothProgress;
   // Cinematic spring-like easing - creates smooth, elegant transitions
-  const easeStrength = Math.abs(delta) > 0.15 ? 0.068 : 0.042;
+  const easeStrength = performanceMode
+    ? (Math.abs(delta) > 0.15 ? 0.16 : 0.12)
+    : (Math.abs(delta) > 0.15 ? 0.068 : 0.042);
   smoothProgress += delta * easeStrength;
-  pointerSmoothX += (pointerTargetX - pointerSmoothX) * 0.0785;
-  pointerSmoothY += (pointerTargetY - pointerSmoothY) * 0.0785;
+  pointerSmoothX += (pointerTargetX - pointerSmoothX) * (performanceMode ? 0.2 : 0.0785);
+  pointerSmoothY += (pointerTargetY - pointerSmoothY) * (performanceMode ? 0.2 : 0.0785);
 
-  if (homeAtmosphere) {
+  if (homeAtmosphere && !performanceMode) {
     const scrollInfluence = (smoothProgress - maxProgress * 0.5) * -2.4;
     const atmosphereX = pointerSmoothX * 0.85;
     const atmosphereY = pointerSmoothY * 0.75 + scrollInfluence;
@@ -140,7 +149,20 @@ const animate = () => {
   }
 
   renderScenes(smoothProgress);
-  window.requestAnimationFrame(animate);
+
+  if (Math.abs(targetProgress - smoothProgress) > 0.0008 || Math.abs(pointerTargetX - pointerSmoothX) > 0.03 || Math.abs(pointerTargetY - pointerSmoothY) > 0.03) {
+    homeRafId = window.requestAnimationFrame(animate);
+    return;
+  }
+
+  isHomeAnimating = false;
+  homeRafId = 0;
+};
+
+const requestHomeAnimation = () => {
+  if (isHomeAnimating) return;
+  isHomeAnimating = true;
+  homeRafId = window.requestAnimationFrame(animate);
 };
 
 const initializeLayoutHeight = () => {
@@ -156,27 +178,51 @@ const initHomePage = () => {
   updateTargetProgress();
   renderScenes(smoothProgress);
 
-  window.addEventListener('scroll', updateTargetProgress, { passive: true });
-  window.addEventListener('pointermove', (event) => {
-    const nx = event.clientX / window.innerWidth - 0.5;
-    const ny = event.clientY / window.innerHeight - 0.5;
-    pointerTargetX = nx * 8;
-    pointerTargetY = ny * 6;
-  });
-  window.addEventListener('pointerleave', () => {
-    pointerTargetX = 0;
-    pointerTargetY = 0;
-  });
-  window.addEventListener('blur', () => {
-    pointerTargetX = 0;
-    pointerTargetY = 0;
-  });
+  window.addEventListener('scroll', () => {
+    updateTargetProgress();
+    requestHomeAnimation();
+  }, { passive: true });
+
+  if (!performanceMode) {
+    window.addEventListener('pointermove', (event) => {
+      const nx = event.clientX / window.innerWidth - 0.5;
+      const ny = event.clientY / window.innerHeight - 0.5;
+      pointerTargetX = nx * 8;
+      pointerTargetY = ny * 6;
+      requestHomeAnimation();
+    });
+    window.addEventListener('pointerleave', () => {
+      pointerTargetX = 0;
+      pointerTargetY = 0;
+      requestHomeAnimation();
+    });
+    window.addEventListener('blur', () => {
+      pointerTargetX = 0;
+      pointerTargetY = 0;
+      requestHomeAnimation();
+    });
+  }
+
   window.addEventListener('resize', () => {
     maxProgress = Math.max(0, bgScenes.length - 1);
     updateTargetProgress();
+    requestHomeAnimation();
   });
 
-  window.requestAnimationFrame(animate);
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden && homeRafId) {
+      window.cancelAnimationFrame(homeRafId);
+      homeRafId = 0;
+      isHomeAnimating = false;
+      return;
+    }
+
+    if (!document.hidden) {
+      requestHomeAnimation();
+    }
+  });
+
+  requestHomeAnimation();
 };
 
 const initHomeEffects = () => {
@@ -323,19 +369,19 @@ const initAboutWheelMotion = () => {
   let pointerY = 0;
   let smoothX = 0;
   let smoothY = 0;
-  let rot = 0;
+  let ticking = false;
 
   const animateWheel = () => {
     const scrollRange = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
     const progress = Math.min(1, Math.max(0, window.scrollY / scrollRange));
 
-    smoothX += (pointerX - smoothX) * 0.06;
-    smoothY += (pointerY - smoothY) * 0.06;
+    smoothX += (pointerX - smoothX) * (performanceMode ? 0.18 : 0.06);
+    smoothY += (pointerY - smoothY) * (performanceMode ? 0.18 : 0.06);
 
-    rot = progress * 150;
+    const rot = progress * (performanceMode ? 90 : 150);
 
-    const wheelX = smoothX * 9;
-    const wheelY = smoothY * 7 - progress * 5;
+    const wheelX = smoothX * (performanceMode ? 4 : 9);
+    const wheelY = smoothY * (performanceMode ? 3 : 7) - progress * (performanceMode ? 2 : 5);
     const wheelScale = 0.95 + progress * 0.12;
 
     document.body.style.setProperty('--wheel-x', `${wheelX.toFixed(2)}px`);
@@ -343,20 +389,33 @@ const initAboutWheelMotion = () => {
     document.body.style.setProperty('--wheel-rot', `${rot.toFixed(2)}deg`);
     document.body.style.setProperty('--wheel-scale', wheelScale.toFixed(3));
 
+    ticking = false;
+  };
+
+  const requestWheelUpdate = () => {
+    if (ticking) return;
+    ticking = true;
     window.requestAnimationFrame(animateWheel);
   };
 
-  window.addEventListener('pointermove', (event) => {
-    pointerX = event.clientX / window.innerWidth - 0.5;
-    pointerY = event.clientY / window.innerHeight - 0.5;
-  });
+  if (!performanceMode) {
+    window.addEventListener('pointermove', (event) => {
+      pointerX = event.clientX / window.innerWidth - 0.5;
+      pointerY = event.clientY / window.innerHeight - 0.5;
+      requestWheelUpdate();
+    });
 
-  window.addEventListener('pointerleave', () => {
-    pointerX = 0;
-    pointerY = 0;
-  });
+    window.addEventListener('pointerleave', () => {
+      pointerX = 0;
+      pointerY = 0;
+      requestWheelUpdate();
+    });
+  }
 
-  window.requestAnimationFrame(animateWheel);
+  window.addEventListener('scroll', requestWheelUpdate, { passive: true });
+  window.addEventListener('resize', requestWheelUpdate);
+
+  requestWheelUpdate();
 };
 
 initHomePage();

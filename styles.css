@@ -1759,6 +1759,182 @@ h3,
   }
 }
 
+@media (max-width: 540px) {
+  .site-header {
+    padding: 12px 12px;
+    gap: 8px;
+  }
+
+  .brand {
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+  }
+
+  .main-nav {
+    padding: 4px;
+  }
+
+  .main-nav a {
+    padding: 6px 8px;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+  }
+
+  .home-progress,
+  .about-progress {
+    top: 58px;
+  }
+
+  .portfolio-overlay {
+    padding: 12px;
+    align-items: flex-end;
+  }
+
+  .overlay-card {
+    padding: 14px;
+    border-radius: 14px;
+    backdrop-filter: blur(3px);
+  }
+
+  .overlay-title {
+    font-size: clamp(26px, 10vw, 34px);
+  }
+
+  .overlay-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.38;
+  }
+
+  .overlay-chips span {
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+  }
+
+  .home-panel {
+    min-height: 92vh;
+    padding: 74px 12px 16px;
+  }
+
+  .panel-card {
+    border-radius: 18px;
+    padding: 16px;
+    backdrop-filter: blur(2px);
+  }
+
+  .panel-card h2 {
+    font-size: clamp(22px, 8vw, 30px);
+  }
+
+  .panel-card p {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .mini-grid {
+    gap: 8px;
+  }
+
+  .mini-grid div {
+    border-radius: 12px;
+    padding: 12px;
+  }
+
+  .about-main {
+    padding: 88px 12px 72px;
+    gap: 18px;
+  }
+
+  .about-hero {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .about-hero h1 {
+    margin: 4px 0 8px;
+    font-size: clamp(28px, 9vw, 36px);
+    max-width: 100%;
+  }
+
+  .about-hero p {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .hero-side {
+    gap: 10px;
+    padding-top: 14px;
+  }
+
+  .hero-facts li {
+    font-size: 0.84rem;
+    padding: 9px 10px;
+  }
+
+  .about-showcase,
+  .signature-panel,
+  .timeline,
+  .portfolio-section,
+  .about-card,
+  .project-card,
+  .skill-card {
+    border-radius: 16px;
+    padding: 16px;
+  }
+
+  .timeline ul {
+    margin-top: 14px;
+    gap: 10px;
+  }
+
+  .timeline li {
+    padding: 12px;
+    border-left-width: 3px;
+    line-height: 1.5;
+  }
+
+  .showcase-track,
+  .home-showcase-track {
+    animation-duration: 28s;
+  }
+
+  .site-footer {
+    margin-top: 30px;
+    padding: 36px 12px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-atmosphere {
+    display: none;
+  }
+
+  .immersive-bg::before,
+  .bg-vignette,
+  .about-atmosphere,
+  .focus-wheel,
+  .about-page .focus-zoom-target {
+    animation: none !important;
+  }
+
+  .bg-scene {
+    filter: brightness(0.88) saturate(1.02) contrast(1.02);
+    will-change: opacity, transform;
+  }
+
+  .overlay-card,
+  .panel-card,
+  .about-hero,
+  .about-showcase,
+  .signature-panel,
+  .timeline,
+  .portfolio-section,
+  .about-card,
+  .project-card,
+  .skill-card {
+    backdrop-filter: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .home-atmosphere::before,
   .home-atmosphere::after,
