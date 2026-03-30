@@ -204,14 +204,14 @@ const translations = {
       },
       strengths: {
         eyebrow: 'Sterkeprofiel',
-        title: 'Wat ik voor projecten meebren',
+        title: 'Wat ik voor projecten meebrengen',
         item1: { label: 'Technische Aanpassingsvermogen', desc: 'Ik pas me snel aan aan tools, workflows en projectbeperkingen terwijl ik me op codekwaliteit concentreer.' },
         item2: { label: 'Probleemoplossing', desc: 'Ik analyseer problemen methodisch en lever oplossingen die praktisch en onderhoudbaar zijn.' },
         item3: { label: 'Professionele Samenwerking', desc: 'Ik werk goed in teams, communiceer voortgang duidelijk en sluit aan op projectdoelstellingen.' }
       },
       timeline: {
         eyebrow: 'Reis',
-        title: 'Tijdlijn van groei',
+        title: 'Persoonlijke groei',
         item1: { year: '2023', text: 'Mijn stage bij Aurubis Olen afgerond en directe ervaring in een professionele IT-omgeving opgedaan.' },
         item2: { year: '2024', text: 'Mijn technische basis verder uitgebouwd door schoolprojecten, praktische opdrachten en hands-on ontwikkeling.' },
         item3: { year: '2025', text: 'Grotere projecten opgeleverd, inclusief MissionZebra en mijn vermogen om over design en implementatie te werken verbeterd.' },
