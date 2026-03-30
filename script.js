@@ -1,3 +1,46 @@
+// ==== Language System ====
+let currentLanguage = localStorage.getItem('language') || 'en';
+
+const initializeLanguage = () => {
+  const savedLang = localStorage.getItem('language') || 'en';
+  setLanguage(savedLang);
+};
+
+const setLanguage = (lang) => {
+  currentLanguage = lang;
+  localStorage.setItem('language', lang);
+  document.documentElement.lang = lang;
+  
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.getAttribute('data-lang') === lang) {
+      btn.classList.add('active');
+    }
+  });
+};
+
+const initLanguageSwitcher = () => {
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const lang = btn.getAttribute('data-lang');
+      setLanguage(lang);
+    });
+  });
+};
+
+// Initialize on DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    initializeLanguage();
+    initLanguageSwitcher();
+  });
+} else {
+  initializeLanguage();
+  initLanguageSwitcher();
+}
+
+// ==== Original Script Content ====
 const bgScenes = Array.from(document.querySelectorAll('.bg-scene'));
 const scrollTriggers = Array.from(document.querySelectorAll('.scroll-trigger'));
 const sceneTag = document.getElementById('sceneTag');
@@ -87,45 +130,21 @@ const updateTargetProgress = () => {
 };
 
 const renderScenes = (progress) => {
-  const time = performance.now() * 0.00042;
-  const idleX = performanceMode ? 0 : Math.sin(time) * 4;
-  const idleY = performanceMode ? 0 : Math.cos(time * 1.18) * 3;
-
-  // Keep color grading lightweight to reduce GPU cost during scrolling.
-  const sceneSettings = [
-    { brightness: 0.82, saturate: 1.05 },
-    { brightness: 0.88, saturate: 1.08 },
-    { brightness: 0.80, saturate: 1.03 }
-  ];
-
   bgScenes.forEach((scene, index) => {
     const distance = Math.abs(progress - index);
     const weight = Math.max(0, 1 - distance);
     
-    // Cubic easing for more cinematic feel - slower at start and end
     const easeWeight = weight < 0.5 
       ? 4 * weight * weight * weight 
       : 1 - Math.pow(-2 * weight + 2, 3) / 2;
     
     const opacity = easeWeight > 0.01 ? easeWeight : 0;
-    
-    // Much more dramatic scaling for cinematic depth - zooms in when active
     const scale = 1.18 - easeWeight * 0.12;
-    
-    // Get cinematic settings
-    const settings = sceneSettings[index] || sceneSettings[0];
-    const brightness = settings.brightness + easeWeight * (performanceMode ? 0.16 : 0.28);
-    const saturate = settings.saturate + easeWeight * (performanceMode ? 0.06 : 0.12);
-    const clarity = 1.08 + easeWeight * (performanceMode ? 0.03 : 0.08);
-    
-    // Deep parallax for immersive feel
-    const depth = performanceMode ? 0 : 0.55 + index * 0.35;
-    const translateX = idleX + pointerSmoothX * depth;
-    const translateY = idleY + pointerSmoothY * depth;
+    const brightness = 0.85 + easeWeight * 0.2;
 
-    scene.style.opacity = opacity.toFixed(4);
-    scene.style.transform = `translate3d(${translateX.toFixed(2)}px, ${translateY.toFixed(2)}px, 0) scale(${scale.toFixed(4)})`;
-    scene.style.filter = `brightness(${brightness.toFixed(3)}) saturate(${saturate.toFixed(3)}) contrast(${clarity.toFixed(3)})`;
+    scene.style.opacity = opacity > 0.01 ? opacity : 0;
+    scene.style.transform = `scale(${scale.toFixed(3)})`;
+    scene.style.filter = `brightness(${brightness.toFixed(2)})`;
   });
 
   const nearest = String(Math.min(maxProgress + 1, Math.max(1, Math.round(progress) + 1)));
@@ -143,9 +162,8 @@ const renderScenesFast = (progress) => {
     const opacity = weight > 0.001 ? weight : 0;
     const scale = 1.04 - weight * 0.04;
 
-    scene.style.opacity = opacity.toFixed(4);
-    scene.style.transform = `translate3d(0, 0, 0) scale(${scale.toFixed(4)})`;
-    scene.style.filter = 'none';
+    scene.style.opacity = opacity > 0.01 ? opacity : 0;
+    scene.style.transform = `translate3d(0, 0, 0) scale(${scale.toFixed(3)})`;
   });
 
   const nearest = String(Math.min(maxProgress + 1, Math.max(1, Math.round(progress) + 1)));
@@ -155,22 +173,24 @@ const renderScenesFast = (progress) => {
   }
 };
 
+let lastFrameTime = 0;
+const FRAME_TIME = 33;
+
 const animate = () => {
+  const now = performance.now();
+  const timeSinceLastFrame = now - lastFrameTime;
+  
+  if (timeSinceLastFrame < FRAME_TIME) {
+    homeRafId = window.requestAnimationFrame(animate);
+    return;
+  }
+  
+  lastFrameTime = now;
   const delta = targetProgress - smoothProgress;
-  // Cinematic spring-like easing - creates smooth, elegant transitions
   const easeStrength = performanceMode
     ? (Math.abs(delta) > 0.15 ? 0.16 : 0.12)
-    : (Math.abs(delta) > 0.15 ? 0.068 : 0.042);
+    : (Math.abs(delta) > 0.15 ? 0.1 : 0.055);
   smoothProgress += delta * easeStrength;
-  pointerSmoothX += (pointerTargetX - pointerSmoothX) * (performanceMode ? 0.2 : 0.0785);
-  pointerSmoothY += (pointerTargetY - pointerSmoothY) * (performanceMode ? 0.2 : 0.0785);
-
-  if (homeAtmosphere && !performanceMode) {
-    const scrollInfluence = (smoothProgress - maxProgress * 0.5) * -2.4;
-    const atmosphereX = pointerSmoothX * 0.85;
-    const atmosphereY = pointerSmoothY * 0.75 + scrollInfluence;
-    homeAtmosphere.style.transform = `translate3d(${atmosphereX.toFixed(2)}px, ${atmosphereY.toFixed(2)}px, 0)`;
-  }
 
   if (Math.abs(delta) < 0.0003) {
     smoothProgress = targetProgress;
@@ -178,7 +198,7 @@ const animate = () => {
 
   renderScenes(smoothProgress);
 
-  if (Math.abs(targetProgress - smoothProgress) > 0.0008 || Math.abs(pointerTargetX - pointerSmoothX) > 0.03 || Math.abs(pointerTargetY - pointerSmoothY) > 0.03) {
+  if (Math.abs(targetProgress - smoothProgress) > 0.0008) {
     homeRafId = window.requestAnimationFrame(animate);
     return;
   }
@@ -231,24 +251,30 @@ const initHomePage = () => {
     requestHomeAnimation();
   }, { passive: true });
 
-  if (!performanceMode) {
+  if (!performanceMode && supportsHover) {
+    let pointerThrottled = false;
     window.addEventListener('pointermove', (event) => {
-      const nx = event.clientX / window.innerWidth - 0.5;
-      const ny = event.clientY / window.innerHeight - 0.5;
-      pointerTargetX = nx * 8;
-      pointerTargetY = ny * 6;
-      requestHomeAnimation();
-    });
+      if (pointerThrottled) return;
+      pointerThrottled = true;
+      requestAnimationFrame(() => {
+        const nx = event.clientX / window.innerWidth - 0.5;
+        const ny = event.clientY / window.innerHeight - 0.5;
+        pointerTargetX = nx * 8;
+        pointerTargetY = ny * 6;
+        requestHomeAnimation();
+        pointerThrottled = false;
+      });
+    }, { passive: true });
     window.addEventListener('pointerleave', () => {
       pointerTargetX = 0;
       pointerTargetY = 0;
       requestHomeAnimation();
-    });
+    }, { passive: true });
     window.addEventListener('blur', () => {
       pointerTargetX = 0;
       pointerTargetY = 0;
       requestHomeAnimation();
-    });
+    }, { passive: true });
   }
 
   window.addEventListener('resize', () => {

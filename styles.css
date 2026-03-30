@@ -20,7 +20,6 @@ body {
   font-family: "Manrope", sans-serif;
   color: var(--ink);
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 h1,
@@ -58,6 +57,7 @@ h3,
   border: 1px solid rgba(226, 232, 240, 0.35);
   background: rgba(15, 23, 42, 0.35);
   backdrop-filter: blur(6px);
+  align-items: center;
 }
 
 .main-nav a {
@@ -71,6 +71,38 @@ h3,
 }
 
 .main-nav a.active {
+  color: #0f172a;
+  background: #e2e8f0;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 4px;
+  border-left: 1px solid rgba(226, 232, 240, 0.35);
+  padding-left: 10px;
+  margin-left: 6px;
+}
+
+.lang-btn {
+  text-decoration: none;
+  color: #e2e8f0;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 200ms ease;
+  font-weight: 600;
+}
+
+.lang-btn:hover {
+  color: #38bdf8;
+}
+
+.lang-btn.active {
   color: #0f172a;
   background: #e2e8f0;
 }
@@ -112,6 +144,11 @@ h3,
   inset: 0;
   z-index: 0;
   background: radial-gradient(ellipse 2200px 1400px at 50% 50%, #0a1525 0%, #020617 60%);
+  will-change: transform;
+}
+
+.bg-scene {
+  will-change: transform, filter, opacity;
 }
 
 .immersive-bg::before {
@@ -122,7 +159,6 @@ h3,
     radial-gradient(ellipse 1600px 900px at 30% 20%, rgba(56, 189, 248, 0.08), transparent),
     radial-gradient(ellipse 1600px 900px at 70% 80%, rgba(167, 139, 250, 0.06), transparent);
   pointer-events: none;
-  animation: cinematicGradientShift 32s ease-in-out infinite;
 }
 
 @keyframes cinematicGradientShift {
@@ -192,13 +228,11 @@ h3,
 
 .home-atmosphere::before {
   background: conic-gradient(from 90deg, rgba(56, 189, 248, 0.42), rgba(16, 185, 129, 0.24), rgba(167, 139, 250, 0.38), rgba(56, 189, 248, 0.42));
-  animation: homeAuraSpin 40s linear infinite;
   filter: blur(64px);
 }
 
 .home-atmosphere::after {
   background: radial-gradient(circle at 35% 35%, rgba(125, 211, 252, 0.38), rgba(125, 211, 252, 0.1) 35%, rgba(125, 211, 252, 0));
-  animation: homeAuraPulse 16s ease-in-out infinite;
   filter: blur(56px);
 }
 
@@ -223,14 +257,12 @@ h3,
   top: 18%;
   left: -28vw;
   transform: rotate(-12deg);
-  animation: beamSweepA 16s ease-in-out infinite;
 }
 
 .home-atmosphere .beam-b {
   top: 72%;
   right: -32vw;
   transform: rotate(9deg);
-  animation: beamSweepB 16s ease-in-out infinite;
 }
 
 .home-atmosphere .glow {
@@ -245,14 +277,12 @@ h3,
   top: -120px;
   left: -140px;
   background: radial-gradient(circle at 55% 45%, rgba(103, 232, 249, 0.48), rgba(103, 232, 249, 0.12) 40%, rgba(103, 232, 249, 0));
-  animation: glowFloatA 14s ease-in-out infinite;
 }
 
 .home-atmosphere .glow-b {
   bottom: -160px;
   right: -120px;
   background: radial-gradient(circle at 45% 55%, rgba(167, 139, 250, 0.44), rgba(167, 139, 250, 0.08) 40%, rgba(167, 139, 250, 0));
-  animation: glowFloatB 15s ease-in-out infinite;
 }
 
 .bg-scene {
@@ -282,7 +312,6 @@ h3,
     radial-gradient(ellipse 700px 450px at 15% 85%, rgba(16, 185, 129, 0.05), transparent 45%);
   pointer-events: none;
   box-shadow: inset 0 0 160px rgba(2, 6, 23, 0.72), inset 0 0 100px rgba(2, 6, 23, 0.4), inset 0 0 240px rgba(2, 6, 23, 0.35);
-  animation: cinematicVignette 18s ease-in-out infinite;
 }
 
 .portfolio-overlay {
@@ -384,7 +413,6 @@ h3,
   background: rgba(15, 23, 42, 0.5);
   color: #e2e8f0;
   box-shadow: 0 24px 56px rgba(2, 6, 23, 0.28);
-  backdrop-filter: blur(4px);
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -475,7 +503,7 @@ h3,
   gap: 10px;
   width: max-content;
   padding: 10px;
-  animation: railMove 16s linear infinite;
+  animation: none;
 }
 
 .home-showcase-track span {
@@ -609,7 +637,6 @@ h3,
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
-  animation: atmosphereDrift 24s ease-in-out infinite;
 }
 
 .focus-wheel {
@@ -638,19 +665,19 @@ h3,
 }
 
 .wheel-ring.ring-outer {
-  animation: wheelSpinOuter 22s linear infinite;
+  animation: none;
 }
 
 .wheel-ring.ring-mid {
   inset: 15%;
   border-color: rgba(167, 139, 250, 0.24);
-  animation: wheelSpinInner 15s linear infinite;
+  animation: none;
 }
 
 .wheel-ring.ring-core {
   inset: 33%;
   border-color: rgba(52, 211, 153, 0.28);
-  animation: wheelPulse 6.6s ease-in-out infinite;
+  animation: none;
 }
 
 .wheel-spoke {
@@ -674,7 +701,7 @@ h3,
   border-radius: 999px;
   filter: blur(8px);
   opacity: 0.26;
-  animation: floatOrb 12s ease-in-out infinite;
+  animation: none;
 }
 
 .about-atmosphere .orb-a {
@@ -751,8 +778,7 @@ h3,
   border-radius: 32px;
   background: linear-gradient(150deg, rgba(7, 14, 30, 0.98), rgba(9, 19, 39, 0.97));
   padding: clamp(42px, 5vw, 62px);
-  box-shadow: 0 32px 72px rgba(2, 6, 23, 0.68), inset 0 1px 1px rgba(251, 191, 36, 0.12);
-  backdrop-filter: blur(12px);
+  box-shadow: 0 32px 72px rgba(2, 6, 23, 0.68);
   position: relative;
   overflow: hidden;
 }
@@ -1049,7 +1075,7 @@ h3,
   gap: 12px;
   width: max-content;
   padding: 10px 12px;
-  animation: railMove 24s linear infinite;
+  animation: none;
 }
 
 .showcase-track span {
@@ -1420,8 +1446,7 @@ h3,
   background: linear-gradient(155deg, rgba(11, 21, 43, 0.78), rgba(8, 14, 30, 0.72));
   padding: clamp(28px, 4vw, 38px);
   margin-bottom: 36px;
-  backdrop-filter: blur(7px);
-  box-shadow: 0 18px 34px rgba(2, 6, 23, 0.46), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 18px 34px rgba(2, 6, 23, 0.46);
 }
 
 .footer-contact h2 {
