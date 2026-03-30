@@ -113,6 +113,12 @@ const translations = {
         item2: { title: 'Learning Speed', desc: 'I absorb new tools and concepts quickly, then apply them directly in practical situations.' },
         item3: { title: 'Reliability', desc: 'I communicate clearly, take ownership, and deliver work people can depend on.' }
       },
+      missionzebra: {
+        eyebrow: 'Featured Project',
+        title: 'MissionZebra: Screen Time Made Smart',
+        description: 'An app designed to help families navigate screen time in a positive way. Teaching children healthy digital habits through planning, tracking, and real rewards within a family ecosystem.',
+        link: 'Visit MissionZebra'
+      },
       footer: {
         contact: { eyebrow: 'Contact', title: "Let's connect", text: 'Email: <a href="mailto:seppe.vanroy@telenet.be">seppe.vanroy@telenet.be</a><br />GitHub: <a href="https://github.com/DaddySeppe" target="_blank" rel="noopener noreferrer">github.com/DaddySeppe</a><br />LinkedIn: <a href="https://linkedin.com/in/seppe-vanroy-857680331" target="_blank" rel="noopener noreferrer">linkedin.com/in/seppe-vanroy-857680331</a>' }
       }
@@ -230,6 +236,12 @@ const translations = {
         item1: { title: 'Discipline', desc: 'Ik blijf consistent, maak af wat ik start en handhaaf kwaliteit zelfs onder druk.' },
         item2: { title: 'Leertempo', desc: 'Ik absorbeer snel nieuwe tools en concepten, en pas ze vervolgens direct in praktische situaties toe.' },
         item3: { title: 'Betrouwbaarheid', desc: 'Ik communiceer duidelijk, neem eigenaarschap en lever werk dat mensen kunnen vertrouwen.' }
+      },
+      missionzebra: {
+        eyebrow: 'Gekozen Project',
+        title: 'MissionZebra: Schermentijd op een Slimme Manier',
+        description: 'Een app ontworpen om gezinnen schermentijd op een positieve manier te navigeren. Kinderen gezonde digitale gewoonten aanleren door planning, tracking en echte beloningen binnen een gezinsecosysteem.',
+        link: 'Bezoek MissionZebra'
       },
       footer: {
         contact: { eyebrow: 'Contact', title: 'Laten we in contact komen', text: 'E-mail: <a href="mailto:seppe.vanroy@telenet.be">seppe.vanroy@telenet.be</a><br />GitHub: <a href="https://github.com/DaddySeppe" target="_blank" rel="noopener noreferrer">github.com/DaddySeppe</a><br />LinkedIn: <a href="https://linkedin.com/in/seppe-vanroy-857680331" target="_blank" rel="noopener noreferrer">linkedin.com/in/seppe-vanroy-857680331</a>' }
