@@ -319,6 +319,7 @@ const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').ma
 
 const getSceneCopy = (lang) => {
   const trans = translations[lang] || translations.en;
+  const isDutch = lang === 'nl';
   return {
     '1': {
       tag: trans.hero.tag,
@@ -326,14 +327,18 @@ const getSceneCopy = (lang) => {
       subtitle: trans.hero.subtitle
     },
     '2': {
-      tag: 'SELECTED PROJECTS',
-      title: 'Projects With Purpose',
-      subtitle: 'School and personal concepts where design and frontend execution work together.'
+      tag: isDutch ? 'GESELECTEERDE PROJECTEN' : 'SELECTED PROJECTS',
+      title: isDutch ? 'Projecten Met Doel' : 'Projects With Purpose',
+      subtitle: isDutch
+        ? 'School- en persoonlijke concepten waar design en frontend-uitvoering samenkomen.'
+        : 'School and personal concepts where design and frontend execution work together.'
     },
     '3': {
-      tag: 'ABOUT ME',
-      title: 'Personal Story',
-      subtitle: 'Detail-focused, curious, and always improving with every project.'
+      tag: isDutch ? 'OVER MIJ' : 'ABOUT ME',
+      title: isDutch ? 'Persoonlijk Verhaal' : 'Personal Story',
+      subtitle: isDutch
+        ? 'Detailgericht, nieuwsgierig en altijd aan het verbeteren bij elk project.'
+        : 'Detail-focused, curious, and always improving with every project.'
     }
   };
 };
