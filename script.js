@@ -46,11 +46,11 @@ const translations = {
     about: {
       hero: {
         eyebrow: 'Profile',
-        title: 'I build practical IT solutions with a professional mindset and a drive to improve.',
+        title: 'Building IT solutions, step by step.',
+        // title: 'I build practical IT solutions with a professional mindset and a drive to improve.',
         description: 'I am a second-year IT student who learns fastest in real environments. My 2023 internship at Aurubis Olen and my current holiday work on their IT department shaped how I approach projects: clear thinking, reliable execution, and continuous growth.',
         tag1: 'Practical Problem Solver',
         tag2: 'Professional Attitude',
-        tag3: 'Growth Through Execution',
         snapshot: 'Quick Snapshot',
         subtitle: 'Focused, consistent, and serious about quality.',
         fact1: { label: 'Role', value: 'IT Student' },
@@ -164,11 +164,11 @@ const translations = {
     about: {
       hero: {
         eyebrow: 'Profiel',
-        title: 'Ik bouw praktische IT-oplossingen met een professionele instelling en drang om me te verbeteren.',
+        title: 'Praktische IT-oplossingen, stap voor stap.',
+        // title: 'Ik bouw praktische IT-oplossingen met een professionele instelling en drang om me te verbeteren.',
         description: 'Ik ben een tweedejaars IT-student die het snelst in echte omgevingen leert. Mijn stagering in 2023 bij Aurubis Olen en mijn huidige vakantiewerk in hun IT-afdeling hebben gevormd hoe ik projecten benaader: helder denken, betrouwbare uitvoering en voortdurende groei.',
         tag1: 'Praktische Probleemoplosser',
         tag2: 'Professionele Instelling',
-        tag3: 'Groei Door Uitvoering',
         snapshot: 'Snelle Schets',
         subtitle: 'Gericht, consistent en serieus over kwaliteit.',
         fact1: { label: 'Rol', value: 'IT Student' },
