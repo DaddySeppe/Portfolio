@@ -25,7 +25,7 @@ const translations = {
     },
     projects: {
       eyebrow: 'Projects',
-      title: 'Most of my work comes from school projects, exercises and moments where I had to learn by actually doing it.',
+      title: 'Work from school projects and practical learning',
       card1: { title: 'School Work', desc: 'I work on assignments where I have to apply what I learn and turn it into something practical.' },
       card2: { title: 'Technical Skills', desc: 'I keep improving my technical skills by working with different systems, tools and course projects.' },
       card3: { title: 'My Approach', desc: 'I try to work seriously, stay clear in what I do and keep improving until the result feels right.' },
@@ -33,7 +33,7 @@ const translations = {
     },
     aboutsection: {
       eyebrow: 'About Me',
-      title: 'I am someone who wants to keep growing in IT and build more experience through practice, effort and new challenges.',
+      title: 'Growing in IT through practice and real challenges',
       description: 'On my about page, you can read more about me, my strengths and the way I try to improve myself as a student.',
       link1: 'Go to About Me',
       link2: 'Contact Me'
@@ -143,7 +143,7 @@ const translations = {
     },
     projects: {
       eyebrow: 'Projecten',
-      title: 'Het meeste van mijn werk komt voort uit schoolprojecten, oefeningen en momenten waarop ik door daadwerkelijk te doen moest leren.',
+      title: 'Werk via schoolprojecten en praktische ervaring',
       card1: { title: 'Schoolwerk', desc: 'Ik werk aan opdrachten waarbij ik moet toepassen wat ik leer en het in iets practisch moet omzetten.' },
       card2: { title: 'Technische Vaardigheden', desc: 'Ik verbeter mijn technische vaardigheden voortdurend door met verschillende systemen, tools en cursusprojecten te werken.' },
       card3: { title: 'Mijn Aanpak', desc: 'Ik probeer serieus te werken, duidelijk in wat ik doe te zijn en blijf verbeteren totdat het resultaat goed voelt.' },
@@ -151,7 +151,7 @@ const translations = {
     },
     aboutsection: {
       eyebrow: 'Over Mij',
-      title: 'Ik ben iemand die graag verder groeit in IT en meer ervaring wil opbouwen door oefening, inspanning en nieuwe uitdagingen.',
+      title: 'Groei in IT door oefening en uitdagingen',
       description: 'Op mijn over-mij pagina kun je meer over mij lezen, mijn sterke punten en hoe ik mezelf als student probeer te verbeteren.',
       link1: 'Ga naar Over Mij',
       link2: 'Neem Contact Op'
