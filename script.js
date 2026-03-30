@@ -280,6 +280,9 @@ const setLanguage = (lang) => {
   });
   
   translatePage(lang);
+  if (typeof window.updateChatWidgetLanguage === 'function') {
+    window.updateChatWidgetLanguage(lang);
+  }
 };
 
 const initLanguageSwitcher = () => {
@@ -785,11 +788,195 @@ const initAboutWheelMotion = () => {
   requestWheelUpdate();
 };
 
+const initPortfolioAI = () => {
+  const widget = document.getElementById('aiChatWidget');
+  const toggle = document.getElementById('aiChatToggle');
+  const closeBtn = document.getElementById('aiChatClose');
+  const panel = document.getElementById('aiChatPanel');
+  const messages = document.getElementById('aiChatMessages');
+  const form = document.getElementById('aiChatForm');
+  const input = document.getElementById('aiChatInput');
+  const sendButton = form ? form.querySelector('button[type="submit"]') : null;
+  const title = document.querySelector('.ai-chat-title');
+  const kicker = document.querySelector('.ai-chat-kicker');
+
+  if (!widget || !toggle || !closeBtn || !panel || !messages || !form || !input || !title || !kicker) {
+    return;
+  }
+
+  const uiByLang = {
+    nl: {
+      openTitle: 'Open AI chat',
+      title: 'Vraag iets aan mijn AI',
+      kicker: 'Portfolio Assistant',
+      placeholder: 'Typ je vraag...',
+      send: 'Verstuur',
+      greeting: 'Hey! Ik ben de portfolio-assistent. Vraag me gerust iets over Seppe, projecten, contact of skills.'
+    },
+    en: {
+      openTitle: 'Open AI chat',
+      title: 'Ask my AI anything',
+      kicker: 'Portfolio Assistant',
+      placeholder: 'Type your question...',
+      send: 'Send',
+      greeting: 'Hey! I am the portfolio assistant. Ask me anything about Seppe, projects, contact, or skills.'
+    }
+  };
+
+  const getUI = () => uiByLang[currentLanguage] || uiByLang.en;
+
+  const addMessage = (text, role) => {
+    const bubble = document.createElement('div');
+    bubble.className = `ai-msg ${role === 'user' ? 'ai-msg-user' : 'ai-msg-bot'}`;
+    bubble.textContent = text;
+    messages.appendChild(bubble);
+    messages.scrollTop = messages.scrollHeight;
+  };
+
+  const conversation = [];
+
+  const getRuleBasedReply = (prompt) => {
+    const p = prompt.toLowerCase();
+    const nl = currentLanguage === 'nl';
+
+    if (/(hallo|hey|hi|goedemorgen|goedenavond)/.test(p)) {
+      return nl
+        ? 'Hey! Leuk dat je er bent. Je kan me vragen over projecten, vaardigheden, opleiding of contact.'
+        : 'Hey! Great to have you here. You can ask me about projects, skills, education, or contact.';
+    }
+
+    if (/(contact|mail|email|linkedin|github)/.test(p)) {
+      return nl
+        ? 'Je kan Seppe contacteren via seppe.vanroy@telenet.be, LinkedIn of GitHub. Scroll ook gerust naar de contact-sectie onderaan.'
+        : 'You can contact Seppe through seppe.vanroy@telenet.be, LinkedIn, or GitHub. You can also scroll to the contact section at the bottom.';
+    }
+
+    if (/(project|missionzebra|portfolio)/.test(p)) {
+      return nl
+        ? 'Belangrijke projecten zijn MissionZebra, dit portfolio, en praktische IT-bijdragen bij Aurubis. Wil je dat ik er een kort samenvat?'
+        : 'Key projects include MissionZebra, this portfolio, and practical IT contributions at Aurubis. Want me to summarize one?';
+    }
+
+    if (/(skill|vaardigheid|sterkte|strength)/.test(p)) {
+      return nl
+        ? 'Sterktes: gestructureerd werken, probleemoplossing, snel bijleren, en betrouwbaar samenwerken in teamcontext.'
+        : 'Strengths: structured execution, problem solving, fast learning, and reliable collaboration in team environments.';
+    }
+
+    if (/(studie|opleiding|school|internship|stage|aurubis)/.test(p)) {
+      return nl
+        ? 'Seppe is tweedejaars IT-student, liep stage bij Aurubis Olen en werkt daar ook tijdens vakantieperiodes op IT.'
+        : 'Seppe is a second-year IT student, completed an internship at Aurubis Olen, and also works there in IT during holiday periods.';
+    }
+
+    return nl
+      ? 'Goeie vraag. Ik kan je helpen met info over projecten, skills, ervaring, contact en studie. Stel gerust iets specifieker.'
+      : 'Great question. I can help with projects, skills, experience, contact info, and studies. Feel free to ask a bit more specifically.';
+  };
+
+  const getAPIReply = async (prompt) => {
+    try {
+      const response = await fetch('api/chat.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: prompt,
+          lang: currentLanguage,
+          history: conversation.slice(-8)
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`API returned ${response.status}`);
+      }
+
+      const data = await response.json();
+      if (data && typeof data.reply === 'string' && data.reply.trim().length > 0) {
+        return data.reply.trim();
+      }
+
+      throw new Error('No reply in API response');
+    } catch (error) {
+      return getRuleBasedReply(prompt);
+    }
+  };
+
+  const openChat = () => {
+    widget.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    window.setTimeout(() => input.focus(), 120);
+  };
+
+  const closeChat = () => {
+    widget.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+
+  const applyLanguage = (lang) => {
+    const ui = uiByLang[lang] || uiByLang.en;
+    toggle.title = ui.openTitle;
+    title.textContent = ui.title;
+    kicker.textContent = ui.kicker;
+    input.placeholder = ui.placeholder;
+    if (sendButton) sendButton.textContent = ui.send;
+
+    if (messages.children.length === 0) {
+      addMessage(ui.greeting, 'bot');
+    }
+  };
+
+  window.updateChatWidgetLanguage = applyLanguage;
+
+  toggle.addEventListener('click', () => {
+    if (widget.classList.contains('is-open')) {
+      closeChat();
+    } else {
+      openChat();
+    }
+  });
+
+  closeBtn.addEventListener('click', closeChat);
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const value = input.value.trim();
+    if (!value) return;
+
+    addMessage(value, 'user');
+    conversation.push({ role: 'user', content: value });
+    input.value = '';
+
+    input.disabled = true;
+    if (sendButton) sendButton.disabled = true;
+
+    const typing = document.createElement('div');
+    typing.className = 'ai-msg ai-msg-bot';
+    typing.textContent = currentLanguage === 'nl' ? 'AI is aan het typen...' : 'AI is typing...';
+    messages.appendChild(typing);
+    messages.scrollTop = messages.scrollHeight;
+
+    const reply = await getAPIReply(value);
+
+    typing.remove();
+    addMessage(reply, 'bot');
+    conversation.push({ role: 'assistant', content: reply });
+
+    input.disabled = false;
+    if (sendButton) sendButton.disabled = false;
+    input.focus();
+  });
+
+  applyLanguage(currentLanguage);
+};
+
 initHomePage();
 initHomeEffects();
 initReveal();
 initAboutEffects();
 initAboutCenterZoom();
 initAboutWheelMotion();
+initPortfolioAI();
 
 

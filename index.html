@@ -156,6 +156,26 @@
     </div>
   </footer>
 
+  <div class="ai-chat" id="aiChatWidget" aria-live="polite">
+    <button class="ai-chat-toggle" id="aiChatToggle" type="button" aria-expanded="false" aria-controls="aiChatPanel" title="Open AI chat">
+      <span>AI</span>
+    </button>
+    <section class="ai-chat-panel" id="aiChatPanel" aria-label="Portfolio assistant">
+      <header class="ai-chat-header">
+        <div>
+          <p class="ai-chat-kicker">Portfolio Assistant</p>
+          <h3 class="ai-chat-title">Vraag iets aan mijn AI</h3>
+        </div>
+        <button class="ai-chat-close" id="aiChatClose" type="button" aria-label="Close chat">x</button>
+      </header>
+      <div class="ai-chat-messages" id="aiChatMessages"></div>
+      <form class="ai-chat-form" id="aiChatForm">
+        <input id="aiChatInput" type="text" autocomplete="off" placeholder="Typ je vraag..." />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
