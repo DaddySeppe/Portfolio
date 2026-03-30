@@ -1,5 +1,266 @@
 // ==== Language System ====
+const translations = {
+  en: {
+    nav: {
+      home: 'Home',
+      about: 'About Me'
+    },
+    hero: {
+      tag: 'SEPPE PORTFOLIO',
+      title: 'IT Student',
+      subtitle: 'I am Seppe, a second-year IT student. I like learning new things, working on practical projects and improving myself step by step.',
+      chip1: 'Second-year student',
+      chip2: 'Motivated',
+      chip3: 'Always learning',
+      scroll: 'Scroll to explore'
+    },
+    home: {
+      eyebrow: 'Home',
+      title: 'I am Seppe, a student who likes to keep learning and getting better by working on real projects.',
+      description: 'I am interested in IT because I like solving problems, trying things out and seeing progress in what I do. I am still learning, but with every project I gain more experience and confidence.',
+      skill1: 'Problem solving',
+      skill2: 'Learning by doing',
+      skill3: 'Teamwork',
+      skill4: 'Step by step growth'
+    },
+    projects: {
+      eyebrow: 'Projects',
+      title: 'Most of my work comes from school projects, exercises and moments where I had to learn by actually doing it.',
+      card1: { title: 'School Work', desc: 'I work on assignments where I have to apply what I learn and turn it into something practical.' },
+      card2: { title: 'Technical Skills', desc: 'I keep improving my technical skills by working with different systems, tools and course projects.' },
+      card3: { title: 'My Approach', desc: 'I try to work seriously, stay clear in what I do and keep improving until the result feels right.' },
+      card4: { title: 'Growth', desc: 'For me, every project is a chance to learn something new and become better at what I do.' }
+    },
+    aboutsection: {
+      eyebrow: 'About Me',
+      title: 'I am someone who wants to keep growing in IT and build more experience through practice, effort and new challenges.',
+      description: 'On my about page, you can read more about me, my strengths and the way I try to improve myself as a student.',
+      link1: 'Go to About Me',
+      link2: 'Contact Me'
+    },
+    footer: {
+      description: 'IT Student passionate about building practical solutions with professional mindset and continuous improvement.',
+      connect: 'Connect',
+      copyright: '&copy; 2026 Seppe Vanroy. All rights reserved.'
+    },
+    about: {
+      hero: {
+        eyebrow: 'Profile',
+        title: 'I build practical IT solutions with a professional mindset and a drive to improve.',
+        description: 'I am a second-year IT student who learns fastest in real environments. My 2023 internship at Aurubis Olen and my current holiday work on their IT department shaped how I approach projects: clear thinking, reliable execution, and continuous growth.',
+        tag1: 'Practical Problem Solver',
+        tag2: 'Professional Attitude',
+        tag3: 'Growth Through Execution',
+        snapshot: 'Quick Snapshot',
+        subtitle: 'Focused, consistent, and serious about quality.',
+        fact1: { label: 'Role', value: 'IT Student' },
+        fact2: { label: 'Experience', value: 'Aurubis Olen' },
+        fact3: { label: 'Strength', value: 'Structured problem solving' }
+      },
+      showcase: {
+        item1: 'PROFESSIONAL MINDSET',
+        item2: 'REAL-WORLD EXPERIENCE',
+        item3: 'PROJECT OWNERSHIP',
+        item4: 'TECHNICAL CURIOSITY',
+        item5: 'CLEAR COMMUNICATION'
+      },
+      stats: {
+        stage: { label: 'Current Stage', value: 'Second-Year IT' },
+        base: { label: 'Professional Base', value: 'Aurubis Olen' },
+        approach: { label: 'Approach', value: 'Build, test, improve' }
+      },
+      signature: {
+        eyebrow: 'How I Work',
+        title: 'I keep complexity under control with a step-by-step approach.',
+        description: 'I start from clear requirements, split work into manageable blocks, and validate each step before moving forward. This keeps projects stable and makes collaboration easier.'
+      },
+      quote: {
+        eyebrow: 'Work Principle',
+        text: '"Good IT work is not only about writing code. It is about delivering dependable solutions that people can trust."'
+      },
+      cards: {
+        card1: { title: 'Execution Style', desc: 'I work with structure, set priorities, and keep progress visible. I prefer clean solutions over quick fixes.' },
+        card2: { title: 'Real Environment', desc: 'At Aurubis Olen, I learned how IT supports daily operations and why reliability matters in every detail.' },
+        card3: { title: 'Technical Focus', desc: 'I enjoy building functional products, troubleshooting efficiently, and refining systems until they perform well.' },
+        card4: { title: 'Team Contribution', desc: 'I communicate clearly, stay accountable, and help keep projects moving forward with consistent effort.' }
+      },
+      strengths: {
+        eyebrow: 'Strength Profile',
+        title: 'What I bring to projects',
+        item1: { label: 'Technical Adaptability', desc: 'I quickly adapt to tools, workflows, and project constraints while keeping code quality in focus.' },
+        item2: { label: 'Problem Solving', desc: 'I analyze issues methodically and deliver solutions that are practical and maintainable.' },
+        item3: { label: 'Professional Collaboration', desc: 'I work well in teams, communicate progress clearly, and align with project goals.' }
+      },
+      timeline: {
+        eyebrow: 'Journey',
+        title: 'Timeline of growth',
+        item1: { year: '2023', text: 'Completed my internship at Aurubis Olen and gained first-hand experience in a professional IT environment.' },
+        item2: { year: '2024', text: 'Continued building my technical base through school projects, practical assignments, and hands-on development.' },
+        item3: { year: '2025', text: 'Delivered larger projects including MissionZebra and improved my ability to work across design and implementation.' },
+        item4: { year: '2026', text: 'Working holiday periods at the Aurubis IT department while advancing my studies and expanding my project scope.' }
+      },
+      projects: {
+        eyebrow: 'Selected Work',
+        title: 'Projects that shaped my skills',
+        item1: { title: 'MissionZebra', desc: 'A mobile application focused on planning and organization for families. Built in a team context with real delivery goals.', stack: 'Flutter • Kotlin • Team Delivery' },
+        item2: { title: 'Portfolio Platform', desc: 'A custom portfolio website built to communicate my identity, process, and progress in a polished visual format.', stack: 'HTML • CSS • JavaScript • UX' },
+        item3: { title: 'Aurubis IT Contribution', desc: 'Hands-on support work inside a manufacturing context, helping maintain and improve practical IT workflows.', stack: 'IT Support • Operations • Reliability' }
+      },
+      capabilities: {
+        eyebrow: 'Capabilities',
+        title: 'Professional strengths in action',
+        item1: { title: 'Discipline', desc: 'I stay consistent, finish what I start, and maintain quality even under pressure.' },
+        item2: { title: 'Learning Speed', desc: 'I absorb new tools and concepts quickly, then apply them directly in practical situations.' },
+        item3: { title: 'Reliability', desc: 'I communicate clearly, take ownership, and deliver work people can depend on.' }
+      },
+      footer: {
+        contact: { eyebrow: 'Contact', title: "Let's connect", text: 'Email: <a href="mailto:seppe.vanroy@telenet.be">seppe.vanroy@telenet.be</a><br />GitHub: <a href="https://github.com/DaddySeppe" target="_blank" rel="noopener noreferrer">github.com/DaddySeppe</a><br />LinkedIn: <a href="https://linkedin.com/in/seppe-vanroy-857680331" target="_blank" rel="noopener noreferrer">linkedin.com/in/seppe-vanroy-857680331</a>' }
+      }
+    }
+  },
+  nl: {
+    nav: {
+      home: 'Home',
+      about: 'Over Mij'
+    },
+    hero: {
+      tag: 'SEPPE PORTFOLIO',
+      title: 'IT Student',
+      subtitle: 'Ik ben Seppe, een tweedejaars IT-student. Ik hou ervan om nieuwe dingen te leren, aan praktische projecten te werken en mezelf stap voor stap te verbeteren.',
+      chip1: 'Tweedejaars student',
+      chip2: 'Gemotiveerd',
+      chip3: 'Altijd leren',
+      scroll: 'Scroll om te verkennen'
+    },
+    home: {
+      eyebrow: 'Home',
+      title: 'Ik ben Seppe, een student die graag blijft leren en beter wordt door aan echte projecten te werken.',
+      description: 'Ik ben geïnteresseerd in IT omdat ik graag problemen oplos, dingen uitprobeer en voortgang zie in wat ik doe. Ik ben nog steeds aan het leren, maar met elk project krijg ik meer ervaring en zelfvertrouwen.',
+      skill1: 'Probleemoplossing',
+      skill2: 'Leren door doen',
+      skill3: 'Teamwerk',
+      skill4: 'Stap voor stap groei'
+    },
+    projects: {
+      eyebrow: 'Projecten',
+      title: 'Het meeste van mijn werk komt voort uit schoolprojecten, oefeningen en momenten waarop ik door daadwerkelijk te doen moest leren.',
+      card1: { title: 'Schoolwerk', desc: 'Ik werk aan opdrachten waarbij ik moet toepassen wat ik leer en het in iets practisch moet omzetten.' },
+      card2: { title: 'Technische Vaardigheden', desc: 'Ik verbeter mijn technische vaardigheden voortdurend door met verschillende systemen, tools en cursusprojecten te werken.' },
+      card3: { title: 'Mijn Aanpak', desc: 'Ik probeer serieus te werken, duidelijk in wat ik doe te zijn en blijf verbeteren totdat het resultaat goed voelt.' },
+      card4: { title: 'Groei', desc: 'Voor mij is elk project een kans om iets nieuws te leren en beter te worden in wat ik doe.' }
+    },
+    aboutsection: {
+      eyebrow: 'Over Mij',
+      title: 'Ik ben iemand die graag verder groeit in IT en meer ervaring wil opbouwen door oefening, inspanning en nieuwe uitdagingen.',
+      description: 'Op mijn over-mij pagina kun je meer over mij lezen, mijn sterke punten en hoe ik mezelf als student probeer te verbeteren.',
+      link1: 'Ga naar Over Mij',
+      link2: 'Neem Contact Op'
+    },
+    footer: {
+      description: 'IT Student gepassioneerd over het bouwen van praktische oplossingen met een professionele instelling en voortdurende verbetering.',
+      connect: 'Verbinding',
+      copyright: '&copy; 2026 Seppe Vanroy. Alle rechten voorbehouden.'
+    },
+    about: {
+      hero: {
+        eyebrow: 'Profiel',
+        title: 'Ik bouw praktische IT-oplossingen met een professionele instelling en drang om me te verbeteren.',
+        description: 'Ik ben een tweedejaars IT-student die het snelst in echte omgevingen leert. Mijn stagering in 2023 bij Aurubis Olen en mijn huidige vakantiewerk in hun IT-afdeling hebben gevormd hoe ik projecten benaader: helder denken, betrouwbare uitvoering en voortdurende groei.',
+        tag1: 'Praktische Probleemoplosser',
+        tag2: 'Professionele Instelling',
+        tag3: 'Groei Door Uitvoering',
+        snapshot: 'Snelle Schets',
+        subtitle: 'Gericht, consistent en serieus over kwaliteit.',
+        fact1: { label: 'Rol', value: 'IT Student' },
+        fact2: { label: 'Ervaring', value: 'Aurubis Olen' },
+        fact3: { label: 'Sterkte', value: 'Gestructureerde probleemoplossing' }
+      },
+      showcase: {
+        item1: 'PROFESSIONELE INSTELLING',
+        item2: 'ERVARING IN DE PRAKTIJK',
+        item3: 'PROJECTEIGENAARSCHAP',
+        item4: 'TECHNISCHE NIEUWSGIERIGHEID',
+        item5: 'DUIDELIJKE COMMUNICATIE'
+      },
+      stats: {
+        stage: { label: 'Huidig Stadium', value: 'Tweedejaars IT' },
+        base: { label: 'Professionele Basis', value: 'Aurubis Olen' },
+        approach: { label: 'Aanpak', value: 'Bouwen, testen, verbeteren' }
+      },
+      signature: {
+        eyebrow: 'Hoe Ik Werk',
+        title: 'Ik hou de complexiteit onder controle met een stap-voor-stap benadering.',
+        description: 'Ik begin met duidelijke vereisten, verdeel het werk in beheersbare blokken en valideer elke stap voordat ik voortga. Dit houdt projecten stabiel en maakt samenwerking gemakkelijker.'
+      },
+      quote: {
+        eyebrow: 'Werkprincipe',
+        text: '"Goed IT-werk gaat niet alleen over code schrijven. Het gaat over het leveren van betrouwbare oplossingen waar mensen op kunnen vertrouwen."'
+      },
+      cards: {
+        card1: { title: 'Uitvoeringsstijl', desc: 'Ik werk met structuur, stel prioriteiten in en hou voortgang zichtbaar. Ik geef de voorkeur aan schone oplossingen boven snelle fixes.' },
+        card2: { title: 'Echte Omgeving', desc: 'Bij Aurubis Olen leerde ik hoe IT dagelijkse activiteiten ondersteunt en waarom betrouwbaarheid in elk detail belangrijk is.' },
+        card3: { title: 'Technische Focus', desc: 'Ik geniet ervan functionele producten te bouwen, efficiënt problemen op te lossen en systemen tot op hoog niveau te verfijnen.' },
+        card4: { title: 'Teambijdrage', desc: 'Ik communiceer duidelijk, blijf verantwoordelijk en help projecten voort te zetten met consistent inzet.' }
+      },
+      strengths: {
+        eyebrow: 'Sterkeprofiel',
+        title: 'Wat ik voor projecten meebren',
+        item1: { label: 'Technische Aanpassingsvermogen', desc: 'Ik pas me snel aan aan tools, workflows en projectbeperkingen terwijl ik me op codekwaliteit concentreer.' },
+        item2: { label: 'Probleemoplossing', desc: 'Ik analyseer problemen methodisch en lever oplossingen die praktisch en onderhoudbaar zijn.' },
+        item3: { label: 'Professionele Samenwerking', desc: 'Ik werk goed in teams, communiceer voortgang duidelijk en sluit aan op projectdoelstellingen.' }
+      },
+      timeline: {
+        eyebrow: 'Reis',
+        title: 'Tijdlijn van groei',
+        item1: { year: '2023', text: 'Mijn stage bij Aurubis Olen afgerond en directe ervaring in een professionele IT-omgeving opgedaan.' },
+        item2: { year: '2024', text: 'Mijn technische basis verder uitgebouwd door schoolprojecten, praktische opdrachten en hands-on ontwikkeling.' },
+        item3: { year: '2025', text: 'Grotere projecten opgeleverd, inclusief MissionZebra en mijn vermogen om over design en implementatie te werken verbeterd.' },
+        item4: { year: '2026', text: 'Vakantiewerkperiodes in de Aurubis IT-afdeling terwijl ik mijn studies voortga en mijn projectomvang uitbrei.' }
+      },
+      projects: {
+        eyebrow: 'Geselecteerde Werk',
+        title: 'Projecten die mijn vaardigheden hebben gevormd',
+        item1: { title: 'MissionZebra', desc: 'Een mobiele applicatie gericht op planning en organisatie voor gezinnen. Gebouwd in teamcontext met echte leveringsdoelstellingen.', stack: 'Flutter • Kotlin • Teamlevering' },
+        item2: { title: 'Portfolioplatform', desc: 'Een aangepaste portfoliowebsite gebouwd om mijn identiteit, proces en voortgang in een gepolijst visueel formaat te communiceren.', stack: 'HTML • CSS • JavaScript • UX' },
+        item3: { title: 'Aurubis IT Bijdrage', desc: 'Hands-on ondersteuningswerk in een fabriekscontext, helpen bij onderhoud en verbetering van praktische IT-workflows.', stack: 'IT Ondersteuning • Operaties • Betrouwbaarheid' }
+      },
+      capabilities: {
+        eyebrow: 'Mogelijkheden',
+        title: 'Professionele sterke punten in actie',
+        item1: { title: 'Discipline', desc: 'Ik blijf consistent, maak af wat ik start en handhaaf kwaliteit zelfs onder druk.' },
+        item2: { title: 'Leertempo', desc: 'Ik absorbeer snel nieuwe tools en concepten, en pas ze vervolgens direct in praktische situaties toe.' },
+        item3: { title: 'Betrouwbaarheid', desc: 'Ik communiceer duidelijk, neem eigenaarschap en lever werk dat mensen kunnen vertrouwen.' }
+      },
+      footer: {
+        contact: { eyebrow: 'Contact', title: 'Laten we in contact komen', text: 'E-mail: <a href="mailto:seppe.vanroy@telenet.be">seppe.vanroy@telenet.be</a><br />GitHub: <a href="https://github.com/DaddySeppe" target="_blank" rel="noopener noreferrer">github.com/DaddySeppe</a><br />LinkedIn: <a href="https://linkedin.com/in/seppe-vanroy-857680331" target="_blank" rel="noopener noreferrer">linkedin.com/in/seppe-vanroy-857680331</a>' }
+      }
+    }
+  }
+};
+
 let currentLanguage = localStorage.getItem('language') || 'en';
+
+const getNestedValue = (obj, path) => {
+  return path.split('.').reduce((current, prop) => current?.[prop], obj);
+};
+
+const translatePage = (lang) => {
+  const trans = translations[lang];
+  if (!trans) return;
+  
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const value = getNestedValue(trans, key);
+    
+    if (value !== undefined) {
+      if (key.includes('footer.contact.text')) {
+        el.innerHTML = value;
+      } else {
+        el.textContent = value;
+      }
+    }
+  });
+};
 
 const initializeLanguage = () => {
   const savedLang = localStorage.getItem('language') || 'en';
@@ -17,6 +278,8 @@ const setLanguage = (lang) => {
       btn.classList.add('active');
     }
   });
+  
+  translatePage(lang);
 };
 
 const initLanguageSwitcher = () => {
@@ -41,6 +304,8 @@ if (document.readyState === 'loading') {
 }
 
 // ==== Original Script Content ====
+
+// ==== Original Script Content ====
 const bgScenes = Array.from(document.querySelectorAll('.bg-scene'));
 const scrollTriggers = Array.from(document.querySelectorAll('.scroll-trigger'));
 const sceneTag = document.getElementById('sceneTag');
@@ -52,25 +317,29 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 const performanceMode = isSmallScreen || prefersReducedMotion;
 const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-const sceneCopy = {
-  '1': {
-    tag: 'SEPPE PORTFOLIO',
-    title: 'Creative Developer',
-    subtitle: 'I build clear, polished web experiences in my own visual style.'
-  },
-  '2': {
-    tag: 'SELECTED PROJECTS',
-    title: 'Projects With Purpose',
-    subtitle: 'School and personal concepts where design and frontend execution work together.'
-  },
-  '3': {
-    tag: 'ABOUT ME',
-    title: 'Personal Story',
-    subtitle: 'Detail-focused, curious, and always improving with every project.'
-  }
+const getSceneCopy = (lang) => {
+  const trans = translations[lang] || translations.en;
+  return {
+    '1': {
+      tag: trans.hero.tag,
+      title: trans.hero.title,
+      subtitle: trans.hero.subtitle
+    },
+    '2': {
+      tag: 'SELECTED PROJECTS',
+      title: 'Projects With Purpose',
+      subtitle: 'School and personal concepts where design and frontend execution work together.'
+    },
+    '3': {
+      tag: 'ABOUT ME',
+      title: 'Personal Story',
+      subtitle: 'Detail-focused, curious, and always improving with every project.'
+    }
+  };
 };
 
 const updateOverlay = (sceneKey) => {
+  const sceneCopy = getSceneCopy(currentLanguage);
   const content = sceneCopy[sceneKey];
   if (!content || !sceneTag || !sceneTitle || !sceneSubtitle) return;
 
