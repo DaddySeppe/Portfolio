@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="home-page">
@@ -16,13 +17,13 @@
   <header class="site-header">
     <a class="brand" href="index.html">SEPPE</a>
     <nav class="main-nav" aria-label="Main navigation">
-      <a class="active" href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+      <a class="active" href="index.html" data-i18n="nav.home">Home</a>
+      <a href="about.html" data-i18n="nav.about">Over Mij</a>
+      <a href="projects.html" data-i18n="nav.projects">Projecten</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
       <div class="language-switcher">
-        <button class="lang-btn lang-btn-nl" data-lang="nl" title="Nederlands">NL</button>
-        <button class="lang-btn lang-btn-en active" data-lang="en" title="English">EN</button>
+        <button class="lang-btn lang-btn-nl active" data-lang="nl" title="Nederlands">NL</button>
+        <button class="lang-btn lang-btn-en" data-lang="en" title="English">EN</button>
       </div>
     </nav>
   </header>
@@ -43,14 +44,14 @@
       <div class="neo-grid">
         <article class="neo-hero">
           <p class="neo-kicker">Frontend Developer</p>
-          <h1>Hi, I am Seppe Vanroy.</h1>
+          <h1>Hallo, ik ben Seppe Vanroy.</h1>
           <p class="neo-text">
-            I build modern web interfaces with focus on clarity, performance, and clean implementation.
-            This layout is designed in a dark cinematic style inspired by your reference.
+            Ik bouw moderne webinterfaces met focus op duidelijkheid, prestaties en nette implementatie.
+            Deze layout is ontworpen in een donkere cinematische stijl, geinspireerd op je referentie.
           </p>
           <div class="neo-actions">
-            <a href="about.html" class="neo-btn">Know More</a>
-            <a href="mailto:seppe.vanroy@telenet.be" class="neo-link">Email Me</a>
+            <a href="about.html" class="neo-btn">Lees Meer</a>
+            <a href="mailto:seppe.vanroy@telenet.be" class="neo-link">Mail Mij</a>
           </div>
         </article>
 
@@ -59,53 +60,182 @@
         </figure>
 
         <section class="neo-projects">
-          <h2>Featured Projects</h2>
+          <h2>Uitgelichte Projecten</h2>
           <div class="neo-cards">
             <a class="neo-card neo-card-link" href="project-one.html" aria-label="Open Project One page">
               <img src="assets/images/scene1.jpg.png" alt="Project one preview" />
-              <h3>Project One</h3>
-              <p>Dashboard concept with clean visual hierarchy and practical interactions.</p>
+              <h3>Project Een</h3>
+              <p>Dashboardconcept met een heldere visuele hierarchie en praktische interacties.</p>
             </a>
             <a class="neo-card neo-card-link" href="project-two.html" aria-label="Open Project Two page">
               <img src="assets/images/scene2.jpg.png" alt="Project two preview" />
-              <h3>Project Two</h3>
-              <p>Web experience focused on transitions, modular sections, and clear storytelling.</p>
+              <h3>Project Twee</h3>
+              <p>Webervaring gericht op transities, modulaire secties en duidelijke storytelling.</p>
             </a>
             <a class="neo-card neo-card-link" href="project-three.html" aria-label="Open Project Three page">
               <img src="assets/images/scene3.jpg.png" alt="Project three preview" />
-              <h3>Project Three</h3>
-              <p>Mobile-first interface with strong contrast and fast, responsive behavior.</p>
+              <h3>Project Drie</h3>
+              <p>Mobile-first interface met sterk contrast en snelle, responsieve werking.</p>
             </a>
           </div>
         </section>
 
         <aside class="neo-side">
           <article class="neo-panel">
-            <h2>About Me</h2>
-            <p>I am a second-year IT student who likes to ship practical projects and keep improving every week.</p>
+            <h2>Over Mij</h2>
+            <p>Ik ben een tweedejaars IT-student die graag praktische projecten oplevert en elke week beter wordt.</p>
           </article>
 
           <article class="neo-panel" id="contact">
-            <h2>Contact Me</h2>
+            <h2>Contacteer Mij</h2>
             <form class="neo-form" action="#" method="post">
-              <input type="text" placeholder="Name" aria-label="Name" />
-              <input type="email" placeholder="Email" aria-label="Email" />
-              <textarea rows="4" placeholder="Message" aria-label="Message"></textarea>
-              <button type="submit">Send</button>
+              <input type="text" placeholder="Naam" aria-label="Naam" />
+              <input type="email" placeholder="E-mail" aria-label="E-mail" />
+              <textarea rows="4" placeholder="Bericht" aria-label="Bericht"></textarea>
+              <button type="submit">Verstuur</button>
             </form>
           </article>
         </aside>
       </div>
     </section>
 
-    <section class="neo-features reveal">
-      <h2>Features</h2>
-      <ul>
-        <li>Showcase your projects</li>
-        <li>About me section</li>
-        <li>Contact form</li>
-        <li>Smooth animations</li>
-      </ul>
+    <section class="skills-categorized reveal">
+      <div class="skills-header">
+        <p class="section-eyebrow" data-i18n="skills.eyebrow">SKILLS</p>
+        <h2 data-i18n="skills.title">What I Can Do</h2>
+      </div>
+      
+      <div class="skills-section">
+        <div class="skill-category-block">
+          <h3 data-i18n="skills.categories.webdev">Web Development</h3>
+          <div class="tech-grid">
+            <div class="tech-badge html5">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 logo" loading="lazy" />
+              <span data-i18n="skills.tech.html5">HTML5</span>
+            </div>
+            <div class="tech-badge css3">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/css/1572B6" alt="CSS3 logo" loading="lazy" />
+              <span data-i18n="skills.tech.css3">CSS3</span>
+            </div>
+            <div class="tech-badge javascript">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript logo" loading="lazy" />
+              <span data-i18n="skills.tech.javascript">JavaScript</span>
+            </div>
+            <div class="tech-badge react">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/react/61DAFB" alt="React logo" loading="lazy" />
+              <span data-i18n="skills.tech.react">React</span>
+            </div>
+            <div class="tech-badge vuejs">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/vuedotjs/4FC08D" alt="Vue.js logo" loading="lazy" />
+              <span data-i18n="skills.tech.vuejs">Vue.js</span>
+            </div>
+            <div class="tech-badge tailwind">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS logo" loading="lazy" />
+              <span data-i18n="skills.tech.tailwind">Tailwind CSS</span>
+            </div>
+            <div class="tech-badge bootstrap">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="Bootstrap logo" loading="lazy" />
+              <span data-i18n="skills.tech.bootstrap">Bootstrap</span>
+            </div>
+            <div class="tech-badge dotnet">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/dotnet/512BD4" alt=".NET logo" loading="lazy" />
+              <span data-i18n="skills.tech.dotnet">.NET</span>
+            </div>
+            <div class="tech-badge php">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/php/777BB4" alt="PHP logo" loading="lazy" />
+              <span data-i18n="skills.tech.php">PHP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category-block">
+          <h3 data-i18n="skills.categories.databackend">Data & Backend</h3>
+          <div class="tech-grid">
+            <div class="tech-badge python">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/python/3776AB" alt="Python logo" loading="lazy" />
+              <span data-i18n="skills.tech.python">Python</span>
+            </div>
+            <div class="tech-badge mysql">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL logo" loading="lazy" />
+              <span data-i18n="skills.tech.mysql">MySQL</span>
+            </div>
+            <div class="tech-badge flask">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/flask/FFFFFF" alt="Flask logo" loading="lazy" />
+              <span data-i18n="skills.tech.flask">Flask</span>
+            </div>
+            <div class="tech-badge kotlin">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/kotlin/7F52FF" alt="Kotlin logo" loading="lazy" />
+              <span data-i18n="skills.tech.kotlin">Kotlin</span>
+            </div>
+            <div class="tech-badge sql">
+              <img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server logo" loading="lazy" />
+              <span data-i18n="skills.tech.sql">SQL</span>
+            </div>
+            <div class="tech-badge restapi">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/openapiinitiative/6BA539" alt="REST API logo" loading="lazy" />
+              <span data-i18n="skills.tech.restapis">REST APIs</span>
+            </div>
+            <div class="tech-badge firebase">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase logo" loading="lazy" />
+              <span data-i18n="skills.tech.firebase">Firebase</span>
+            </div>
+            <div class="tech-badge db">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/postgresql/4169E1" alt="Database logo" loading="lazy" />
+              <span data-i18n="skills.tech.database">Database Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category-block">
+          <h3 data-i18n="skills.categories.tools">Tools & Platforms</h3>
+          <div class="tech-grid">
+            <div class="tech-badge github">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub logo" loading="lazy" />
+              <span data-i18n="skills.tech.github">Git & GitHub</span>
+            </div>
+            <div class="tech-badge docker">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker logo" loading="lazy" />
+              <span data-i18n="skills.tech.docker">Docker</span>
+            </div>
+            <div class="tech-badge vscode">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VS Code logo" loading="lazy" />
+              <span data-i18n="skills.tech.vscode">VS Code</span>
+            </div>
+            <div class="tech-badge figma">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma logo" loading="lazy" />
+              <span data-i18n="skills.tech.figma">Figma</span>
+            </div>
+            <div class="tech-badge linux">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux logo" loading="lazy" />
+              <span data-i18n="skills.tech.linux">Linux</span>
+            </div>
+            <div class="tech-badge aws">
+              <img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS logo" loading="lazy" />
+              <span data-i18n="skills.tech.aws">AWS</span>
+            </div>
+            <div class="tech-badge terminal">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/gnubash/4EAA25" alt="Terminal logo" loading="lazy" />
+              <span data-i18n="skills.tech.terminal">Terminal/CLI</span>
+            </div>
+            <div class="tech-badge agile">
+              <img class="tech-logo" src="https://cdn.simpleicons.org/jira/0052CC" alt="Agile logo" loading="lazy" />
+              <span data-i18n="skills.tech.agile">Agile</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-hero reveal">
+      <div class="cta-content">
+        <p class="cta-eyebrow">KLAAR OM SAMEN TE WERKEN?</p>
+        <h2>Laten we samen iets sterk bouwen</h2>
+        <p>Of je nu een projectidee hebt, technische vragen of gewoon wil praten: ik ben er klaar voor.</p>
+        <div class="cta-button-group">
+          <a href="about.html" class="cta-btn cta-btn-primary">Bekijk Mijn Werk</a>
+          <a href="contact.html" class="cta-btn cta-btn-secondary">Neem Contact Op</a>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -124,7 +254,7 @@
       <div class="ai-chat-messages" id="aiChatMessages"></div>
       <form class="ai-chat-form" id="aiChatForm">
         <input id="aiChatInput" type="text" autocomplete="off" placeholder="Typ je vraag..." />
-        <button type="submit">Send</button>
+        <button type="submit">Verstuur</button>
       </form>
     </section>
   </div>

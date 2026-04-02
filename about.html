@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,13 +27,13 @@
   <header class="site-header">
     <a class="brand" href="index.html">SEPPE</a>
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a class="active" href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a class="active" href="about.html" data-i18n="nav.about">Over Mij</a>
+      <a href="projects.html" data-i18n="nav.projects">Projecten</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
       <div class="language-switcher">
-        <button class="lang-btn lang-btn-nl" data-lang="nl" title="Nederlands">NL</button>
-        <button class="lang-btn lang-btn-en active" data-lang="en" title="English">EN</button>
+        <button class="lang-btn lang-btn-nl active" data-lang="nl" title="Nederlands">NL</button>
+        <button class="lang-btn lang-btn-en" data-lang="en" title="English">EN</button>
       </div>
     </nav>
   </header>
@@ -42,165 +42,135 @@
     <span id="aboutProgressBar"></span>
   </div>
 
-  <main class="about-main about-rebuilt">
-    <section class="about-hero about-hero-show reveal about-hero-modern">
-      <div class="hero-main">
-        <p class="eyebrow" data-i18n="about.hero.eyebrow">Profile</p>
-        <h1 data-i18n="about.hero.title">I build practical IT solutions with a professional mindset and a drive to improve.</h1>
-        <p data-i18n="about.hero.description">
-          I am a second-year IT student who learns fastest in real environments. My internship, holiday work, and school projects shaped how I work: clear thinking, reliable execution, and steady growth.
+  <main class="about-main about-ultra-redesign">
+    <section class="about-hero-full reveal">
+      <div class="hero-content-massive">
+        <p class="hero-eyebrow-mega" data-i18n="about.hero.eyebrow">WIE IK BEN</p>
+        <h1 class="hero-title-giant" data-i18n="about.hero.title">Praktische IT-oplosser</h1>
+        <p class="hero-intro-text" data-i18n="about.hero.description">
+          Tweedejaars IT-student met passie voor echte oplossingen in echte omgevingen. Leren via stage, projecten en professionele samenwerking.
         </p>
-        <div class="hero-tags" aria-label="Personal style keywords">
-          <span data-i18n="about.hero.tag1">Practical Problem Solver</span>
-          <span data-i18n="about.hero.tag2">Professional Attitude</span>
-        </div>
-        <div class="hero-actions">
-          <a href="projects.html" class="btn-link">View Projects</a>
-          <a href="contact.html" class="btn-link btn-link-secondary">Contact Me</a>
-        </div>
-      </div>
-      <aside class="hero-side about-sideboard">
-        <figure class="profile-slot about-profile-slot">
-          <img src="assets/images/profile-placeholder.jpg" alt="Portrait placeholder of Seppe" />
-        </figure>
-        <p class="hero-side-label" data-i18n="about.hero.snapshot">Quick Snapshot</p>
-        <h3 data-i18n="about.hero.subtitle">Focused, consistent, and serious about quality.</h3>
-        <ul class="hero-facts">
-          <li><span data-i18n="about.hero.fact1.label">Role</span> <span data-i18n="about.hero.fact1.value">IT Student</span></li>
-          <li><span data-i18n="about.hero.fact2.label">Experience</span> <span data-i18n="about.hero.fact2.value">Aurubis Olen</span></li>
-          <li><span data-i18n="about.hero.fact3.label">Strength</span> <span data-i18n="about.hero.fact3.value">Structured problem solving</span></li>
-        </ul>
-      </aside>
-    </section>
-
-    <section class="about-strip reveal" aria-label="Professional highlights">
-      <div class="showcase-rail">
-        <div class="showcase-track">
-          <span data-i18n="about.showcase.item1">PROFESSIONAL MINDSET</span>
-          <span data-i18n="about.showcase.item2">REAL-WORLD EXPERIENCE</span>
-          <span data-i18n="about.showcase.item3">PROJECT OWNERSHIP</span>
-          <span data-i18n="about.showcase.item4">TECHNICAL CURIOSITY</span>
-          <span data-i18n="about.showcase.item5">CLEAR COMMUNICATION</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-now reveal">
-      <article class="about-panel about-now-story">
-        <p class="eyebrow" data-i18n="about.aboutsection.eyebrow">About Me</p>
-        <h2 data-i18n="about.aboutsection.title">Growing in IT through practice and real challenges</h2>
-        <p data-i18n="about.aboutsection.description">
-          On my about page, you can read more about me, my strengths and the way I try to improve myself as a student.
-        </p>
-        <div class="panel-actions">
-          <a class="btn-link" href="projects.html" data-i18n="about.aboutsection.link1">View Projects</a>
-          <a class="btn-link btn-link-secondary" href="contact.html" data-i18n="about.aboutsection.link2">Contact Me</a>
-        </div>
-      </article>
-      <div class="about-now-grid">
-        <article>
-          <p class="stat-label" data-i18n="about.stats.stage.label">Current Stage</p>
-          <p class="stat-value" data-i18n="about.stats.stage.value">Second-Year IT</p>
-        </article>
-        <article>
-          <p class="stat-label" data-i18n="about.stats.base.label">Professional Base</p>
-          <p class="stat-value" data-i18n="about.stats.base.value">Aurubis Olen</p>
-        </article>
-        <article>
-          <p class="stat-label" data-i18n="about.stats.approach.label">Approach</p>
-          <p class="stat-value" data-i18n="about.stats.approach.value">Build, test, improve</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="about-split reveal" aria-label="Core approach and value">
-      <article class="about-panel about-panel-story">
-        <p class="eyebrow" data-i18n="about.signature.eyebrow">How I Work</p>
-        <h2 data-i18n="about.signature.title">I keep complexity under control with a step-by-step approach.</h2>
-        <p data-i18n="about.signature.description">
-          I start from clear requirements, split work into manageable blocks, and validate each step before moving forward. This keeps projects stable and makes collaboration easier.
-        </p>
-      </article>
-      <article class="about-panel about-panel-focus">
-        <p class="eyebrow">What Matters</p>
-        <div class="focus-grid">
-          <div>
-            <strong>Structure</strong>
-            <span>Clear scope, visible progress, less friction.</span>
+        <div class="hero-stats-ultra">
+          <div class="stat-block">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Jaar IT</div>
           </div>
-          <div>
-            <strong>Reliability</strong>
-            <span>Dependable work that other people can trust.</span>
+          <div class="stat-block">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Motivatie</div>
           </div>
-          <div>
-            <strong>Growth</strong>
-            <span>Learn fast, apply directly, improve again.</span>
+          <div class="stat-block">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Focus</div>
           </div>
         </div>
-      </article>
-    </section>
-
-    <section class="about-grid reveal">
-      <article class="about-card">
-        <div class="card-badge">01</div>
-        <h2 data-i18n="about.cards.card1.title">Execution Style</h2>
-        <p data-i18n="about.cards.card1.desc">I work with structure, set priorities, and keep progress visible. I prefer clean solutions over quick fixes.</p>
-      </article>
-      <article class="about-card">
-        <div class="card-badge">02</div>
-        <h2 data-i18n="about.cards.card2.title">Real Environment</h2>
-        <p data-i18n="about.cards.card2.desc">At Aurubis Olen, I learned how IT supports daily operations and why reliability matters in every detail.</p>
-      </article>
-      <article class="about-card">
-        <div class="card-badge">03</div>
-        <h2 data-i18n="about.cards.card3.title">Technical Focus</h2>
-        <p data-i18n="about.cards.card3.desc">I enjoy building functional products, troubleshooting efficiently, and refining systems until they perform well.</p>
-      </article>
-      <article class="about-card">
-        <div class="card-badge">04</div>
-        <h2 data-i18n="about.cards.card4.title">Team Contribution</h2>
-        <p data-i18n="about.cards.card4.desc">I communicate clearly, stay accountable, and help keep projects moving forward with consistent effort.</p>
-      </article>
-    </section>
-
-    <section class="timeline reveal about-strengths-block">
-      <p class="eyebrow" data-i18n="about.strengths.eyebrow">Strength Profile</p>
-      <h2 data-i18n="about.strengths.title">What I bring to projects</h2>
-      <div class="strength-grid">
-        <article>
-          <h3 data-i18n="about.strengths.item1.label">Technical Adaptability</h3>
-          <p data-i18n="about.strengths.item1.desc">I quickly adapt to tools, workflows, and project constraints while keeping code quality in focus.</p>
-        </article>
-        <article>
-          <h3 data-i18n="about.strengths.item2.label">Problem Solving</h3>
-          <p data-i18n="about.strengths.item2.desc">I analyze issues methodically and deliver solutions that are practical and maintainable.</p>
-        </article>
-        <article>
-          <h3 data-i18n="about.strengths.item3.label">Professional Collaboration</h3>
-          <p data-i18n="about.strengths.item3.desc">I work well in teams, communicate progress clearly, and align with project goals.</p>
-        </article>
+      </div>
+      <div class="hero-image-block">
+        <div class="image-frame-container">
+          <div class="image-frame-premium">
+            <img src="assets/images/profile-placeholder.jpg" alt="Portrait of Seppe" />
+          </div>
+          <div class="image-name">SEPPE VANROY</div>
+        </div>
       </div>
     </section>
 
-    <section class="timeline reveal">
-      <p class="eyebrow" data-i18n="about.timeline.eyebrow">Journey</p>
-      <h2 data-i18n="about.timeline.title">Timeline of growth</h2>
-      <ul>
-        <li><span data-i18n="about.timeline.item1.year">2023</span> <span data-i18n="about.timeline.item1.text">Completed my internship at Aurubis Olen and gained first-hand experience in a professional IT environment.</span></li>
-        <li><span data-i18n="about.timeline.item2.year">2024</span> <span data-i18n="about.timeline.item2.text">Continued building my technical base through school projects, practical assignments, and hands-on development.</span></li>
-        <li><span data-i18n="about.timeline.item3.year">2025</span> <span data-i18n="about.timeline.item3.text">Delivered larger projects including MissionZebra and improved my ability to work across design and implementation.</span></li>
-        <li><span data-i18n="about.timeline.item4.year">2026</span> <span data-i18n="about.timeline.item4.text">Working holiday periods at the Aurubis IT department while advancing my studies and expanding my project scope.</span></li>
-      </ul>
+    <section class="skills-matrix-section reveal">
+      <div class="section-header-centered">
+        <p class="section-eyebrow">MIJN AANPAK</p>
+        <h2>Wat mijn werk stuurt</h2>
+      </div>
+      <div class="skills-matrix">
+        <div class="skill-card-large">
+          <div class="skill-icon-circle">01</div>
+          <h3>Eerst Structuur</h3>
+          <p>Duidelijke scope, zichtbare vooruitgang en georganiseerde uitvoering van start tot einde.</p>
+        </div>
+        <div class="skill-card-large">
+          <div class="skill-icon-circle">02</div>
+          <h3>Betrouwbaar Werk</h3>
+          <p>Oplossingen waarop je kunt vertrouwen. Stabiele uitvoering waar anderen op kunnen bouwen.</p>
+        </div>
+        <div class="skill-card-large">
+          <div class="skill-icon-circle">03</div>
+          <h3>Constante Groei</h3>
+          <p>Snel leren, direct toepassen, verbeteren. Elk project maakt het volgende beter.</p>
+        </div>
+        <div class="skill-card-large">
+          <div class="skill-icon-circle">04</div>
+          <h3>Echte Oplossingen</h3>
+          <p>Bouwen voor echt gebruik. Professionele omgevingen leren pragmatisch werken.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="about-cta reveal">
-      <div>
-        <p class="eyebrow">Next Step</p>
-        <h2>Want the short version? My projects and contact page are the fastest way in.</h2>
+    <section class="experience-showcase reveal">
+      <div class="showcase-left">
+        <div class="showcase-text">
+          <p class="section-eyebrow">ERVARING</p>
+          <h2>Gevormd door IT in de praktijk</h2>
+          <p>Mijn traject is niet alleen theorie. Echte omgevingen bij Aurubis Olen en hands-on projecten leerden me hoe IT echt werkt, waarom betrouwbaarheid telt en hoe je levert.</p>
+          <div class="experience-list">
+            <div class="exp-item">
+              <div class="exp-year">2023</div>
+              <div class="exp-details">
+                <strong>Stage bij Aurubis Olen</strong>
+                <span>Professionele IT-ervaring uit eerste hand</span>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-year">2024</div>
+              <div class="exp-details">
+                <strong>Technische Basis</strong>
+                <span>Schoolprojecten en praktische opdrachten</span>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-year">2025</div>
+              <div class="exp-details">
+                <strong>Grote Projecten</strong>
+                <span>MissionZebra en portfolio-ontwikkeling</span>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-year">2026</div>
+              <div class="exp-details">
+                <strong>Professionele Groei</strong>
+                <span>Vakantiewerk bij Aurubis IT + verdere studies</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="panel-actions">
-        <a class="btn-link" href="projects.html">View Projects</a>
-        <a class="btn-link btn-link-secondary" href="contact.html">Contact Me</a>
+      <div class="showcase-right">
+        <div class="highlight-card highlight-card-1">
+          <h3>Probleemoplosser</h3>
+          <p>Ik analyseer problemen methodisch en lever snel praktische, onderhoudbare oplossingen.</p>
+        </div>
+        <div class="highlight-card highlight-card-2">
+          <h3>Teamspeler</h3>
+          <p>Duidelijke communicatie en verantwoordelijkheid houden projecten consequent vooruit.</p>
+        </div>
+        <div class="highlight-card highlight-card-3">
+          <h3>Aanpasbaar</h3>
+          <p>Nieuwe tools of andere workflows? Ik leer snel en hou de codekwaliteit hoog.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="call-to-action-ultra reveal">
+      <div class="cta-content">
+        <p class="cta-eyebrow">KLAAR OM SAMEN TE WERKEN?</p>
+        <h2>Laten we praten over de volgende stap</h2>
+        <p class="cta-description">Of het nu gaat om een projectgesprek, technische vragen of gewoon connecteren: ik sta open.</p>
+        <div class="cta-buttons-group">
+          <a href="projects.html" class="btn-cta btn-primary">Bekijk Mijn Werk</a>
+          <a href="contact.html" class="btn-cta btn-secondary">Neem Contact Op</a>
+        </div>
+      </div>
+      <div class="cta-visual">
+        <div class="cta-accent cta-accent-1"></div>
+        <div class="cta-accent cta-accent-2"></div>
       </div>
     </section>
 
@@ -210,7 +180,7 @@
     <button class="ai-chat-toggle" id="aiChatToggle" type="button" aria-expanded="false" aria-controls="aiChatPanel" title="Open AI chat">
       <span>AI</span>
     </button>
-    <section class="ai-chat-panel" id="aiChatPanel" aria-label="Portfolio assistant">
+    <section class="ai-chat-panel" id="aiChatPanel" aria-label="Portfolio assistent">
       <header class="ai-chat-header">
         <div>
           <p class="ai-chat-kicker">Portfolio Assistant</p>
@@ -221,7 +191,7 @@
       <div class="ai-chat-messages" id="aiChatMessages"></div>
       <form class="ai-chat-form" id="aiChatForm">
         <input id="aiChatInput" type="text" autocomplete="off" placeholder="Typ je vraag..." />
-        <button type="submit">Send</button>
+        <button type="submit">Verstuur</button>
       </form>
     </section>
   </div>

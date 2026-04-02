@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,13 +20,13 @@
   <header class="site-header">
     <a class="brand" href="index.html">SEPPE</a>
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a class="active" href="contact.html">Contact</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="about.html" data-i18n="nav.about">Over Mij</a>
+      <a href="projects.html" data-i18n="nav.projects">Projecten</a>
+      <a class="active" href="contact.html" data-i18n="nav.contact">Contact</a>
       <div class="language-switcher">
-        <button class="lang-btn lang-btn-nl" data-lang="nl" title="Nederlands">NL</button>
-        <button class="lang-btn lang-btn-en active" data-lang="en" title="English">EN</button>
+        <button class="lang-btn lang-btn-nl active" data-lang="nl" title="Nederlands">NL</button>
+        <button class="lang-btn lang-btn-en" data-lang="en" title="English">EN</button>
       </div>
     </nav>
   </header>
@@ -39,79 +39,79 @@
     <section class="about-hero reveal hub-hero">
       <div class="hero-main">
         <p class="eyebrow">Contact</p>
-        <h1>Let us build something strong</h1>
+        <h1>Laten we iets sterk bouwen</h1>
         <p>
-          Open to internships, student opportunities, and practical collaboration.
-          Reach out through your preferred channel and I will get back to you.
+          Open voor stages, studentenkansen en praktische samenwerking.
+          Neem contact op via je voorkeurskanaal en ik kom bij je terug.
         </p>
       </div>
     </section>
 
     <section class="portfolio-section reveal hub-grid-wrap">
-      <p class="eyebrow">Direct Channels</p>
-      <h2>Pick the fastest way to connect</h2>
+      <p class="eyebrow">Directe Kanalen</p>
+      <h2>Kies de snelste manier om te connecteren</h2>
       <div class="hub-grid contact-grid">
         <a class="hub-card" href="mailto:seppe.vanroy@telenet.be" aria-label="Send an email to Seppe">
           <h3>Email</h3>
           <p>seppe.vanroy@telenet.be</p>
-          <span>Send Email</span>
+          <span>Stuur E-mail</span>
         </a>
         <a class="hub-card" href="https://github.com/DaddySeppe" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile">
           <h3>GitHub</h3>
           <p>github.com/DaddySeppe</p>
-          <span>View Profile</span>
+          <span>Bekijk Profiel</span>
         </a>
         <a class="hub-card" href="https://linkedin.com/in/seppe-vanroy-857680331" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile">
           <h3>LinkedIn</h3>
           <p>linkedin.com/in/seppe-vanroy-857680331</p>
-          <span>Connect</span>
+          <span>Connecteer</span>
         </a>
       </div>
     </section>
 
     <section class="portfolio-section reveal contact-form-section">
       <div class="contact-form-head">
-        <p class="eyebrow">Send a message</p>
-        <h2>Drop your details and I will reply by email</h2>
-        <p>Use this for internships, collaboration, or a quick question. The message goes straight to my inbox.</p>
+        <p class="eyebrow">Stuur een bericht</p>
+        <h2>Laat je gegevens achter en ik antwoord via e-mail</h2>
+        <p>Gebruik dit voor stages, samenwerking of een snelle vraag. Het bericht gaat rechtstreeks naar mijn inbox.</p>
       </div>
 
       <div class="contact-form-layout">
         <form class="contact-form neo-form" id="contactForm" action="api/contact.php" method="post" novalidate>
           <div class="contact-form-grid">
             <label>
-              <span>Name</span>
-              <input type="text" name="name" autocomplete="name" placeholder="Your name" required minlength="2" maxlength="80" />
+              <span>Naam</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Jouw naam" required minlength="2" maxlength="80" />
             </label>
             <label>
-              <span>Email</span>
-              <input type="email" name="email" autocomplete="email" placeholder="Your email" required maxlength="120" />
+              <span>E-mail</span>
+              <input type="email" name="email" autocomplete="email" placeholder="Jouw e-mail" required maxlength="120" />
             </label>
           </div>
 
           <label>
-            <span>Subject</span>
-            <input type="text" name="subject" autocomplete="off" placeholder="What is this about?" required minlength="3" maxlength="120" />
+            <span>Onderwerp</span>
+            <input type="text" name="subject" autocomplete="off" placeholder="Waarover gaat dit?" required minlength="3" maxlength="120" />
           </label>
 
           <label>
-            <span>Message</span>
-            <textarea name="message" rows="6" placeholder="Write your message..." required minlength="10" maxlength="4000"></textarea>
+            <span>Bericht</span>
+            <textarea name="message" rows="6" placeholder="Schrijf je bericht..." required minlength="10" maxlength="4000"></textarea>
           </label>
 
           <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="contact-honeypot" />
 
-          <button type="submit">Send message</button>
+          <button type="submit">Verstuur bericht</button>
           <p class="contact-form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
         </form>
 
         <aside class="contact-form-aside">
-          <h3>Direct inbox</h3>
-          <p>Messages from this form are sent to <a href="mailto:seppe.vanroy@telenet.be">seppe.vanroy@telenet.be</a>.</p>
+          <h3>Rechtstreeks naar inbox</h3>
+          <p>Berichten uit dit formulier worden verzonden naar <a href="mailto:seppe.vanroy@telenet.be">seppe.vanroy@telenet.be</a>.</p>
           <ul>
-            <li>Best for internships and project questions</li>
-            <li>Reply usually goes through the same day</li>
-            <li>GitHub and LinkedIn stay available too</li>
+            <li>Ideaal voor stages en projectvragen</li>
+            <li>Antwoord meestal op dezelfde dag</li>
+            <li>GitHub en LinkedIn blijven ook beschikbaar</li>
           </ul>
         </aside>
       </div>

@@ -3,7 +3,9 @@ const translations = {
   en: {
     nav: {
       home: 'Home',
-      about: 'About Me'
+      about: 'About Me',
+      projects: 'Projects',
+      contact: 'Contact'
     },
     hero: {
       tag: 'SEPPE PORTFOLIO',
@@ -42,6 +44,42 @@ const translations = {
       description: 'IT Student passionate about building practical solutions with professional mindset and continuous improvement.',
       connect: 'Connect',
       copyright: '&copy; 2026 Seppe Vanroy. All rights reserved.'
+    },
+    skills: {
+      eyebrow: 'SKILLS',
+      title: 'What I Can Do',
+      categories: {
+        webdev: 'Web Development',
+        databackend: 'Data & Backend',
+        tools: 'Tools & Platforms'
+      },
+      tech: {
+        html5: 'HTML5',
+        css3: 'CSS3',
+        javascript: 'JavaScript',
+        react: 'React',
+        vuejs: 'Vue.js',
+        tailwind: 'Tailwind CSS',
+        bootstrap: 'Bootstrap',
+        dotnet: '.NET',
+        php: 'PHP',
+        python: 'Python',
+        mysql: 'MySQL',
+        flask: 'Flask',
+        kotlin: 'Kotlin',
+        sql: 'SQL',
+        restapis: 'REST APIs',
+        firebase: 'Firebase',
+        database: 'Database Design',
+        github: 'Git & GitHub',
+        docker: 'Docker',
+        vscode: 'VS Code',
+        figma: 'Figma',
+        linux: 'Linux',
+        aws: 'AWS',
+        terminal: 'Terminal/CLI',
+        agile: 'Agile'
+      }
     },
     about: {
       hero: {
@@ -127,7 +165,9 @@ const translations = {
   nl: {
     nav: {
       home: 'Home',
-      about: 'Over Mij'
+      about: 'Over Mij',
+      projects: 'Projecten',
+      contact: 'Contact'
     },
     hero: {
       tag: 'SEPPE PORTFOLIO',
@@ -166,6 +206,42 @@ const translations = {
       description: 'IT Student gepassioneerd over het bouwen van praktische oplossingen met een professionele instelling en voortdurende verbetering.',
       connect: 'Verbinding',
       copyright: '&copy; 2026 Seppe Vanroy. Alle rechten voorbehouden.'
+    },
+    skills: {
+      eyebrow: 'VAARDIGHEDEN',
+      title: 'Wat ik kan doen',
+      categories: {
+        webdev: 'Webontwikkeling',
+        databackend: 'Data & Backend',
+        tools: 'Tools & Platforms'
+      },
+      tech: {
+        html5: 'HTML5',
+        css3: 'CSS3',
+        javascript: 'JavaScript',
+        react: 'React',
+        vuejs: 'Vue.js',
+        tailwind: 'Tailwind CSS',
+        bootstrap: 'Bootstrap',
+        dotnet: '.NET',
+        php: 'PHP',
+        python: 'Python',
+        mysql: 'MySQL',
+        flask: 'Flask',
+        kotlin: 'Kotlin',
+        sql: 'SQL',
+        restapis: 'REST APIs',
+        firebase: 'Firebase',
+        database: 'Ontwerp van database',
+        github: 'Git & GitHub',
+        docker: 'Docker',
+        vscode: 'VS Code',
+        figma: 'Figma',
+        linux: 'Linux',
+        aws: 'AWS',
+        terminal: 'Terminal/CLI',
+        agile: 'Agile'
+      }
     },
     about: {
       hero: {
@@ -250,7 +326,7 @@ const translations = {
   }
 };
 
-let currentLanguage = localStorage.getItem('language') || 'en';
+let currentLanguage = localStorage.getItem('language') || 'nl';
 
 const getNestedValue = (obj, path) => {
   return path.split('.').reduce((current, prop) => current?.[prop], obj);
@@ -275,7 +351,7 @@ const translatePage = (lang) => {
 };
 
 const initializeLanguage = () => {
-  const savedLang = localStorage.getItem('language') || 'en';
+  const savedLang = localStorage.getItem('language') || 'nl';
   setLanguage(savedLang);
 };
 
@@ -880,20 +956,25 @@ const initContactForm = () => {
     const website = String(formData.get('website') || '').trim();
 
     if (website) {
-      setStatus('Message sent.', false);
+      setStatus(currentLanguage === 'nl' ? 'Bericht verzonden.' : 'Message sent.', false);
       form.reset();
       return;
     }
 
     if (!name || !email || !subject || !message) {
-      setStatus('Fill in all fields first.', true);
+      setStatus(currentLanguage === 'nl' ? 'Vul eerst alle velden in.' : 'Fill in all fields first.', true);
       return;
     }
 
     if (submitButton) submitButton.disabled = true;
     const mailto = buildMailto({ name, email, subject, message });
 
-    setStatus('Opening your mail app with the message ready.', false);
+    setStatus(
+      currentLanguage === 'nl'
+        ? 'Je mailapp wordt geopend met het bericht klaar.'
+        : 'Opening your mail app with the message ready.',
+      false
+    );
 
     window.location.href = mailto;
     if (submitButton) {
