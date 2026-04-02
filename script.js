@@ -326,6 +326,413 @@ const translations = {
   }
 };
 
+const pageTranslations = {
+  'index.html': {
+    nl: {
+      title: 'Seppe | Home',
+      selectors: {
+        '.neo-kicker': { text: 'Frontend Ontwikkelaar' },
+        '.neo-hero h1': { text: 'Hallo, ik ben Seppe Vanroy.' },
+        '.neo-hero .neo-text': { text: 'Ik bouw moderne webinterfaces met focus op duidelijkheid, prestaties en nette implementatie. Deze layout is ontworpen in een donkere cinematische stijl, geinspireerd op je referentie.' },
+        '.neo-actions .neo-btn': { text: 'Lees Meer' },
+        '.neo-actions .neo-link': { text: 'Mail Mij' },
+        '.neo-projects h2': { text: 'Uitgelichte Projecten' },
+        '.neo-card:nth-child(1) h3': { text: 'Project Een' },
+        '.neo-card:nth-child(1) p': { text: 'Dashboardconcept met een heldere visuele hierarchie en praktische interacties.' },
+        '.neo-card:nth-child(2) h3': { text: 'Project Twee' },
+        '.neo-card:nth-child(2) p': { text: 'Webervaring gericht op transities, modulaire secties en duidelijke storytelling.' },
+        '.neo-card:nth-child(3) h3': { text: 'Project Drie' },
+        '.neo-card:nth-child(3) p': { text: 'Mobile-first interface met sterk contrast en snelle, responsieve werking.' },
+        '.neo-side .neo-panel:first-child h2': { text: 'Over Mij' },
+        '.neo-side .neo-panel:first-child p': { text: 'Ik ben een tweedejaars IT-student die graag praktische projecten oplevert en elke week beter wordt.' },
+        '#contact h2': { text: 'Contacteer Mij' },
+        '#contact .neo-form input[type="text"]': { placeholder: 'Naam', ariaLabel: 'Naam' },
+        '#contact .neo-form input[type="email"]': { placeholder: 'E-mail', ariaLabel: 'E-mail' },
+        '#contact .neo-form textarea': { placeholder: 'Bericht', ariaLabel: 'Bericht' },
+        '#contact .neo-form button': { text: 'Verstuur' },
+        '.cta-eyebrow': { text: 'KLAAR OM SAMEN TE WERKEN?' },
+        '.cta-content h2': { text: 'Laten we samen iets sterk bouwen' },
+        '.cta-content p:not(.cta-eyebrow)': { text: 'Of je nu een projectidee hebt, technische vragen of gewoon wil praten: ik ben er klaar voor.' },
+        '.cta-btn-primary': { text: 'Bekijk Mijn Werk' },
+        '.cta-btn-secondary': { text: 'Neem Contact Op' },
+        '.ai-chat-panel': { ariaLabel: 'Portfolio assistent' }
+      }
+    },
+    en: {
+      title: 'Seppe | Home',
+      selectors: {
+        '.neo-kicker': { text: 'Frontend Developer' },
+        '.neo-hero h1': { text: 'Hi, I am Seppe Vanroy.' },
+        '.neo-hero .neo-text': { text: 'I build modern web interfaces with focus on clarity, performance, and clean implementation. This layout is designed in a dark cinematic style inspired by your reference.' },
+        '.neo-actions .neo-btn': { text: 'Know More' },
+        '.neo-actions .neo-link': { text: 'Email Me' },
+        '.neo-projects h2': { text: 'Featured Projects' },
+        '.neo-card:nth-child(1) h3': { text: 'Project One' },
+        '.neo-card:nth-child(1) p': { text: 'Dashboard concept with clean visual hierarchy and practical interactions.' },
+        '.neo-card:nth-child(2) h3': { text: 'Project Two' },
+        '.neo-card:nth-child(2) p': { text: 'Web experience focused on transitions, modular sections, and clear storytelling.' },
+        '.neo-card:nth-child(3) h3': { text: 'Project Three' },
+        '.neo-card:nth-child(3) p': { text: 'Mobile-first interface with strong contrast and fast, responsive behavior.' },
+        '.neo-side .neo-panel:first-child h2': { text: 'About Me' },
+        '.neo-side .neo-panel:first-child p': { text: 'I am a second-year IT student who likes to ship practical projects and keep improving every week.' },
+        '#contact h2': { text: 'Contact Me' },
+        '#contact .neo-form input[type="text"]': { placeholder: 'Name', ariaLabel: 'Name' },
+        '#contact .neo-form input[type="email"]': { placeholder: 'Email', ariaLabel: 'Email' },
+        '#contact .neo-form textarea': { placeholder: 'Message', ariaLabel: 'Message' },
+        '#contact .neo-form button': { text: 'Send' },
+        '.cta-eyebrow': { text: 'READY TO COLLABORATE?' },
+        '.cta-content h2': { text: "Let's create something amazing together" },
+        '.cta-content p:not(.cta-eyebrow)': { text: "Whether you have a project idea, technical questions, or just want to chat, I'm ready." },
+        '.cta-btn-primary': { text: 'Explore My Work' },
+        '.cta-btn-secondary': { text: 'Get In Touch' },
+        '.ai-chat-panel': { ariaLabel: 'Portfolio assistant' }
+      }
+    }
+  },
+  'about.html': {
+    nl: {
+      title: 'Seppe | Over Mij',
+      selectors: {
+        '.hero-eyebrow-mega': { text: 'WIE IK BEN' },
+        '.hero-title-giant': { text: 'Praktische IT-oplossingen, stap voor stap.' },
+        '.hero-intro-text': { text: 'Tweedejaars IT-student met passie voor echte oplossingen in echte omgevingen. Leren via stage, projecten en professionele samenwerking.' },
+        '.hero-stats-ultra .stat-block:nth-child(1) .stat-label': { text: 'Jaar IT' },
+        '.hero-stats-ultra .stat-block:nth-child(2) .stat-label': { text: 'Motivatie' },
+        '.hero-stats-ultra .stat-block:nth-child(3) .stat-label': { text: 'Focus' },
+        '.section-header-centered .section-eyebrow': { text: 'MIJN AANPAK' },
+        '.section-header-centered h2': { text: 'Wat mijn werk stuurt' },
+        '.skills-matrix .skill-card-large:nth-child(1) h3': { text: 'Eerst Structuur' },
+        '.skills-matrix .skill-card-large:nth-child(1) p': { text: 'Duidelijke scope, zichtbare vooruitgang en georganiseerde uitvoering van start tot einde.' },
+        '.skills-matrix .skill-card-large:nth-child(2) h3': { text: 'Betrouwbaar Werk' },
+        '.skills-matrix .skill-card-large:nth-child(2) p': { text: 'Oplossingen waarop je kunt vertrouwen. Stabiele uitvoering waar anderen op kunnen bouwen.' },
+        '.skills-matrix .skill-card-large:nth-child(3) h3': { text: 'Constante Groei' },
+        '.skills-matrix .skill-card-large:nth-child(3) p': { text: 'Snel leren, direct toepassen, verbeteren. Elk project maakt het volgende beter.' },
+        '.skills-matrix .skill-card-large:nth-child(4) h3': { text: 'Echte Oplossingen' },
+        '.skills-matrix .skill-card-large:nth-child(4) p': { text: 'Bouwen voor echt gebruik. Professionele omgevingen leren pragmatisch werken.' },
+        '.showcase-text .section-eyebrow': { text: 'ERVARING' },
+        '.showcase-text h2': { text: 'Gevormd door IT in de praktijk' },
+        '.showcase-text > p': { text: 'Mijn traject is niet alleen theorie. Echte omgevingen bij Aurubis Olen en hands-on projecten leerden me hoe IT echt werkt, waarom betrouwbaarheid telt en hoe je levert.' },
+        '.call-to-action-ultra .cta-eyebrow': { text: 'KLAAR OM SAMEN TE WERKEN?' },
+        '.call-to-action-ultra h2': { text: 'Laten we praten over de volgende stap' },
+        '.call-to-action-ultra .cta-description': { text: 'Of het nu gaat om een projectgesprek, technische vragen of gewoon connecteren: ik sta open.' },
+        '.call-to-action-ultra .btn-primary': { text: 'Bekijk Mijn Werk' },
+        '.call-to-action-ultra .btn-secondary': { text: 'Neem Contact Op' }
+      }
+    },
+    en: {
+      title: 'Seppe | About Me',
+      selectors: {
+        '.hero-eyebrow-mega': { text: 'WHO I AM' },
+        '.hero-title-giant': { text: 'Practical IT solutions, step by step.' },
+        '.hero-intro-text': { text: 'Second-year IT student passionate about building real solutions in real environments. Learning through internships, projects, and professional collaboration.' },
+        '.hero-stats-ultra .stat-block:nth-child(1) .stat-label': { text: 'Years IT' },
+        '.hero-stats-ultra .stat-block:nth-child(2) .stat-label': { text: 'Drive' },
+        '.hero-stats-ultra .stat-block:nth-child(3) .stat-label': { text: 'Focused' },
+        '.section-header-centered .section-eyebrow': { text: 'MY APPROACH' },
+        '.section-header-centered h2': { text: 'What drives my work' },
+        '.skills-matrix .skill-card-large:nth-child(1) h3': { text: 'Structure First' },
+        '.skills-matrix .skill-card-large:nth-child(1) p': { text: 'Clear scope, visible progress, and organized execution from start to finish.' },
+        '.skills-matrix .skill-card-large:nth-child(2) h3': { text: 'Reliable Work' },
+        '.skills-matrix .skill-card-large:nth-child(2) p': { text: 'Solutions you can trust. Dependable execution that others can build upon.' },
+        '.skills-matrix .skill-card-large:nth-child(3) h3': { text: 'Constant Growth' },
+        '.skills-matrix .skill-card-large:nth-child(3) p': { text: 'Learn fast, apply directly, iterate. Every project improves the next one.' },
+        '.skills-matrix .skill-card-large:nth-child(4) h3': { text: 'Real Solutions' },
+        '.skills-matrix .skill-card-large:nth-child(4) p': { text: 'Building for actual use. Professional environments teach pragmatism.' },
+        '.showcase-text .section-eyebrow': { text: 'EXPERIENCE' },
+        '.showcase-text h2': { text: 'Shaped by real-world IT' },
+        '.showcase-text > p': { text: "My journey is not just theory. Real environments at Aurubis Olen and hands-on projects taught me how IT actually works, why reliability matters, and how to deliver." },
+        '.call-to-action-ultra .cta-eyebrow': { text: 'READY TO COLLABORATE?' },
+        '.call-to-action-ultra h2': { text: "Let's talk about what's next" },
+        '.call-to-action-ultra .cta-description': { text: "Whether it's a project discussion, technical questions, or just connecting, I'm always open." },
+        '.call-to-action-ultra .btn-primary': { text: 'View My Work' },
+        '.call-to-action-ultra .btn-secondary': { text: 'Get In Touch' }
+      }
+    }
+  },
+  'projects.html': {
+    nl: {
+      title: 'Seppe | Projecten',
+      selectors: {
+        '.hub-hero .eyebrow': { text: 'Projectoverzicht' },
+        '.hub-hero h1': { text: 'Kies een project en duik erin' },
+        '.hub-hero p': { text: 'Kies een van de drie projecten om de context, aanpak en resultaten te verkennen. Elke pagina heeft een unieke visuele stijl en duidelijke uitleg.' },
+        '.hub-grid-wrap .eyebrow': { text: 'Kies Je Pad' },
+        '.hub-grid-wrap h2': { text: 'Drie projecten, drie verhalen' },
+        '.hub-card:nth-child(1) h3': { text: 'Project Een' },
+        '.hub-card:nth-child(1) p': { text: 'Dashboardconcept met focus op visuele helderheid en bruikbare interface-structuur.' },
+        '.hub-card:nth-child(1) span': { text: 'Open Project' },
+        '.hub-card:nth-child(2) h3': { text: 'Project Twee' },
+        '.hub-card:nth-child(2) p': { text: 'MissionZebra-samenwerking met een echt systeem voor gezinsplanning en gewoontes.' },
+        '.hub-card:nth-child(2) span': { text: 'Open Project' },
+        '.hub-card:nth-child(3) h3': { text: 'Project Drie' },
+        '.hub-card:nth-child(3) p': { text: 'Aurubis IT-bijdrage met focus op betrouwbaarheid en praktische operationele ondersteuning.' },
+        '.hub-card:nth-child(3) span': { text: 'Open Project' }
+      }
+    },
+    en: {
+      title: 'Seppe | Projects',
+      selectors: {
+        '.hub-hero .eyebrow': { text: 'Project Hub' },
+        '.hub-hero h1': { text: 'Pick a project and dive in' },
+        '.hub-hero p': { text: 'Choose one of the three projects to explore the context, execution flow, and outcomes. Each page has a unique visual style and detailed breakdown.' },
+        '.hub-grid-wrap .eyebrow': { text: 'Choose Your Path' },
+        '.hub-grid-wrap h2': { text: 'Three projects, three stories' },
+        '.hub-card:nth-child(1) h3': { text: 'Project One' },
+        '.hub-card:nth-child(1) p': { text: 'Dashboard concept focused on visual clarity and actionable interface structure.' },
+        '.hub-card:nth-child(1) span': { text: 'Open Project' },
+        '.hub-card:nth-child(2) h3': { text: 'Project Two' },
+        '.hub-card:nth-child(2) p': { text: 'MissionZebra collaboration with a real-world family planning and habit system.' },
+        '.hub-card:nth-child(2) span': { text: 'Open Project' },
+        '.hub-card:nth-child(3) h3': { text: 'Project Three' },
+        '.hub-card:nth-child(3) p': { text: 'Aurubis IT contribution centered on reliability and practical operations support.' },
+        '.hub-card:nth-child(3) span': { text: 'Open Project' }
+      }
+    }
+  },
+  'contact.html': {
+    nl: {
+      title: 'Seppe | Contact',
+      selectors: {
+        '.hub-hero .eyebrow': { text: 'Contact' },
+        '.hub-hero h1': { text: 'Laten we iets sterk bouwen' },
+        '.hub-hero p': { text: 'Open voor stages, studentenkansen en praktische samenwerking. Neem contact op via je voorkeurskanaal en ik kom bij je terug.' },
+        '.hub-grid-wrap .eyebrow': { text: 'Directe Kanalen' },
+        '.hub-grid-wrap h2': { text: 'Kies de snelste manier om te connecteren' },
+        '.contact-grid .hub-card:nth-child(1) span': { text: 'Stuur E-mail' },
+        '.contact-grid .hub-card:nth-child(2) span': { text: 'Bekijk Profiel' },
+        '.contact-grid .hub-card:nth-child(3) span': { text: 'Connecteer' },
+        '.contact-form-head .eyebrow': { text: 'Stuur een bericht' },
+        '.contact-form-head h2': { text: 'Laat je gegevens achter en ik antwoord via e-mail' },
+        '.contact-form-head p': { text: 'Gebruik dit voor stages, samenwerking of een snelle vraag. Het bericht gaat rechtstreeks naar mijn inbox.' },
+        '.contact-form .contact-form-grid label:nth-child(1) span': { text: 'Naam' },
+        '.contact-form .contact-form-grid label:nth-child(2) span': { text: 'E-mail' },
+        '.contact-form > label:nth-of-type(1) span': { text: 'Onderwerp' },
+        '.contact-form > label:nth-of-type(2) span': { text: 'Bericht' },
+        'input[name="name"]': { placeholder: 'Jouw naam' },
+        'input[name="email"]': { placeholder: 'Jouw e-mail' },
+        'input[name="subject"]': { placeholder: 'Waarover gaat dit?' },
+        'textarea[name="message"]': { placeholder: 'Schrijf je bericht...' },
+        '.contact-form button[type="submit"]': { text: 'Verstuur bericht' },
+        '.contact-form-aside h3': { text: 'Rechtstreeks naar inbox' },
+        '.contact-form-aside p': { text: 'Berichten uit dit formulier worden verzonden naar seppe.vanroy@telenet.be.' },
+        '.contact-form-aside ul li:nth-child(1)': { text: 'Ideaal voor stages en projectvragen' },
+        '.contact-form-aside ul li:nth-child(2)': { text: 'Antwoord meestal op dezelfde dag' },
+        '.contact-form-aside ul li:nth-child(3)': { text: 'GitHub en LinkedIn blijven ook beschikbaar' }
+      }
+    },
+    en: {
+      title: 'Seppe | Contact',
+      selectors: {
+        '.hub-hero .eyebrow': { text: 'Contact' },
+        '.hub-hero h1': { text: 'Let us build something strong' },
+        '.hub-hero p': { text: 'Open to internships, student opportunities, and practical collaboration. Reach out through your preferred channel and I will get back to you.' },
+        '.hub-grid-wrap .eyebrow': { text: 'Direct Channels' },
+        '.hub-grid-wrap h2': { text: 'Pick the fastest way to connect' },
+        '.contact-grid .hub-card:nth-child(1) span': { text: 'Send Email' },
+        '.contact-grid .hub-card:nth-child(2) span': { text: 'View Profile' },
+        '.contact-grid .hub-card:nth-child(3) span': { text: 'Connect' },
+        '.contact-form-head .eyebrow': { text: 'Send a message' },
+        '.contact-form-head h2': { text: 'Drop your details and I will reply by email' },
+        '.contact-form-head p': { text: 'Use this for internships, collaboration, or a quick question. The message goes straight to my inbox.' },
+        '.contact-form .contact-form-grid label:nth-child(1) span': { text: 'Name' },
+        '.contact-form .contact-form-grid label:nth-child(2) span': { text: 'Email' },
+        '.contact-form > label:nth-of-type(1) span': { text: 'Subject' },
+        '.contact-form > label:nth-of-type(2) span': { text: 'Message' },
+        'input[name="name"]': { placeholder: 'Your name' },
+        'input[name="email"]': { placeholder: 'Your email' },
+        'input[name="subject"]': { placeholder: 'What is this about?' },
+        'textarea[name="message"]': { placeholder: 'Write your message...' },
+        '.contact-form button[type="submit"]': { text: 'Send message' },
+        '.contact-form-aside h3': { text: 'Direct inbox' },
+        '.contact-form-aside p': { text: 'Messages from this form are sent to seppe.vanroy@telenet.be.' },
+        '.contact-form-aside ul li:nth-child(1)': { text: 'Best for internships and project questions' },
+        '.contact-form-aside ul li:nth-child(2)': { text: 'Reply usually goes through the same day' },
+        '.contact-form-aside ul li:nth-child(3)': { text: 'GitHub and LinkedIn stay available too' }
+      }
+    }
+  },
+  'project-one.html': {
+    nl: {
+      title: 'Seppe | Project Een',
+      selectors: {
+        '.project-hero .eyebrow': { text: 'Project 01' },
+        '.project-hero h1': { text: 'Dashboardconcept' },
+        '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Een schoon dashboardconcept met focus op praktische informatiestructuur, snelle leesbaarheid en duidelijke actiepunten. Het doel was om dagelijkse taken eenvoudiger te maken door visuele ruis te verminderen terwijl belangrijke data goed zichtbaar blijft.' },
+        '.hero-tags span:nth-child(1)': { text: 'UI Design' },
+        '.hero-tags span:nth-child(2)': { text: 'Frontend Bouw' },
+        '.hero-tags span:nth-child(3)': { text: 'Gebruiksvriendelijkheid' },
+        '.hero-side-label': { text: 'Status' },
+        '.hero-side h3': { text: 'Prototype Voltooid' },
+        '.hero-facts li:nth-child(1)': { html: '<span>Rol</span> Designer + Developer' },
+        '.hero-facts li:nth-child(2)': { html: '<span>Stack</span> HTML, CSS, JavaScript' },
+        '.hero-facts li:nth-child(3)': { html: '<span>Focus</span> Duidelijkheid en interactieflow' },
+        '.project-impact .eyebrow': { text: 'Impactblokken' },
+        '.project-impact h2': { text: 'Snel scannen, sneller handelen' },
+        '.project-impact-grid article:nth-child(1) h3': { text: 'Signaal Eerst' },
+        '.project-impact-grid article:nth-child(1) p': { text: 'Kritieke data staat bewust centraal zodat gebruikers eerst zien wat telt en dan pas details lezen.' },
+        '.project-impact-grid article:nth-child(2) h3': { text: 'Minder Ruis' },
+        '.project-impact-grid article:nth-child(2) p': { text: 'Spatiering en hierarchie halen rommel weg, waardoor operationele schermen mentaal lichter worden.' },
+        '.project-impact-grid article:nth-child(3) h3': { text: 'Actieritme' },
+        '.project-impact-grid article:nth-child(3) p': { text: 'Knoppen en statussen zijn per workflow gegroepeerd zodat gebruikers met minder twijfel door taken gaan.' },
+        '.project-flow .eyebrow': { text: 'Uitvoeringsflow' },
+        '.project-flow h2': { text: 'Hoe ik dit concept bouwde' },
+        '.project-steps li:nth-child(1)': { html: '<strong>Map</strong> dagelijkse beslissingen die gebruikers in de eerste 30 seconden nemen.' },
+        '.project-steps li:nth-child(2)': { html: '<strong>Prototype</strong> een layout met weinig ruis en strikte visuele prioriteiten.' },
+        '.project-steps li:nth-child(3)': { html: '<strong>Verfijn</strong> micro-interacties en spacing tot lezen moeiteloos aanvoelt.' },
+        '.portfolio-section:last-child .eyebrow': { text: 'Projectsamenvatting' },
+        '.portfolio-section:last-child h2': { text: 'Wat dit project oplost' },
+        '.portfolio-section:last-child .project-copy': { text: 'Dit concept organiseert informatie in kaarten en duidelijke secties zodat gebruikers prioriteiten meteen zien. Het gebruikt sterke hierarchie, heldere spacing en leesbaar contrast om beslissingen te versnellen.' },
+        '.portfolio-section:last-child .panel-actions a:nth-child(1)': { text: 'Terug naar Home' },
+        '.portfolio-section:last-child .panel-actions a:nth-child(2)': { text: 'Meer Projecten' }
+      }
+    },
+    en: {
+      title: 'Seppe | Project One',
+      selectors: {
+        '.project-hero .eyebrow': { text: 'Project 01' },
+        '.project-hero h1': { text: 'Dashboard Concept' },
+        '.project-hero .hero-main > p:not(.eyebrow)': { text: 'A clean dashboard concept focused on practical information structure, fast readability, and clear action points. The goal was to make daily tasks easier by reducing visual noise while keeping important data highly visible.' },
+        '.hero-tags span:nth-child(1)': { text: 'UI Design' },
+        '.hero-tags span:nth-child(2)': { text: 'Frontend Build' },
+        '.hero-tags span:nth-child(3)': { text: 'Usability' },
+        '.hero-side-label': { text: 'Status' },
+        '.hero-side h3': { text: 'Prototype Complete' },
+        '.hero-facts li:nth-child(1)': { html: '<span>Role</span> Designer + Developer' },
+        '.hero-facts li:nth-child(2)': { html: '<span>Stack</span> HTML, CSS, JavaScript' },
+        '.hero-facts li:nth-child(3)': { html: '<span>Focus</span> Clarity and interaction flow' },
+        '.project-impact .eyebrow': { text: 'Impact Blocks' },
+        '.project-impact h2': { text: 'Fast scanning, faster actions' },
+        '.project-impact-grid article:nth-child(1) h3': { text: 'Signal First' },
+        '.project-impact-grid article:nth-child(1) p': { text: 'Critical data is intentionally elevated so users see what matters before they read details.' },
+        '.project-impact-grid article:nth-child(2) h3': { text: 'Reduced Noise' },
+        '.project-impact-grid article:nth-child(2) p': { text: 'Spacing and hierarchy remove clutter, making daily operation screens less mentally heavy.' },
+        '.project-impact-grid article:nth-child(3) h3': { text: 'Action Rhythm' },
+        '.project-impact-grid article:nth-child(3) p': { text: 'Buttons and states are grouped by workflow so users move through tasks with less hesitation.' },
+        '.project-flow .eyebrow': { text: 'Execution Flow' },
+        '.project-flow h2': { text: 'How I built this concept' },
+        '.project-steps li:nth-child(1)': { html: '<strong>Map</strong> daily decisions users take in the first 30 seconds.' },
+        '.project-steps li:nth-child(2)': { html: '<strong>Prototype</strong> a low-noise layout with strict visual priorities.' },
+        '.project-steps li:nth-child(3)': { html: '<strong>Refine</strong> micro-interactions and spacing until reading speed feels effortless.' },
+        '.portfolio-section:last-child .eyebrow': { text: 'Project Summary' },
+        '.portfolio-section:last-child h2': { text: 'What this project solves' },
+        '.portfolio-section:last-child .project-copy': { text: 'This concept organizes information in cards and clear sections so users can spot priorities instantly. It uses strong hierarchy, clear spacing, and readable contrast to improve decision speed.' },
+        '.portfolio-section:last-child .panel-actions a:nth-child(1)': { text: 'Back To Home' },
+        '.portfolio-section:last-child .panel-actions a:nth-child(2)': { text: 'More Projects' }
+      }
+    }
+  },
+  'project-two.html': {
+    nl: {
+      title: 'Seppe | Project Twee',
+      selectors: {
+        '.project-hero .eyebrow': { text: 'Project 02' },
+        '.project-hero h1': { text: 'MissionZebra Samenwerking' },
+        '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Een teamproject dat gezinnen helpt om schermtijd op een gezondere manier te plannen. Het product combineert planning, structuur en motiverende interacties om kinderen en ouders in dagelijkse digitale routines te ondersteunen.' },
+        '.hero-tags span:nth-child(1)': { text: 'Teamproject' },
+        '.hero-tags span:nth-child(2)': { text: 'Mobile-first' },
+        '.hero-tags span:nth-child(3)': { text: 'Echte Gebruikers' },
+        '.hero-side-label': { text: 'Status' },
+        '.hero-side h3': { text: 'Live Product' },
+        '.hero-facts li:nth-child(1)': { html: '<span>Rol</span> Teamlid' },
+        '.hero-facts li:nth-child(2)': { html: '<span>Stack</span> Flutter, Kotlin' },
+        '.hero-facts li:nth-child(3)': { html: '<span>Focus</span> Gezinsworkflow-design' }
+      }
+    },
+    en: {
+      title: 'Seppe | Project Two',
+      selectors: {
+        '.project-hero .eyebrow': { text: 'Project 02' },
+        '.project-hero h1': { text: 'MissionZebra Collaboration' },
+        '.project-hero .hero-main > p:not(.eyebrow)': { text: 'A team-driven project focused on helping families plan screen time in a healthier way. The product combines planning, structure, and motivating interactions to support children and parents in daily digital routines.' },
+        '.hero-tags span:nth-child(1)': { text: 'Team Project' },
+        '.hero-tags span:nth-child(2)': { text: 'Mobile-first' },
+        '.hero-tags span:nth-child(3)': { text: 'Real Users' },
+        '.hero-side-label': { text: 'Status' },
+        '.hero-side h3': { text: 'Live Product' },
+        '.hero-facts li:nth-child(1)': { html: '<span>Role</span> Team Contributor' },
+        '.hero-facts li:nth-child(2)': { html: '<span>Stack</span> Flutter, Kotlin' },
+        '.hero-facts li:nth-child(3)': { html: '<span>Focus</span> Family workflow design' }
+      }
+    }
+  },
+  'project-three.html': {
+    nl: {
+      title: 'Seppe | Project Drie',
+      selectors: {
+        '.project-hero .eyebrow': { text: 'Project 03' },
+        '.project-hero h1': { text: 'Aurubis IT-bijdrage' },
+        '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Praktische IT-support in een echte industriele context waar betrouwbaarheid cruciaal is. Het werk focuste op stabiele dagelijkse operaties, efficiente troubleshooting, en het verbeteren van workflows waar teams op vertrouwen.' },
+        '.hero-tags span:nth-child(1)': { text: 'IT Operaties' },
+        '.hero-tags span:nth-child(2)': { text: 'Troubleshooting' },
+        '.hero-tags span:nth-child(3)': { text: 'Betrouwbaarheid' },
+        '.hero-side-label': { text: 'Status' },
+        '.hero-side h3': { text: 'Lopende Ervaring' },
+        '.hero-facts li:nth-child(1)': { html: '<span>Rol</span> IT Support' },
+        '.hero-facts li:nth-child(2)': { html: '<span>Context</span> Productie' },
+        '.hero-facts li:nth-child(3)': { html: '<span>Focus</span> Stabiliteit en continuiteit' }
+      }
+    },
+    en: {
+      title: 'Seppe | Project Three',
+      selectors: {
+        '.project-hero .eyebrow': { text: 'Project 03' },
+        '.project-hero h1': { text: 'Aurubis IT Contribution' },
+        '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Practical IT support in a real industrial context where reliability is critical. The work focused on stable day-to-day operations, efficient troubleshooting, and improving workflows that teams depend on.' },
+        '.hero-tags span:nth-child(1)': { text: 'IT Operations' },
+        '.hero-tags span:nth-child(2)': { text: 'Troubleshooting' },
+        '.hero-tags span:nth-child(3)': { text: 'Reliability' },
+        '.hero-side-label': { text: 'Status' },
+        '.hero-side h3': { text: 'Ongoing Experience' },
+        '.hero-facts li:nth-child(1)': { html: '<span>Role</span> IT Support' },
+        '.hero-facts li:nth-child(2)': { html: '<span>Context</span> Manufacturing' },
+        '.hero-facts li:nth-child(3)': { html: '<span>Focus</span> Stability and continuity' }
+      }
+    }
+  }
+};
+
+const applyPageTranslations = (lang) => {
+  const pageName = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const pageConfig = pageTranslations[pageName]?.[lang];
+  if (!pageConfig) return;
+
+  if (pageConfig.title) {
+    document.title = pageConfig.title;
+  }
+
+  const selectors = pageConfig.selectors || {};
+  Object.entries(selectors).forEach(([selector, update]) => {
+    let element = null;
+    try {
+      element = document.querySelector(selector);
+    } catch (error) {
+      return;
+    }
+    if (!element) return;
+
+    if (typeof update === 'string') {
+      element.textContent = update;
+      return;
+    }
+
+    if (update.text !== undefined) {
+      element.textContent = update.text;
+    }
+    if (update.html !== undefined) {
+      element.innerHTML = update.html;
+    }
+    if (update.placeholder !== undefined) {
+      element.setAttribute('placeholder', update.placeholder);
+    }
+    if (update.ariaLabel !== undefined) {
+      element.setAttribute('aria-label', update.ariaLabel);
+    }
+    if (update.title !== undefined) {
+      element.setAttribute('title', update.title);
+    }
+  });
+};
+
 let currentLanguage = localStorage.getItem('language') || 'nl';
 
 const getNestedValue = (obj, path) => {
@@ -368,6 +775,7 @@ const setLanguage = (lang) => {
   });
   
   translatePage(lang);
+  applyPageTranslations(lang);
   if (typeof window.updateChatWidgetLanguage === 'function') {
     window.updateChatWidgetLanguage(lang);
   }
