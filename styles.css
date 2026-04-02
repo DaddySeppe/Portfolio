@@ -2796,6 +2796,7 @@ h3,
 .neo-grid {
   display: grid;
   grid-template-columns: 1.65fr 1.05fr;
+  align-items: start;
   gap: 18px;
   padding: 18px;
 }
@@ -2885,7 +2886,7 @@ h3,
 }
 
 .neo-projects {
-  padding: 18px;
+  padding: 22px;
 }
 
 .neo-projects h2,
@@ -2900,44 +2901,54 @@ h3,
   margin-top: 14px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: 14px;
 }
 
 .neo-card {
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 12px;
-  padding: 8px;
+  padding: 10px;
   background: rgba(10, 15, 28, 0.75);
-  transition: transform 240ms ease, border-color 240ms ease;
+  transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
 }
 
 .neo-card:hover {
   transform: translateY(-4px);
   border-color: rgba(255, 198, 76, 0.5);
+  box-shadow: 0 12px 24px rgba(4, 9, 20, 0.45);
 }
 
 .neo-card img {
-  height: 104px;
+  height: 132px;
   border-radius: 8px;
 }
 
 .neo-card h3 {
-  margin: 10px 0 0;
-  font-size: 0.96rem;
+  margin: 12px 0 0;
+  font-size: 1.05rem;
   color: #f7f9ff;
 }
 
 .neo-card p {
-  margin: 6px 0 0;
+  margin: 8px 0 0;
   color: #9faed1;
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   line-height: 1.5;
 }
 
 .neo-side {
-  grid-row: span 2;
   display: grid;
   gap: 12px;
+}
+
+.neo-card-link {
+  display: block;
+  text-decoration: none;
+}
+
+.neo-card-link:focus-visible {
+  outline: 2px solid rgba(255, 198, 76, 0.85);
+  outline-offset: 3px;
 }
 
 .neo-panel {
@@ -3059,6 +3070,201 @@ h3,
 
   .neo-cards {
     grid-template-columns: 1fr;
+  }
+}
+
+.project-main {
+  gap: 34px;
+}
+
+.project-hero {
+  padding: clamp(30px, 4.2vw, 48px);
+}
+
+.project-cover {
+  width: min(100%, 320px) !important;
+  min-width: min(100%, 320px) !important;
+  max-width: 320px !important;
+}
+
+.project-cover img {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: 240px !important;
+  max-height: 240px !important;
+}
+
+.project-copy {
+  margin: 14px 0 0;
+  color: #c8d7f0;
+  line-height: 1.72;
+  max-width: 75ch;
+}
+
+@media (max-width: 860px) {
+  .project-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero .hero-side {
+    border-left: 0;
+    border-top: 2px solid rgba(251, 191, 36, 0.5);
+    padding-left: 0;
+    padding-top: 18px;
+  }
+}
+
+.project-page {
+  --project-accent: #f97316;
+  --project-accent-soft: rgba(249, 115, 22, 0.24);
+  --project-secondary: #22d3ee;
+}
+
+.project-page::before {
+  background:
+    radial-gradient(circle at 8% 18%, rgba(2, 132, 199, 0.35) 0%, rgba(2, 132, 199, 0) 35%),
+    radial-gradient(circle at 90% 10%, var(--project-accent-soft) 0%, rgba(0, 0, 0, 0) 36%),
+    linear-gradient(180deg, #050913 0%, #060f20 55%, #07152a 100%);
+}
+
+.project-page .project-main {
+  max-width: 1240px;
+}
+
+.project-page .project-hero {
+  border-color: rgba(255, 255, 255, 0.16);
+  background:
+    linear-gradient(140deg, rgba(6, 12, 28, 0.97), rgba(7, 15, 34, 0.95)),
+    radial-gradient(900px 400px at -10% -20%, var(--project-accent-soft), transparent 55%);
+  box-shadow: 0 30px 72px rgba(2, 6, 23, 0.62), 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+}
+
+.project-page .project-hero h1 {
+  font-size: clamp(36px, 6.4vw, 74px);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-wrap: pretty;
+}
+
+.project-page .hero-tags span {
+  border-color: color-mix(in srgb, var(--project-accent) 60%, #ffffff 20%);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--project-accent) 26%, transparent), color-mix(in srgb, var(--project-secondary) 20%, transparent));
+}
+
+.project-page .project-cover {
+  border-color: color-mix(in srgb, var(--project-accent) 40%, #ffffff 18%);
+  transform: rotate(-1.2deg);
+}
+
+.project-page .project-cover img {
+  filter: saturate(1.16) contrast(1.08);
+}
+
+.project-page .hero-facts li {
+  border-left: 4px solid color-mix(in srgb, var(--project-accent) 62%, #ffffff 10%);
+}
+
+.project-impact-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.project-impact-grid article {
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 16px;
+  padding: 18px;
+  background: linear-gradient(145deg, rgba(10, 19, 39, 0.93), rgba(8, 15, 31, 0.96));
+  transform: translateY(0);
+  transition: transform 220ms ease, border-color 220ms ease;
+}
+
+.project-impact-grid article:hover {
+  transform: translateY(-6px) rotate(-0.4deg);
+  border-color: color-mix(in srgb, var(--project-accent) 52%, #ffffff 16%);
+}
+
+.project-impact-grid h3 {
+  margin: 0;
+  font-size: 1.04rem;
+  color: #f8fbff;
+}
+
+.project-impact-grid p {
+  margin: 10px 0 0;
+  color: #c5d4ed;
+  line-height: 1.66;
+}
+
+.project-steps {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+  display: grid;
+  gap: 12px;
+}
+
+.project-steps li {
+  counter-increment: step;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 14px;
+  background: linear-gradient(130deg, rgba(10, 19, 39, 0.88), rgba(7, 14, 29, 0.95));
+  color: #d4e0f5;
+  padding: 14px 16px 14px 54px;
+  position: relative;
+  line-height: 1.62;
+}
+
+.project-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--project-accent) 86%, #ffffff 8%), color-mix(in srgb, var(--project-secondary) 54%, #000000 6%));
+  color: #041024;
+  font-weight: 800;
+}
+
+.project-page .btn-link {
+  box-shadow: 0 12px 22px color-mix(in srgb, var(--project-accent) 35%, transparent);
+}
+
+.project-one-page {
+  --project-accent: #f59e0b;
+  --project-accent-soft: rgba(245, 158, 11, 0.22);
+  --project-secondary: #38bdf8;
+}
+
+.project-two-page {
+  --project-accent: #22c55e;
+  --project-accent-soft: rgba(34, 197, 94, 0.22);
+  --project-secondary: #2dd4bf;
+}
+
+.project-three-page {
+  --project-accent: #ef4444;
+  --project-accent-soft: rgba(239, 68, 68, 0.2);
+  --project-secondary: #fb7185;
+}
+
+@media (max-width: 940px) {
+  .project-impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-page .project-hero h1 {
+    font-size: clamp(34px, 10vw, 56px);
   }
 }
 
