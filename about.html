@@ -27,8 +27,8 @@
   <header class="site-header">
     <a class="brand" href="index.html">SEPPE</a>
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="index.html" data-i18n="nav.home">Home</a>
-      <a class="active" href="about.html" data-i18n="nav.about">About Me</a>
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
       <div class="language-switcher">
@@ -42,23 +42,26 @@
     <span id="aboutProgressBar"></span>
   </div>
 
-  <main class="about-main">
-    <section class="about-hero about-hero-show reveal">
+  <main class="about-main about-rebuilt">
+    <section class="about-hero about-hero-show reveal about-hero-modern">
       <div class="hero-main">
         <p class="eyebrow" data-i18n="about.hero.eyebrow">Profile</p>
         <h1 data-i18n="about.hero.title">I build practical IT solutions with a professional mindset and a drive to improve.</h1>
         <p data-i18n="about.hero.description">
-          I am a second-year IT student who learns fastest in real environments. My 2023 internship at Aurubis Olen and my current holiday work on their IT department shaped how I approach projects: clear thinking, reliable execution, and continuous growth.
+          I am a second-year IT student who learns fastest in real environments. My internship, holiday work, and school projects shaped how I work: clear thinking, reliable execution, and steady growth.
         </p>
         <div class="hero-tags" aria-label="Personal style keywords">
           <span data-i18n="about.hero.tag1">Practical Problem Solver</span>
           <span data-i18n="about.hero.tag2">Professional Attitude</span>
         </div>
+        <div class="hero-actions">
+          <a href="projects.html" class="btn-link">View Projects</a>
+          <a href="contact.html" class="btn-link btn-link-secondary">Contact Me</a>
+        </div>
       </div>
-      <aside class="hero-side">
-        <figure class="profile-slot" style="width: 210px !important; min-width: 210px !important; max-width: 210px !important; height: auto;">
-          <img src="assets/images/profile-placeholder.jpg" alt="Portrait placeholder of Seppe" style="width: 210px !important; min-width: 210px !important; max-width: 210px !important; height: 260px !important; max-height: 260px !important; object-fit: cover;" />
-          
+      <aside class="hero-side about-sideboard">
+        <figure class="profile-slot about-profile-slot">
+          <img src="assets/images/profile-placeholder.jpg" alt="Portrait placeholder of Seppe" />
         </figure>
         <p class="hero-side-label" data-i18n="about.hero.snapshot">Quick Snapshot</p>
         <h3 data-i18n="about.hero.subtitle">Focused, consistent, and serious about quality.</h3>
@@ -70,7 +73,7 @@
       </aside>
     </section>
 
-    <section class="about-showcase reveal" aria-label="Professional highlights">
+    <section class="about-strip reveal" aria-label="Professional highlights">
       <div class="showcase-rail">
         <div class="showcase-track">
           <span data-i18n="about.showcase.item1">PROFESSIONAL MINDSET</span>
@@ -78,14 +81,23 @@
           <span data-i18n="about.showcase.item3">PROJECT OWNERSHIP</span>
           <span data-i18n="about.showcase.item4">TECHNICAL CURIOSITY</span>
           <span data-i18n="about.showcase.item5">CLEAR COMMUNICATION</span>
-          <span data-i18n="about.showcase.item1">PROFESSIONAL MINDSET</span>
-          <span data-i18n="about.showcase.item2">REAL-WORLD EXPERIENCE</span>
-          <span data-i18n="about.showcase.item3">PROJECT OWNERSHIP</span>
-          <span data-i18n="about.showcase.item4">TECHNICAL CURIOSITY</span>
-          <span data-i18n="about.showcase.item5">CLEAR COMMUNICATION</span>
         </div>
       </div>
-      <div class="showcase-stats">
+    </section>
+
+    <section class="about-now reveal">
+      <article class="about-panel about-now-story">
+        <p class="eyebrow" data-i18n="about.aboutsection.eyebrow">About Me</p>
+        <h2 data-i18n="about.aboutsection.title">Growing in IT through practice and real challenges</h2>
+        <p data-i18n="about.aboutsection.description">
+          On my about page, you can read more about me, my strengths and the way I try to improve myself as a student.
+        </p>
+        <div class="panel-actions">
+          <a class="btn-link" href="projects.html" data-i18n="about.aboutsection.link1">View Projects</a>
+          <a class="btn-link btn-link-secondary" href="contact.html" data-i18n="about.aboutsection.link2">Contact Me</a>
+        </div>
+      </article>
+      <div class="about-now-grid">
         <article>
           <p class="stat-label" data-i18n="about.stats.stage.label">Current Stage</p>
           <p class="stat-value" data-i18n="about.stats.stage.value">Second-Year IT</p>
@@ -101,19 +113,30 @@
       </div>
     </section>
 
-    <section class="signature-layout reveal" aria-label="Core approach and value">
-      <article class="signature-panel">
+    <section class="about-split reveal" aria-label="Core approach and value">
+      <article class="about-panel about-panel-story">
         <p class="eyebrow" data-i18n="about.signature.eyebrow">How I Work</p>
         <h2 data-i18n="about.signature.title">I keep complexity under control with a step-by-step approach.</h2>
         <p data-i18n="about.signature.description">
           I start from clear requirements, split work into manageable blocks, and validate each step before moving forward. This keeps projects stable and makes collaboration easier.
         </p>
       </article>
-      <article class="signature-panel quote-panel">
-        <p class="eyebrow" data-i18n="about.quote.eyebrow">Work Principle</p>
-        <blockquote data-i18n="about.quote.text">
-          "Good IT work is not only about writing code. It is about delivering dependable solutions that people can trust."
-        </blockquote>
+      <article class="about-panel about-panel-focus">
+        <p class="eyebrow">What Matters</p>
+        <div class="focus-grid">
+          <div>
+            <strong>Structure</strong>
+            <span>Clear scope, visible progress, less friction.</span>
+          </div>
+          <div>
+            <strong>Reliability</strong>
+            <span>Dependable work that other people can trust.</span>
+          </div>
+          <div>
+            <strong>Growth</strong>
+            <span>Learn fast, apply directly, improve again.</span>
+          </div>
+        </div>
       </article>
     </section>
 
@@ -140,14 +163,23 @@
       </article>
     </section>
 
-    <section class="timeline reveal">
+    <section class="timeline reveal about-strengths-block">
       <p class="eyebrow" data-i18n="about.strengths.eyebrow">Strength Profile</p>
       <h2 data-i18n="about.strengths.title">What I bring to projects</h2>
-      <ul>
-        <li><span data-i18n="about.strengths.item1.label">Technical Adaptability</span> <span data-i18n="about.strengths.item1.desc">I quickly adapt to tools, workflows, and project constraints while keeping code quality in focus.</span></li>
-        <li><span data-i18n="about.strengths.item2.label">Problem Solving</span> <span data-i18n="about.strengths.item2.desc">I analyze issues methodically and deliver solutions that are practical and maintainable.</span></li>
-        <li><span data-i18n="about.strengths.item3.label">Professional Collaboration</span> <span data-i18n="about.strengths.item3.desc">I work well in teams, communicate progress clearly, and align with project goals.</span></li>
-      </ul>
+      <div class="strength-grid">
+        <article>
+          <h3 data-i18n="about.strengths.item1.label">Technical Adaptability</h3>
+          <p data-i18n="about.strengths.item1.desc">I quickly adapt to tools, workflows, and project constraints while keeping code quality in focus.</p>
+        </article>
+        <article>
+          <h3 data-i18n="about.strengths.item2.label">Problem Solving</h3>
+          <p data-i18n="about.strengths.item2.desc">I analyze issues methodically and deliver solutions that are practical and maintainable.</p>
+        </article>
+        <article>
+          <h3 data-i18n="about.strengths.item3.label">Professional Collaboration</h3>
+          <p data-i18n="about.strengths.item3.desc">I work well in teams, communicate progress clearly, and align with project goals.</p>
+        </article>
+      </div>
     </section>
 
     <section class="timeline reveal">
@@ -161,110 +193,18 @@
       </ul>
     </section>
 
-    <section class="portfolio-section reveal">
-      <p class="eyebrow" data-i18n="about.missionzebra.eyebrow">Featured Project</p>
-      <h2 data-i18n="about.missionzebra.title">MissionZebra: Screen Time Made Smart</h2>
-      <div class="missionzebra-content">
-        <p data-i18n="about.missionzebra.description">An app designed to help families navigate screen time in a positive way. Teaching children healthy digital habits through planning, tracking, and real rewards within a family ecosystem.</p>
-        <a href="https://missionzebra.be/" target="_blank" rel="noopener noreferrer" class="btn-link" data-i18n="about.missionzebra.link">Visit MissionZebra</a>
+    <section class="about-cta reveal">
+      <div>
+        <p class="eyebrow">Next Step</p>
+        <h2>Want the short version? My projects and contact page are the fastest way in.</h2>
       </div>
-    </section>
-
-    <section class="portfolio-section reveal">
-      <p class="eyebrow" data-i18n="about.projects.eyebrow">Selected Work</p>
-      <h2 data-i18n="about.projects.title">Projects that shaped my skills</h2>
-      <div id="projectGrid" class="project-grid" aria-live="polite">
-        <article class="project-card">
-          <h3 data-i18n="about.projects.item1.title">MissionZebra</h3>
-          <p data-i18n="about.projects.item1.desc">A mobile application focused on planning and organization for families. Built in a team context with real delivery goals.</p>
-          <p class="project-stack" data-i18n="about.projects.item1.stack">Flutter • Kotlin • Team Delivery</p>
-        </article>
-        <article class="project-card">
-          <h3 data-i18n="about.projects.item2.title">Portfolio Platform</h3>
-          <p data-i18n="about.projects.item2.desc">A custom portfolio website built to communicate my identity, process, and progress in a polished visual format.</p>
-          <p class="project-stack" data-i18n="about.projects.item2.stack">HTML • CSS • JavaScript • UX</p>
-        </article>
-        <article class="project-card">
-          <h3 data-i18n="about.projects.item3.title">Aurubis IT Contribution</h3>
-          <p data-i18n="about.projects.item3.desc">Hands-on support work inside a manufacturing context, helping maintain and improve practical IT workflows.</p>
-          <p class="project-stack" data-i18n="about.projects.item3.stack">IT Support • Operations • Reliability</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="portfolio-section reveal">
-      <p class="eyebrow" data-i18n="about.capabilities.eyebrow">Capabilities</p>
-      <h2 data-i18n="about.capabilities.title">Professional strengths in action</h2>
-      <div class="skills-grid">
-        <article class="skill-card">
-          <h3 data-i18n="about.capabilities.item1.title">Discipline</h3>
-          <p data-i18n="about.capabilities.item1.desc">I stay consistent, finish what I start, and maintain quality even under pressure.</p>
-        </article>
-        <article class="skill-card">
-          <h3 data-i18n="about.capabilities.item2.title">Learning Speed</h3>
-          <p data-i18n="about.capabilities.item2.desc">I absorb new tools and concepts quickly, then apply them directly in practical situations.</p>
-        </article>
-        <article class="skill-card">
-          <h3 data-i18n="about.capabilities.item3.title">Reliability</h3>
-          <p data-i18n="about.capabilities.item3.desc">I communicate clearly, take ownership, and deliver work people can depend on.</p>
-        </article>
-      </div>
-      <div class="skills-tags" aria-label="Skill tags">
-        <span>Structured Thinking</span>
-        <span>Frontend Development</span>
-        <span>Technical Troubleshooting</span>
-        <span>Team Communication</span>
-        <span>Professional IT Practice</span>
-       
+      <div class="panel-actions">
+        <a class="btn-link" href="projects.html">View Projects</a>
+        <a class="btn-link btn-link-secondary" href="contact.html">Contact Me</a>
       </div>
     </section>
 
   </main>
-
-  <footer class="site-footer">
-    <div class="footer-container">
-      <section class="footer-contact" aria-label="Contact details">
-        <p class="eyebrow" data-i18n="about.footer.contact.eyebrow">Contact</p>
-        <h2 data-i18n="about.footer.contact.title">Let's connect</h2>
-        <p data-i18n="about.footer.contact.text">
-          Email: <a href="mailto:seppe.vanroy@telenet.be">seppe.vanroy@telenet.be</a><br />
-          GitHub: <a href="https://github.com/DaddySeppe" target="_blank" rel="noopener noreferrer">github.com/DaddySeppe</a><br />
-          LinkedIn: <a href="https://linkedin.com/in/seppe-vanroy-857680331" target="_blank" rel="noopener noreferrer">linkedin.com/in/seppe-vanroy-857680331</a>
-        </p>
-      </section>
-
-      <div class="footer-top">
-        <div class="footer-left">
-          <h3 class="footer-title">Seppe.</h3>
-          <p class="footer-description" data-i18n="footer.description">IT Student passionate about building practical solutions with professional mindset and continuous improvement.</p>
-        </div>
-        <div class="footer-right">
-          <p class="footer-connect-label" data-i18n="footer.connect">Connect</p>
-          <div class="footer-socials">
-            <a href="https://linkedin.com/in/seppe-vanroy-857680331" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-              </svg>
-            </a>
-            <a href="https://github.com/DaddySeppe" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
-            </a>
-            <a href="mailto:seppe.vanroy@telenet.be" class="social-icon" title="Email">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-divider"></div>
-      <div class="footer-bottom">
-        <p class="footer-copyright" data-i18n="footer.copyright">&copy; 2026 Seppe Vanroy. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
 
   <div class="ai-chat" id="aiChatWidget" aria-live="polite">
     <button class="ai-chat-toggle" id="aiChatToggle" type="button" aria-expanded="false" aria-controls="aiChatPanel" title="Open AI chat">

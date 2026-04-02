@@ -35,7 +35,7 @@ const translations = {
       eyebrow: 'About Me',
       title: 'Growing in IT through practice and real challenges',
       description: 'On my about page, you can read more about me, my strengths and the way I try to improve myself as a student.',
-      link1: 'Go to About Me',
+      link1: 'View Projects',
       link2: 'Contact Me'
     },
     footer: {
@@ -159,7 +159,7 @@ const translations = {
       eyebrow: 'Over Mij',
       title: 'Groei in IT door oefening en uitdagingen',
       description: 'Op mijn over-mij pagina kun je meer over mij lezen, mijn sterke punten en hoe ik mezelf als student probeer te verbeteren.',
-      link1: 'Ga naar Over Mij',
+      link1: 'Bekijk Projecten',
       link2: 'Neem Contact Op'
     },
     footer: {
@@ -307,15 +307,55 @@ const initLanguageSwitcher = () => {
   });
 };
 
+const initActiveNavigation = () => {
+  const navLinks = Array.from(document.querySelectorAll('.main-nav a[href]'));
+  if (navLinks.length === 0) return;
+
+  const setActiveLink = (activeHref) => {
+    navLinks.forEach((link) => {
+      const isActive = link.getAttribute('href') === activeHref;
+      link.classList.toggle('active', isActive);
+      if (isActive) {
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  };
+
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const routeMap = {
+    '': 'index.html',
+    'index.html': 'index.html',
+    'about.html': 'about.html',
+    'projects.html': 'projects.html',
+    'contact.html': 'contact.html',
+    'project-one.html': 'projects.html',
+    'project-two.html': 'projects.html',
+    'project-three.html': 'projects.html'
+  };
+
+  setActiveLink(routeMap[currentPath] || 'index.html');
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (link.classList.contains('lang-btn')) return;
+      setActiveLink(link.getAttribute('href'));
+    });
+  });
+};
+
 // Initialize on DOM ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     initializeLanguage();
     initLanguageSwitcher();
+    initActiveNavigation();
   });
 } else {
   initializeLanguage();
   initLanguageSwitcher();
+  initActiveNavigation();
 }
 
 // ==== Original Script Content ====
@@ -800,6 +840,70 @@ const initAboutWheelMotion = () => {
   requestWheelUpdate();
 };
 
+const initContactForm = () => {
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('contactFormStatus');
+
+  if (!form || !status) return;
+
+  const submitButton = form.querySelector('button[type="submit"]');
+
+  const buildMailto = (values) => {
+    const subject = `Portfolio contact: ${values.subject}`;
+    const body = [
+      'New message from the portfolio contact form',
+      '',
+      `Name: ${values.name}`,
+      `Email: ${values.email}`,
+      `Subject: ${values.subject}`,
+      '',
+      'Message:',
+      values.message
+    ].join('\n');
+
+    return `mailto:seppe.vanroy@telenet.be?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
+  const setStatus = (message, isError = false) => {
+    status.textContent = message;
+    status.style.color = isError ? '#fca5a5' : '#9ee7ff';
+  };
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    const name = String(formData.get('name') || '').trim();
+    const email = String(formData.get('email') || '').trim();
+    const subject = String(formData.get('subject') || '').trim();
+    const message = String(formData.get('message') || '').trim();
+    const website = String(formData.get('website') || '').trim();
+
+    if (website) {
+      setStatus('Message sent.', false);
+      form.reset();
+      return;
+    }
+
+    if (!name || !email || !subject || !message) {
+      setStatus('Fill in all fields first.', true);
+      return;
+    }
+
+    if (submitButton) submitButton.disabled = true;
+    const mailto = buildMailto({ name, email, subject, message });
+
+    setStatus('Opening your mail app with the message ready.', false);
+
+    window.location.href = mailto;
+    if (submitButton) {
+      window.setTimeout(() => {
+        submitButton.disabled = false;
+      }, 1200);
+    }
+  });
+};
+
 const initPortfolioAI = () => {
   const widget = document.getElementById('aiChatWidget');
   const toggle = document.getElementById('aiChatToggle');
@@ -989,6 +1093,7 @@ initReveal();
 initAboutEffects();
 initAboutCenterZoom();
 initAboutWheelMotion();
+initContactForm();
 initPortfolioAI();
 
 

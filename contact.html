@@ -68,6 +68,54 @@
         </a>
       </div>
     </section>
+
+    <section class="portfolio-section reveal contact-form-section">
+      <div class="contact-form-head">
+        <p class="eyebrow">Send a message</p>
+        <h2>Drop your details and I will reply by email</h2>
+        <p>Use this for internships, collaboration, or a quick question. The message goes straight to my inbox.</p>
+      </div>
+
+      <div class="contact-form-layout">
+        <form class="contact-form neo-form" id="contactForm" action="api/contact.php" method="post" novalidate>
+          <div class="contact-form-grid">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Your name" required minlength="2" maxlength="80" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" placeholder="Your email" required maxlength="120" />
+            </label>
+          </div>
+
+          <label>
+            <span>Subject</span>
+            <input type="text" name="subject" autocomplete="off" placeholder="What is this about?" required minlength="3" maxlength="120" />
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" placeholder="Write your message..." required minlength="10" maxlength="4000"></textarea>
+          </label>
+
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="contact-honeypot" />
+
+          <button type="submit">Send message</button>
+          <p class="contact-form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="contact-form-aside">
+          <h3>Direct inbox</h3>
+          <p>Messages from this form are sent to <a href="mailto:seppe.vanroy@telenet.be">seppe.vanroy@telenet.be</a>.</p>
+          <ul>
+            <li>Best for internships and project questions</li>
+            <li>Reply usually goes through the same day</li>
+            <li>GitHub and LinkedIn stay available too</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
   </main>
 
   <script src="script.js"></script>
