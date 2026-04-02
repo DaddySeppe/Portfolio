@@ -54,6 +54,8 @@ h3,
 
 .main-nav {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 4px;
   gap: 10px;
   padding: 6px;
   border-radius: 999px;
@@ -3107,11 +3109,16 @@ h3,
     grid-template-columns: 1fr;
   }
 
+  .project-hero .hero-main {
+    margin-bottom: 10px;
+  }
+
   .project-hero .hero-side {
     border-left: 0;
     border-top: 2px solid rgba(251, 191, 36, 0.5);
     padding-left: 0;
-    padding-top: 18px;
+    padding-top: 28px;
+    margin-top: 10px;
   }
 }
 
@@ -3151,6 +3158,11 @@ h3,
 .project-page .hero-tags span {
   border-color: color-mix(in srgb, var(--project-accent) 60%, #ffffff 20%);
   background: linear-gradient(135deg, color-mix(in srgb, var(--project-accent) 26%, transparent), color-mix(in srgb, var(--project-secondary) 20%, transparent));
+}
+
+.project-page .hero-tags {
+  margin-top: 16px;
+  margin-bottom: 14px;
 }
 
 .project-page .project-cover {
@@ -3266,5 +3278,283 @@ h3,
   .project-page .project-hero h1 {
     font-size: clamp(34px, 10vw, 56px);
   }
+}
+
+.hub-page {
+  --hub-accent: #22d3ee;
+}
+
+.hub-main {
+  max-width: 1240px;
+  gap: 34px;
+}
+
+.hub-hero {
+  padding: clamp(34px, 4.5vw, 58px);
+  border-color: rgba(255, 255, 255, 0.18);
+  background:
+    linear-gradient(145deg, rgba(8, 16, 33, 0.97), rgba(8, 14, 30, 0.95)),
+    radial-gradient(900px 420px at 90% -10%, color-mix(in srgb, var(--hub-accent) 28%, transparent), transparent 60%);
+}
+
+.hub-hero h1 {
+  font-size: clamp(34px, 6.2vw, 68px);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.hub-grid-wrap {
+  background: linear-gradient(145deg, rgba(7, 14, 29, 0.95), rgba(6, 12, 26, 0.97));
+}
+
+.hub-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.hub-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(10, 19, 39, 0.93), rgba(8, 15, 31, 0.96));
+  padding: 10px;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.hub-card:hover {
+  transform: translateY(-8px) rotate(-0.6deg);
+  border-color: color-mix(in srgb, var(--hub-accent) 55%, #ffffff 18%);
+  box-shadow: 0 16px 30px rgba(2, 6, 23, 0.44);
+}
+
+.hub-card img {
+  width: 100%;
+  height: 168px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  filter: saturate(1.08);
+}
+
+.hub-card h3 {
+  margin: 12px 0 0;
+  color: #f8fbff;
+  font-size: 1.14rem;
+}
+
+.hub-card p {
+  margin: 8px 0 0;
+  color: #c8d7f0;
+  line-height: 1.62;
+  font-size: 0.94rem;
+}
+
+.hub-card span {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 0.73rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-weight: 700;
+  color: #061126;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--hub-accent) 86%, #ffffff 8%), #22d3ee);
+}
+
+.hub-card:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--hub-accent) 68%, #ffffff 15%);
+  outline-offset: 3px;
+}
+
+.projects-hub-page {
+  --hub-accent: #38bdf8;
+}
+
+.contact-hub-page {
+  --hub-accent: #22c55e;
+}
+
+.contact-grid .hub-card {
+  padding: 24px;
+}
+
+.contact-grid .hub-card h3 {
+  margin-top: 0;
+  font-size: 1.26rem;
+}
+
+.contact-grid .hub-card p {
+  font-size: 1rem;
+}
+
+@media (max-width: 980px) {
+  .hub-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .hub-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hub-card img {
+    height: 190px;
+  }
+}
+
+/* Professional polish layer across all pages */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.site-header {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+  backdrop-filter: blur(14px) saturate(1.15);
+}
+
+.main-nav {
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.main-nav a {
+  position: relative;
+  transition: color 200ms ease, background-color 200ms ease, transform 200ms ease;
+}
+
+.main-nav a:hover {
+  transform: translateY(-1px);
+  color: #f8fafc;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 4px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.9), rgba(251, 191, 36, 0.9));
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 220ms ease;
+}
+
+.main-nav a.active::after,
+.main-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.lang-btn {
+  border: 1px solid transparent;
+}
+
+.lang-btn:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+}
+
+.neo-window,
+.about-hero,
+.portfolio-section,
+.timeline,
+.signature-panel,
+.about-card,
+.hub-card,
+.project-impact-grid article,
+.project-steps li {
+  box-shadow: 0 22px 46px rgba(2, 6, 23, 0.36);
+}
+
+.neo-card,
+.project-card,
+.skill-card,
+.about-card,
+.hub-card,
+.project-impact-grid article {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.neo-card:hover,
+.project-card:hover,
+.skill-card:hover,
+.about-card:hover,
+.hub-card:hover,
+.project-impact-grid article:hover {
+  box-shadow: 0 18px 34px rgba(2, 6, 23, 0.42);
+}
+
+.neo-hero h1,
+.about-hero h1,
+.hub-hero h1,
+.project-page .project-hero h1 {
+  text-wrap: balance;
+}
+
+.neo-text,
+.about-hero p,
+.project-copy,
+.hub-card p,
+.neo-card p,
+.project-card p,
+.timeline li {
+  line-height: 1.7;
+}
+
+.btn-link,
+.neo-btn,
+.neo-form button,
+.ai-chat-form button {
+  transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
+}
+
+.btn-link:hover,
+.neo-btn:hover,
+.neo-form button:hover,
+.ai-chat-form button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
+.btn-link:focus-visible,
+.neo-btn:focus-visible,
+.neo-link:focus-visible,
+.main-nav a:focus-visible,
+.lang-btn:focus-visible,
+.neo-card-link:focus-visible,
+.hub-card:focus-visible {
+  outline: 2px solid rgba(56, 189, 248, 0.9);
+  outline-offset: 3px;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.neo-layout,
+.about-main,
+.hub-main,
+.project-main {
+  animation: pageEnter 420ms ease-out;
 }
 
