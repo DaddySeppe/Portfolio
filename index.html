@@ -11,170 +11,94 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="home-page">
+  <div class="neo-bg" aria-hidden="true"></div>
+
   <header class="site-header">
     <a class="brand" href="index.html">SEPPE</a>
     <nav class="main-nav" aria-label="Main navigation">
-      <a class="active" href="index.html" data-i18n="nav.home">Home</a>
-      <a href="about.html" data-i18n="nav.about">About Me</a>
-      <div class="language-switcher">
-        <button class="lang-btn lang-btn-nl" data-lang="nl" title="Nederlands">NL</button>
-        <button class="lang-btn lang-btn-en active" data-lang="en" title="English">EN</button>
-      </div>
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <div class="home-progress" aria-hidden="true">
-    <span id="homeProgressBar"></span>
-  </div>
-
-  <!-- Immersive background -->
-  <div class="immersive-bg">
-    <img class="bg-scene active" data-scene="1" src="./assets/images/scene1.svg" alt="Scene 1" />
-    <img class="bg-scene" data-scene="2" src="./assets/images/scene2.svg" alt="Scene 2" />
-    <img class="bg-scene" data-scene="3" src="./assets/images/scene3.svg" alt="Scene 3" />
-    <div class="bg-vignette"></div>
-  </div>
-
-  <div class="home-atmosphere" aria-hidden="true">
-    <span class="beam beam-a"></span>
-    <span class="beam beam-b"></span>
-    <span class="glow glow-a"></span>
-    <span class="glow glow-b"></span>
-  </div>
-
-  <div class="portfolio-overlay">
-    <div class="overlay-card">
-      <p class="overlay-tag" id="sceneTag" data-i18n="hero.tag">SEPPE PORTFOLIO</p>
-      <h1 class="overlay-title" id="sceneTitle" data-i18n="hero.title">IT Student</h1>
-      <p class="overlay-subtitle" id="sceneSubtitle" data-i18n="hero.subtitle">
-        I am Seppe, a second-year IT student. I like learning new things, working on practical projects and improving myself step by step.
-      </p>
-      <div class="overlay-chips" aria-label="Profile highlights">
-        <span data-i18n="hero.chip1">Second-year student</span>
-        <span data-i18n="hero.chip2">Motivated</span>
-        <span data-i18n="hero.chip3">Always learning</span>
+  <main class="neo-layout">
+    <section class="neo-window reveal">
+      <div class="neo-window-top">
+        <div class="neo-dots" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <p>Portfolio v2</p>
       </div>
-      <p class="overlay-scroll" data-i18n="hero.scroll">Scroll to explore</p>
-    </div>
-  </div>
 
-  <main class="home-content">
-    <section class="home-panel scroll-trigger" data-scene="1">
-      <article class="panel-card reveal">
-        <p class="eyebrow" data-i18n="home.eyebrow">Home</p>
-        <h2 data-i18n="home.title">I am Seppe, a student who likes to keep learning and getting better by working on real projects.</h2>
-        <p data-i18n="home.description">
-          I am interested in IT because I like solving problems, trying things out and seeing progress in what I do. I am still learning, but with every project I gain more experience and confidence.
-        </p>
-        <div class="home-showcase" aria-label="Home highlights">
-          <div class="home-showcase-track">
-            <span data-i18n="home.skill1">Problem solving</span>
-            <span data-i18n="home.skill2">Learning by doing</span>
-            <span data-i18n="home.skill3">Teamwork</span>
-            <span data-i18n="home.skill4">Step by step growth</span>
-            <span data-i18n="home.skill1">Problem solving</span>
-            <span data-i18n="home.skill2">Learning by doing</span>
-            <span data-i18n="home.skill3">Teamwork</span>
-            <span data-i18n="home.skill4">Step by step growth</span>
+      <div class="neo-grid">
+        <article class="neo-hero">
+          <p class="neo-kicker">Frontend Developer</p>
+          <h1>Hi, I am Seppe Vanroy.</h1>
+          <p class="neo-text">
+            I build modern web interfaces with focus on clarity, performance, and clean implementation.
+            This layout is designed in a dark cinematic style inspired by your reference.
+          </p>
+          <div class="neo-actions">
+            <a href="about.html" class="neo-btn">Know More</a>
+            <a href="mailto:seppe.vanroy@telenet.be" class="neo-link">Email Me</a>
           </div>
-        </div>
-      </article>
+        </article>
+
+        <figure class="neo-hero-media">
+          <img src="assets/images/scene1.jpg.png" alt="Developer working on laptop" />
+        </figure>
+
+        <section class="neo-projects">
+          <h2>Featured Projects</h2>
+          <div class="neo-cards">
+            <article class="neo-card">
+              <img src="assets/images/scene1.jpg.png" alt="Project one preview" />
+              <h3>Project One</h3>
+              <p>Dashboard concept with clean visual hierarchy and practical interactions.</p>
+            </article>
+            <article class="neo-card">
+              <img src="assets/images/scene2.jpg.png" alt="Project two preview" />
+              <h3>Project Two</h3>
+              <p>Web experience focused on transitions, modular sections, and clear storytelling.</p>
+            </article>
+            <article class="neo-card">
+              <img src="assets/images/scene3.jpg.png" alt="Project three preview" />
+              <h3>Project Three</h3>
+              <p>Mobile-first interface with strong contrast and fast, responsive behavior.</p>
+            </article>
+          </div>
+        </section>
+
+        <aside class="neo-side">
+          <article class="neo-panel">
+            <h2>About Me</h2>
+            <p>I am a second-year IT student who likes to ship practical projects and keep improving every week.</p>
+          </article>
+
+          <article class="neo-panel" id="contact">
+            <h2>Contact Me</h2>
+            <form class="neo-form" action="#" method="post">
+              <input type="text" placeholder="Name" aria-label="Name" />
+              <input type="email" placeholder="Email" aria-label="Email" />
+              <textarea rows="4" placeholder="Message" aria-label="Message"></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </article>
+        </aside>
+      </div>
     </section>
 
-    <section class="home-panel scroll-trigger" data-scene="2">
-      <article class="panel-card reveal">
-        <p class="eyebrow" data-i18n="projects.eyebrow">Projects</p>
-        <h2 data-i18n="projects.title">Most of my work comes from school projects, exercises and moments where I had to learn by actually doing it.</h2>
-        <div class="mini-grid">
-          <div>
-            <h3 data-i18n="projects.card1.title">School Work</h3>
-            <p data-i18n="projects.card1.desc">I work on assignments where I have to apply what I learn and turn it into something practical.</p>
-          </div>
-          <div>
-            <h3 data-i18n="projects.card2.title">Technical Skills</h3>
-            <p data-i18n="projects.card2.desc">I keep improving my technical skills by working with different systems, tools and course projects.</p>
-          </div>
-          <div>
-            <h3 data-i18n="projects.card3.title">My Approach</h3>
-            <p data-i18n="projects.card3.desc">I try to work seriously, stay clear in what I do and keep improving until the result feels right.</p>
-          </div>
-          <div>
-            <h3 data-i18n="projects.card4.title">Growth</h3>
-            <p data-i18n="projects.card4.desc">For me, every project is a chance to learn something new and become better at what I do.</p>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <section class="home-panel scroll-trigger" data-scene="3">
-      <article class="panel-card reveal">
-        <p class="eyebrow" data-i18n="aboutsection.eyebrow">About Me</p>
-        <h2 data-i18n="aboutsection.title">I am someone who wants to keep growing in IT and build more experience through practice, effort and new challenges.</h2>
-        <p data-i18n="aboutsection.description">
-          On my about page, you can read more about me, my strengths and the way I try to improve myself as a student.
-        </p>
-        <div class="panel-actions">
-          <a class="btn-link" href="about.html" data-i18n="aboutsection.link1">Go to About Me</a>
-          <a class="btn-link btn-link-secondary" href="mailto:seppe@example.com" data-i18n="aboutsection.link2">Contact Me</a>
-        </div>
-      </article>
+    <section class="neo-features reveal">
+      <h2>Features</h2>
+      <ul>
+        <li>Showcase your projects</li>
+        <li>About me section</li>
+        <li>Contact form</li>
+        <li>Smooth animations</li>
+      </ul>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-top">
-        <div class="footer-left">
-          <h3 class="footer-title">Seppe.</h3>
-          <p class="footer-description" data-i18n="footer.description">IT Student passionate about building practical solutions with professional mindset and continuous improvement.</p>
-        </div>
-        <div class="footer-right">
-          <p class="footer-connect-label" data-i18n="footer.connect">Connect</p>
-          <div class="footer-socials">
-            <a href="https://linkedin.com/in/seppe-vanroy-857680331" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-              </svg>
-            </a>
-            <a href="https://github.com/DaddySeppe" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
-            </a>
-            <a href="mailto:seppe.vanroy@telenet.be" class="social-icon" title="Email">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-divider"></div>
-      <div class="footer-bottom">
-        <p class="footer-copyright" data-i18n="footer.copyright">&copy; 2026 Seppe Vanroy. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <div class="ai-chat" id="aiChatWidget" aria-live="polite">
-    <button class="ai-chat-toggle" id="aiChatToggle" type="button" aria-expanded="false" aria-controls="aiChatPanel" title="Open AI chat">
-      <span>AI</span>
-    </button>
-    <section class="ai-chat-panel" id="aiChatPanel" aria-label="Portfolio assistant">
-      <header class="ai-chat-header">
-        <div>
-          <p class="ai-chat-kicker">Portfolio Assistant</p>
-          <h3 class="ai-chat-title">Vraag iets aan mijn AI</h3>
-        </div>
-        <button class="ai-chat-close" id="aiChatClose" type="button" aria-label="Close chat">x</button>
-      </header>
-      <div class="ai-chat-messages" id="aiChatMessages"></div>
-      <form class="ai-chat-form" id="aiChatForm">
-        <input id="aiChatInput" type="text" autocomplete="off" placeholder="Typ je vraag..." />
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </div>
 
   <script src="script.js"></script>
 </body>
