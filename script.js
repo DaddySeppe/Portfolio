@@ -1577,12 +1577,12 @@ const initPortfolioAI = () => {
 };
 
 initHomePage();
-initHomeEffects();
-initReveal();
-initAboutEffects();
-initAboutCenterZoom();
-initAboutWheelMotion();
-initContactForm();
-initPortfolioAI();
+try { initHomeEffects(); } catch (e) { console.error('initHomeEffects error:', e); }
+try { initReveal(); } catch (e) { console.error('initReveal error:', e); }
+try { initAboutEffects(); } catch (e) { console.error('initAboutEffects error:', e); }
+try { initAboutCenterZoom(); } catch (e) { console.error('initAboutCenterZoom error:', e); }
+try { initAboutWheelMotion(); } catch (e) { console.error('initAboutWheelMotion error:', e); }
+try { initContactForm(); } catch (e) { console.error('initContactForm error:', e); }
+try { initPortfolioAI(); } catch (e) { console.error('initPortfolioAI error:', e); }
 
 
