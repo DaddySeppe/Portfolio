@@ -853,7 +853,7 @@ const sceneSubtitle = document.getElementById('sceneSubtitle');
 const homeAtmosphere = document.querySelector('.home-atmosphere');
 const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const performanceMode = true; // Force performance mode for smooth scrolling
+const performanceMode = isSmallScreen || prefersReducedMotion;
 const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
 const getSceneCopy = (lang) => {
@@ -1577,11 +1577,12 @@ const initPortfolioAI = () => {
 };
 
 initHomePage();
-try { initHomeEffects(); } catch (e) { console.error('initHomeEffects error:', e); }
-try { initReveal(); } catch (e) { console.error('initReveal error:', e); }
-try { initAboutEffects(); } catch (e) { console.error('initAboutEffects error:', e); }
-try { initAboutCenterZoom(); } catch (e) { console.error('initAboutCenterZoom error:', e); }
-try { initAboutWheelMotion(); } catch (e) { console.error('initAboutWheelMotion error:', e); }
+// Performance first: disable heavy animations on all pages
+// try { initHomeEffects(); } catch (e) { console.error('initHomeEffects error:', e); }
+// try { initReveal(); } catch (e) { console.error('initReveal error:', e); }
+// try { initAboutEffects(); } catch (e) { console.error('initAboutEffects error:', e); }
+// try { initAboutCenterZoom(); } catch (e) { console.error('initAboutCenterZoom error:', e); }
+// try { initAboutWheelMotion(); } catch (e) { console.error('initAboutWheelMotion error:', e); }
 try { initContactForm(); } catch (e) { console.error('initContactForm error:', e); }
 try { initPortfolioAI(); } catch (e) { console.error('initPortfolioAI error:', e); }
 
