@@ -853,7 +853,7 @@ const sceneSubtitle = document.getElementById('sceneSubtitle');
 const homeAtmosphere = document.querySelector('.home-atmosphere');
 const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const performanceMode = isSmallScreen || prefersReducedMotion;
+const performanceMode = true; // Force performance mode for smooth scrolling
 const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
 const getSceneCopy = (lang) => {
