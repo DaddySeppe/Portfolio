@@ -1579,7 +1579,7 @@ const initPortfolioAI = () => {
 initHomePage();
 // Performance first: disable heavy animations on all pages
 // try { initHomeEffects(); } catch (e) { console.error('initHomeEffects error:', e); }
-// try { initReveal(); } catch (e) { console.error('initReveal error:', e); }
+try { initReveal(); } catch (e) { console.error('initReveal error:', e); }
 // try { initAboutEffects(); } catch (e) { console.error('initAboutEffects error:', e); }
 // try { initAboutCenterZoom(); } catch (e) { console.error('initAboutCenterZoom error:', e); }
 // try { initAboutWheelMotion(); } catch (e) { console.error('initAboutWheelMotion error:', e); }
