@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="/styles.css?v=5" />
+  <link rel="stylesheet" href="/styles.css?v=6" />
 </head>
 <body class="home-page">
   <div class="neo-bg" aria-hidden="true"></div>
@@ -89,11 +89,14 @@
 
           <article class="neo-panel" id="contact">
             <h2>Contacteer Mij</h2>
-            <form class="neo-form" action="#" method="post">
-              <input type="text" placeholder="Naam" aria-label="Naam" />
-              <input type="email" placeholder="E-mail" aria-label="E-mail" />
-              <textarea rows="4" placeholder="Bericht" aria-label="Bericht"></textarea>
+            <form class="neo-form" id="contactForm" action="api/contact.php" method="post" novalidate>
+              <input type="text" name="name" placeholder="Naam" aria-label="Naam" required minlength="2" maxlength="80" />
+              <input type="email" name="email" placeholder="E-mail" aria-label="E-mail" required maxlength="120" />
+              <input type="hidden" name="subject" value="Homepage contact" />
+              <textarea rows="4" name="message" placeholder="Bericht" aria-label="Bericht" required minlength="10" maxlength="4000"></textarea>
+              <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="contact-honeypot" />
               <button type="submit">Verstuur</button>
+              <p class="contact-form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
             </form>
           </article>
         </aside>
@@ -260,6 +263,6 @@
     </section>
   </div>
 
-  <script src="/script.js?v=5"></script>
+  <script src="/script.js?v=6"></script>
 </body>
 </html>
