@@ -1332,25 +1332,36 @@ const initContactForm = () => {
 
   const submitButton = form.querySelector('button[type="submit"]');
 
-  const buildMailto = (values) => {
-    const subject = `Portfolio contact: ${values.subject}`;
-    const body = [
-      'New message from the portfolio contact form',
-      '',
-      `Name: ${values.name}`,
-      `Email: ${values.email}`,
-      `Subject: ${values.subject}`,
-      '',
-      'Message:',
-      values.message
-    ].join('\n');
-
-    return `mailto:seppe.vanroy@telenet.be?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const messages = {
+    nl: {
+      allFields: 'Vul eerst alle velden correct in.',
+      short: 'Naam, onderwerp of bericht is te kort.',
+      badEmail: 'Vul een geldig e-mailadres in.',
+      sending: 'Bericht wordt verzonden...',
+      sent: 'Bericht verzonden. Ik neem snel contact op.',
+      fallback: 'Server mail is nu niet beschikbaar. Je mailapp wordt geopend als fallback.',
+      genericError: 'Verzenden mislukt. Probeer opnieuw binnen enkele minuten.'
+    },
+    en: {
+      allFields: 'Please fill in all required fields.',
+      short: 'Name, subject, or message is too short.',
+      badEmail: 'Please enter a valid email address.',
+      sending: 'Sending message...',
+      sent: 'Message sent. I will reply soon.',
+      fallback: 'Server mail is not available right now. Opening your mail app as fallback.',
+      genericError: 'Sending failed. Please try again in a few minutes.'
+    }
   };
 
-  const setStatus = (message, isError = false) => {
+  const getMsg = (key) => {
+    const lang = currentLanguage === 'nl' ? 'nl' : 'en';
+    return messages[lang][key] || messages.en[key] || '';
+  };
+
+  const setStatus = (message, tone = 'info') => {
     status.textContent = message;
-    status.style.color = isError ? '#fca5a5' : '#9ee7ff';
+    status.classList.remove('is-info', 'is-success', 'is-error');
+    status.classList.add(`is-${tone}`);
   };
 
   form.addEventListener('submit', async (event) => {
@@ -1364,31 +1375,78 @@ const initContactForm = () => {
     const website = String(formData.get('website') || '').trim();
 
     if (website) {
-      setStatus(currentLanguage === 'nl' ? 'Bericht verzonden.' : 'Message sent.', false);
+      setStatus(getMsg('sent'), 'success');
       form.reset();
       return;
     }
 
     if (!name || !email || !subject || !message) {
-      setStatus(currentLanguage === 'nl' ? 'Vul eerst alle velden in.' : 'Fill in all fields first.', true);
+      setStatus(getMsg('allFields'), 'error');
       return;
     }
 
-    if (submitButton) submitButton.disabled = true;
-    const mailto = buildMailto({ name, email, subject, message });
+    if (name.length < 2 || subject.length < 3 || message.length < 10) {
+      setStatus(getMsg('short'), 'error');
+      return;
+    }
 
-    setStatus(
-      currentLanguage === 'nl'
-        ? 'Je mailapp wordt geopend met het bericht klaar.'
-        : 'Opening your mail app with the message ready.',
-      false
-    );
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      setStatus(getMsg('badEmail'), 'error');
+      return;
+    }
 
-    window.location.href = mailto;
+    const endpoint = form.getAttribute('action') || 'api/contact.php';
+    const payload = { name, email, subject, message, website };
+    const idleButtonLabel = submitButton ? submitButton.textContent : '';
+
     if (submitButton) {
-      window.setTimeout(() => {
+      submitButton.disabled = true;
+      submitButton.textContent = getMsg('sending');
+    }
+    form.setAttribute('aria-busy', 'true');
+    setStatus(getMsg('sending'), 'info');
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const raw = await response.text();
+      let result = {};
+
+      try {
+        result = raw ? JSON.parse(raw) : {};
+      } catch (parseError) {
+        result = {};
+      }
+
+      if (!response.ok || !result.success) {
+        if (typeof result.fallback === 'string' && result.fallback.startsWith('mailto:')) {
+          setStatus(getMsg('fallback'), 'error');
+          window.location.href = result.fallback;
+          return;
+        }
+
+        const backendMessage = typeof result.error === 'string' ? result.error : '';
+        throw new Error(backendMessage || getMsg('genericError'));
+      }
+
+      setStatus(getMsg('sent'), 'success');
+      form.reset();
+    } catch (error) {
+      const message = error instanceof Error && error.message ? error.message : getMsg('genericError');
+      setStatus(message, 'error');
+    } finally {
+      form.removeAttribute('aria-busy');
+      if (submitButton) {
         submitButton.disabled = false;
-      }, 1200);
+        submitButton.textContent = idleButtonLabel;
+      }
     }
   });
 };

@@ -3792,6 +3792,18 @@ h3,
   font-size: 0.92rem;
 }
 
+.contact-form-status.is-info {
+  color: #9ee7ff;
+}
+
+.contact-form-status.is-success {
+  color: #86efac;
+}
+
+.contact-form-status.is-error {
+  color: #fca5a5;
+}
+
 .contact-honeypot {
   position: absolute;
   left: -9999px;

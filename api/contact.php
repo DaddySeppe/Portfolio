@@ -1,10 +1,15 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+
+$respond = static function (int $code, array $payload): void {
+    http_response_code($code);
+    echo json_encode($payload);
+    exit;
+};
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    echo json_encode(['success' => false, 'error' => 'Method not allowed']);
-    exit;
+    $respond(405, ['success' => false, 'error' => 'Method not allowed']);
 }
 
 $payload = [];
@@ -34,35 +39,26 @@ $message = trim((string) ($payload['message'] ?? ''));
 $website = $clean($payload['website'] ?? '');
 
 if ($website !== '') {
-    echo json_encode(['success' => true]);
-    exit;
+    $respond(200, ['success' => true]);
 }
 
 if ($name === '' || $email === '' || $subject === '' || $message === '') {
-    http_response_code(400);
-    echo json_encode(['success' => false, 'error' => 'All fields are required']);
-    exit;
+    $respond(400, ['success' => false, 'error' => 'All fields are required']);
 }
 
 if (strlen($name) < 2 || strlen($subject) < 3 || strlen($message) < 10) {
-    http_response_code(400);
-    echo json_encode(['success' => false, 'error' => 'Message is too short']);
-    exit;
+    $respond(400, ['success' => false, 'error' => 'Message is too short']);
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    http_response_code(400);
-    echo json_encode(['success' => false, 'error' => 'Invalid email address']);
-    exit;
+    $respond(400, ['success' => false, 'error' => 'Invalid email address']);
 }
 
 if (strlen($message) > 4000) {
-    http_response_code(400);
-    echo json_encode(['success' => false, 'error' => 'Message is too long']);
-    exit;
+    $respond(400, ['success' => false, 'error' => 'Message is too long']);
 }
 
-$recipient = 'seppe.vanroy@telenet.be';
+$recipient = getenv('CONTACT_TO') ?: 'seppe.vanroy@telenet.be';
 $mailSubject = 'Portfolio contact: ' . $subject;
 $mailBody = "New message from the portfolio contact form\n\n";
 $mailBody .= "Name: {$name}\n";
@@ -71,10 +67,17 @@ $mailBody .= "Subject: {$subject}\n";
 $mailBody .= "Sent: " . date('c') . "\n\n";
 $mailBody .= "Message:\n{$message}\n";
 
+$host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+$host = preg_replace('/:\\d+$/', '', $host);
+$fromAddress = getenv('CONTACT_FROM') ?: ('no-reply@' . $host);
+if (!filter_var($fromAddress, FILTER_VALIDATE_EMAIL)) {
+    $fromAddress = $recipient;
+}
+
 $headers = [
     'MIME-Version: 1.0',
     'Content-Type: text/plain; charset=UTF-8',
-    'From: Seppe Portfolio <no-reply@seppe-portfolio.local>',
+    'From: Seppe Portfolio <' . $fromAddress . '>',
     'Reply-To: ' . $name . ' <' . $email . '>',
     'X-Mailer: PHP/' . phpversion(),
 ];
@@ -82,12 +85,11 @@ $headers = [
 $success = @mail($recipient, $mailSubject, $mailBody, implode("\r\n", $headers));
 
 if (!$success) {
-    echo json_encode([
+    $respond(500, [
         'success' => false,
-        'error' => 'Mail delivery is not configured on this server yet.',
-        'fallback' => 'mailto:' . rawurlencode($recipient) . '?subject=' . rawurlencode($mailSubject) . '&body=' . rawurlencode($mailBody)
+        'error' => 'Mail delivery is not configured on this server.',
+        'fallback' => 'mailto:' . $recipient . '?subject=' . rawurlencode($mailSubject) . '&body=' . rawurlencode($mailBody)
     ]);
-    exit;
 }
 
-echo json_encode(['success' => true]);
+$respond(200, ['success' => true]);
