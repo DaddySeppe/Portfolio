@@ -481,13 +481,17 @@ Object.assign(pageTranslations, {
         '.neo-link': { text: 'Contactformulier' },
         '.neo-projects h2': { text: 'Uitgelichte Projecten' },
         '.neo-card:nth-child(1) h3': { text: 'Aurubis IT-ondersteuning' },
-        '.neo-card:nth-child(1) p': { text: 'Troubleshooting en support in een echte productieomgeving.' },
+        '.neo-card:nth-child(1) p': { text: 'IT-support en troubleshooting binnen een productieomgeving waar duidelijke opvolging belangrijk is.' },
         '.neo-card:nth-child(2) h3': { text: 'MissionZebra' },
-        '.neo-card:nth-child(2) p': { text: 'Een teamproject rond planning en mobile-first flows.' },
-        '.neo-card:nth-child(3) h3': { text: 'Portfolio Website' },
-        '.neo-card:nth-child(3) p': { text: 'Mijn eigen website met focus op structuur, inhoud en presentatie.' },
-        '.neo-card:nth-child(4) h3': { text: 'Aurubis IT-ondersteuning' },
-        '.neo-card:nth-child(4) p': { text: 'IT-support en troubleshooting in een echte productieomgeving.' },
+        '.neo-card:nth-child(2) p': { text: 'Een teamproject rond planning, schermtijd en een praktische mobiele flow voor gezinnen.' },
+        '.neo-card:nth-child(3) h3': { text: 'Poetrel' },
+        '.neo-card:nth-child(3) p': { text: 'Softwareproject met focus op logica, data en een duidelijke opbouw van idee naar werkend prototype.' },
+        '.neo-card:nth-child(4) h3': { text: 'K.V.V Rauw' },
+        '.neo-card:nth-child(4) p': { text: 'Project voor een clubcontext, met aandacht voor heldere informatie, structuur en gebruiksgemak.' },
+        '.neo-card:nth-child(5) h3': { text: 'Portfolio Website' },
+        '.neo-card:nth-child(5) p': { text: 'Mijn eigen portfolio waarin ik projecten, groei en ambitie duidelijker samenbreng.' },
+        '.neo-card:nth-child(6) h3': { text: 'Helpse' },
+        '.neo-card:nth-child(6) p': { text: 'Een applicatieconcept rond hulpvragen en overzicht: sneller vinden wat nodig is, zonder onnodige stappen.' },
         '.internship-panel .panel-eyebrow': { text: 'Stagefocus' },
         '.internship-panel h2': { text: 'Stage in softwareontwikkeling' },
         '.internship-panel .internship-lead': { text: "Ik zoek een stage waar ik als APP/AI-student kan meewerken aan echte software: applicaties, backend-logica, data, API's of automatisatie." },
@@ -518,13 +522,17 @@ Object.assign(pageTranslations, {
         '.neo-link': { text: 'Email Me' },
         '.neo-projects h2': { text: 'Featured Projects' },
         '.neo-card:nth-child(1) h3': { text: 'Aurubis IT Support' },
-        '.neo-card:nth-child(1) p': { text: 'Troubleshooting and support in a real production environment.' },
+        '.neo-card:nth-child(1) p': { text: 'IT support and troubleshooting in a production environment where clear follow-up matters.' },
         '.neo-card:nth-child(2) h3': { text: 'MissionZebra' },
-        '.neo-card:nth-child(2) p': { text: 'A team project around planning and mobile-first flows.' },
-        '.neo-card:nth-child(3) h3': { text: 'Portfolio Website' },
-        '.neo-card:nth-child(3) p': { text: 'My own website with focus on structure, content, and presentation.' },
-        '.neo-card:nth-child(4) h3': { text: 'Aurubis IT Support' },
-        '.neo-card:nth-child(4) p': { text: 'IT support and troubleshooting in a real production environment.' },
+        '.neo-card:nth-child(2) p': { text: 'A team project about planning, screen time, and a practical mobile flow for families.' },
+        '.neo-card:nth-child(3) h3': { text: 'Poetrel' },
+        '.neo-card:nth-child(3) p': { text: 'Software project focused on logic, data, and turning an idea into a working prototype.' },
+        '.neo-card:nth-child(4) h3': { text: 'K.V.V Rauw' },
+        '.neo-card:nth-child(4) p': { text: 'A club-context project focused on clear information, structure, and ease of use.' },
+        '.neo-card:nth-child(5) h3': { text: 'Portfolio Website' },
+        '.neo-card:nth-child(5) p': { text: 'My own portfolio, built to present my projects, growth, and ambitions more clearly.' },
+        '.neo-card:nth-child(6) h3': { text: 'Helpse' },
+        '.neo-card:nth-child(6) p': { text: 'An application concept around help requests and overview: finding what is needed with fewer steps.' },
         '.internship-panel .panel-eyebrow': { text: 'Internship focus' },
         '.internship-panel h2': { text: 'Software development internship' },
         '.internship-panel .internship-lead': { text: 'I am looking for an internship where I can work on real software as an APP/AI student: applications, backend logic, data, APIs, or automation.' },
@@ -645,21 +653,27 @@ Object.assign(pageTranslations, {
       selectors: {
         '.hub-hero .eyebrow': { text: 'Projectoverzicht' },
         '.hub-hero h1': { text: 'Projecten en realisaties' },
-        '.hub-hero .hero-main > p:not(.eyebrow)': { text: 'Hier staan twee projecten uit mijn portfolio, plus twee extra realisaties waar ik trots op ben. De meest indrukwekkende resultaten staan bovenaan.' },
+        '.hub-hero .hero-main > p:not(.eyebrow)': { text: 'Een overzicht van projecten waarin ik software, support, structuur en praktische oplossingen samenbreng. Elk project toont een ander stuk van mijn groei als APP/AI-student.' },
         '.hub-grid-wrap .eyebrow': { text: 'Kies Je Pad' },
-        '.hub-grid-wrap h2': { text: 'Vier projecten, vier verhalen' },
+        '.hub-grid-wrap h2': { text: 'Zes projecten, zes stappen vooruit' },
         '.hub-card:nth-child(1) h3': { text: 'Aurubis IT-ondersteuning' },
-        '.hub-card:nth-child(1) p': { text: 'Praktische support en troubleshooting in een professionele productieomgeving.' },
+        '.hub-card:nth-child(1) p': { text: 'IT-support en troubleshooting binnen een productieomgeving waar duidelijke opvolging belangrijk is.' },
         '.hub-card:nth-child(2) h3': { text: 'MissionZebra' },
-        '.hub-card:nth-child(2) p': { text: 'Een teamproject rond planning en mobile-first flows.' },
-        '.hub-card:nth-child(3) h3': { text: 'Portfolio Website' },
-        '.hub-card:nth-child(3) p': { text: 'Mijn eigen portfolio als presentatie van wie ik ben, wat ik maak en waar ik naartoe wil.' },
-        '.hub-card:nth-child(4) h3': { text: 'Aurubis IT-ondersteuning' },
-        '.hub-card:nth-child(4) p': { text: 'IT-support en troubleshooting in een echte productieomgeving.' },
+        '.hub-card:nth-child(2) p': { text: 'Een teamproject rond planning, schermtijd en een praktische mobiele flow voor gezinnen.' },
+        '.hub-card:nth-child(3) h3': { text: 'Poetrel' },
+        '.hub-card:nth-child(3) p': { text: 'Softwareproject met focus op logica, data en een duidelijke opbouw van idee naar werkend prototype.' },
+        '.hub-card:nth-child(4) h3': { text: 'K.V.V Rauw' },
+        '.hub-card:nth-child(4) p': { text: 'Project voor een clubcontext, met aandacht voor heldere informatie, structuur en gebruiksgemak.' },
+        '.hub-card:nth-child(5) h3': { text: 'Portfolio Website' },
+        '.hub-card:nth-child(5) p': { text: 'Mijn eigen portfolio waarin ik projecten, groei en ambitie duidelijker samenbreng.' },
+        '.hub-card:nth-child(6) h3': { text: 'Helpse' },
+        '.hub-card:nth-child(6) p': { text: 'Een applicatieconcept rond hulpvragen en overzicht: sneller vinden wat nodig is, zonder onnodige stappen.' },
         '.hub-card:nth-child(1) span': { text: 'Open Project' },
         '.hub-card:nth-child(2) span': { text: 'Open Project' },
         '.hub-card:nth-child(3) span': { text: 'Open Project' },
-        '.hub-card:nth-child(4) span': { text: 'Open Project' }
+        '.hub-card:nth-child(4) span': { text: 'Open Project' },
+        '.hub-card:nth-child(5) span': { text: 'Open Project' },
+        '.hub-card:nth-child(6) span': { text: 'Open Project' }
       }
     },
     en: {
@@ -667,21 +681,27 @@ Object.assign(pageTranslations, {
       selectors: {
         '.hub-hero .eyebrow': { text: 'Project Overview' },
         '.hub-hero h1': { text: 'Projects and achievements' },
-        '.hub-hero .hero-main > p:not(.eyebrow)': { text: 'This page includes the two required SKIL2 projects, plus two extra achievements I am proud of. The most impressive results are shown first.' },
+        '.hub-hero .hero-main > p:not(.eyebrow)': { text: 'An overview of projects where I combine software, support, structure, and practical solutions. Each project shows a different part of my growth as an APP/AI student.' },
         '.hub-grid-wrap .eyebrow': { text: 'Choose Your Path' },
-        '.hub-grid-wrap h2': { text: 'Four projects, four stories' },
+        '.hub-grid-wrap h2': { text: 'Six projects, six steps forward' },
         '.hub-card:nth-child(1) h3': { text: 'Aurubis IT Support' },
-        '.hub-card:nth-child(1) p': { text: 'Practical support and troubleshooting in a professional production environment.' },
+        '.hub-card:nth-child(1) p': { text: 'IT support and troubleshooting in a production environment where clear follow-up matters.' },
         '.hub-card:nth-child(2) h3': { text: 'MissionZebra' },
-        '.hub-card:nth-child(2) p': { text: 'A team project around planning and mobile-first flows.' },
-        '.hub-card:nth-child(3) h3': { text: 'Portfolio Website' },
-        '.hub-card:nth-child(3) p': { text: 'My own portfolio as a presentation of who I am, what I make, and where I want to go.' },
-        '.hub-card:nth-child(4) h3': { text: 'Aurubis IT Support' },
-        '.hub-card:nth-child(4) p': { text: 'IT support and troubleshooting in a real production environment.' },
+        '.hub-card:nth-child(2) p': { text: 'A team project about planning, screen time, and a practical mobile flow for families.' },
+        '.hub-card:nth-child(3) h3': { text: 'Poetrel' },
+        '.hub-card:nth-child(3) p': { text: 'Software project focused on logic, data, and turning an idea into a working prototype.' },
+        '.hub-card:nth-child(4) h3': { text: 'K.V.V Rauw' },
+        '.hub-card:nth-child(4) p': { text: 'A club-context project focused on clear information, structure, and ease of use.' },
+        '.hub-card:nth-child(5) h3': { text: 'Portfolio Website' },
+        '.hub-card:nth-child(5) p': { text: 'My own portfolio, built to present my projects, growth, and ambitions more clearly.' },
+        '.hub-card:nth-child(6) h3': { text: 'Helpse' },
+        '.hub-card:nth-child(6) p': { text: 'An application concept around help requests and overview: finding what is needed with fewer steps.' },
         '.hub-card:nth-child(1) span': { text: 'Open Project' },
         '.hub-card:nth-child(2) span': { text: 'Open Project' },
         '.hub-card:nth-child(3) span': { text: 'Open Project' },
-        '.hub-card:nth-child(4) span': { text: 'Open Project' }
+        '.hub-card:nth-child(4) span': { text: 'Open Project' },
+        '.hub-card:nth-child(5) span': { text: 'Open Project' },
+        '.hub-card:nth-child(6) span': { text: 'Open Project' }
       }
     }
   },
@@ -964,9 +984,150 @@ pageTranslations['project-four.html'] = {
   }
 };
 
+pageTranslations['project-poetrel.html'] = {
+  nl: {
+    title: 'Seppe | Poetrel',
+    selectors: {
+      '.project-hero .eyebrow': { text: 'Softwareproject' },
+      '.project-hero h1': { text: 'Poetrel' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Poetrel is een project waarin ik vooral bezig ben met softwarelogica, data en de stap van idee naar werkend prototype.' },
+      '.hero-tags span:nth-child(1)': { text: 'Softwareontwikkeling' },
+      '.hero-tags span:nth-child(2)': { text: 'Data' },
+      '.hero-tags span:nth-child(3)': { text: 'Prototype' },
+      '.hero-side-label': { text: 'Focus' },
+      '.hero-side h3': { text: 'Logica en structuur' },
+      '.project-impact .eyebrow': { text: 'Aanpak' },
+      '.project-impact h2': { text: 'Wat dit project toont' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Analyse' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'Het idee opdelen in duidelijke onderdelen voordat ik begin te bouwen.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Data' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'Nadenken over welke gegevens nodig zijn en hoe ze door de applicatie bewegen.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Iteratie' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'Stap voor stap verbeteren tot het prototype logisch en bruikbaar aanvoelt.' },
+      '.panel-actions .btn-link': { text: 'Terug naar Projecten' }
+    }
+  },
+  en: {
+    title: 'Seppe | Poetrel',
+    selectors: {
+      '.project-hero .eyebrow': { text: 'Software project' },
+      '.project-hero h1': { text: 'Poetrel' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Poetrel is a project where I focus on software logic, data, and turning an idea into a working prototype.' },
+      '.hero-tags span:nth-child(1)': { text: 'Software development' },
+      '.hero-tags span:nth-child(2)': { text: 'Data' },
+      '.hero-tags span:nth-child(3)': { text: 'Prototype' },
+      '.hero-side-label': { text: 'Focus' },
+      '.hero-side h3': { text: 'Logic and structure' },
+      '.project-impact .eyebrow': { text: 'Approach' },
+      '.project-impact h2': { text: 'What this project shows' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Analysis' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'Splitting the idea into clear parts before I start building.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Data' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'Thinking about what data is needed and how it moves through the application.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Iteration' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'Improving step by step until the prototype feels logical and useful.' },
+      '.panel-actions .btn-link': { text: 'Back to Projects' }
+    }
+  }
+};
+
+pageTranslations['project-kvv-rauw.html'] = {
+  nl: {
+    title: 'Seppe | K.V.V Rauw',
+    selectors: {
+      '.project-hero .eyebrow': { text: 'Clubproject' },
+      '.project-hero h1': { text: 'K.V.V Rauw' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Een project in een clubcontext, met focus op duidelijke informatie, overzichtelijke structuur en een gebruikservaring die logisch blijft.' },
+      '.hero-tags span:nth-child(1)': { text: 'Structuur' },
+      '.hero-tags span:nth-child(2)': { text: 'Informatie' },
+      '.hero-tags span:nth-child(3)': { text: 'Gebruiksgemak' },
+      '.hero-side-label': { text: 'Focus' },
+      '.hero-side h3': { text: 'Clubinformatie helder maken' },
+      '.project-impact .eyebrow': { text: 'Aanpak' },
+      '.project-impact h2': { text: 'Wat dit project oefent' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Doelgroep' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'Nadenken over wat leden, bezoekers of medewerkers snel moeten kunnen vinden.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Structuur' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'Informatie opdelen in duidelijke blokken zodat het project niet rommelig wordt.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Afwerking' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'Een project maken dat betrouwbaar en overzichtelijk aanvoelt.' },
+      '.panel-actions .btn-link': { text: 'Terug naar Projecten' }
+    }
+  },
+  en: {
+    title: 'Seppe | K.V.V Rauw',
+    selectors: {
+      '.project-hero .eyebrow': { text: 'Club project' },
+      '.project-hero h1': { text: 'K.V.V Rauw' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'A project in a club context, focused on clear information, organized structure, and a user experience that stays logical.' },
+      '.hero-tags span:nth-child(1)': { text: 'Structure' },
+      '.hero-tags span:nth-child(2)': { text: 'Information' },
+      '.hero-tags span:nth-child(3)': { text: 'Ease of use' },
+      '.hero-side-label': { text: 'Focus' },
+      '.hero-side h3': { text: 'Making club information clear' },
+      '.project-impact .eyebrow': { text: 'Approach' },
+      '.project-impact h2': { text: 'What this project trains' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Audience' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'Thinking about what members, visitors, or staff need to find quickly.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Structure' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'Splitting information into clear blocks so the project does not become messy.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Polish' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'Creating a project that feels reliable and easy to scan.' },
+      '.panel-actions .btn-link': { text: 'Back to Projects' }
+    }
+  }
+};
+
+pageTranslations['project-helpse.html'] = {
+  nl: {
+    title: 'Seppe | Helpse',
+    selectors: {
+      '.project-hero .eyebrow': { text: 'Applicatieconcept' },
+      '.project-hero h1': { text: 'Helpse' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Helpse is een concept rond hulpvragen en overzicht: gebruikers sneller naar de juiste informatie of actie brengen, zonder onnodige stappen.' },
+      '.hero-tags span:nth-child(1)': { text: 'Applicatie' },
+      '.hero-tags span:nth-child(2)': { text: 'Flow' },
+      '.hero-tags span:nth-child(3)': { text: 'Overzicht' },
+      '.hero-side-label': { text: 'Focus' },
+      '.hero-side h3': { text: 'Sneller naar de juiste hulp' },
+      '.project-impact .eyebrow': { text: 'Aanpak' },
+      '.project-impact h2': { text: 'Wat dit project onderzoekt' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Flow' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'De stappen beperken tot wat echt nodig is voor de gebruiker.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Overzicht' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'Informatie zo tonen dat iemand snel snapt wat de volgende actie is.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Softwarelogica' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'Nadenken over schermen, data en beslissingen achter de applicatie.' },
+      '.panel-actions .btn-link': { text: 'Terug naar Projecten' }
+    }
+  },
+  en: {
+    title: 'Seppe | Helpse',
+    selectors: {
+      '.project-hero .eyebrow': { text: 'Application concept' },
+      '.project-hero h1': { text: 'Helpse' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Helpse is a concept around help requests and overview: getting users to the right information or action faster, without unnecessary steps.' },
+      '.hero-tags span:nth-child(1)': { text: 'Application' },
+      '.hero-tags span:nth-child(2)': { text: 'Flow' },
+      '.hero-tags span:nth-child(3)': { text: 'Overview' },
+      '.hero-side-label': { text: 'Focus' },
+      '.hero-side h3': { text: 'Faster access to the right help' },
+      '.project-impact .eyebrow': { text: 'Approach' },
+      '.project-impact h2': { text: 'What this project explores' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Flow' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'Limiting the steps to what the user actually needs.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Overview' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'Showing information so someone quickly understands the next action.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Software logic' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'Thinking about screens, data, and decisions behind the application.' },
+      '.panel-actions .btn-link': { text: 'Back to Projects' }
+    }
+  }
+};
+
 const applyPageTranslations = (lang) => {
   const rawPageName = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  const pageName = pageTranslations[rawPageName] ? rawPageName : 'index.html';
+  const pageName = rawPageName || 'index.html';
   const pageConfig = pageTranslations[pageName]?.[lang];
   if (!pageConfig) return;
 
@@ -1092,7 +1253,10 @@ const initActiveNavigation = () => {
     'project-one.html': 'projects.html',
     'project-two.html': 'projects.html',
     'project-three.html': 'projects.html',
-    'project-four.html': 'projects.html'
+    'project-four.html': 'projects.html',
+    'project-poetrel.html': 'projects.html',
+    'project-kvv-rauw.html': 'projects.html',
+    'project-helpse.html': 'projects.html'
   };
 
   setActiveLink(routeMap[currentPath] || 'index.html');

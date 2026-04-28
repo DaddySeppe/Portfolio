@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Poetrel project preview</title>
+  <desc id="desc">Abstract software project preview with data panels and code blocks.</desc>
+  <rect width="640" height="360" fill="#07111f"/>
+  <rect x="34" y="34" width="572" height="292" rx="26" fill="#0f1c2e" stroke="#3dd6ff" stroke-opacity=".35"/>
+  <rect x="72" y="76" width="180" height="34" rx="8" fill="#38bdf8" fill-opacity=".18"/>
+  <rect x="72" y="132" width="228" height="18" rx="9" fill="#e2e8f0" fill-opacity=".82"/>
+  <rect x="72" y="166" width="160" height="14" rx="7" fill="#94a3b8" fill-opacity=".7"/>
+  <rect x="72" y="198" width="230" height="58" rx="14" fill="#020617" stroke="#1e3a5f"/>
+  <path d="M98 228h48m18 0h82" stroke="#38bdf8" stroke-width="10" stroke-linecap="round"/>
+  <rect x="344" y="82" width="198" height="198" rx="22" fill="#020617" stroke="#f7bc47" stroke-opacity=".45"/>
+  <path d="M384 232V132m58 100V104m58 128v-72" stroke="#f7bc47" stroke-width="18" stroke-linecap="round"/>
+  <text x="72" y="306" fill="#f8fafc" font-family="Arial, sans-serif" font-size="38" font-weight="700">Poetrel</text>
+</svg>

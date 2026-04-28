@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">K.V.V Rauw project preview</title>
+  <desc id="desc">Club project preview with pitch lines and interface cards.</desc>
+  <rect width="640" height="360" fill="#06140d"/>
+  <rect x="38" y="36" width="564" height="288" rx="28" fill="#0b2618" stroke="#4ade80" stroke-opacity=".35"/>
+  <path d="M320 58v244M72 180h496" stroke="#86efac" stroke-opacity=".35" stroke-width="4"/>
+  <circle cx="320" cy="180" r="58" fill="none" stroke="#86efac" stroke-opacity=".35" stroke-width="4"/>
+  <rect x="78" y="82" width="174" height="82" rx="16" fill="#020617" fill-opacity=".82" stroke="#38bdf8" stroke-opacity=".4"/>
+  <rect x="388" y="194" width="174" height="82" rx="16" fill="#020617" fill-opacity=".82" stroke="#f7bc47" stroke-opacity=".45"/>
+  <path d="M112 118h96M112 142h58M422 230h96M422 254h66" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round" opacity=".85"/>
+  <text x="78" y="306" fill="#f8fafc" font-family="Arial, sans-serif" font-size="36" font-weight="700">K.V.V Rauw</text>
+</svg>

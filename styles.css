@@ -3283,8 +3283,8 @@ h3,
 .neo-cards {
   margin-top: 14px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 14px;
   align-items: stretch;
 }
 
@@ -3306,6 +3306,8 @@ h3,
 .neo-card img {
   height: 118px;
   border-radius: 8px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .neo-card h3 {
@@ -3720,7 +3722,7 @@ h3,
 .hub-grid {
   margin-top: 18px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -6636,14 +6638,14 @@ main {
   }
 }
 
-/* Final index override: prevents older global card rules from breaking the 4-column layout. */
+/* Final index override: keeps the featured projects as a balanced 3x2 grid. */
 .home-page .neo-projects {
   grid-column: 1 / -1 !important;
 }
 
 .home-page .neo-cards {
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  gap: 12px !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 14px !important;
 }
 
 .home-page .neo-card {
@@ -6652,7 +6654,9 @@ main {
 }
 
 .home-page .neo-card img {
-  height: 116px !important;
+  height: 126px !important;
+  width: 100% !important;
+  object-fit: cover !important;
 }
 
 .home-page .neo-card h3 {
@@ -6668,7 +6672,7 @@ main {
   word-spacing: 0 !important;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   .home-page .neo-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
