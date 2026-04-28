@@ -330,6 +330,622 @@ const translations = {
 
 const pageTranslations = {};
 
+pageTranslations['cv.html'] = {
+  nl: {
+    title: 'Seppe | CV',
+    selectors: {
+      '.cv-toolbar .eyebrow': { text: 'Curriculum vitae' },
+      '.cv-toolbar h1': { text: 'CV Seppe Vanroy' },
+      '.cv-toolbar p:not(.eyebrow)': { text: 'Een scanbare webversie van mijn CV, met daarnaast een downloadbare PDF-versie.' },
+      '.cv-toolbar .btn-link:nth-child(1)': { text: 'Download PDF' },
+      '.cv-toolbar .btn-link:nth-child(2)': { text: 'Terug naar Over Mij' },
+      '.cv-sheet': { ariaLabel: 'CV van Seppe Vanroy' },
+      '.cv-name-block p': { text: 'APP/AI student' },
+      '.cv-sidebar .cv-block:nth-child(3) h3': { text: 'Contact' },
+      '.cv-sidebar .cv-block:nth-child(4) h3': { text: 'Talen' },
+      '.cv-sidebar .cv-block:nth-child(4) li:nth-child(1)': { text: 'Nederlands' },
+      '.cv-sidebar .cv-block:nth-child(4) li:nth-child(2)': { text: 'Engels' },
+      '.cv-sidebar .cv-block:nth-child(5) h3': { text: 'Soft skills' },
+      '.cv-sidebar .cv-block:nth-child(5) li:nth-child(2)': { text: 'Communicatie' },
+      '.cv-sidebar .cv-block:nth-child(5) li:nth-child(3)': { text: 'Leergierigheid' },
+      '.cv-sidebar .cv-block:nth-child(5) li:nth-child(4)': { text: 'Betrouwbaarheid' },
+      '.cv-section:nth-child(1) h3': { text: 'Profiel' },
+      '.cv-section:nth-child(1) p': { text: 'Ik ben een tweedejaarsstudent APP/AI met interesse in webontwikkeling, praktische IT-support en gestructureerd projectwerk. Ik werk graag aan duidelijke oplossingen die professioneel ogen en echt bruikbaar zijn.' },
+      '.cv-section:nth-child(2) h3': { text: 'Opleiding' },
+      '.cv-section:nth-child(2) .cv-entry span': { text: 'Thomas More' },
+      '.cv-section:nth-child(2) .cv-entry p': { text: 'Focus op applicatieontwikkeling, webontwikkeling, databases, AI-basis en projectmatig werken.' },
+      '.cv-section:nth-child(3) h3': { text: 'Ervaring en projecten' },
+      '.cv-section:nth-child(3) .cv-entry:nth-child(2) strong': { text: 'Aurubis IT-ondersteuning' },
+      '.cv-section:nth-child(3) .cv-entry:nth-child(2) span': { text: 'Praktijkervaring' },
+      '.cv-section:nth-child(3) .cv-entry:nth-child(2) p': { text: 'Ondersteuning bij troubleshooting, dagelijkse IT-taken en communicatie in een professionele productieomgeving.' },
+      '.cv-section:nth-child(3) .cv-entry:nth-child(3) p': { text: 'Teamproject rond planning en gewoontes, met aandacht voor analyse, mobile-first schermen en samenwerking.' },
+      '.cv-section:nth-child(3) .cv-entry:nth-child(4) strong': { text: 'Portfolio website' },
+      '.cv-section:nth-child(3) .cv-entry:nth-child(4) span': { text: 'Eigen realisatie' },
+      '.cv-section:nth-child(3) .cv-entry:nth-child(4) p': { text: "Ontwerp en ontwikkeling van een persoonlijke portfolio met aparte pagina's voor projecten, CV en contact." },
+      '.cv-section:nth-child(4) h3': { text: 'Technische skills' },
+      '.cv-skill-grid span:nth-child(9)': { text: 'Flutter / Kotlin basis' },
+      '.cv-skill-grid span:nth-child(10)': { text: 'IT-support' }
+    }
+  },
+  en: {
+    title: 'Seppe | CV',
+    selectors: {
+      '.cv-toolbar .eyebrow': { text: 'Curriculum vitae' },
+      '.cv-toolbar h1': { text: 'CV Seppe Vanroy' },
+      '.cv-toolbar p:not(.eyebrow)': { text: 'A scannable web version of my CV, with a downloadable PDF version next to it.' },
+      '.cv-toolbar .btn-link:nth-child(1)': { text: 'Download PDF' },
+      '.cv-toolbar .btn-link:nth-child(2)': { text: 'Back to About Me' },
+      '.cv-sheet': { ariaLabel: 'CV of Seppe Vanroy' },
+      '.cv-name-block p': { text: 'APP/AI student' },
+      '.cv-sidebar .cv-block:nth-child(3) h3': { text: 'Contact' },
+      '.cv-sidebar .cv-block:nth-child(4) h3': { text: 'Languages' },
+      '.cv-sidebar .cv-block:nth-child(4) li:nth-child(1)': { text: 'Dutch' },
+      '.cv-sidebar .cv-block:nth-child(4) li:nth-child(2)': { text: 'English' },
+      '.cv-sidebar .cv-block:nth-child(5) h3': { text: 'Soft skills' },
+      '.cv-sidebar .cv-block:nth-child(5) li:nth-child(2)': { text: 'Communication' },
+      '.cv-sidebar .cv-block:nth-child(5) li:nth-child(3)': { text: 'Eagerness to learn' },
+      '.cv-sidebar .cv-block:nth-child(5) li:nth-child(4)': { text: 'Reliability' },
+      '.cv-section:nth-child(1) h3': { text: 'Profile' },
+      '.cv-section:nth-child(1) p': { text: 'I am a second-year APP/AI student with an interest in web development, practical IT support, and structured project work. I like working on clear solutions that look professional and are genuinely useful.' },
+      '.cv-section:nth-child(2) h3': { text: 'Education' },
+      '.cv-section:nth-child(2) .cv-entry span': { text: 'Thomas More' },
+      '.cv-section:nth-child(2) .cv-entry p': { text: 'Focus on application development, web development, databases, AI foundations, and project-based work.' },
+      '.cv-section:nth-child(3) h3': { text: 'Experience and projects' },
+      '.cv-section:nth-child(3) .cv-entry:nth-child(2) strong': { text: 'Aurubis IT Support' },
+      '.cv-section:nth-child(3) .cv-entry:nth-child(2) span': { text: 'Practical experience' },
+      '.cv-section:nth-child(3) .cv-entry:nth-child(2) p': { text: 'Support with troubleshooting, daily IT tasks, and communication in a professional production environment.' },
+      '.cv-section:nth-child(3) .cv-entry:nth-child(3) p': { text: 'Team project around planning and habits, with attention to analysis, mobile-first screens, and collaboration.' },
+      '.cv-section:nth-child(3) .cv-entry:nth-child(4) strong': { text: 'Portfolio website' },
+      '.cv-section:nth-child(3) .cv-entry:nth-child(4) span': { text: 'Own realization' },
+      '.cv-section:nth-child(3) .cv-entry:nth-child(4) p': { text: 'Design and development of a personal portfolio with separate pages for projects, CV, and contact.' },
+      '.cv-section:nth-child(4) h3': { text: 'Technical skills' },
+      '.cv-skill-grid span:nth-child(9)': { text: 'Flutter / Kotlin basics' },
+      '.cv-skill-grid span:nth-child(10)': { text: 'IT support' }
+    }
+  }
+};
+
+pageTranslations['project-one.html'] = {
+  nl: {
+    title: 'Seppe | SKIL2 Semester 1',
+    selectors: {
+      '.project-hero .eyebrow': { text: 'SKIL2 Semester 1' },
+      '.project-hero h1': { text: 'Eerste portfolio-opzet' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Context: dit was mijn eerste SKIL2-opdracht binnen Skill 2. Ik bouwde een eenvoudige portfolio-structuur om te tonen dat ik HTML, CSS en inhoud logisch kan samenbrengen in een nette pagina.' },
+      '.hero-side-label': { text: 'Status' },
+      '.hero-side h3': { text: 'Prototype voltooid' },
+      '.hero-facts li:nth-child(1)': { html: '<span>Rol</span> Solo studentproject' },
+      '.hero-facts li:nth-child(2)': { html: '<span>Stack</span> HTML, CSS, basis JavaScript' },
+      '.hero-facts li:nth-child(3)': { html: '<span>Vak</span> SKIL2 - semester 1' },
+      '.project-impact .eyebrow': { text: 'Realisaties' },
+      '.project-impact h2': { text: 'Wat ik effectief heb gemaakt' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Pagina-opbouw' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'Ik zette de inhoud op in duidelijke secties zodat de lezer snel snapt waar elke blok over gaat.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Visuele hiërarchie' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'Met titels, spacing en contrast oefende ik hoe je een pagina meteen professioneler laat aanvoelen.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Herbruikbare structuur' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'Ik werkte bewust met herhaalbare elementen zodat uitbreiden later eenvoudiger werd.' },
+      '.project-flow .eyebrow': { text: 'Wat ik leerde' },
+      '.project-flow h2': { text: 'Leerpunten uit semester 1' },
+      '.project-steps li:nth-child(1)': { html: '<strong>Analyse</strong> bepalen wat een bezoeker eerst moet zien en welke info later kan komen.' },
+      '.project-steps li:nth-child(2)': { html: '<strong>Realisatie</strong> een duidelijke HTML-structuur maken die later goed uitbreidbaar blijft.' },
+      '.project-steps li:nth-child(3)': { html: '<strong>Communicatie</strong> inhoud professioneel brengen, zonder overbodige ruis.' },
+      '.portfolio-section:last-child .eyebrow': { text: 'Mijn deel' },
+      '.portfolio-section:last-child h2': { text: 'Waar ik zelf voor instond' },
+      '.portfolio-section:last-child .project-copy': { text: 'Dit project was volledig mijn eigen oefening. Ik maakte de structuur, koos de inhoud en werkte de presentatie af om te tonen dat ik de basis van een nette portfolio beheer.' },
+      '.panel-actions .btn-link:nth-child(1)': { text: 'Terug naar Projecten' },
+      '.panel-actions .btn-link:nth-child(2)': { text: 'Bekijk mijn CV' }
+    }
+  },
+  en: {
+    title: 'Seppe | SKIL2 Semester 1',
+    selectors: {
+      '.project-hero .eyebrow': { text: 'SKIL2 Semester 1' },
+      '.project-hero h1': { text: 'First portfolio setup' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Context: this was my first SKIL2 assignment in Skill 2. I built a simple portfolio structure to show that I can combine HTML, CSS, and content logically in a clean page.' },
+      '.hero-side-label': { text: 'Status' },
+      '.hero-side h3': { text: 'Prototype completed' },
+      '.hero-facts li:nth-child(1)': { html: '<span>Role</span> Solo student project' },
+      '.hero-facts li:nth-child(2)': { html: '<span>Stack</span> HTML, CSS, basic JavaScript' },
+      '.hero-facts li:nth-child(3)': { html: '<span>Course</span> SKIL2 - semester 1' },
+      '.project-impact .eyebrow': { text: 'Realizations' },
+      '.project-impact h2': { text: 'What I actually built' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Page structure' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'I organized the content into clear sections so the reader quickly understands what each block is about.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Visual hierarchy' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'With headings, spacing, and contrast, I practiced how to make a page feel more professional right away.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Reusable structure' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'I consciously worked with repeatable elements so expanding the site later became easier.' },
+      '.project-flow .eyebrow': { text: 'What I learned' },
+      '.project-flow h2': { text: 'Learning points from semester 1' },
+      '.project-steps li:nth-child(1)': { html: '<strong>Analysis</strong> decide what a visitor should see first and which information can come later.' },
+      '.project-steps li:nth-child(2)': { html: '<strong>Realization</strong> create a clear HTML structure that remains easy to expand later.' },
+      '.project-steps li:nth-child(3)': { html: '<strong>Communication</strong> present content professionally, without unnecessary noise.' },
+      '.portfolio-section:last-child .eyebrow': { text: 'My part' },
+      '.portfolio-section:last-child h2': { text: 'What I was responsible for' },
+      '.portfolio-section:last-child .project-copy': { text: 'This project was fully my own exercise. I created the structure, chose the content, and finished the presentation to show that I understand the basics of a clean portfolio.' },
+      '.panel-actions .btn-link:nth-child(1)': { text: 'Back to Projects' },
+      '.panel-actions .btn-link:nth-child(2)': { text: 'View my CV' }
+    }
+  }
+};
+
+Object.assign(pageTranslations, {
+  'index.html': {
+    nl: {
+      title: 'Seppe | Home',
+      selectors: {
+        '.neo-window-top p': { text: 'Portfolio v2' },
+        '.neo-kicker': { text: 'APP/AI Student' },
+        '.neo-hero h1': { text: 'Hallo, ik ben Seppe Vanroy.' },
+        '.neo-text': { text: 'Welkom op mijn e-portfolio. Ik ben een tweedejaarsstudent APP/AI en toon hier wie ik ben, welke projecten ik gemaakt heb en welke richting ik professioneel uit wil.' },
+        '.neo-btn': { text: 'Lees Meer' },
+        '.neo-link': { text: 'Mail Mij' },
+        '.neo-projects h2': { text: 'Uitgelichte Projecten' },
+        '.neo-card:nth-child(1) h3': { text: 'Aurubis IT-ondersteuning' },
+        '.neo-card:nth-child(1) p': { text: 'Praktische IT-support en troubleshooting in een professionele productieomgeving.' },
+        '.neo-card:nth-child(2) h3': { text: 'SKIL2 Semester 2' },
+        '.neo-card:nth-child(2) p': { text: 'MissionZebra als teamproject rond planning, gebruiksstromen en mobile-first denken.' },
+        '.neo-card:nth-child(3) h3': { text: 'Portfolio Website' },
+        '.neo-card:nth-child(3) p': { text: 'Deze website als eigen realisatie met aandacht voor inhoud, structuur en presentatie.' },
+        '.neo-card:nth-child(4) h3': { text: 'SKIL2 Semester 1' },
+        '.neo-card:nth-child(4) p': { text: 'Mijn eerste portfolio-opzet waarin ik HTML, CSS en inhoud logisch leerde combineren.' },
+        '.neo-side .neo-panel:nth-child(1) h2': { text: 'Over Mij' },
+        '.neo-side .neo-panel:nth-child(1) p': { text: 'Ik ben een tweedejaars APP/AI-student die graag praktische projecten maakt, rustig samenwerkt en stap voor stap blijft groeien.' },
+        '#contact h2': { text: 'Contacteer Mij' },
+        '#contact input[name="name"]': { placeholder: 'Naam', ariaLabel: 'Naam' },
+        '#contact input[name="email"]': { placeholder: 'E-mail', ariaLabel: 'E-mail' },
+        '#contact textarea[name="message"]': { placeholder: 'Bericht', ariaLabel: 'Bericht' },
+        '#contact button[type="submit"]': { text: 'Verstuur' },
+        '.cta-hero .cta-eyebrow': { text: 'KLAAR OM SAMEN TE WERKEN?' },
+        '.cta-hero h2': { text: 'Laten we samen iets sterk bouwen' },
+        '.cta-hero .cta-content > p:not(.cta-eyebrow)': { text: 'Of je nu een projectidee hebt, technische vragen of gewoon wil praten: ik ben er klaar voor.' },
+        '.cta-btn-primary': { text: 'Bekijk Mijn Werk' },
+        '.cta-btn-secondary': { text: 'Neem Contact Op' }
+      }
+    },
+    en: {
+      title: 'Seppe | Home',
+      selectors: {
+        '.neo-window-top p': { text: 'Portfolio v2' },
+        '.neo-kicker': { text: 'APP/AI Student' },
+        '.neo-hero h1': { text: 'Hi, I am Seppe Vanroy.' },
+        '.neo-text': { text: 'Welcome to my e-portfolio. I am a second-year APP/AI student, and this site shows who I am, which projects I have built, and where I want to grow professionally.' },
+        '.neo-btn': { text: 'Read More' },
+        '.neo-link': { text: 'Email Me' },
+        '.neo-projects h2': { text: 'Featured Projects' },
+        '.neo-card:nth-child(1) h3': { text: 'Aurubis IT Support' },
+        '.neo-card:nth-child(1) p': { text: 'Practical IT support and troubleshooting in a professional production environment.' },
+        '.neo-card:nth-child(2) h3': { text: 'SKIL2 Semester 2' },
+        '.neo-card:nth-child(2) p': { text: 'MissionZebra as a team project around planning, user flows, and mobile-first thinking.' },
+        '.neo-card:nth-child(3) h3': { text: 'Portfolio Website' },
+        '.neo-card:nth-child(3) p': { text: 'This website as my own realization, with attention to content, structure, and presentation.' },
+        '.neo-card:nth-child(4) h3': { text: 'SKIL2 Semester 1' },
+        '.neo-card:nth-child(4) p': { text: 'My first portfolio setup, where I learned to combine HTML, CSS, and content in a logical way.' },
+        '.neo-side .neo-panel:nth-child(1) h2': { text: 'About Me' },
+        '.neo-side .neo-panel:nth-child(1) p': { text: 'I am a second-year APP/AI student who likes building practical projects, working calmly with others, and improving step by step.' },
+        '#contact h2': { text: 'Contact Me' },
+        '#contact input[name="name"]': { placeholder: 'Name', ariaLabel: 'Name' },
+        '#contact input[name="email"]': { placeholder: 'Email', ariaLabel: 'Email' },
+        '#contact textarea[name="message"]': { placeholder: 'Message', ariaLabel: 'Message' },
+        '#contact button[type="submit"]': { text: 'Send' },
+        '.cta-hero .cta-eyebrow': { text: 'READY TO WORK TOGETHER?' },
+        '.cta-hero h2': { text: 'Let us build something strong together' },
+        '.cta-hero .cta-content > p:not(.cta-eyebrow)': { text: 'Whether you have a project idea, technical questions, or just want to talk: I am ready.' },
+        '.cta-btn-primary': { text: 'View My Work' },
+        '.cta-btn-secondary': { text: 'Contact Me' }
+      }
+    }
+  },
+  'about.html': {
+    nl: {
+      title: 'Seppe | Over Mij',
+      selectors: {
+        '.hero-eyebrow-mega': { text: 'WIE IK BEN' },
+        '.hero-title-giant': { text: 'Seppe Vanroy' },
+        '.hero-intro-text': { text: 'Tweedejaarsstudent APP/AI met een praktische blik op IT, een rustige werkstijl en veel interesse in oplossingen die echt gebruikt kunnen worden.' },
+        '.hero-stats-ultra .stat-block:nth-child(1) .stat-label': { text: 'Applicatieontwikkeling en AI' },
+        '.hero-stats-ultra .stat-block:nth-child(2) .stat-label': { text: 'Praktijkgericht' },
+        '.hero-stats-ultra .stat-block:nth-child(3) .stat-label': { text: 'Bekijk en download' },
+        '.section-header-centered .section-eyebrow': { text: 'OVER MIJ' },
+        '.section-header-centered h2': { text: 'Wie ik ben naast mijn studies' },
+        '.skills-matrix .skill-card-large:nth-child(1) h3': { text: "Hobby's" },
+        '.skills-matrix .skill-card-large:nth-child(1) p': { text: 'Ik hou van lopen, fietsen, muziek ontdekken en af en toe experimenteren met hardware of kleine technische projecten. Die combinatie helpt mij om creatief en geconcentreerd te blijven.' },
+        '.skills-matrix .skill-card-large:nth-child(2) h3': { text: 'Waarom APP/AI' },
+        '.skills-matrix .skill-card-large:nth-child(2) p': { text: 'Ik koos voor APP/AI omdat ik graag applicaties bouw, systemen begrijp en wil leren hoe AI praktische oplossingen sterker kan maken.' },
+        '.skills-matrix .skill-card-large:nth-child(3) h3': { text: 'Toekomst' },
+        '.skills-matrix .skill-card-large:nth-child(3) p': { text: 'Ik wil doorgroeien naar een rol waarin ik software, support of infrastructuur combineer met duidelijke communicatie en betrouwbare uitvoering.' },
+        '.skills-matrix .skill-card-large:nth-child(4) h3': { text: 'CV' },
+        '.skills-matrix .skill-card-large:nth-child(4) p': { text: 'Mijn CV staat apart op een eigen pagina en kan ook direct als pdf worden gedownload zodra je het bestand in deze map zet.' },
+        '.skills-matrix .skill-card-large:nth-child(4) .btn-link:nth-child(1)': { text: 'Bekijk CV' },
+        '.showcase-text .section-eyebrow': { text: 'VAARDIGHEDEN' },
+        '.showcase-text h2': { text: 'Een extract uit mijn CV in HTML-vorm' },
+        '.showcase-text > p:not(.section-eyebrow)': { text: 'Deze lijst is expres in HTML opgebouwd zodat de jury meteen ziet welke technische en soft skills ik meebreng.' },
+        '.experience-list .exp-item:nth-child(1) span': { text: 'Basis voor webinterfaces en interactieve portfolio’s' },
+        '.experience-list .exp-item:nth-child(2) span': { text: 'Back-end, data en probleemoplossing' },
+        '.experience-list .exp-item:nth-child(3) strong': { text: 'Communicatie, teamwork, leergierigheid' },
+        '.experience-list .exp-item:nth-child(3) span': { text: 'Belangrijk in projecten, stage en samenwerking' },
+        '.experience-list .exp-item:nth-child(4) strong': { text: 'Betrouwbaarheid en structuur' },
+        '.experience-list .exp-item:nth-child(4) span': { text: 'Ik werk graag ordelijk en lever af waar ik voor ga' },
+        '.highlight-card-1 h3': { text: 'Motivatie' },
+        '.highlight-card-1 p': { text: 'Ik wil begrijpen hoe dingen werken en daar zelf mee iets bouwen dat nuttig is.' },
+        '.highlight-card-2 h3': { text: 'Werkstijl' },
+        '.highlight-card-2 p': { text: 'Rustig, gestructureerd en met aandacht voor details, maar wel met tempo als het nodig is.' },
+        '.highlight-card-3 h3': { text: 'Doel' },
+        '.highlight-card-3 p': { text: 'Doorgroeien naar een stage of job waar ik projecten professioneel kan ondersteunen en afwerken.' },
+        '.call-to-action-ultra .cta-eyebrow': { text: 'CV EN CONTACT' },
+        '.call-to-action-ultra h2': { text: 'Bekijk mijn CV of open de download' },
+        '.call-to-action-ultra .cta-description': { text: 'De CV staat op een aparte pagina, en de pdf-link is alvast klaar voor wanneer je hem in de map plaatst.' },
+        '.call-to-action-ultra .btn-primary': { text: 'Open CV' }
+      }
+    },
+    en: {
+      title: 'Seppe | About Me',
+      selectors: {
+        '.hero-eyebrow-mega': { text: 'WHO I AM' },
+        '.hero-title-giant': { text: 'Seppe Vanroy' },
+        '.hero-intro-text': { text: 'Second-year APP/AI student with a practical view on IT, a calm working style, and a strong interest in solutions that can actually be used.' },
+        '.hero-stats-ultra .stat-block:nth-child(1) .stat-label': { text: 'Application Development and AI' },
+        '.hero-stats-ultra .stat-block:nth-child(2) .stat-label': { text: 'Practice-oriented' },
+        '.hero-stats-ultra .stat-block:nth-child(3) .stat-label': { text: 'View and download' },
+        '.section-header-centered .section-eyebrow': { text: 'ABOUT ME' },
+        '.section-header-centered h2': { text: 'Who I am besides my studies' },
+        '.skills-matrix .skill-card-large:nth-child(1) h3': { text: 'Hobbies' },
+        '.skills-matrix .skill-card-large:nth-child(1) p': { text: 'I enjoy running, cycling, discovering music, and sometimes experimenting with hardware or small technical projects. That combination helps me stay creative and focused.' },
+        '.skills-matrix .skill-card-large:nth-child(2) h3': { text: 'Why APP/AI' },
+        '.skills-matrix .skill-card-large:nth-child(2) p': { text: 'I chose APP/AI because I like building applications, understanding systems, and learning how AI can make practical solutions stronger.' },
+        '.skills-matrix .skill-card-large:nth-child(3) h3': { text: 'Future' },
+        '.skills-matrix .skill-card-large:nth-child(3) p': { text: 'I want to grow into a role where I combine software, support, or infrastructure with clear communication and reliable execution.' },
+        '.skills-matrix .skill-card-large:nth-child(4) h3': { text: 'CV' },
+        '.skills-matrix .skill-card-large:nth-child(4) p': { text: 'My CV has its own separate page and can also be downloaded as a PDF once the file is placed in this folder.' },
+        '.skills-matrix .skill-card-large:nth-child(4) .btn-link:nth-child(1)': { text: 'View CV' },
+        '.showcase-text .section-eyebrow': { text: 'SKILLS' },
+        '.showcase-text h2': { text: 'An extract from my CV in HTML format' },
+        '.showcase-text > p:not(.section-eyebrow)': { text: 'This list is intentionally built in HTML so the jury can immediately see which technical and soft skills I bring.' },
+        '.experience-list .exp-item:nth-child(1) span': { text: 'Foundation for web interfaces and interactive portfolios' },
+        '.experience-list .exp-item:nth-child(2) span': { text: 'Back-end, data, and problem solving' },
+        '.experience-list .exp-item:nth-child(3) strong': { text: 'Communication, teamwork, eagerness to learn' },
+        '.experience-list .exp-item:nth-child(3) span': { text: 'Important in projects, internships, and collaboration' },
+        '.experience-list .exp-item:nth-child(4) strong': { text: 'Reliability and structure' },
+        '.experience-list .exp-item:nth-child(4) span': { text: 'I like working in an organized way and delivering what I commit to' },
+        '.highlight-card-1 h3': { text: 'Motivation' },
+        '.highlight-card-1 p': { text: 'I want to understand how things work and use that knowledge to build something useful.' },
+        '.highlight-card-2 h3': { text: 'Working Style' },
+        '.highlight-card-2 p': { text: 'Calm, structured, and attentive to details, while still keeping pace when needed.' },
+        '.highlight-card-3 h3': { text: 'Goal' },
+        '.highlight-card-3 p': { text: 'Grow into an internship or job where I can support and finish projects professionally.' },
+        '.call-to-action-ultra .cta-eyebrow': { text: 'CV AND CONTACT' },
+        '.call-to-action-ultra h2': { text: 'View my CV or open the download' },
+        '.call-to-action-ultra .cta-description': { text: 'The CV is on a separate page, and the PDF link is ready for when the file is placed in the folder.' },
+        '.call-to-action-ultra .btn-primary': { text: 'Open CV' }
+      }
+    }
+  },
+  'projects.html': {
+    nl: {
+      title: 'Seppe | Projecten',
+      selectors: {
+        '.hub-hero .eyebrow': { text: 'Projectoverzicht' },
+        '.hub-hero h1': { text: 'Projecten en realisaties' },
+        '.hub-hero .hero-main > p:not(.eyebrow)': { text: 'Hier staan de twee verplichte SKIL2-projecten, plus twee extra realisaties waar ik trots op ben. De meest indrukwekkende resultaten staan bovenaan.' },
+        '.hub-grid-wrap .eyebrow': { text: 'Kies Je Pad' },
+        '.hub-grid-wrap h2': { text: 'Vier projecten, vier verhalen' },
+        '.hub-card:nth-child(1) h3': { text: 'Aurubis IT-ondersteuning' },
+        '.hub-card:nth-child(1) p': { text: 'Praktische support en troubleshooting in een professionele productieomgeving.' },
+        '.hub-card:nth-child(2) h3': { text: 'SKIL2 Semester 2' },
+        '.hub-card:nth-child(2) p': { text: 'MissionZebra en de bijhorende flow: een teamproject dat nog verder werd uitgewerkt.' },
+        '.hub-card:nth-child(3) h3': { text: 'Portfolio Website' },
+        '.hub-card:nth-child(3) p': { text: 'Mijn eigen portfolio als presentatie van wie ik ben, wat ik maak en waar ik naartoe wil.' },
+        '.hub-card:nth-child(4) h3': { text: 'SKIL2 Semester 1' },
+        '.hub-card:nth-child(4) p': { text: 'De eerste portfolio- en weboefeningen waarin ik mijn basis in HTML, CSS en structuur toonde.' },
+        '.hub-card:nth-child(1) span': { text: 'Open Project' },
+        '.hub-card:nth-child(2) span': { text: 'Open Project' },
+        '.hub-card:nth-child(3) span': { text: 'Open Project' },
+        '.hub-card:nth-child(4) span': { text: 'Open Project' }
+      }
+    },
+    en: {
+      title: 'Seppe | Projects',
+      selectors: {
+        '.hub-hero .eyebrow': { text: 'Project Overview' },
+        '.hub-hero h1': { text: 'Projects and achievements' },
+        '.hub-hero .hero-main > p:not(.eyebrow)': { text: 'This page includes the two required SKIL2 projects, plus two extra achievements I am proud of. The most impressive results are shown first.' },
+        '.hub-grid-wrap .eyebrow': { text: 'Choose Your Path' },
+        '.hub-grid-wrap h2': { text: 'Four projects, four stories' },
+        '.hub-card:nth-child(1) h3': { text: 'Aurubis IT Support' },
+        '.hub-card:nth-child(1) p': { text: 'Practical support and troubleshooting in a professional production environment.' },
+        '.hub-card:nth-child(2) h3': { text: 'SKIL2 Semester 2' },
+        '.hub-card:nth-child(2) p': { text: 'MissionZebra and the related flow: a team project that was developed further.' },
+        '.hub-card:nth-child(3) h3': { text: 'Portfolio Website' },
+        '.hub-card:nth-child(3) p': { text: 'My own portfolio as a presentation of who I am, what I make, and where I want to go.' },
+        '.hub-card:nth-child(4) h3': { text: 'SKIL2 Semester 1' },
+        '.hub-card:nth-child(4) p': { text: 'The first portfolio and web exercises where I showed my foundation in HTML, CSS, and structure.' },
+        '.hub-card:nth-child(1) span': { text: 'Open Project' },
+        '.hub-card:nth-child(2) span': { text: 'Open Project' },
+        '.hub-card:nth-child(3) span': { text: 'Open Project' },
+        '.hub-card:nth-child(4) span': { text: 'Open Project' }
+      }
+    }
+  },
+  'contact.html': {
+    nl: {
+      title: 'Seppe | Contact',
+      selectors: {
+        '.hub-hero .eyebrow': { text: 'Contact' },
+        '.hub-hero h1': { text: 'Laten we iets sterk bouwen' },
+        '.hub-hero .hero-main > p:not(.eyebrow)': { text: 'Open voor stages, studentenkansen en praktische samenwerking. Neem contact op via je voorkeurskanaal en ik kom bij je terug.' },
+        '.hub-grid-wrap .eyebrow': { text: 'Directe Kanalen' },
+        '.hub-grid-wrap h2': { text: 'Kies de snelste manier om te connecteren' },
+        '.contact-grid .hub-card:nth-child(1) h3': { text: 'E-mail' },
+        '.contact-grid .hub-card:nth-child(1) span': { text: 'Stuur E-mail' },
+        '.contact-grid .hub-card:nth-child(2) span': { text: 'Bekijk Profiel' },
+        '.contact-grid .hub-card:nth-child(3) span': { text: 'Connecteer' },
+        '.contact-form-head .eyebrow': { text: 'Stuur een bericht' },
+        '.contact-form-head h2': { text: 'Laat je gegevens achter en ik antwoord via e-mail' },
+        '.contact-form-head p:not(.eyebrow)': { text: 'Gebruik dit voor stages, samenwerking of een snelle vraag. Het bericht gaat rechtstreeks naar mijn inbox.' },
+        '.contact-form-grid label:nth-child(1) span': { text: 'Naam' },
+        '.contact-form-grid label:nth-child(2) span': { text: 'E-mail' },
+        '.contact-form > label:nth-of-type(1) span': { text: 'Onderwerp' },
+        '.contact-form > label:nth-of-type(2) span': { text: 'Bericht' },
+        '.contact-form input[name="name"]': { placeholder: 'Jouw naam' },
+        '.contact-form input[name="email"]': { placeholder: 'Jouw e-mail' },
+        '.contact-form input[name="subject"]': { placeholder: 'Waarover gaat dit?' },
+        '.contact-form textarea[name="message"]': { placeholder: 'Schrijf je bericht...' },
+        '.contact-form button[type="submit"]': { text: 'Verstuur bericht' },
+        '.contact-form-aside h3': { text: 'Rechtstreeks naar inbox' },
+        '.contact-form-aside p': { html: 'Berichten uit dit formulier worden verzonden naar <a href="mailto:seppe.vanroy@telenet.be">seppe.vanroy@telenet.be</a>.' },
+        '.contact-form-aside li:nth-child(1)': { text: 'Ideaal voor stages en projectvragen' },
+        '.contact-form-aside li:nth-child(2)': { text: 'Antwoord meestal op dezelfde dag' },
+        '.contact-form-aside li:nth-child(3)': { text: 'GitHub en LinkedIn blijven ook beschikbaar' }
+      }
+    },
+    en: {
+      title: 'Seppe | Contact',
+      selectors: {
+        '.hub-hero .eyebrow': { text: 'Contact' },
+        '.hub-hero h1': { text: 'Let us build something strong' },
+        '.hub-hero .hero-main > p:not(.eyebrow)': { text: 'Open to internships, student opportunities, and practical collaboration. Contact me through your preferred channel and I will get back to you.' },
+        '.hub-grid-wrap .eyebrow': { text: 'Direct Channels' },
+        '.hub-grid-wrap h2': { text: 'Choose the fastest way to connect' },
+        '.contact-grid .hub-card:nth-child(1) h3': { text: 'Email' },
+        '.contact-grid .hub-card:nth-child(1) span': { text: 'Send Email' },
+        '.contact-grid .hub-card:nth-child(2) span': { text: 'View Profile' },
+        '.contact-grid .hub-card:nth-child(3) span': { text: 'Connect' },
+        '.contact-form-head .eyebrow': { text: 'Send a message' },
+        '.contact-form-head h2': { text: 'Leave your details and I will reply by email' },
+        '.contact-form-head p:not(.eyebrow)': { text: 'Use this for internships, collaboration, or a quick question. The message goes straight to my inbox.' },
+        '.contact-form-grid label:nth-child(1) span': { text: 'Name' },
+        '.contact-form-grid label:nth-child(2) span': { text: 'Email' },
+        '.contact-form > label:nth-of-type(1) span': { text: 'Subject' },
+        '.contact-form > label:nth-of-type(2) span': { text: 'Message' },
+        '.contact-form input[name="name"]': { placeholder: 'Your name' },
+        '.contact-form input[name="email"]': { placeholder: 'Your email' },
+        '.contact-form input[name="subject"]': { placeholder: 'What is this about?' },
+        '.contact-form textarea[name="message"]': { placeholder: 'Write your message...' },
+        '.contact-form button[type="submit"]': { text: 'Send message' },
+        '.contact-form-aside h3': { text: 'Straight to inbox' },
+        '.contact-form-aside p': { html: 'Messages from this form are sent to <a href="mailto:seppe.vanroy@telenet.be">seppe.vanroy@telenet.be</a>.' },
+        '.contact-form-aside li:nth-child(1)': { text: 'Ideal for internships and project questions' },
+        '.contact-form-aside li:nth-child(2)': { text: 'Usually replies the same day' },
+        '.contact-form-aside li:nth-child(3)': { text: 'GitHub and LinkedIn remain available too' }
+      }
+    }
+  }
+});
+
+pageTranslations['project-two.html'] = {
+  nl: {
+    title: 'Seppe | SKIL2 Semester 2',
+    selectors: {
+      '.project-hero .eyebrow': { text: 'SKIL2 Semester 2' },
+      '.project-hero h1': { text: 'MissionZebra prototype' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Context: dit is het SKIL2-project van semester 2 dat tot nu toe werd uitgewerkt. Het idee draait rond planning en gewoontevorming voor gezinnen, met focus op een duidelijke flow en een bruikbare mobiele ervaring.' },
+      '.hero-tags span:nth-child(1)': { text: 'Teamproject' },
+      '.hero-tags span:nth-child(2)': { text: 'Mobile-first' },
+      '.hero-tags span:nth-child(3)': { text: 'Planning' },
+      '.hero-side-label': { text: 'Status' },
+      '.hero-side h3': { text: 'Verder uitgewerkt' },
+      '.hero-facts li:nth-child(1)': { html: '<span>Rol</span> Teamlid' },
+      '.hero-facts li:nth-child(2)': { html: '<span>Stack</span> Flutter, Kotlin' },
+      '.hero-facts li:nth-child(3)': { html: '<span>Vak</span> SKIL2 - semester 2' },
+      '.project-impact .eyebrow': { text: 'Realisaties' },
+      '.project-impact h2': { text: 'Wat er al klaar is' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Planningflow' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'Ik hielp mee aan een structuur waarin afspraken en schermtijd op een begrijpelijke manier samenkomen.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Prototype-opbouw' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'We werkten aan schermen en interacties die het idee tastbaar maken zonder de gebruiker te overladen.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Gebruiksklaar denken' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'De focus lag op iets dat ouders en kinderen echt zouden begrijpen en willen gebruiken.' },
+      '.project-flow .eyebrow': { text: 'Mijn deel' },
+      '.project-flow h2': { text: 'Wat ik zelf deed binnen het team' },
+      '.project-steps li:nth-child(1)': { html: '<strong>Analyse</strong> de basisbehoefte vertalen naar een eenvoudige gebruiksstroom.' },
+      '.project-steps li:nth-child(2)': { html: '<strong>Realisatie</strong> meewerken aan schermen, logica en de opbouw van de prototype-ervaring.' },
+      '.project-steps li:nth-child(3)': { html: '<strong>Communicatie</strong> in het team afstemmen zodat de flow helder en de scope haalbaar bleef.' },
+      '.portfolio-section:last-child .eyebrow': { text: 'Wat ik geleerd heb' },
+      '.portfolio-section:last-child h2': { text: 'Leerpunten uit semester 2' },
+      '.portfolio-section:last-child .project-copy': { text: 'Ik leerde hoe je in teamverband een idee afbakent, keuzes bespreekbaar maakt en samen iets opbouwt dat verder kan groeien.' },
+      '.panel-actions .btn-link:nth-child(1)': { text: 'Terug naar Projecten' },
+      '.panel-actions .btn-link:nth-child(2)': { text: 'Volgend project' }
+    }
+  },
+  en: {
+    title: 'Seppe | SKIL2 Semester 2',
+    selectors: {
+      '.project-hero .eyebrow': { text: 'SKIL2 Semester 2' },
+      '.project-hero h1': { text: 'MissionZebra prototype' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Context: this is the SKIL2 project from semester 2 that has been developed so far. The idea focuses on planning and habit building for families, with a clear flow and a usable mobile experience.' },
+      '.hero-tags span:nth-child(1)': { text: 'Team project' },
+      '.hero-tags span:nth-child(2)': { text: 'Mobile-first' },
+      '.hero-tags span:nth-child(3)': { text: 'Planning' },
+      '.hero-side-label': { text: 'Status' },
+      '.hero-side h3': { text: 'Further developed' },
+      '.hero-facts li:nth-child(1)': { html: '<span>Role</span> Team member' },
+      '.hero-facts li:nth-child(2)': { html: '<span>Stack</span> Flutter, Kotlin' },
+      '.hero-facts li:nth-child(3)': { html: '<span>Course</span> SKIL2 - semester 2' },
+      '.project-impact .eyebrow': { text: 'Realizations' },
+      '.project-impact h2': { text: 'What is already finished' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Planning flow' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'I helped build a structure where agreements and screen time come together in an understandable way.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Prototype setup' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'We worked on screens and interactions that make the idea tangible without overwhelming the user.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Usability thinking' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'The focus was on something parents and children would actually understand and want to use.' },
+      '.project-flow .eyebrow': { text: 'My part' },
+      '.project-flow h2': { text: 'What I did within the team' },
+      '.project-steps li:nth-child(1)': { html: '<strong>Analysis</strong> translate the basic need into a simple user flow.' },
+      '.project-steps li:nth-child(2)': { html: '<strong>Realization</strong> contribute to screens, logic, and the structure of the prototype experience.' },
+      '.project-steps li:nth-child(3)': { html: '<strong>Communication</strong> align within the team so the flow stayed clear and the scope remained realistic.' },
+      '.portfolio-section:last-child .eyebrow': { text: 'What I learned' },
+      '.portfolio-section:last-child h2': { text: 'Learning points from semester 2' },
+      '.portfolio-section:last-child .project-copy': { text: 'I learned how to define an idea in a team, discuss choices clearly, and build something together that can continue to grow.' },
+      '.panel-actions .btn-link:nth-child(1)': { text: 'Back to Projects' },
+      '.panel-actions .btn-link:nth-child(2)': { text: 'Next project' }
+    }
+  }
+};
+
+pageTranslations['project-three.html'] = {
+  nl: {
+    title: 'Seppe | Aurubis IT-ondersteuning',
+    selectors: {
+      '.project-hero .eyebrow': { text: 'Andere realisatie' },
+      '.project-hero h1': { text: 'Aurubis IT-ondersteuning' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Context: stage en latere ondersteuning in een echte industriële omgeving waar betrouwbaarheid telt. Ik hielp mee met dagelijkse IT-taken, troubleshooting en onderhoud in een professionele context.' },
+      '.hero-tags span:nth-child(1)': { text: 'IT Support' },
+      '.hero-tags span:nth-child(2)': { text: 'Operaties' },
+      '.hero-tags span:nth-child(3)': { text: 'Betrouwbaarheid' },
+      '.hero-side-label': { text: 'Status' },
+      '.hero-side h3': { text: 'Praktijkervaring' },
+      '.hero-facts li:nth-child(1)': { html: '<span>Rol</span> IT Support' },
+      '.hero-facts li:nth-child(2)': { html: '<span>Context</span> Productieomgeving' },
+      '.hero-facts li:nth-child(3)': { html: '<span>Focus</span> Stabiliteit en continuïteit' },
+      '.project-impact .eyebrow': { text: 'Realisaties' },
+      '.project-impact h2': { text: 'Wat ik daar effectief deed' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Troubleshooting' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'Ik hielp bij het opsporen en oplossen van technische problemen zodat collega’s verder konden werken.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Onderhoud' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'Ik ondersteunde configuratie, update-werk en algemene IT-handelingen in een operationele omgeving.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Teamwerking' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'Ik werkte duidelijk en professioneel samen zodat taken correct en tijdig werden opgevolgd.' },
+      '.project-flow .eyebrow': { text: 'Wat ik geleerd heb' },
+      '.project-flow h2': { text: 'Leerpunten uit de praktijk' },
+      '.project-steps li:nth-child(1)': { html: '<strong>Analyse</strong> problemen rustiger onderzoeken door naar de oorzaak te kijken in plaats van enkel naar het symptoom.' },
+      '.project-steps li:nth-child(2)': { html: '<strong>Operate</strong> ondersteuning bieden in een omgeving waar stabiliteit en opvolging belangrijk zijn.' },
+      '.project-steps li:nth-child(3)': { html: '<strong>Professioneel handelen</strong> duidelijk communiceren en verantwoordelijkheid opnemen.' },
+      '.portfolio-section:last-child .eyebrow': { text: 'Mijn deel' },
+      '.portfolio-section:last-child h2': { text: 'Waar ik zelf voor instond' },
+      '.portfolio-section:last-child .project-copy': { text: 'Ik droeg bij aan het dagelijks werk door praktische support te geven, problemen mee op te lossen en de omgeving stabiel te houden. Dat maakte dit een waardevolle stap richting professioneel werken.' },
+      '.panel-actions .btn-link:nth-child(1)': { text: 'Terug naar Projecten' },
+      '.panel-actions .btn-link:nth-child(2)': { text: 'Volgend project' }
+    }
+  },
+  en: {
+    title: 'Seppe | Aurubis IT Support',
+    selectors: {
+      '.project-hero .eyebrow': { text: 'Other achievement' },
+      '.project-hero h1': { text: 'Aurubis IT Support' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Context: internship and later support in a real industrial environment where reliability matters. I helped with daily IT tasks, troubleshooting, and maintenance in a professional context.' },
+      '.hero-tags span:nth-child(1)': { text: 'IT Support' },
+      '.hero-tags span:nth-child(2)': { text: 'Operations' },
+      '.hero-tags span:nth-child(3)': { text: 'Reliability' },
+      '.hero-side-label': { text: 'Status' },
+      '.hero-side h3': { text: 'Practical experience' },
+      '.hero-facts li:nth-child(1)': { html: '<span>Role</span> IT Support' },
+      '.hero-facts li:nth-child(2)': { html: '<span>Context</span> Production environment' },
+      '.hero-facts li:nth-child(3)': { html: '<span>Focus</span> Stability and continuity' },
+      '.project-impact .eyebrow': { text: 'Realizations' },
+      '.project-impact h2': { text: 'What I actually did there' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Troubleshooting' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'I helped identify and solve technical problems so colleagues could continue working.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Maintenance' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'I supported configuration, update work, and general IT actions in an operational environment.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Teamwork' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'I worked clearly and professionally with others so tasks were followed up correctly and on time.' },
+      '.project-flow .eyebrow': { text: 'What I learned' },
+      '.project-flow h2': { text: 'Learning points from practice' },
+      '.project-steps li:nth-child(1)': { html: '<strong>Analysis</strong> investigate problems more calmly by looking for the cause instead of only the symptom.' },
+      '.project-steps li:nth-child(2)': { html: '<strong>Operate</strong> provide support in an environment where stability and follow-up matter.' },
+      '.project-steps li:nth-child(3)': { html: '<strong>Professional behavior</strong> communicate clearly and take responsibility.' },
+      '.portfolio-section:last-child .eyebrow': { text: 'My part' },
+      '.portfolio-section:last-child h2': { text: 'What I was responsible for' },
+      '.portfolio-section:last-child .project-copy': { text: 'I contributed to daily work by providing practical support, helping solve problems, and keeping the environment stable. That made this a valuable step toward professional work.' },
+      '.panel-actions .btn-link:nth-child(1)': { text: 'Back to Projects' },
+      '.panel-actions .btn-link:nth-child(2)': { text: 'Next project' }
+    }
+  }
+};
+
+pageTranslations['project-four.html'] = {
+  nl: {
+    title: 'Seppe | Portfolio Website',
+    selectors: {
+      '.project-hero .eyebrow': { text: 'Andere realisatie' },
+      '.project-hero h1': { text: 'Portfolio website' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Context: dit portfolio zelf is een extra realisatie waar ik trots op ben. Het doel was om mijn profiel, projecten en CV professioneel samen te brengen in één website.' },
+      '.hero-tags span:nth-child(1)': { text: 'HTML/CSS' },
+      '.hero-tags span:nth-child(2)': { text: 'Design' },
+      '.hero-tags span:nth-child(3)': { text: 'Presentatie' },
+      '.hero-side-label': { text: 'Status' },
+      '.hero-side h3': { text: 'Live portfolio' },
+      '.hero-facts li:nth-child(1)': { html: '<span>Rol</span> Designer + Developer' },
+      '.hero-facts li:nth-child(2)': { html: '<span>Stack</span> HTML, CSS, JavaScript' },
+      '.hero-facts li:nth-child(3)': { html: '<span>Focus</span> Professionele presentatie' },
+      '.project-impact .eyebrow': { text: 'Realisaties' },
+      '.project-impact h2': { text: 'Wat deze website laat zien' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Eigen stijl' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'Ik bouwde een visuele identiteit die consistent is doorheen de volledige site.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Structuur' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'Bezoekers vinden snel Home, Over Mij, Projecten en CV zonder extra zoeken.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Afwerking' },
+      '.project-impact-grid article:nth-child(3) p': { text: "De pagina's zijn bedoeld om professioneel en duidelijk over te komen, ook op juryniveau." },
+      '.project-flow .eyebrow': { text: 'Wat ik geleerd heb' },
+      '.project-flow h2': { text: 'Leerpunten uit dit portfolio' },
+      '.project-steps li:nth-child(1)': { html: '<strong>Design</strong> een interface die persoonlijk voelt maar toch overzichtelijk blijft.' },
+      '.project-steps li:nth-child(2)': { html: "<strong>Realisatie</strong> pagina's bouwen die inhoudelijk sterk zijn, niet alleen mooi ogen." },
+      '.project-steps li:nth-child(3)': { html: '<strong>Communicatie</strong> mijn werk via duidelijke secties, cv en projectbeschrijvingen.' },
+      '.portfolio-section:last-child .eyebrow': { text: 'Mijn deel' },
+      '.portfolio-section:last-child h2': { text: 'Wat ik hier zelf maakte' },
+      '.portfolio-section:last-child .project-copy': { text: 'Ik heb de volledige structuur, stijl en inhoud van dit portfolio uitgewerkt zodat het mijn werk, groei en ambities helder toont.' },
+      '.panel-actions .btn-link:nth-child(1)': { text: 'Terug naar Projecten' },
+      '.panel-actions .btn-link:nth-child(2)': { text: 'Bekijk CV' }
+    }
+  },
+  en: {
+    title: 'Seppe | Portfolio Website',
+    selectors: {
+      '.project-hero .eyebrow': { text: 'Other achievement' },
+      '.project-hero h1': { text: 'Portfolio website' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Context: this portfolio itself is an extra achievement I am proud of. The goal was to bring my profile, projects, and CV together professionally in one website.' },
+      '.hero-tags span:nth-child(1)': { text: 'HTML/CSS' },
+      '.hero-tags span:nth-child(2)': { text: 'Design' },
+      '.hero-tags span:nth-child(3)': { text: 'Presentation' },
+      '.hero-side-label': { text: 'Status' },
+      '.hero-side h3': { text: 'Live portfolio' },
+      '.hero-facts li:nth-child(1)': { html: '<span>Role</span> Designer + Developer' },
+      '.hero-facts li:nth-child(2)': { html: '<span>Stack</span> HTML, CSS, JavaScript' },
+      '.hero-facts li:nth-child(3)': { html: '<span>Focus</span> Professional presentation' },
+      '.project-impact .eyebrow': { text: 'Realizations' },
+      '.project-impact h2': { text: 'What this website shows' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Own style' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'I built a visual identity that stays consistent throughout the full site.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Structure' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'Visitors can quickly find Home, About Me, Projects, and CV without extra searching.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Polish' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'The pages are meant to feel professional and clear, also at jury level.' },
+      '.project-flow .eyebrow': { text: 'What I learned' },
+      '.project-flow h2': { text: 'Learning points from this portfolio' },
+      '.project-steps li:nth-child(1)': { html: '<strong>Design</strong> an interface that feels personal while staying clear.' },
+      '.project-steps li:nth-child(2)': { html: '<strong>Realization</strong> build pages that are strong in content, not just nice to look at.' },
+      '.project-steps li:nth-child(3)': { html: '<strong>Communication</strong> present my work through clear sections, a CV, and project descriptions.' },
+      '.portfolio-section:last-child .eyebrow': { text: 'My part' },
+      '.portfolio-section:last-child h2': { text: 'What I made myself here' },
+      '.portfolio-section:last-child .project-copy': { text: 'I worked out the full structure, style, and content of this portfolio so it clearly shows my work, growth, and ambitions.' },
+      '.panel-actions .btn-link:nth-child(1)': { text: 'Back to Projects' },
+      '.panel-actions .btn-link:nth-child(2)': { text: 'View CV' }
+    }
+  }
+};
+
 const applyPageTranslations = (lang) => {
   const pageName = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
   const pageConfig = pageTranslations[pageName]?.[lang];
@@ -414,7 +1030,7 @@ const setLanguage = (lang) => {
   });
   
   translatePage(lang);
-  // Page content is maintained directly in the HTML so project and CV details stay assignment-specific.
+  applyPageTranslations(lang);
   if (typeof window.updateChatWidgetLanguage === 'function') {
     window.updateChatWidgetLanguage(lang);
   }
@@ -1111,6 +1727,8 @@ const initPortfolioAI = () => {
   const uiByLang = {
     nl: {
       openTitle: 'Open AI chat',
+      closeLabel: 'Sluit chat',
+      panelLabel: 'Portfolio assistent',
       title: 'Vraag iets aan mijn AI',
       kicker: 'Portfolio Assistant',
       placeholder: 'Typ je vraag...',
@@ -1119,6 +1737,8 @@ const initPortfolioAI = () => {
     },
     en: {
       openTitle: 'Open AI chat',
+      closeLabel: 'Close chat',
+      panelLabel: 'Portfolio assistant',
       title: 'Ask my AI anything',
       kicker: 'Portfolio Assistant',
       placeholder: 'Type your question...',
@@ -1221,6 +1841,8 @@ const initPortfolioAI = () => {
   const applyLanguage = (lang) => {
     const ui = uiByLang[lang] || uiByLang.en;
     toggle.title = ui.openTitle;
+    closeBtn.setAttribute('aria-label', ui.closeLabel);
+    panel.setAttribute('aria-label', ui.panelLabel);
     title.textContent = ui.title;
     kicker.textContent = ui.kicker;
     input.placeholder = ui.placeholder;
