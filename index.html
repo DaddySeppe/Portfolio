@@ -14,7 +14,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css?v=20260429.7" />
+  <link rel="stylesheet" href="styles.css?v=20260429.8" />
+  <style>
+    .home-page .neo-card-media {
+      display: block !important;
+      width: 100% !important;
+      aspect-ratio: 1 / 1 !important;
+      overflow: hidden !important;
+      border-radius: 8px !important;
+    }
+
+    .home-page .neo-card-media > img {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: none !important;
+      max-height: none !important;
+      margin: 0 !important;
+      object-fit: cover !important;
+    }
+  </style>
 </head>
 <body class="home-page">
   <div class="neo-bg" aria-hidden="true"></div>
@@ -65,7 +83,7 @@
           <img src="assets/images/profile-placeholder.jpg" alt="Developer working on laptop" />
         </figure>
 
-        <section class="neo-projects">
+        <section class="neo-projects" id="featured-projects">
           <h2>Uitgelichte Projecten</h2>
           <div class="neo-cards">
             <a class="neo-card neo-card-link" href="project-one.html" aria-label="Open Aurubis project page">
