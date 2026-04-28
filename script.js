@@ -499,7 +499,7 @@ Object.assign(pageTranslations, {
         '#contact button[type="submit"]': { text: 'Verstuur' },
         '.cta-hero .cta-eyebrow': { text: 'KLAAR OM SAMEN TE WERKEN?' },
         '.cta-hero h2': { text: 'Laten we samen iets sterk bouwen' },
-        '.cta-hero .cta-content > p:not(.cta-eyebrow)': { text: 'Of je nu een projectidee hebt, technische vragen of gewoon wil praten: ik ben er klaar voor.' },
+        '.cta-hero .cta-content > p:not(.cta-eyebrow)': { text: 'Of je nu een projectidee hebt, technische vragen of even wilt informeren: stuur me gerust een bericht!' },
         '.cta-btn-primary': { text: 'Bekijk Mijn Werk' },
         '.cta-btn-secondary': { text: 'Neem Contact Op' }
       }
