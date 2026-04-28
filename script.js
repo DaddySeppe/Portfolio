@@ -336,7 +336,6 @@ pageTranslations['cv.html'] = {
     selectors: {
       '.cv-toolbar .eyebrow': { text: 'Curriculum vitae' },
       '.cv-toolbar h1': { text: 'CV Seppe Vanroy' },
-      '.cv-toolbar p:not(.eyebrow)': { text: 'Een scanbare webversie van mijn CV, met daarnaast een downloadbare PDF-versie.' },
       '.cv-toolbar .btn-link:nth-child(1)': { text: 'Download PDF' },
       '.cv-toolbar .btn-link:nth-child(2)': { text: 'Terug naar Over Mij' },
       '.cv-sheet': { ariaLabel: 'CV van Seppe Vanroy' },
@@ -372,7 +371,6 @@ pageTranslations['cv.html'] = {
     selectors: {
       '.cv-toolbar .eyebrow': { text: 'Curriculum vitae' },
       '.cv-toolbar h1': { text: 'CV Seppe Vanroy' },
-      '.cv-toolbar p:not(.eyebrow)': { text: 'A scannable web version of my CV, with a downloadable PDF version next to it.' },
       '.cv-toolbar .btn-link:nth-child(1)': { text: 'Download PDF' },
       '.cv-toolbar .btn-link:nth-child(2)': { text: 'Back to About Me' },
       '.cv-sheet': { ariaLabel: 'CV of Seppe Vanroy' },
@@ -556,7 +554,7 @@ Object.assign(pageTranslations, {
         '.skills-matrix .skill-card-large:nth-child(3) h3': { text: 'Toekomst' },
         '.skills-matrix .skill-card-large:nth-child(3) p': { text: 'Ik wil doorgroeien naar een rol waarin ik software, support of infrastructuur combineer met duidelijke communicatie en betrouwbare uitvoering.' },
         '.skills-matrix .skill-card-large:nth-child(4) h3': { text: 'CV' },
-        '.skills-matrix .skill-card-large:nth-child(4) p': { text: 'Mijn CV staat apart op een eigen pagina en kan ook direct als pdf worden gedownload zodra je het bestand in deze map zet.' },
+        '.skills-matrix .skill-card-large:nth-child(4) p': { text: 'Mijn CV staat apart op een eigen pagina en kan daar ook meteen als pdf worden gedownload.' },
         '.skills-matrix .skill-card-large:nth-child(4) .btn-link:nth-child(1)': { text: 'Bekijk CV' },
         '.showcase-text .section-eyebrow': { text: 'VAARDIGHEDEN' },
         '.showcase-text h2': { text: 'Wat ik graag doe in IT' },
@@ -580,7 +578,7 @@ Object.assign(pageTranslations, {
         '.highlight-card-3 h3': { text: 'Doel' },
         '.highlight-card-3 p': { text: 'Doorgroeien naar een stage of job waar ik projecten professioneel kan ondersteunen en afwerken.' },
         '.call-to-action-ultra .cta-eyebrow': { text: 'CV EN CONTACT' },
-        '.call-to-action-ultra h2': { text: 'Bekijk mijn CV of open de download' },
+        '.call-to-action-ultra h2': { text: 'Bekijk mijn CV of download de PDF' },
         '.call-to-action-ultra .btn-primary': { text: 'Open CV' }
       }
     },
@@ -602,7 +600,7 @@ Object.assign(pageTranslations, {
         '.skills-matrix .skill-card-large:nth-child(3) h3': { text: 'Future' },
         '.skills-matrix .skill-card-large:nth-child(3) p': { text: 'I want to grow into a role where I combine software, support, or infrastructure with clear communication and reliable execution.' },
         '.skills-matrix .skill-card-large:nth-child(4) h3': { text: 'CV' },
-        '.skills-matrix .skill-card-large:nth-child(4) p': { text: 'My CV has its own separate page and can also be downloaded as a PDF once the file is placed in this folder.' },
+        '.skills-matrix .skill-card-large:nth-child(4) p': { text: 'My CV has its own separate page and can also be downloaded there as a PDF.' },
         '.skills-matrix .skill-card-large:nth-child(4) .btn-link:nth-child(1)': { text: 'View CV' },
         '.showcase-text .section-eyebrow': { text: 'SKILLS' },
         '.showcase-text h2': { text: 'What I like doing in IT' },
@@ -626,7 +624,7 @@ Object.assign(pageTranslations, {
         '.highlight-card-3 h3': { text: 'Goal' },
         '.highlight-card-3 p': { text: 'Grow into an internship or job where I can support and finish projects professionally.' },
         '.call-to-action-ultra .cta-eyebrow': { text: 'CV AND CONTACT' },
-        '.call-to-action-ultra h2': { text: 'View my CV or open the download' },
+        '.call-to-action-ultra h2': { text: 'View my CV or download the PDF' },
         '.call-to-action-ultra .btn-primary': { text: 'Open CV' }
       }
     }

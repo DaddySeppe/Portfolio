@@ -6699,3 +6699,32 @@ main {
   }
 }
 
+/* Final CV toolbar override: centered title with actions underneath. */
+.cv-page .cv-toolbar {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+  gap: 1.75rem;
+}
+
+.cv-page .cv-toolbar > div:first-child {
+  display: grid;
+  justify-items: center;
+}
+
+.cv-page .cv-toolbar h1 {
+  white-space: nowrap;
+}
+
+.cv-page .cv-toolbar .panel-actions {
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .cv-page .cv-toolbar h1 {
+    white-space: normal;
+  }
+}
+
