@@ -6793,4 +6793,23 @@ main {
   }
 }
 
+/* Absolute final homepage project grid override. */
+body.home-page .neo-projects .neo-cards {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+}
+
+@media (max-width: 860px) {
+  body.home-page .neo-projects .neo-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 520px) {
+  body.home-page .neo-projects .neo-cards {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 
