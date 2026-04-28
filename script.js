@@ -250,7 +250,7 @@ const translations = {
         eyebrow: 'Profiel',
         title: 'Praktische IT-oplossingen, stap voor stap.',
         // title: 'Ik bouw praktische IT-oplossingen met een professionele instelling en drang om me te verbeteren.',
-        description: 'Ik ben een tweedejaarsstudent APP/AI die graag praktisch bezig is met IT. Ik denk graag mee, werk gestructureerd en probeer vooral dingen te maken die logisch in elkaar zitten en echt gebruikt kunnen worden.',
+        description: 'Ik ben een tweedejaarsstudent APP/AI die graag praktisch bezig is met IT. Ik werk rustig, denk graag mee en probeer vooral dingen te maken die logisch in elkaar zitten en echt gebruikt kunnen worden.',
         tag1: 'Praktische Probleemoplosser',
         tag2: 'Professionele Instelling',
         snapshot: 'Snelle Schets',
@@ -559,7 +559,7 @@ Object.assign(pageTranslations, {
       selectors: {
         '.hero-eyebrow-mega': { text: 'WIE IK BEN' },
         '.hero-title-giant': { text: 'Seppe Vanroy' },
-        '.hero-intro-text': { text: 'Ik ben een tweedejaarsstudent APP/AI die graag praktisch bezig is met IT. Ik denk graag mee, werk gestructureerd en probeer vooral dingen te maken die logisch in elkaar zitten en echt gebruikt kunnen worden.' },
+        '.hero-intro-text': { text: 'Ik ben een tweedejaarsstudent APP/AI die graag praktisch bezig is met IT. Ik werk rustig, denk graag mee en probeer vooral dingen te maken die logisch in elkaar zitten en echt gebruikt kunnen worden.' },
         '.hero-stats-ultra .stat-block:nth-child(1) .stat-label': { text: 'Applicatieontwikkeling en AI' },
         '.hero-stats-ultra .stat-block:nth-child(2) .stat-label': { text: 'Praktijkgericht' },
         '.hero-stats-ultra .stat-block:nth-child(3) .stat-label': { text: 'Bekijk en download' },
@@ -605,7 +605,7 @@ Object.assign(pageTranslations, {
       selectors: {
         '.hero-eyebrow-mega': { text: 'WHO I AM' },
         '.hero-title-giant': { text: 'Seppe Vanroy' },
-        '.hero-intro-text': { text: 'Second-year APP/AI student with a practical view on IT, a calm working style, and a strong interest in solutions that can actually be used.' },
+        '.hero-intro-text': { text: 'I am a second-year APP/AI student who enjoys practical IT work. I work calmly, like to think along, and mainly try to build things that make sense and can actually be used.' },
         '.hero-stats-ultra .stat-block:nth-child(1) .stat-label': { text: 'Application Development and AI' },
         '.hero-stats-ultra .stat-block:nth-child(2) .stat-label': { text: 'Practice-oriented' },
         '.hero-stats-ultra .stat-block:nth-child(3) .stat-label': { text: 'View and download' },
