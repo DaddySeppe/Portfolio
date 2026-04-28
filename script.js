@@ -947,7 +947,8 @@ pageTranslations['project-four.html'] = {
 };
 
 const applyPageTranslations = (lang) => {
-  const pageName = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const rawPageName = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const pageName = pageTranslations[rawPageName] ? rawPageName : 'index.html';
   const pageConfig = pageTranslations[pageName]?.[lang];
   if (!pageConfig) return;
 
@@ -1098,6 +1099,10 @@ if (document.readyState === 'loading') {
   initLanguageSwitcher();
   initActiveNavigation();
 }
+
+window.addEventListener('load', () => {
+  applyPageTranslations(currentLanguage);
+});
 
 // ==== Original Script Content ====
 
