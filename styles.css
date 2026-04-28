@@ -3304,7 +3304,8 @@ h3,
 }
 
 .neo-card img {
-  aspect-ratio: 1.35 / 1;
+  aspect-ratio: 1.75 / 1;
+  max-height: 150px;
   height: auto;
   border-radius: 8px;
   width: 100%;
@@ -3745,7 +3746,8 @@ h3,
 
 .hub-card img {
   width: 100%;
-  aspect-ratio: 1.35 / 1;
+  aspect-ratio: 1.75 / 1;
+  max-height: 150px;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
@@ -4147,7 +4149,8 @@ h3,
   }
 
   .hub-card img {
-    aspect-ratio: 1.35 / 1;
+    aspect-ratio: 1.75 / 1;
+    max-height: 140px;
     height: auto;
   }
 }
@@ -6657,7 +6660,8 @@ main {
 }
 
 .home-page .neo-card img {
-  aspect-ratio: 1.35 / 1 !important;
+  aspect-ratio: 1.75 / 1 !important;
+  max-height: 150px !important;
   height: auto !important;
   width: 100% !important;
   object-fit: cover !important;
