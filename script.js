@@ -560,7 +560,7 @@ Object.assign(pageTranslations, {
         '.skills-matrix .skill-card-large:nth-child(4) .btn-link:nth-child(1)': { text: 'Bekijk CV' },
         '.showcase-text .section-eyebrow': { text: 'VAARDIGHEDEN' },
         '.showcase-text h2': { text: 'Een extract uit mijn CV in HTML-vorm' },
-        '.showcase-text > p:not(.section-eyebrow)': { text: 'Deze lijst is expres in HTML opgebouwd zodat de jury meteen ziet welke technische en soft skills ik meebreng.' },
+        
         '.experience-list .exp-item:nth-child(1) span': { text: 'Basis voor webinterfaces en interactieve portfolio’s' },
         '.experience-list .exp-item:nth-child(2) span': { text: 'Back-end, data en probleemoplossing' },
         '.experience-list .exp-item:nth-child(3) strong': { text: 'Communicatie, teamwork, leergierigheid' },
