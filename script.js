@@ -581,7 +581,6 @@ Object.assign(pageTranslations, {
         '.highlight-card-3 p': { text: 'Doorgroeien naar een stage of job waar ik projecten professioneel kan ondersteunen en afwerken.' },
         '.call-to-action-ultra .cta-eyebrow': { text: 'CV EN CONTACT' },
         '.call-to-action-ultra h2': { text: 'Bekijk mijn CV of open de download' },
-        '.call-to-action-ultra .cta-description': { text: 'De CV staat op een aparte pagina, en de pdf-link is alvast klaar voor wanneer je hem in de map plaatst.' },
         '.call-to-action-ultra .btn-primary': { text: 'Open CV' }
       }
     },
@@ -628,7 +627,6 @@ Object.assign(pageTranslations, {
         '.highlight-card-3 p': { text: 'Grow into an internship or job where I can support and finish projects professionally.' },
         '.call-to-action-ultra .cta-eyebrow': { text: 'CV AND CONTACT' },
         '.call-to-action-ultra h2': { text: 'View my CV or open the download' },
-        '.call-to-action-ultra .cta-description': { text: 'The CV is on a separate page, and the PDF link is ready for when the file is placed in the folder.' },
         '.call-to-action-ultra .btn-primary': { text: 'Open CV' }
       }
     }

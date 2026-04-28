@@ -6652,3 +6652,48 @@ main {
   }
 }
 
+/* Final about CTA override: wide centered bar with only the title and buttons. */
+.about-page .call-to-action-ultra {
+  width: min(1400px, calc(100vw - 36px));
+  max-width: none;
+  left: 50%;
+  transform: translateX(-50%);
+  grid-template-columns: 1fr !important;
+  justify-items: center;
+  text-align: center;
+  padding: clamp(42px, 5vw, 68px) clamp(20px, 5vw, 72px);
+}
+
+.about-page .call-to-action-ultra .cta-content {
+  width: 100%;
+}
+
+.about-page .call-to-action-ultra h2 {
+  white-space: nowrap;
+  margin-bottom: 2rem;
+}
+
+.about-page .call-to-action-ultra .cta-description,
+.about-page .call-to-action-ultra .cta-visual {
+  display: none !important;
+}
+
+.about-page .call-to-action-ultra .cta-buttons-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 240px));
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .about-page .call-to-action-ultra h2 {
+    white-space: normal;
+  }
+
+  .about-page .call-to-action-ultra .cta-buttons-group {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
