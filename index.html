@@ -57,7 +57,7 @@ en praktische oplossingen. Ik denk graag mee, zoek naar oplossingen wanneer iets
           </p>
           <div class="neo-actions">
             <a href="about.html" class="neo-btn">Lees Meer</a>
-            <a href="mailto:seppe.vanroy@telenet.be" class="neo-link">Mail Mij</a>
+            <a href="mailto:seppe.vanroy@telenet.be" class="neo-link" onclick="window.location.href='mailto:seppe.vanroy@telenet.be'">Mail Mij</a>
           </div>
         </article>
         
@@ -289,13 +289,5 @@ en praktische oplossingen. Ik denk graag mee, zoek naar oplossingen wanneer iets
   </div>
 
   <script src="script.js?v=20260429.1"></script>
-  <script>
-    // Force the hero paragraph text after all scripts run so local edits remain visible
-    window.addEventListener('load', function () {
-      const el = document.querySelector('.neo-text');
-      if (!el) return;
-      el.textContent = 'Ik ben iemand die graag bijleert door te doen. Via projecten zoals MissionZebra, mijn portfolio en mijn ervaring met IT-ondersteuning bij Aurubis leer ik stap voor stap hoe ik ideeën kan omzetten in duidelijke en praktische oplossingen. Ik denk graag mee, zoek naar oplossingen wanneer iets niet meteen lukt en vind het belangrijk dat wat ik maak bruikbaar is voor anderen.';
-    });
-  </script>
 </body>
 </html>
