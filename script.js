@@ -975,23 +975,15 @@ const applyPageTranslations = (lang) => {
     if (!element) return;
 
     if (typeof update === 'string') {
-      // Only overwrite if element explicitly marked for translation or empty
-      const current = (element.textContent || '').trim();
-      const allowOverwrite = element.hasAttribute('data-i18n') || current === '' || element.dataset.forceTranslate === 'true';
-      if (allowOverwrite) element.textContent = update;
+      element.textContent = update;
       return;
     }
 
-    // For text/html updates: do not overwrite existing author content unless element has data-i18n or force flag
     if (update.text !== undefined) {
-      const current = (element.textContent || '').trim();
-      const allowOverwrite = element.hasAttribute('data-i18n') || current === '' || element.dataset.forceTranslate === 'true';
-      if (allowOverwrite) element.textContent = update.text;
+      element.textContent = update.text;
     }
     if (update.html !== undefined) {
-      const currentHtml = (element.innerHTML || '').trim();
-      const allowOverwriteHtml = element.hasAttribute('data-i18n') || currentHtml === '' || element.dataset.forceTranslate === 'true';
-      if (allowOverwriteHtml) element.innerHTML = update.html;
+      element.innerHTML = update.html;
     }
     if (update.placeholder !== undefined) {
       element.setAttribute('placeholder', update.placeholder);
