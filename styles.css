@@ -6619,3 +6619,36 @@ main {
   }
 }
 
+/* Final about override: keeps the four "Wie ik ben" cards as a balanced 2x2 square grid. */
+.about-page .skills-matrix {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.about-page .skill-card-large {
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-page .skill-card-large p {
+  margin-top: 0;
+}
+
+.about-page .skill-card-large .panel-actions {
+  margin-top: auto !important;
+}
+
+@media (max-width: 640px) {
+  .about-page .skills-matrix {
+    grid-template-columns: 1fr !important;
+  }
+
+  .about-page .skill-card-large {
+    aspect-ratio: auto;
+    min-height: 260px;
+  }
+}
+

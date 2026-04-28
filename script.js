@@ -118,10 +118,10 @@ const translations = {
         text: '"Good IT work is not only about writing code. It is about delivering dependable solutions that people can trust."'
       },
       cards: {
-        card1: { title: 'Execution Style', desc: 'I work with structure, set priorities, and keep progress visible. I prefer clean solutions over quick fixes.' },
-        card2: { title: 'Real Environment', desc: 'At Aurubis Olen, I learned how IT supports daily operations and why reliability matters in every detail.' },
-        card3: { title: 'Technical Focus', desc: 'I enjoy building functional products, troubleshooting efficiently, and refining systems until they perform well.' },
-        card4: { title: 'Team Contribution', desc: 'I communicate clearly, stay accountable, and help keep projects moving forward with consistent effort.' }
+        card1: { title: 'Hobbies', desc: 'I enjoy running, cycling, discovering music, and small technical experiments.' },
+        card2: { title: 'Why APP/AI', desc: 'I choose APP/AI because I like building applications and understanding systems.' },
+        card3: { title: 'After my studies', desc: 'I want to grow into a role where I combine software, support, or infrastructure.' },
+        card4: { title: 'CV', desc: 'My CV has its own page and is available there right away.' }
       },
       strengths: {
         eyebrow: 'Strength Profile',
@@ -250,7 +250,7 @@ const translations = {
         eyebrow: 'Profiel',
         title: 'Praktische IT-oplossingen, stap voor stap.',
         // title: 'Ik bouw praktische IT-oplossingen met een professionele instelling en drang om me te verbeteren.',
-        description: 'Ik ben een tweedejaars APP/AI-student die het snelst in echte omgevingen leert. Mijn stage in 2023 bij Aurubis Olen en mijn huidige vakantiewerk in hun IT-afdeling hebben gevormd hoe ik projecten benader: helder denken, betrouwbare uitvoering en voortdurende groei.',
+        description: 'Ik ben een tweedejaarsstudent APP/AI die graag praktisch bezig is met IT. Ik werk rustig, denk graag mee en probeer vooral dingen te maken die logisch in elkaar zitten en echt gebruikt kunnen worden.',
         tag1: 'Praktische Probleemoplosser',
         tag2: 'Professionele Instelling',
         snapshot: 'Snelle Schets',
@@ -281,10 +281,10 @@ const translations = {
         text: '"Goed IT-werk gaat niet alleen over code schrijven. Het gaat over het leveren van betrouwbare oplossingen waar mensen op kunnen vertrouwen."'
       },
       cards: {
-        card1: { title: 'Uitvoeringsstijl', desc: 'Ik werk met structuur, stel prioriteiten in en hou voortgang zichtbaar. Ik geef de voorkeur aan schone oplossingen boven snelle fixes.' },
-        card2: { title: 'Echte Omgeving', desc: 'Bij Aurubis Olen leerde ik hoe IT dagelijkse activiteiten ondersteunt en waarom betrouwbaarheid in elk detail belangrijk is.' },
-        card3: { title: 'Technische Focus', desc: 'Ik geniet ervan functionele producten te bouwen, efficiënt problemen op te lossen en systemen tot op hoog niveau te verfijnen.' },
-        card4: { title: 'Teambijdrage', desc: 'Ik communiceer duidelijk, blijf verantwoordelijk en help projecten voort te zetten met consistent inzet.' }
+        card1: { title: "Hobby's", desc: 'Ik hou van lopen, fietsen, muziek ontdekken en kleine technische experimenten.' },
+        card2: { title: 'Waarom APP/AI', desc: 'Ik kies voor APP/AI omdat ik graag applicaties bouw en systemen begrijp.' },
+        card3: { title: 'Na mijn studies', desc: 'Ik wil doorgroeien naar een rol waarin ik software, support of infrastructuur combineer.' },
+        card4: { title: 'CV', desc: 'Mijn CV staat apart op een eigen pagina en is daar meteen beschikbaar.' }
       },
       strengths: {
         eyebrow: 'Sterkeprofiel',
@@ -543,7 +543,7 @@ Object.assign(pageTranslations, {
       selectors: {
         '.hero-eyebrow-mega': { text: 'WIE IK BEN' },
         '.hero-title-giant': { text: 'Seppe Vanroy' },
-        '.hero-intro-text': { text: 'Tweedejaarsstudent APP/AI met een praktische blik op IT, een rustige werkstijl en veel interesse in oplossingen die echt gebruikt kunnen worden.' },
+        '.hero-intro-text': { text: 'Ik ben een tweedejaarsstudent APP/AI die graag praktisch bezig is met IT. Ik werk rustig, denk graag mee en probeer vooral dingen te maken die logisch in elkaar zitten en echt gebruikt kunnen worden.' },
         '.hero-stats-ultra .stat-block:nth-child(1) .stat-label': { text: 'Applicatieontwikkeling en AI' },
         '.hero-stats-ultra .stat-block:nth-child(2) .stat-label': { text: 'Praktijkgericht' },
         '.hero-stats-ultra .stat-block:nth-child(3) .stat-label': { text: 'Bekijk en download' },
