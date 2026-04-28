@@ -3373,6 +3373,78 @@ h3,
   font-size: 0.9rem;
 }
 
+.internship-panel {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(14, 20, 38, 0.94), rgba(6, 13, 27, 0.82)),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.18), rgba(247, 188, 71, 0.14));
+}
+
+.internship-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, #38bdf8, #f7bc47);
+}
+
+.internship-panel .panel-eyebrow {
+  margin: 0 0 8px;
+  color: #f7bc47;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.internship-panel h2 {
+  max-width: 16ch;
+  line-height: 1.08;
+}
+
+.internship-panel .internship-lead {
+  margin-top: 12px;
+  color: #d5def7;
+  font-size: 0.95rem;
+}
+
+.internship-points {
+  gap: 10px;
+}
+
+.internship-points div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  align-items: start;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.internship-points span {
+  margin-top: 2px;
+  color: #38bdf8;
+  font-size: 0.74rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.internship-points h3,
+.internship-points p {
+  grid-column: 2;
+}
+
+.internship-points h3 {
+  margin-bottom: 4px;
+}
+
+.internship-points p {
+  color: #aebbe0;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
 .neo-form {
   margin-top: 12px;
   display: grid;
