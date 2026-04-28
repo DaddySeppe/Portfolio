@@ -6858,6 +6858,26 @@ body.about-page .hero-image-block {
   align-self: center !important;
 }
 
+body.about-page .about-main.about-ultra-redesign {
+  width: min(1180px, 95vw) !important;
+  max-width: 1180px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.about-page .about-hero-full {
+  width: 100% !important;
+  max-width: 100% !important;
+  justify-self: stretch !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+body.about-page .hero-content-massive,
+body.about-page .hero-stats-ultra {
+  min-width: 0 !important;
+}
+
 body.about-page .image-frame-container {
   width: clamp(280px, 30vw, 360px) !important;
   max-width: 360px !important;
@@ -6872,6 +6892,12 @@ body.about-page .image-frame-premium {
 }
 
 @media (max-width: 720px) {
+  body.about-page .about-main.about-ultra-redesign {
+    width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
   body.about-page .image-frame-container {
     width: min(100%, 320px) !important;
     max-width: 320px !important;
