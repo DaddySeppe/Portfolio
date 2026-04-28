@@ -478,7 +478,7 @@ Object.assign(pageTranslations, {
         '.neo-window-top p': { text: 'Portfolio v2' },
         '.neo-kicker': { text: 'APP/AI Student' },
         '.neo-hero h1': { text: 'Hallo, ik ben Seppe Vanroy.' },
-        '.neo-text': { text: 'Ik ben een tweedejaarsstudent APP/AI die graag dingen maakt die echt werken. Via projecten zoals MissionZebra, mijn portfolio en IT-ondersteuning bij Aurubis leer ik stap voor stap hoe je technische kennis omzet in duidelijke, bruikbare oplossingen.' },
+        '.neo-text': { text: 'Ik ben een tweedejaarsstudent APP/AI en maak graag dingen die ook echt werken. Ik ben iemand die graag bijleert door te doen. Via projecten zoals MissionZebra, mijn portfolio en mijn ervaring met IT-ondersteuning bij Aurubis leer ik stap voor stap hoe ik ideeën kan omzetten in duidelijke en praktische oplossingen. Ik denk graag mee, zoek naar oplossingen wanneer iets niet meteen lukt en vind het belangrijk dat wat ik maak bruikbaar is voor anderen.' },
         '.neo-btn': { text: 'Lees Meer' },
         '.neo-link': { text: 'Mail Mij' },
         '.neo-projects h2': { text: 'Uitgelichte Projecten' },
