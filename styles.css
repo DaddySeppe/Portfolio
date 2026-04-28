@@ -3566,6 +3566,13 @@ h3,
   --project-secondary: #fb7185;
 }
 
+.project-four-page,
+.cv-page {
+  --project-accent: #a78bfa;
+  --project-accent-soft: rgba(167, 139, 250, 0.2);
+  --project-secondary: #22d3ee;
+}
+
 @media (max-width: 940px) {
   .project-impact-grid {
     grid-template-columns: 1fr;
@@ -3607,7 +3614,7 @@ h3,
 .hub-grid {
   margin-top: 18px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
 }
 
@@ -3802,6 +3809,178 @@ h3,
 
 .contact-form-status.is-error {
   color: #fca5a5;
+}
+
+.cv-main {
+  max-width: 1180px;
+}
+
+.cv-toolbar {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 24px;
+  padding: clamp(24px, 4vw, 38px);
+  background:
+    linear-gradient(145deg, rgba(8, 16, 33, 0.96), rgba(8, 14, 30, 0.95)),
+    radial-gradient(720px 360px at 100% 0%, rgba(167, 139, 250, 0.24), transparent 60%);
+}
+
+.cv-toolbar h1 {
+  margin: 0;
+  font-size: clamp(34px, 6vw, 64px);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.cv-toolbar p:not(.eyebrow) {
+  max-width: 62ch;
+  color: #c8d7f0;
+}
+
+.cv-sheet {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.36fr) 1fr;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 24px;
+  background: #f8fafc;
+  color: #0f172a;
+  box-shadow: 0 30px 80px rgba(2, 6, 23, 0.45);
+}
+
+.cv-sidebar {
+  padding: clamp(24px, 3vw, 34px);
+  background: linear-gradient(180deg, #0f172a, #111827);
+  color: #e2e8f0;
+}
+
+.cv-photo {
+  margin: 0 0 18px;
+  aspect-ratio: 1;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cv-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cv-name-block h2 {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.05;
+}
+
+.cv-name-block p,
+.cv-block li {
+  color: #cbd5e1;
+}
+
+.cv-block {
+  margin-top: 28px;
+}
+
+.cv-block h3,
+.cv-section h3 {
+  margin: 0 0 12px;
+  font-size: 0.86rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.cv-block ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-block li {
+  margin: 0 0 10px;
+  line-height: 1.55;
+}
+
+.cv-content {
+  padding: clamp(26px, 4vw, 46px);
+}
+
+.cv-section {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.cv-section:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.cv-section p {
+  color: #334155;
+  line-height: 1.72;
+}
+
+.cv-entry {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.34fr) 1fr;
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.cv-entry strong {
+  display: block;
+  color: #0f172a;
+}
+
+.cv-entry span {
+  display: block;
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+.cv-entry p {
+  margin: 0;
+}
+
+.cv-skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cv-skill-grid span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  border-radius: 999px;
+  padding: 8px 13px;
+  background: #e0f2fe;
+  color: #075985;
+  font-weight: 800;
+  font-size: 0.86rem;
+}
+
+@media (max-width: 860px) {
+  .cv-toolbar,
+  .cv-sheet,
+  .cv-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-toolbar {
+    align-items: start;
+  }
+
+  .cv-sheet {
+    display: block;
+  }
 }
 
 .contact-honeypot {
