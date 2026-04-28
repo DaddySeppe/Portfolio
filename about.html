@@ -203,6 +203,31 @@
     </section>
   </div>
 
-  <script src="script.js?v=20260429.4"></script>
+  <script src="script.js?v=20260429.11"></script>
+  <script>
+    (() => {
+      const introText = {
+        nl: 'Ik ben een tweedejaarsstudent APP/AI die graag praktisch bezig is met IT. Ik werk rustig, denk graag mee en probeer vooral dingen te maken die logisch in elkaar zitten en echt gebruikt kunnen worden.',
+        en: 'I am a second-year APP/AI student who enjoys practical IT work. I work calmly, like to think along, and mainly try to build things that make sense and can actually be used.'
+      };
+
+      const applyIntroText = (lang) => {
+        const intro = document.querySelector('.hero-intro-text');
+        if (!intro) return;
+        intro.textContent = introText[lang] || introText.nl;
+      };
+
+      document.querySelectorAll('.lang-btn').forEach((button) => {
+        button.addEventListener('click', () => {
+          applyIntroText(button.getAttribute('data-lang'));
+        });
+      });
+
+      applyIntroText(localStorage.getItem('language') || document.documentElement.lang || 'nl');
+      window.addEventListener('load', () => {
+        applyIntroText(localStorage.getItem('language') || document.documentElement.lang || 'nl');
+      });
+    })();
+  </script>
 </body>
 </html>
