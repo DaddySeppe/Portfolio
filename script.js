@@ -508,7 +508,7 @@ Object.assign(pageTranslations, {
         '.neo-window-top p': { text: 'Portfolio v2' },
         '.neo-kicker': { text: 'APP/AI Student' },
         '.neo-hero h1': { text: 'Hi, I am Seppe Vanroy.' },
-        '.neo-text': { text: 'I am a second-year APP/AI student who likes building things that actually work. Through projects like MissionZebra, my portfolio, and IT support at Aurubis, I learn step by step how to turn technical knowledge into clear, useful solutions.' },
+        '.neo-text': { text: 'I am a second-year APP/AI student and I enjoy making things that actually work.\n\nI am someone who likes learning by doing. Through projects such as MissionZebra, my portfolio, and my experience with IT support at Aurubis, I am learning step by step how to turn ideas into clear and practical solutions. I like thinking along, looking for solutions when something does not work right away, and I find it important that what I make is useful for others.' },
         '.neo-btn': { text: 'Read More' },
         '.neo-link': { text: 'Email Me' },
         '.neo-projects h2': { text: 'Featured Projects' },
