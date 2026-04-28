@@ -1055,16 +1055,6 @@ const initLanguageSwitcher = () => {
   });
 };
 
-const initMailMeLink = () => {
-  const mailLink = document.getElementById('mailMeLink');
-  if (!mailLink) return;
-
-  mailLink.addEventListener('click', (event) => {
-    event.preventDefault();
-    window.location.href = 'mailto:seppe.vanroy@telenet.be';
-  });
-};
-
 const initActiveNavigation = () => {
   const navLinks = Array.from(document.querySelectorAll('.main-nav a[href]'));
   if (navLinks.length === 0) return;
@@ -1110,13 +1100,11 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     initializeLanguage();
     initLanguageSwitcher();
-    initMailMeLink();
     initActiveNavigation();
   });
 } else {
   initializeLanguage();
   initLanguageSwitcher();
-  initMailMeLink();
   initActiveNavigation();
 }
 
