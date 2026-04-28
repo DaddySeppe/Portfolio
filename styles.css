@@ -3344,6 +3344,28 @@ h3,
   padding: 18px;
 }
 
+.neo-panel-stack {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.neo-panel-stack h3 {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  color: #f8fbff;
+}
+
+.neo-panel-stack p {
+  margin: 0;
+}
+
+.panel-actions-inline {
+  margin-top: 16px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
 .neo-panel p {
   margin: 10px 0 0;
   color: #a8b5d7;
@@ -3392,75 +3414,6 @@ h3,
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: linear-gradient(160deg, rgba(8, 11, 21, 0.88), rgba(9, 12, 24, 0.82));
-}
-
-.neo-features ul {
-  margin: 14px 0 0;
-  padding-left: 24px;
-  display: grid;
-  gap: 8px;
-}
-
-.neo-features li {
-  color: #d0daf6;
-  font-size: 1.04rem;
-}
-
-.neo-features li::marker {
-  color: #f7bc47;
-}
-
-@keyframes neoFloat {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-14px); }
-  100% { transform: translateY(0); }
-}
-
-@media (max-width: 980px) {
-  .neo-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .neo-side {
-    grid-row: auto;
-    grid-template-columns: 1fr;
-  }
-
-  .neo-cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .neo-layout {
-    width: min(1160px, 96vw);
-    margin-top: 88px;
-  }
-
-  .neo-grid {
-    padding: 12px;
-    gap: 12px;
-  }
-
-  .neo-hero,
-  .neo-projects,
-  .neo-panel {
-    padding: 14px;
-  }
-
-  .neo-actions {
-    flex-wrap: wrap;
-  }
-
-  .neo-btn,
-  .neo-link {
-    width: 100%;
-    text-align: center;
-  }
-
-  .neo-cards {
-    grid-template-columns: 1fr !important;
-  }
 }
 
 .project-main {
@@ -6652,12 +6605,6 @@ main {
   font-size: clamp(0.78rem, 0.95vw, 0.88rem) !important;
   line-height: 1.42 !important;
   word-spacing: 0 !important;
-}
-
-@media (max-width: 980px) {
-  .neo-insight-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 720px) {

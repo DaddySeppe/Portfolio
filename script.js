@@ -26,26 +26,6 @@ const translations = {
       skill3: 'Teamwork',
       skill4: 'Step by step growth'
     },
-    homeFocus: {
-      eyebrow: 'Current Focus',
-      title: 'What I am working on now',
-      description: 'I use this portfolio to show what I can already do, where I still want to grow, and which kind of internship or assignment fits me best.',
-      card1: {
-        label: 'Learning now',
-        title: 'More structure in front-end',
-        text: 'I am practicing semantic HTML, clean CSS layouts, and interfaces that feel calm but still professional.'
-      },
-      card2: {
-        label: 'Looking for',
-        title: 'An internship with real impact',
-        text: 'I fit well in an environment where I can keep learning, support the team, and gradually take more responsibility.'
-      },
-      card3: {
-        label: 'My approach',
-        title: 'Calm, logical, and reliable',
-        text: 'I like understanding things properly before I finish them, so solutions not only work but also stay maintainable.'
-      }
-    },
     projects: {
       eyebrow: 'Projects',
       title: 'Work from school projects and practical learning',
@@ -208,26 +188,6 @@ const translations = {
       skill2: 'Leren door doen',
       skill3: 'Teamwerk',
       skill4: 'Stap voor stap groei'
-    },
-    homeFocus: {
-      eyebrow: 'Huidige focus',
-      title: 'Waar ik nu mee bezig ben',
-      description: 'Ik gebruik mijn portfolio om te tonen wat ik al kan, waar ik nog wil groeien en welke soort stage of opdracht het best bij mij past.',
-      card1: {
-        label: 'Nu leren',
-        title: 'Meer structuur in front-end',
-        text: 'Ik oefen op semantische HTML, nette CSS-layouts en interfaces die rustig maar professioneel aanvoelen.'
-      },
-      card2: {
-        label: 'Zoek ik',
-        title: 'Een stage met echte impact',
-        text: 'Ik pas goed in een omgeving waar je mag bijleren, mee ondersteunen en stap voor stap meer verantwoordelijkheid krijgt.'
-      },
-      card3: {
-        label: 'Mijn aanpak',
-        title: 'Rustig, logisch en betrouwbaar',
-        text: 'Ik wil dingen goed begrijpen voor ik ze afwerk, zodat oplossingen niet alleen werken maar ook onderhoudbaar blijven.'
-      }
     },
     projects: {
       eyebrow: 'Projecten',
