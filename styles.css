@@ -6868,6 +6868,8 @@ body.about-page .about-main.about-ultra-redesign {
 body.about-page .about-hero-full {
   width: 100% !important;
   max-width: 100% !important;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 320px) !important;
+  gap: clamp(2rem, 4vw, 3rem) !important;
   justify-self: stretch !important;
   animation: none !important;
   transform: none !important;
@@ -6878,9 +6880,13 @@ body.about-page .hero-stats-ultra {
   min-width: 0 !important;
 }
 
+body.about-page .hero-stats-ultra {
+  gap: clamp(1rem, 2vw, 1.5rem) !important;
+}
+
 body.about-page .image-frame-container {
-  width: clamp(280px, 30vw, 360px) !important;
-  max-width: 360px !important;
+  width: clamp(240px, 24vw, 320px) !important;
+  max-width: 320px !important;
   flex: 0 0 auto !important;
 }
 
