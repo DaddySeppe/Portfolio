@@ -11,7 +11,7 @@ const translations = {
     hero: {
       tag: 'SEPPE PORTFOLIO',
       title: 'IT Student',
-      subtitle: 'I am Seppe, a second-year IT student. I like learning new things, working on practical projects and improving myself step by step.',
+      subtitle: 'I am Seppe, a second-year APP/AI student. I like learning new things, working on practical projects and improving myself step by step.',
       chip1: 'Second-year student',
       chip2: 'Motivated',
       chip3: 'Always learning',
@@ -87,7 +87,7 @@ const translations = {
         eyebrow: 'Profile',
         title: 'Building IT solutions, step by step.',
         // title: 'I build practical IT solutions with a professional mindset and a drive to improve.',
-        description: 'I am a second-year IT student who learns fastest in real environments. My 2023 internship at Aurubis Olen and my current holiday work on their IT department shaped how I approach projects: clear thinking, reliable execution, and continuous growth.',
+        description: 'I am a second-year APP/AI student who learns fastest in real environments. My 2023 internship at Aurubis Olen and my current holiday work on their IT department shaped how I approach projects: clear thinking, reliable execution, and continuous growth.',
         tag1: 'Practical Problem Solver',
         tag2: 'Professional Attitude',
         snapshot: 'Quick Snapshot',
@@ -174,7 +174,7 @@ const translations = {
     hero: {
       tag: 'SEPPE PORTFOLIO',
       title: 'IT Student',
-      subtitle: 'Ik ben Seppe, een tweedejaars IT-student. Ik hou ervan om nieuwe dingen te leren, aan praktische projecten te werken en mezelf stap voor stap te verbeteren.',
+      subtitle: 'Ik ben Seppe, een tweedejaars APP/AI-student. Ik hou ervan om nieuwe dingen te leren, aan praktische projecten te werken en mezelf stap voor stap te verbeteren.',
       chip1: 'Tweedejaars student',
       chip2: 'Gemotiveerd',
       chip3: 'Altijd leren',
@@ -250,7 +250,7 @@ const translations = {
         eyebrow: 'Profiel',
         title: 'Praktische IT-oplossingen, stap voor stap.',
         // title: 'Ik bouw praktische IT-oplossingen met een professionele instelling en drang om me te verbeteren.',
-        description: 'Ik ben een tweedejaars IT-student die het snelst in echte omgevingen leert. Mijn stagering in 2023 bij Aurubis Olen en mijn huidige vakantiewerk in hun IT-afdeling hebben gevormd hoe ik projecten benaader: helder denken, betrouwbare uitvoering en voortdurende groei.',
+        description: 'Ik ben een tweedejaars APP/AI-student die het snelst in echte omgevingen leert. Mijn stage in 2023 bij Aurubis Olen en mijn huidige vakantiewerk in hun IT-afdeling hebben gevormd hoe ik projecten benader: helder denken, betrouwbare uitvoering en voortdurende groei.',
         tag1: 'Praktische Probleemoplosser',
         tag2: 'Professionele Instelling',
         snapshot: 'Snelle Schets',
@@ -452,10 +452,12 @@ const initActiveNavigation = () => {
     'index.html': 'index.html',
     'about.html': 'about.html',
     'projects.html': 'projects.html',
+    'cv.html': 'cv.html',
     'contact.html': 'contact.html',
     'project-one.html': 'projects.html',
     'project-two.html': 'projects.html',
-    'project-three.html': 'projects.html'
+    'project-three.html': 'projects.html',
+    'project-four.html': 'projects.html'
   };
 
   setActiveLink(routeMap[currentPath] || 'index.html');
@@ -1167,8 +1169,8 @@ const initPortfolioAI = () => {
 
     if (/(studie|opleiding|school|internship|stage|aurubis)/.test(p)) {
       return nl
-        ? 'Seppe is tweedejaars IT-student, liep stage bij Aurubis Olen en werkt daar ook tijdens vakantieperiodes op IT.'
-        : 'Seppe is a second-year IT student, completed an internship at Aurubis Olen, and also works there in IT during holiday periods.';
+        ? 'Seppe is tweedejaars APP/AI-student, liep stage bij Aurubis Olen en werkt daar ook tijdens vakantieperiodes op IT.'
+        : 'Seppe is a second-year APP/AI student, completed an internship at Aurubis Olen, and also works there in IT during holiday periods.';
     }
 
     return nl
@@ -1275,9 +1277,9 @@ const initPortfolioAI = () => {
 
 initHomePage();
 // Performance first: disable heavy animations on all pages
-// try { initHomeEffects(); } catch (e) { console.error('initHomeEffects error:', e); }
+try { initHomeEffects(); } catch (e) { console.error('initHomeEffects error:', e); }
 try { initReveal(); } catch (e) { console.error('initReveal error:', e); }
-// try { initAboutEffects(); } catch (e) { console.error('initAboutEffects error:', e); }
+try { initAboutEffects(); } catch (e) { console.error('initAboutEffects error:', e); }
 // try { initAboutCenterZoom(); } catch (e) { console.error('initAboutCenterZoom error:', e); }
 // try { initAboutWheelMotion(); } catch (e) { console.error('initAboutWheelMotion error:', e); }
 try { initContactForm(); } catch (e) { console.error('initContactForm error:', e); }
