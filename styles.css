@@ -6654,10 +6654,12 @@ main {
 
 /* Final about CTA override: wide centered bar with only the title and buttons. */
 .about-page .call-to-action-ultra {
-  width: min(1400px, calc(100vw - 36px));
-  max-width: none;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1400px;
+  left: auto;
+  transform: none;
+  margin-left: auto;
+  margin-right: auto;
   grid-template-columns: 1fr !important;
   justify-items: center;
   text-align: center;
