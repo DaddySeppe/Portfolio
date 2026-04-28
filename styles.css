@@ -6662,6 +6662,9 @@ main {
 .home-page .neo-card {
   min-width: 0;
   padding: 9px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
 }
 
 .home-page .neo-card img {
@@ -6673,6 +6676,17 @@ main {
   display: block !important;
   margin: 0 !important;
   object-fit: cover !important;
+  align-self: stretch !important;
+}
+
+@supports (height: 1cqw) {
+  .home-page .neo-card {
+    container-type: inline-size;
+  }
+
+  .home-page .neo-card img {
+    height: 100cqw !important;
+  }
 }
 
 .home-page .neo-card h3 {
