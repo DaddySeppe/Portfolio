@@ -3953,17 +3953,34 @@ h3,
     linear-gradient(180deg, #9aa5a4 0%, #909b9a 100%);
   color: #2f405d;
   position: relative;
+  overflow: visible;
+}
+
+.cv-sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background: #2f405d;
+  z-index: 0;
 }
 
 .cv-photo {
   width: 144px;
   height: 144px;
-  margin: -92px auto 18px;
+  margin: 0;
+  position: absolute;
+  top: -72px;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 50%;
   overflow: hidden;
   border: 8px solid #2f405d;
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.22);
   background: #cbd5e1;
+  z-index: 1;
 }
 
 .cv-photo img {
@@ -3974,6 +3991,9 @@ h3,
 
 .cv-name-block {
   text-align: center;
+  padding-top: 92px;
+  position: relative;
+  z-index: 1;
 }
 
 .cv-name-block h2 {
