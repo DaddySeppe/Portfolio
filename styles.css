@@ -7834,16 +7834,23 @@ body.projects-hub-page .hub-card span {
 }
 
 body.helpse-project-page .project-cover {
-  width: min(100%, 520px) !important;
-  min-width: min(100%, 520px) !important;
-  max-width: 520px !important;
+  width: min(100%, 430px) !important;
+  min-width: min(100%, 430px) !important;
+  max-width: 430px !important;
+  transform: none !important;
 }
 
+body.helpse-project-page .hero-side > .profile-slot.project-cover > img,
 body.helpse-project-page .project-cover img {
+  display: block !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
   aspect-ratio: 16 / 9 !important;
-  height: auto !important;
+  height: 242px !important;
   max-height: none !important;
   object-fit: cover !important;
+  object-position: center center !important;
 }
 
 
