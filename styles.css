@@ -7812,6 +7812,17 @@ body.projects-hub-page .hub-card {
   flex-direction: column !important;
 }
 
+body.projects-hub-page .hub-card img {
+  width: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  object-fit: cover !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+}
+
 body.projects-hub-page .hub-card p {
   flex: 1 1 auto !important;
 }
