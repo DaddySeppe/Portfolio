@@ -3726,11 +3726,12 @@ h3,
 .hub-grid {
   margin-top: 18px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 16px;
 }
 
 .hub-card {
+  grid-column: span 2;
   display: block;
   text-decoration: none;
   border: 1px solid rgba(148, 163, 184, 0.22);
@@ -3992,6 +3993,14 @@ h3,
   gap: 22px;
   width: min(1180px, 100%);
   margin: 0 auto;
+}
+
+.hub-grid .hub-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.hub-grid .hub-card:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 .cv-page-hero {
@@ -7054,8 +7063,20 @@ main {
 /* Absolute final homepage project grid override. */
 body.home-page .neo-projects .neo-cards {
   display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
   grid-auto-flow: row !important;
+}
+
+body.home-page .neo-projects .neo-card {
+  grid-column: span 2 !important;
+}
+
+body.home-page .neo-projects .neo-card:nth-child(4) {
+  grid-column: 2 / span 2 !important;
+}
+
+body.home-page .neo-projects .neo-card:nth-child(5) {
+  grid-column: 4 / span 2 !important;
 }
 
 body.home-page .neo-card-media {
@@ -7142,6 +7163,12 @@ body.about-page .image-frame-premium {
 @media (max-width: 860px) {
   body.home-page .neo-projects .neo-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  body.home-page .neo-projects .neo-card,
+  body.home-page .neo-projects .neo-card:nth-child(4),
+  body.home-page .neo-projects .neo-card:nth-child(5) {
+    grid-column: auto !important;
   }
 }
 
@@ -7670,6 +7697,48 @@ body.home-page .neo-side {
   }
 }
 
+/* Final five-project layout: three cards above, two skill projects centered below. */
+.projects-hub-page .hub-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+}
+
+.projects-hub-page .hub-card,
+body.home-page .neo-projects .neo-card {
+  grid-column: span 2 !important;
+}
+
+.projects-hub-page .hub-card:nth-child(4),
+body.home-page .neo-projects .neo-card:nth-child(4) {
+  grid-column: 2 / span 2 !important;
+}
+
+.projects-hub-page .hub-card:nth-child(5),
+body.home-page .neo-projects .neo-card:nth-child(5) {
+  grid-column: 4 / span 2 !important;
+}
+
+@media (max-width: 900px) {
+  .projects-hub-page .hub-grid,
+  body.home-page .neo-projects .neo-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .projects-hub-page .hub-card,
+  .projects-hub-page .hub-card:nth-child(4),
+  .projects-hub-page .hub-card:nth-child(5),
+  body.home-page .neo-projects .neo-card,
+  body.home-page .neo-projects .neo-card:nth-child(4),
+  body.home-page .neo-projects .neo-card:nth-child(5) {
+    grid-column: auto !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .projects-hub-page .hub-grid,
+  body.home-page .neo-projects .neo-cards {
+    grid-template-columns: 1fr !important;
+  }
+}
 /* Roomier project previews on the homepage. */
 body.home-page .neo-projects {
   margin-top: 6px !important;
