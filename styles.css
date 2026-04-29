@@ -3938,7 +3938,7 @@ h3,
 .cv-sheet {
   display: grid;
   grid-template-columns: minmax(280px, 0.36fr) 1fr;
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid rgba(148, 163, 184, 0.18);
   border-radius: 28px;
   background: #f8fafc;
@@ -3947,7 +3947,7 @@ h3,
 }
 
 .cv-sidebar {
-  padding: 34px 26px 30px;
+  padding: 64px 26px 30px;
   background:
     radial-gradient(900px 420px at 50% 0%, rgba(255, 255, 255, 0.18), transparent 62%),
     linear-gradient(180deg, #9aa5a4 0%, #909b9a 100%);
@@ -3958,7 +3958,7 @@ h3,
 .cv-photo {
   width: 144px;
   height: 144px;
-  margin: -82px auto 18px;
+  margin: -92px auto 18px;
   border-radius: 50%;
   overflow: hidden;
   border: 8px solid #2f405d;
