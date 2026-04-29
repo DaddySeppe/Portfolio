@@ -1021,14 +1021,15 @@ pageTranslations['project-helpse.html'] = {
       '.project-impact-grid article:nth-child(3) p': { text: 'Nieuwe gebruikers krijgen 3 dagen trial. Daarna is €2,99 per maand nodig.' },
       '.project-flow .eyebrow': { text: 'Uitwerking' },
       '.project-flow h2': { text: 'Belangrijkste onderdelen' },
-      '.project-steps li:nth-child(1)': { html: '<strong>Access control</strong> trial users mogen rondkijken, maar geen taken posten, aanmelden of beheren.' },
-      '.project-steps li:nth-child(2)': { html: '<strong>REST API</strong> auth, tasks, applications en payments zijn verdeeld over duidelijke endpoints.' },
-      '.project-steps li:nth-child(3)': { html: '<strong>Database</strong> de basis bestaat uit users, tasks en applications met rollen, statussen en relaties.' },
-      '.project-steps li:nth-child(4)': { html: '<strong>Stack</strong> React, Vite, Tailwind CSS, Node.js, Express, Supabase, JWT, bcrypt en Stripe.' },
-      '.portfolio-section:last-child .eyebrow': { text: 'Mijn focus' },
-      '.portfolio-section:last-child h2': { text: 'Wat ik hiermee toon' },
-      '.portfolio-section:last-child .project-copy': { text: 'Met Helpse toon ik hoe je een idee uitwerkt tot een volledige applicatie met gebruikersrollen, betaalde toegang, duidelijke foutmeldingen en een moderne interface.' },
-      '.panel-actions .btn-link': { text: 'Terug naar Projecten' }
+      '.project-steps li:nth-child(1)': { html: '<strong>Access control:</strong> trial users mogen rondkijken, maar geen taken posten, aanmelden of beheren.' },
+      '.project-steps li:nth-child(2)': { html: '<strong>REST API:</strong> auth, tasks, applications en payments zijn verdeeld over duidelijke endpoints.' },
+      '.project-steps li:nth-child(3)': { html: '<strong>Database:</strong> de basis bestaat uit users, tasks en applications met rollen, statussen en relaties.' },
+      '.project-steps li:nth-child(4)': { html: '<strong>Stack:</strong> React, Vite, Tailwind CSS, Node.js, Express, Supabase, JWT, bcrypt en Stripe.' },
+      '.portfolio-section:last-child .eyebrow': { text: 'Doel' },
+      '.portfolio-section:last-child h2': { text: 'Gebouwd om studenten te helpen' },
+      '.portfolio-section:last-child .project-copy': { text: 'Helpse is gebouwd om studenten sneller aan kleine betaalde jobs te helpen en tegelijk mensen in de buurt op een eenvoudige manier hulp te laten vinden.' },
+      '.panel-actions .btn-link:nth-child(1)': { text: 'Terug naar Projecten' },
+      '.panel-actions .btn-link:nth-child(2)': { text: 'Bekijk Website' }
     }
   },
   en: {
@@ -1052,14 +1053,15 @@ pageTranslations['project-helpse.html'] = {
       '.project-impact-grid article:nth-child(3) p': { text: 'New users get a 3-day trial. After that, access costs €2.99 per month.' },
       '.project-flow .eyebrow': { text: 'Build' },
       '.project-flow h2': { text: 'Main parts' },
-      '.project-steps li:nth-child(1)': { html: '<strong>Access control</strong> trial users can browse, but cannot post tasks, apply, or manage tasks.' },
-      '.project-steps li:nth-child(2)': { html: '<strong>REST API</strong> auth, tasks, applications, and payments are split into clear endpoints.' },
-      '.project-steps li:nth-child(3)': { html: '<strong>Database</strong> the base consists of users, tasks, and applications with roles, statuses, and relations.' },
-      '.project-steps li:nth-child(4)': { html: '<strong>Stack</strong> React, Vite, Tailwind CSS, Node.js, Express, Supabase, JWT, bcrypt, and Stripe.' },
-      '.portfolio-section:last-child .eyebrow': { text: 'My focus' },
-      '.portfolio-section:last-child h2': { text: 'What this shows' },
-      '.portfolio-section:last-child .project-copy': { text: 'With Helpse I show how an idea can become a complete application with user roles, paid access, clear errors, and a modern interface.' },
-      '.panel-actions .btn-link': { text: 'Back to Projects' }
+      '.project-steps li:nth-child(1)': { html: '<strong>Access control:</strong> trial users can browse, but cannot post tasks, apply, or manage tasks.' },
+      '.project-steps li:nth-child(2)': { html: '<strong>REST API:</strong> auth, tasks, applications, and payments are split into clear endpoints.' },
+      '.project-steps li:nth-child(3)': { html: '<strong>Database:</strong> the base consists of users, tasks, and applications with roles, statuses, and relations.' },
+      '.project-steps li:nth-child(4)': { html: '<strong>Stack:</strong> React, Vite, Tailwind CSS, Node.js, Express, Supabase, JWT, bcrypt, and Stripe.' },
+      '.portfolio-section:last-child .eyebrow': { text: 'Goal' },
+      '.portfolio-section:last-child h2': { text: 'Built to help students' },
+      '.portfolio-section:last-child .project-copy': { text: 'Helpse is built to help students find small paid jobs faster, while giving people nearby an easy way to find help.' },
+      '.panel-actions .btn-link:nth-child(1)': { text: 'Back to Projects' },
+      '.panel-actions .btn-link:nth-child(2)': { text: 'View Website' }
     }
   }
 };
