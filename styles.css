@@ -3939,6 +3939,7 @@ h3,
   display: grid;
   grid-template-columns: minmax(280px, 0.36fr) 1fr;
   overflow: visible;
+  position: relative;
   border: 1px solid rgba(148, 163, 184, 0.18);
   border-radius: 28px;
   background: #f8fafc;
@@ -3946,25 +3947,27 @@ h3,
   box-shadow: 0 30px 90px rgba(2, 6, 23, 0.42);
 }
 
-.cv-sidebar {
-  padding: 64px 26px 30px;
-  background:
-    radial-gradient(900px 420px at 50% 0%, rgba(255, 255, 255, 0.18), transparent 62%),
-    linear-gradient(180deg, #9aa5a4 0%, #909b9a 100%);
-  color: #2f405d;
-  position: relative;
-  overflow: visible;
-}
-
-.cv-sidebar::before {
+.cv-sheet::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 18px;
+  border-radius: 28px 28px 0 0;
   background: #2f405d;
   z-index: 0;
+}
+
+.cv-sidebar {
+  padding: 74px 26px 30px;
+  background:
+    radial-gradient(900px 420px at 50% 0%, rgba(255, 255, 255, 0.18), transparent 62%),
+    linear-gradient(180deg, #9aa5a4 0%, #909b9a 100%);
+  color: #2f405d;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
 }
 
 .cv-photo {
@@ -3972,7 +3975,7 @@ h3,
   height: 144px;
   margin: 0;
   position: absolute;
-  top: -72px;
+  top: -70px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
@@ -4076,9 +4079,11 @@ h3,
 }
 
 .cv-content {
-  padding: clamp(26px, 4vw, 46px) 34px 34px;
+  padding: 42px 34px 34px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 250, 252, 1));
+  position: relative;
+  z-index: 1;
 }
 
 .cv-section {
