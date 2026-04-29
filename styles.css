@@ -7121,4 +7121,31 @@ body.about-page .image-frame-premium {
   }
 }
 
+/* Final project-card size lock: matches the compact project overview image style. */
+body.home-page .neo-projects .neo-card {
+  align-items: stretch !important;
+  padding: 10px !important;
+}
+
+body.home-page .neo-projects .neo-card-media {
+  display: block !important;
+  width: min(150px, 100%) !important;
+  max-width: 150px !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  border-radius: 10px !important;
+}
+
+body.home-page .neo-projects .neo-card-media > img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 150px !important;
+  max-height: 150px !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+}
+
 
