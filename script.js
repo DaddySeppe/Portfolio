@@ -773,9 +773,8 @@ pageTranslations['project-two.html'] = {
       '.hero-tags span:nth-child(3)': { text: 'KwaliTIJD' },
       '.hero-side-label': { text: 'Idee' },
       '.hero-side h3': { text: 'Schermtijd positief verdienen' },
-      '.hero-facts li:nth-child(1)': { html: '<span>Rol</span> Teamlid' },
+      '.hero-facts li:nth-child(1)': { html: '<span>Rol</span> Medeoprichter / co-owner' },
       '.hero-facts li:nth-child(2)': { html: '<span>Focus</span> Ouders en kinderen' },
-      '.hero-facts li:nth-child(3)': { html: '<span>Vak</span> SKIL2 - semester 2' },
       '.project-impact .eyebrow': { text: 'Probleem en oplossing' },
       '.project-impact h2': { text: 'Van schermstrijd naar samenwerking' },
       '.project-impact-grid article:nth-child(1) h3': { text: 'Probleem' },
@@ -794,7 +793,7 @@ pageTranslations['project-two.html'] = {
       '.portfolio-section:last-child h2': { text: 'Meer rust, plezier en kwaliTIJD' },
       '.portfolio-section:last-child .project-copy': { text: 'MissionZebra draait om evenwicht. De app helpt gezinnen om schermgebruik minder als strijd te zien en meer als hulpmiddel om samen afspraken te maken.' },
       '.panel-actions .btn-link:nth-child(1)': { text: 'Terug naar Projecten' },
-      '.panel-actions .btn-link:nth-child(2)': { text: 'Volgend project' }
+      '.panel-actions .btn-link:nth-child(2)': { text: 'Bekijk Website' }
     }
   },
   en: {
@@ -808,9 +807,8 @@ pageTranslations['project-two.html'] = {
       '.hero-tags span:nth-child(3)': { text: 'Quality time' },
       '.hero-side-label': { text: 'Idea' },
       '.hero-side h3': { text: 'Earn screen time positively' },
-      '.hero-facts li:nth-child(1)': { html: '<span>Role</span> Team member' },
+      '.hero-facts li:nth-child(1)': { html: '<span>Role</span> Co-founder / co-owner' },
       '.hero-facts li:nth-child(2)': { html: '<span>Focus</span> Parents and children' },
-      '.hero-facts li:nth-child(3)': { html: '<span>Course</span> SKIL2 - semester 2' },
       '.project-impact .eyebrow': { text: 'Problem and solution' },
       '.project-impact h2': { text: 'From screen conflict to cooperation' },
       '.project-impact-grid article:nth-child(1) h3': { text: 'Problem' },
@@ -829,7 +827,7 @@ pageTranslations['project-two.html'] = {
       '.portfolio-section:last-child h2': { text: 'More calm, fun, and quality time' },
       '.portfolio-section:last-child .project-copy': { text: 'MissionZebra is about balance. The app helps families see screen use less as a conflict and more as a tool for making agreements together.' },
       '.panel-actions .btn-link:nth-child(1)': { text: 'Back to Projects' },
-      '.panel-actions .btn-link:nth-child(2)': { text: 'Next project' }
+      '.panel-actions .btn-link:nth-child(2)': { text: 'View Website' }
     }
   }
 };
