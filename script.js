@@ -52,7 +52,8 @@ const translations = {
       categories: {
         webdev: 'Web Development',
         databackend: 'Data & Backend',
-        tools: 'Tools & Platforms'
+        tools: 'Tools & Platforms',
+        softskills: 'Soft Skills'
       },
       tech: {
         html5: 'HTML5',
@@ -80,6 +81,16 @@ const translations = {
         aws: 'AWS',
         terminal: 'Terminal/CLI',
         agile: 'Agile'
+      },
+      soft: {
+        problem: 'Problem Solving',
+        communication: 'Communication',
+        teamwork: 'Teamwork',
+        critical: 'Critical Thinking',
+        adaptability: 'Adaptability',
+        ownership: 'Ownership',
+        detail: 'Attention to Detail',
+        planning: 'Planning'
       }
     },
     about: {
@@ -215,7 +226,8 @@ const translations = {
       categories: {
         webdev: 'Webontwikkeling',
         databackend: 'Data & Backend',
-        tools: 'Tools & Platforms'
+        tools: 'Tools & Platforms',
+        softskills: 'Soft Skills'
       },
       tech: {
         html5: 'HTML5',
@@ -243,6 +255,16 @@ const translations = {
         aws: 'AWS',
         terminal: 'Terminal/CLI',
         agile: 'Agile'
+      },
+      soft: {
+        problem: 'Probleemoplossend denken',
+        communication: 'Communicatie',
+        teamwork: 'Teamwork',
+        critical: 'Kritisch denken',
+        adaptability: 'Aanpassingsvermogen',
+        ownership: 'Verantwoordelijkheid',
+        detail: 'Oog voor detail',
+        planning: 'Planning'
       }
     },
     about: {
@@ -956,7 +978,7 @@ pageTranslations['project-kvv-rauw.html'] = {
     selectors: {
       '.project-hero .eyebrow': { text: 'Skill-project' },
       '.project-hero h1': { text: 'K.V.V Rauw' },
-      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'K.V.V Rauw is een skill-project waarin we van een prototype naar een echte werkende website zijn gegaan.' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'K.V.V Rauw is een skill-project waarin we een aangeleverd ontwerp/prototype moesten omzetten naar een echte werkende website.' },
       '.hero-tags span:nth-child(1)': { text: 'Klantproject' },
       '.hero-tags span:nth-child(2)': { text: 'Prototype' },
       '.hero-tags span:nth-child(3)': { text: 'Website' },
@@ -964,10 +986,10 @@ pageTranslations['project-kvv-rauw.html'] = {
       '.hero-side h3': { text: 'Van prototype naar website' },
       '.project-impact .eyebrow': { text: 'Aanpak' },
       '.project-impact h2': { text: 'Van ontwerp naar echte website' },
-      '.project-impact-grid article:nth-child(1) h3': { text: 'Prototype' },
-      '.project-impact-grid article:nth-child(1) p': { text: 'We vertrokken vanuit een prototype en gebruikten dat als basis voor de opbouw.' },
-      '.project-impact-grid article:nth-child(2) h3': { text: 'Ontwikkeling' },
-      '.project-impact-grid article:nth-child(2) p': { text: 'Daarna bouwden we de schermen en structuur om tot een echte website.' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Aangeleverd ontwerp' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'We kregen een ontwerp/prototype dat als basis diende voor de website.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Omzetting' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'Daarna moesten we dat ontwerp zo goed mogelijk vertalen naar een echte werkende website.' },
       '.project-impact-grid article:nth-child(3) h3': { text: 'Afwerking' },
       '.project-impact-grid article:nth-child(3) p': { text: 'We letten op overzicht, gebruiksgemak en een resultaat dat betrouwbaar aanvoelt.' },
       '.panel-actions .btn-link': { text: 'Terug naar Projecten' }
@@ -978,7 +1000,7 @@ pageTranslations['project-kvv-rauw.html'] = {
     selectors: {
       '.project-hero .eyebrow': { text: 'Skill project' },
       '.project-hero h1': { text: 'K.V.V Rauw' },
-      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'K.V.V Rauw is a skill project where we turned a prototype into a real working website.' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'K.V.V Rauw is a skill project where we had to convert a provided design/prototype into a real working website.' },
       '.hero-tags span:nth-child(1)': { text: 'Client project' },
       '.hero-tags span:nth-child(2)': { text: 'Prototype' },
       '.hero-tags span:nth-child(3)': { text: 'Website' },
@@ -986,10 +1008,10 @@ pageTranslations['project-kvv-rauw.html'] = {
       '.hero-side h3': { text: 'From prototype to website' },
       '.project-impact .eyebrow': { text: 'Approach' },
       '.project-impact h2': { text: 'From design to real website' },
-      '.project-impact-grid article:nth-child(1) h3': { text: 'Prototype' },
-      '.project-impact-grid article:nth-child(1) p': { text: 'We started from a prototype and used it as the base for the build.' },
-      '.project-impact-grid article:nth-child(2) h3': { text: 'Development' },
-      '.project-impact-grid article:nth-child(2) p': { text: 'After that, we turned the screens and structure into a real website.' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Provided design' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'We received a design/prototype that served as the basis for the website.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Conversion' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'After that, we had to translate the design as closely as possible into a real working website.' },
       '.project-impact-grid article:nth-child(3) h3': { text: 'Polish' },
       '.project-impact-grid article:nth-child(3) p': { text: 'We focused on clarity, ease of use, and a result that feels reliable.' },
       '.panel-actions .btn-link': { text: 'Back to Projects' }
