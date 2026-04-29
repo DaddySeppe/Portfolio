@@ -3935,6 +3935,63 @@ h3,
   display: none;
 }
 
+.cv-viewer {
+  display: grid;
+  gap: 18px;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.cv-viewer-toolbar {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 24px;
+  padding: clamp(20px, 3vw, 34px);
+  background:
+    linear-gradient(145deg, rgba(8, 16, 33, 0.96), rgba(8, 14, 30, 0.95)),
+    radial-gradient(720px 360px at 100% 0%, rgba(167, 139, 250, 0.24), transparent 60%);
+}
+
+.cv-viewer-toolbar h1 {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 54px);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.cv-viewer-toolbar p:not(.eyebrow) {
+  max-width: 62ch;
+  color: #c8d7f0;
+}
+
+.cv-viewer-frame {
+  width: 100%;
+  height: min(1200px, 82vh);
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: #0f172a;
+  box-shadow: 0 30px 90px rgba(2, 6, 23, 0.42);
+}
+
+.cv-viewer-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #fff;
+}
+
+.cv-viewer-note {
+  margin: 0;
+  text-align: center;
+  color: #c8d7f0;
+  font-size: 0.95rem;
+}
+
 .cv-sheet {
   display: grid;
   grid-template-columns: minmax(280px, 0.36fr) 1fr;
@@ -4164,7 +4221,8 @@ h3,
 @media (max-width: 860px) {
   .cv-toolbar,
   .cv-sheet,
-  .cv-entry {
+  .cv-entry,
+  .cv-viewer-toolbar {
     grid-template-columns: 1fr;
   }
 
@@ -4174,6 +4232,14 @@ h3,
 
   .cv-sheet {
     display: block;
+  }
+
+  .cv-viewer-toolbar {
+    align-items: start;
+  }
+
+  .cv-viewer-frame {
+    height: 76vh;
   }
 }
 
