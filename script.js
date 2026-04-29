@@ -486,7 +486,7 @@ Object.assign(pageTranslations, {
         '.neo-card:nth-child(2) p': { text: 'Een app die kinderen leert omgaan met schermtijd en het gezinsleven in families helpt verbeteren.' },
         '.neo-card:nth-child(3) h3': { text: 'Aurubis Screen Blanking' },
         '.neo-card:nth-child(3) p': { text: 'Een stageproject rond screen blanking voor rijdende voertuigen op de site.' },
-        '.neo-card:nth-child(4) h3': { text: 'Poetrel' },
+        '.neo-card:nth-child(4) h3': { text: 'Poutrel' },
         '.neo-card:nth-child(4) p': { text: 'Een skill-project waarin we voor een klant een volledige website/applicatie hebben gebouwd.' },
         '.neo-card:nth-child(5) h3': { text: 'K.V.V Rauw' },
         '.neo-card:nth-child(5) p': { text: 'Een skill-project waarin we voor een klant een volledige website/applicatie hebben gebouwd.' },
@@ -525,7 +525,7 @@ Object.assign(pageTranslations, {
         '.neo-card:nth-child(2) p': { text: 'An app that helps children learn to manage screen time and improves family life.' },
         '.neo-card:nth-child(3) h3': { text: 'Aurubis Screen Blanking' },
         '.neo-card:nth-child(3) p': { text: 'An internship project around screen blanking for moving vehicles on site.' },
-        '.neo-card:nth-child(4) h3': { text: 'Poetrel' },
+        '.neo-card:nth-child(4) h3': { text: 'Poutrel' },
         '.neo-card:nth-child(4) p': { text: 'A skill project where we built a complete website/application for a client.' },
         '.neo-card:nth-child(5) h3': { text: 'K.V.V Rauw' },
         '.neo-card:nth-child(5) p': { text: 'A skill project where we built a complete website/application for a client.' },
@@ -658,7 +658,7 @@ Object.assign(pageTranslations, {
         '.hub-card:nth-child(2) p': { text: 'Een app die kinderen leert omgaan met schermtijd en het gezinsleven in families helpt verbeteren.' },
         '.hub-card:nth-child(3) h3': { text: 'Aurubis Screen Blanking' },
         '.hub-card:nth-child(3) p': { text: 'Een stageproject rond screen blanking voor rijdende voertuigen op de site.' },
-        '.hub-card:nth-child(4) h3': { text: 'Poetrel' },
+        '.hub-card:nth-child(4) h3': { text: 'Poutrel' },
         '.hub-card:nth-child(4) p': { text: 'Een skill-project waarin we voor een klant een volledige website/applicatie hebben gebouwd.' },
         '.hub-card:nth-child(5) h3': { text: 'K.V.V Rauw' },
         '.hub-card:nth-child(5) p': { text: 'Een skill-project waarin we voor een klant een volledige website/applicatie hebben gebouwd.' },
@@ -683,7 +683,7 @@ Object.assign(pageTranslations, {
         '.hub-card:nth-child(2) p': { text: 'An app that helps children learn to manage screen time and improves family life.' },
         '.hub-card:nth-child(3) h3': { text: 'Aurubis Screen Blanking' },
         '.hub-card:nth-child(3) p': { text: 'An internship project around screen blanking for moving vehicles on site.' },
-        '.hub-card:nth-child(4) h3': { text: 'Poetrel' },
+        '.hub-card:nth-child(4) h3': { text: 'Poutrel' },
         '.hub-card:nth-child(4) p': { text: 'A skill project where we built a complete website/application for a client.' },
         '.hub-card:nth-child(5) h3': { text: 'K.V.V Rauw' },
         '.hub-card:nth-child(5) p': { text: 'A skill project where we built a complete website/application for a client.' },
@@ -907,11 +907,11 @@ pageTranslations['project-three.html'] = pageTranslations['project-one.html'];
 
 pageTranslations['project-poetrel.html'] = {
   nl: {
-    title: 'Seppe | Poetrel',
+    title: 'Seppe | Poutrel',
     selectors: {
       '.project-hero .eyebrow': { text: 'Skill-project' },
-      '.project-hero h1': { text: 'Poetrel' },
-      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Poetrel is een skill-project waarin we voor een klant een volledige website/applicatie hebben gebouwd.' },
+      '.project-hero h1': { text: 'Poutrel' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Poutrel is een skill-project waarin we voor een klant een volledige website/applicatie hebben gebouwd.' },
       '.hero-tags span:nth-child(1)': { text: 'Klantproject' },
       '.hero-tags span:nth-child(2)': { text: 'Website/applicatie' },
       '.hero-tags span:nth-child(3)': { text: 'Teamwerk' },
@@ -929,11 +929,11 @@ pageTranslations['project-poetrel.html'] = {
     }
   },
   en: {
-    title: 'Seppe | Poetrel',
+    title: 'Seppe | Poutrel',
     selectors: {
       '.project-hero .eyebrow': { text: 'Skill project' },
-      '.project-hero h1': { text: 'Poetrel' },
-      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Poetrel is a skill project where we built a complete website/application for a client.' },
+      '.project-hero h1': { text: 'Poutrel' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Poutrel is a skill project where we built a complete website/application for a client.' },
       '.hero-tags span:nth-child(1)': { text: 'Client project' },
       '.hero-tags span:nth-child(2)': { text: 'Website/application' },
       '.hero-tags span:nth-child(3)': { text: 'Teamwork' },
