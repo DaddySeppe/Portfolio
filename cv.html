@@ -12,49 +12,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=20260429.4" />
 </head>
-<body class="about-page project-page cv-page">
-  <div class="about-atmosphere" aria-hidden="true">
-    <span class="orb orb-a"></span>
-    <span class="orb orb-b"></span>
-    <span class="orb orb-c"></span>
-  </div>
-
+<body class="cv-page">
   <header class="site-header">
     <a class="brand" href="index.html">SEPPE</a>
-      <section class="cv-viewer reveal" aria-label="Volledige CV van Seppe Vanroy">
-        <div class="cv-viewer-toolbar">
-          <div>
-            <p class="eyebrow">Curriculum vitae</p>
-            <h1>Seppe Vanroy</h1>
-          </div>
-          <div class="panel-actions">
-            <a class="btn-link" href="assets/cv.pdf" download="cv.pdf">Download PDF</a>
-            <a class="btn-link btn-link-secondary" href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">Open in new tab</a>
-          </div>
-        </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="about.html" data-i18n="nav.about">Over Mij</a>
+      <a href="projects.html" data-i18n="nav.projects">Projecten</a>
+      <a class="active" href="cv.html" data-i18n="nav.cv">CV</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      <div class="language-switcher">
+        <button class="lang-btn lang-btn-nl active" data-lang="nl" title="Nederlands">NL</button>
+        <button class="lang-btn lang-btn-en" data-lang="en" title="English">EN</button>
+      </div>
+    </nav>
+  </header>
 
-        <div class="cv-viewer-frame">
-          <iframe src="assets/cv.pdf#view=FitH" title="CV van Seppe Vanroy"></iframe>
-        </div>
-        <p class="cv-viewer-note">Als je wilt, kan je hier gewoon door je volledige cv scrollen.</p>
-
-        <section class="cv-section">
-          <h3>Education</h3>
-          <article class="cv-entry">
-            <div>
-              <strong>KOSH123 - Herentals</strong>
-            </div>
-            <p>Diploma IT&amp;Networks</p>
-            <p>2017-2023</p>
-          </article>
-          <article class="cv-entry">
-            <div>
-              <strong>Thomas More</strong>
-            </div>
-            <p>applied computer science</p>
-            <p>2024-2027</p>
-          </article>
-        </section>
+  <main class="cv-page-shell" aria-label="CV van Seppe Vanroy">
+    <section class="cv-viewer reveal">
+      <div class="cv-viewer-frame">
+        <iframe src="assets/cv.pdf#view=FitH" title="CV van Seppe Vanroy"></iframe>
       </div>
     </section>
   </main>

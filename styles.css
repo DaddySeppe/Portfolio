@@ -3931,6 +3931,58 @@ h3,
   max-width: 1180px;
 }
 
+.cv-page {
+  min-height: 100vh;
+  background: #020617;
+}
+
+.cv-page .site-header {
+  background: #050b17;
+  border-bottom: 1px solid rgba(34, 211, 238, 0.22);
+  backdrop-filter: none;
+}
+
+.cv-page .brand {
+  color: #f8fbff;
+}
+
+.cv-page .main-nav {
+  border-color: rgba(34, 211, 238, 0.26);
+  background: #0b1220;
+  backdrop-filter: none;
+}
+
+.cv-page .main-nav a {
+  color: #d8e1f5;
+}
+
+.cv-page .main-nav a.active {
+  color: #061126;
+  background: #22d3ee;
+  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.28);
+}
+
+.cv-page .language-switcher {
+  border-left-color: rgba(34, 211, 238, 0.24);
+}
+
+.cv-page .lang-btn:hover {
+  color: #67e8f9;
+}
+
+.cv-page .lang-btn.active {
+  color: #061126;
+  background: #e2e8f0;
+}
+
+.cv-page-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 118px clamp(18px, 4vw, 56px) 36px;
+}
+
 .cv-toolbar {
   display: none;
 }
