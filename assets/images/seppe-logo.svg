@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Seppe Vanroy portfolio logo</title>
+  <desc id="desc">Square personal logo for Seppe Vanroy with initials and portfolio styling.</desc>
+  <defs>
+    <linearGradient id="logo-bg" x1="126" y1="82" x2="914" y2="943" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset=".52" stop-color="#12305f"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="logo-mark" x1="309" y1="281" x2="744" y2="752" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset=".48" stop-color="#f7d44c"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="32" stdDeviation="30" flood-color="#020617" flood-opacity=".45"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" rx="190" fill="url(#logo-bg)"/>
+  <path d="M122 736c132-42 198-39 330 12 130 50 242 31 450-86" fill="none" stroke="#67e8f9" stroke-opacity=".18" stroke-width="34" stroke-linecap="round"/>
+  <path d="M128 269c122 58 233 62 336 11 135-67 246-50 426 60" fill="none" stroke="#f7d44c" stroke-opacity=".14" stroke-width="30" stroke-linecap="round"/>
+  <rect x="192" y="192" width="640" height="640" rx="142" fill="#020617" fill-opacity=".48" stroke="#e2e8f0" stroke-opacity=".16" stroke-width="2" filter="url(#soft-shadow)"/>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M317 394h286c59 0 104 42 104 96 0 55-45 96-104 96H422c-41 0-72 29-72 66s31 65 72 65h252" stroke="url(#logo-mark)" stroke-width="74"/>
+    <path d="M318 704h156" stroke="#f8fafc" stroke-width="58" opacity=".95"/>
+    <path d="M592 704h91" stroke="#f8fafc" stroke-width="58" opacity=".76"/>
+  </g>
+
+  <text x="512" y="852" fill="#f8fafc" font-family="Sora, Arial, sans-serif" font-size="64" font-weight="800" text-anchor="middle" letter-spacing="0">SEPPE</text>
+  <text x="512" y="908" fill="#cbd5e1" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="30" font-weight="700" text-anchor="middle" letter-spacing="0">VANROY</text>
+</svg>
