@@ -3732,7 +3732,9 @@ h3,
 
 .hub-card {
   grid-column: span 2;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   text-decoration: none;
   border: 1px solid rgba(148, 163, 184, 0.22);
   border-radius: 16px;
@@ -3771,12 +3773,15 @@ h3,
   color: #c8d7f0;
   line-height: 1.62;
   font-size: 0.94rem;
+  flex: 1 1 auto;
 }
 
 .hub-card span {
   margin-top: 14px;
   display: inline-flex;
+  align-self: center;
   align-items: center;
+  justify-content: center;
   border-radius: 999px;
   padding: 7px 12px;
   font-size: 0.73rem;
@@ -7800,6 +7805,21 @@ body.projects-hub-page .hub-card:nth-child(5) {
   body.projects-hub-page .hub-grid {
     grid-template-columns: 1fr !important;
   }
+}
+
+body.projects-hub-page .hub-card {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+body.projects-hub-page .hub-card p {
+  flex: 1 1 auto !important;
+}
+
+body.projects-hub-page .hub-card span {
+  align-self: center !important;
+  justify-content: center !important;
+  text-align: center !important;
 }
 
 
