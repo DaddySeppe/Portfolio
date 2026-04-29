@@ -7153,4 +7153,28 @@ body.about-page .image-frame-premium {
   }
 }
 
+/* Global performance mode: reduce heavy visual effects across all pages. */
+.home-atmosphere,
+.about-atmosphere {
+  display: none !important;
+}
+
+.reveal,
+.reveal.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+.site-header,
+.main-nav {
+  backdrop-filter: none !important;
+}
+
+* {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+}
+
 
