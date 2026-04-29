@@ -3932,39 +3932,12 @@ h3,
 }
 
 .cv-toolbar {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 22px;
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  border-radius: 24px;
-  padding: clamp(24px, 4vw, 38px);
-  background:
-    linear-gradient(145deg, rgba(8, 16, 33, 0.96), rgba(8, 14, 30, 0.95)),
-    radial-gradient(720px 360px at 100% 0%, rgba(167, 139, 250, 0.24), transparent 60%);
-}
-
-.cv-toolbar > div:first-child {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.cv-toolbar h1 {
-  margin: 0;
-  font-size: clamp(34px, 6vw, 64px);
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.cv-toolbar p:not(.eyebrow) {
-  max-width: 62ch;
-  color: #c8d7f0;
+  display: none;
 }
 
 .cv-sheet {
   display: grid;
-  grid-template-columns: minmax(240px, 0.36fr) 1fr;
+  grid-template-columns: minmax(280px, 0.36fr) 1fr;
   overflow: hidden;
   border: 1px solid rgba(148, 163, 184, 0.18);
   border-radius: 28px;
@@ -3974,28 +3947,55 @@ h3,
 }
 
 .cv-sidebar {
-  padding: clamp(24px, 3vw, 34px);
+  padding: 34px 26px 30px;
   background:
-    radial-gradient(900px 420px at 50% 0%, rgba(56, 189, 248, 0.12), transparent 62%),
-    linear-gradient(180deg, #0f172a, #111827);
-  color: #e2e8f0;
+    radial-gradient(900px 420px at 50% 0%, rgba(255, 255, 255, 0.18), transparent 62%),
+    linear-gradient(180deg, #9aa5a4 0%, #909b9a 100%);
+  color: #2f405d;
+  position: relative;
+}
+
+.cv-photo {
+  width: 144px;
+  height: 144px;
+  margin: -82px auto 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid #2f405d;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.22);
+  background: #cbd5e1;
+}
+
+.cv-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cv-name-block {
+  text-align: center;
 }
 
 .cv-name-block h2 {
   margin: 0;
-  width: fit-content;
-  padding: 10px 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  min-height: 48px;
+  padding: 10px 22px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #2f405d, #1f2b41);
-  border: 1px solid rgba(226, 232, 240, 0.14);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: #2f405d;
   font-size: clamp(24px, 3vw, 34px);
   line-height: 1.05;
 }
 
 .cv-name-block p,
 .cv-block li {
-  color: #cbd5e1;
+  color: #344865;
 }
 
 .cv-name-block p {
@@ -4010,29 +4010,33 @@ h3,
 .cv-block h3,
 .cv-section h3 {
   margin: 0 0 14px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 40px;
-  padding: 8px 18px;
+  min-height: 46px;
+  padding: 10px 20px;
   border-radius: 999px;
   font-size: 0.9rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
   text-transform: none;
   white-space: nowrap;
 }
 
 .cv-sidebar .cv-block h3 {
+  width: 100%;
   background: transparent;
-  color: #cbd5e1;
-  border: 1px solid rgba(226, 232, 240, 0.38);
+  color: #2f405d;
+  border: 2px solid rgba(47, 64, 93, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .cv-content .cv-section h3 {
-  background: linear-gradient(135deg, #24344b, #1f2b41);
-  color: #f1c9c0;
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+  width: fit-content;
+  min-width: 210px;
+  background: #2f405d;
+  color: #f3b8b0;
+  border: 1px solid rgba(47, 64, 93, 0.14);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.16);
 }
 
 .cv-block ul {
@@ -4047,9 +4051,9 @@ h3,
 }
 
 .cv-content {
-  padding: clamp(26px, 4vw, 46px);
+  padding: clamp(26px, 4vw, 46px) 34px 34px;
   background:
-    linear-gradient(180deg, rgba(248, 250, 252, 0.98), rgba(241, 245, 249, 1));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 250, 252, 1));
 }
 
 .cv-section {
@@ -4087,7 +4091,7 @@ h3,
   margin-top: 16px;
   padding: 16px 18px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(148, 163, 184, 0.18);
   box-shadow: 0 10px 22px rgba(15, 23, 42, 0.04);
 }
