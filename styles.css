@@ -7670,4 +7670,63 @@ body.home-page .neo-side {
   }
 }
 
+/* Roomier project previews on the homepage. */
+body.home-page .neo-projects {
+  margin-top: 6px !important;
+}
+
+body.home-page .neo-projects h2 {
+  margin-bottom: 18px !important;
+}
+
+body.home-page .neo-projects .neo-cards {
+  gap: 16px !important;
+}
+
+body.home-page .neo-projects .neo-card {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 0 !important;
+  padding: 14px !important;
+  align-items: stretch !important;
+}
+
+body.home-page .neo-projects .neo-card-media {
+  width: 100% !important;
+  max-width: none !important;
+  aspect-ratio: 16 / 9 !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+}
+
+body.home-page .neo-projects .neo-card-media > img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+body.home-page .neo-projects .neo-card h3 {
+  margin-top: 12px !important;
+  font-size: 1rem !important;
+}
+
+body.home-page .neo-projects .neo-card p {
+  margin-top: 7px !important;
+  font-size: 0.84rem !important;
+  line-height: 1.48 !important;
+}
+
+@media (max-width: 900px) {
+  body.home-page .neo-projects .neo-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 580px) {
+  body.home-page .neo-projects .neo-cards {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 
