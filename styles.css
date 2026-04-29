@@ -7833,15 +7833,16 @@ body.projects-hub-page .hub-card span {
   text-align: center !important;
 }
 
-body.helpse-project-page .project-cover {
+body.project-page .hero-side > .profile-slot.project-cover,
+body.project-page .project-cover {
   width: min(100%, 430px) !important;
   min-width: min(100%, 430px) !important;
   max-width: 430px !important;
   transform: none !important;
 }
 
-body.helpse-project-page .hero-side > .profile-slot.project-cover > img,
-body.helpse-project-page .project-cover img {
+body.project-page .hero-side > .profile-slot.project-cover > img,
+body.project-page .project-cover img {
   display: block !important;
   width: 100% !important;
   min-width: 100% !important;
