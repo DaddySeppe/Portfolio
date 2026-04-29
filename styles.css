@@ -3989,7 +3989,7 @@ h3,
 
 .cv-viewer {
   display: grid;
-  gap: 18px;
+  gap: 20px;
   width: min(1180px, 100%);
   margin: 0 auto;
 }
@@ -3998,9 +3998,15 @@ h3,
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   text-align: center;
-  padding: 0 12px;
+  padding: 18px clamp(16px, 3.2vw, 38px);
+  border-radius: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background:
+    linear-gradient(145deg, rgba(8, 16, 33, 0.9), rgba(8, 14, 30, 0.86)),
+    radial-gradient(760px 340px at 100% 0%, rgba(34, 211, 238, 0.2), transparent 62%);
+  box-shadow: 0 16px 42px rgba(2, 6, 23, 0.3);
 }
 
 .cv-page-hero .eyebrow {
@@ -4010,9 +4016,10 @@ h3,
 .cv-page-hero h1 {
   margin: 0;
   color: #f8fbff;
-  font-size: clamp(32px, 5vw, 58px);
+  font-size: clamp(30px, 4.3vw, 50px);
   line-height: 1;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .cv-viewer-subtitle {
@@ -4020,14 +4027,21 @@ h3,
   color: #c8d7f0;
 }
 
+.cv-hero-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .cv-viewer-frame {
-  width: min(1060px, 100%);
-  height: min(1240px, 78vh);
+  width: min(960px, 100%);
+  height: min(1160px, 74vh);
   margin: 0 auto;
-  border-radius: 30px;
+  border-radius: 34px;
   overflow: auto;
   border: 1px solid rgba(148, 163, 184, 0.16);
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 24px 70px rgba(2, 6, 23, 0.3);
   scrollbar-width: thin;
   scrollbar-color: #22d3ee rgba(148, 163, 184, 0.18);
@@ -4035,13 +4049,14 @@ h3,
 
 .cv-viewer-frame img {
   display: block;
-  width: 92.5%;
+  width: 90%;
   height: auto;
   border: 0;
+  border-radius: 20px;
   background: #fff;
-  transform: scale(1.08);
+  transform: scale(1.03);
   transform-origin: top center;
-  margin: 0 auto;
+  margin: 16px auto 20px;
 }
 
 .cv-viewer-note {
