@@ -819,7 +819,7 @@ pageTranslations['project-two.html'] = {
       '.project-steps li:nth-child(4)': { html: '<strong>Ambitie:</strong> we willen lokaal testen met gezinnen en daarna verder groeien via scholen en ouderwerkingen.' },
       '.project-role .eyebrow': { text: 'Mijn deel en leerpunten' },
       '.project-role h2': { text: 'Wat ik zelf bijdroeg' },
-      '.project-role .project-copy': { text: 'MissionZebra is een teamproject en persoonlijke realisatie buiten een specifiek ECTS-vak. Mijn rol lag bij het mee uitdenken van het concept, het coderen van het iOS/Apple-gedeelte en het meehelpen aan de backend van de Android-app. Ik werkte ook mee aan het scherpstellen van het probleem en de waarde voor ouders en kinderen. Ik leerde hoe belangrijk validatie, duidelijke taakverdeling en pitchgericht denken zijn. Hard skills waren vooral appontwikkeling, backend-logica en UX-denken; soft skills waren samenwerken, overtuigend communiceren en feedback verwerken.' },
+      '.project-role .project-copy': { text: 'MissionZebra is een teamproject en persoonlijke realisatie buiten een specifiek ECTS-vak. Ik hielp mee om het idee te bedenken, het probleem rond schermtijd scherper te maken en de waarde voor ouders en kinderen duidelijk uit te werken. Technisch lag mijn grootste bijdrage bij het maken van de Apple-app. Daarnaast hielp ik ook mee aan de Android-app en dacht ik mee over de backend. Daardoor groeide ik in appontwikkeling, backend-logica en UX-denken. Als soft skills leerde ik beter samenwerken, feedback verwerken en een idee duidelijker uitleggen.' },
       '.portfolio-section:last-child .eyebrow': { text: 'Doel' },
       '.portfolio-section:last-child h2': { text: 'Meer rust, plezier en kwaliTIJD' },
       '.portfolio-section:last-child .project-copy': { text: 'MissionZebra draait om evenwicht. De app helpt gezinnen om schermgebruik minder als strijd te zien en meer als hulpmiddel om samen afspraken te maken.' },
@@ -856,7 +856,7 @@ pageTranslations['project-two.html'] = {
       '.project-steps li:nth-child(4)': { html: '<strong>Ambition:</strong> we want to test locally with families and grow through schools and parent organizations.' },
       '.project-role .eyebrow': { text: 'My part and lessons' },
       '.project-role h2': { text: 'What I contributed myself' },
-      '.project-role .project-copy': { text: 'MissionZebra is a team project and personal achievement outside a specific ECTS subject. My role was to help shape the concept, code the iOS/Apple part, and help with the backend of the Android app. I also helped clarify the problem and the value for parents and children. I learned how important validation, clear task division, and pitch-focused thinking are. Hard skills were mainly app development, backend logic, and UX thinking; soft skills were teamwork, convincing communication, and processing feedback.' },
+      '.project-role .project-copy': { text: 'MissionZebra is a team project and personal achievement outside a specific ECTS subject. I helped come up with the idea, sharpen the screen-time problem, and define the value for parents and children. Technically, my biggest contribution was building the Apple app. I also helped with the Android app and thought along about the backend. This helped me grow in app development, backend logic, and UX thinking. As soft skills, I learned to collaborate better, process feedback, and explain an idea more clearly.' },
       '.portfolio-section:last-child .eyebrow': { text: 'Goal' },
       '.portfolio-section:last-child h2': { text: 'More calm, fun, and quality time' },
       '.portfolio-section:last-child .project-copy': { text: 'MissionZebra is about balance. The app helps families see screen use less as a conflict and more as a tool for making agreements together.' },
@@ -1038,10 +1038,10 @@ pageTranslations['project-kvv-rauw.html'] = {
       '.project-steps li:nth-child(1)': { html: '<strong>Realisatie:</strong> ik hielp bij het omzetten van het prototype naar HTML/CSS en het verbeteren van de pagina-opbouw.' },
       '.project-steps li:nth-child(2)': { html: '<strong>Hard skills:</strong> ik oefende met responsive layout, nette CSS, structuur in HTML en visuele afwerking.' },
       '.project-steps li:nth-child(3)': { html: '<strong>Soft skills:</strong> ik leerde nauwkeuriger afstemmen met teamleden en feedback sneller omzetten naar aanpassingen.' },
-      '.project-steps li:nth-child(4)': { html: '<strong>Mijn aandeel:</strong> ik hielp mee aan alles wat er aan de website is gedaan, zowel UI als backend.' },
+      '.project-steps li:nth-child(4)': { html: '<strong>Mijn aandeel:</strong> ik hielp mee aan het maken van de UI en werkte ook mee aan de backend van de website.' },
       '.project-role .eyebrow': { text: 'Mijn deel' },
       '.project-role h2': { text: 'Waar ik zelf aan bijdroeg' },
-      '.project-role .project-copy': { text: "Ik werkte mee aan alles wat er aan de website is gedaan: de UI, de opbouw van pagina's, de technische uitwerking en de backend. Daarbij lette ik op de structuur, de visuele overeenkomst met het prototype en de bruikbaarheid op verschillende schermgroottes." },
+      '.project-role .project-copy': { text: "Ik hielp mee bij het bouwen van de UI en de backend van de website. Aan de voorkant werkte ik mee aan de pagina-opbouw, de visuele afwerking en het omzetten van het prototype naar een duidelijke website. Aan de achterkant hielp ik mee met de technische structuur die nodig was om de website goed te laten werken. Zo leerde ik beter hoe frontend en backend samenkomen in een afgewerkt project." },
       '.panel-actions .btn-link': { text: 'Terug naar Projecten' }
     }
   },
@@ -1072,10 +1072,10 @@ pageTranslations['project-kvv-rauw.html'] = {
       '.project-steps li:nth-child(1)': { html: '<strong>Realization:</strong> I helped convert the prototype into HTML/CSS and improve the page structure.' },
       '.project-steps li:nth-child(2)': { html: '<strong>Hard skills:</strong> I practiced responsive layout, clean CSS, HTML structure, and visual polish.' },
       '.project-steps li:nth-child(3)': { html: '<strong>Soft skills:</strong> I learned to coordinate more precisely with teammates and turn feedback into changes faster.' },
-      '.project-steps li:nth-child(4)': { html: '<strong>My part:</strong> I helped with everything that was done for the website, both UI and backend.' },
+      '.project-steps li:nth-child(4)': { html: '<strong>My part:</strong> I helped build the UI and also worked on the backend of the website.' },
       '.project-role .eyebrow': { text: 'My part' },
       '.project-role h2': { text: 'What I contributed myself' },
-      '.project-role .project-copy': { text: 'I helped with everything that was done for the website: the UI, page structure, technical implementation, and backend. I focused on structure, visual match with the prototype, and usability across different screen sizes.' },
+      '.project-role .project-copy': { text: 'I helped build both the UI and the backend of the website. On the frontend, I worked on page structure, visual polish, and translating the prototype into a clear website. On the backend, I helped with the technical structure needed to make the website work properly. This taught me more about how frontend and backend come together in a finished project.' },
       '.panel-actions .btn-link': { text: 'Back to Projects' }
     }
   }
