@@ -25,6 +25,15 @@ const contactCopy = {
     asideTitle: 'Rechtstreeks naar inbox',
     asideText: 'Berichten uit dit formulier worden verzonden naar <a href="mailto:seppe.vanroy@telenet.be">seppe.vanroy@telenet.be</a>.',
     asideItems: ['Ideaal voor stages en projectvragen', 'Antwoord meestal op dezelfde dag', 'GitHub en LinkedIn blijven ook beschikbaar'],
+    footer: {
+      description: 'Tweedejaars APP/AI-student met interesse in webontwikkeling, praktische IT-support en duidelijke oplossingen.',
+      connect: 'Connecteer',
+      copyright: '&copy; 2026 Seppe Vanroy. Alle rechten voorbehouden.',
+      socialsLabel: 'Sociale profielen',
+      emailLabel: 'Stuur een e-mail naar Seppe',
+      githubLabel: 'Open GitHub profiel',
+      linkedinLabel: 'Open LinkedIn profiel'
+    },
     allFields: 'Vul eerst alle velden correct in.',
     short: 'Naam, onderwerp of bericht is te kort.',
     badEmail: 'Vul een geldig e-mailadres in.',
@@ -58,6 +67,15 @@ const contactCopy = {
     asideTitle: 'Straight to inbox',
     asideText: 'Messages from this form are sent to <a href="mailto:seppe.vanroy@telenet.be">seppe.vanroy@telenet.be</a>.',
     asideItems: ['Ideal for internships and project questions', 'Usually replies the same day', 'GitHub and LinkedIn remain available too'],
+    footer: {
+      description: 'Second-year APP/AI student with an interest in web development, practical IT support, and clear solutions.',
+      connect: 'Connect',
+      copyright: '&copy; 2026 Seppe Vanroy. All rights reserved.',
+      socialsLabel: 'Social profiles',
+      emailLabel: 'Send Seppe an email',
+      githubLabel: 'Open GitHub profile',
+      linkedinLabel: 'Open LinkedIn profile'
+    },
     allFields: 'Please fill in all required fields.',
     short: 'Name, subject, or message is too short.',
     badEmail: 'Please enter a valid email address.',
@@ -82,6 +100,11 @@ const setHtml = (selector, value) => {
 const setPlaceholder = (selector, value) => {
   const el = document.querySelector(selector);
   if (el) el.setAttribute('placeholder', value);
+};
+
+const setAttribute = (selector, attribute, value) => {
+  const el = document.querySelector(selector);
+  if (el) el.setAttribute(attribute, value);
 };
 
 const applyLanguage = (lang) => {
@@ -124,6 +147,18 @@ const applyLanguage = (lang) => {
   copy.asideItems.forEach((item, index) => {
     setText(`.contact-form-aside li:nth-child(${index + 1})`, item);
   });
+
+  setText('.footer-description', copy.footer.description);
+  setText('.footer-connect-label', copy.footer.connect);
+  setHtml('.footer-copyright', copy.footer.copyright);
+  setText('.footer-links a[href="index.html"]', copy.nav[0]);
+  setText('.footer-links a[href="projects.html"]', copy.nav[2]);
+  setText('.footer-links a[href="cv.html"]', copy.nav[3]);
+  setText('.footer-links a[href="contact.html"]', copy.nav[4]);
+  setAttribute('.footer-socials', 'aria-label', copy.footer.socialsLabel);
+  setAttribute('.footer-socials a[href^="mailto:"]', 'aria-label', copy.footer.emailLabel);
+  setAttribute('.footer-socials a[href*="github.com"]', 'aria-label', copy.footer.githubLabel);
+  setAttribute('.footer-socials a[href*="linkedin.com"]', 'aria-label', copy.footer.linkedinLabel);
 };
 
 const initReveal = () => {

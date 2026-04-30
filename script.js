@@ -42,9 +42,13 @@ const translations = {
       link2: 'Contact Me'
     },
     footer: {
-      description: 'IT Student passionate about building practical solutions with professional mindset and continuous improvement.',
+      description: 'Second-year APP/AI student with an interest in web development, practical IT support, and clear solutions.',
       connect: 'Connect',
-      copyright: '&copy; 2026 Seppe Vanroy. All rights reserved.'
+      copyright: '&copy; 2026 Seppe Vanroy. All rights reserved.',
+      socialsLabel: 'Social profiles',
+      emailLabel: 'Send Seppe an email',
+      githubLabel: 'Open GitHub profile',
+      linkedinLabel: 'Open LinkedIn profile'
     },
     skills: {
       eyebrow: 'SKILLS',
@@ -216,9 +220,13 @@ const translations = {
       link2: 'Neem Contact Op'
     },
     footer: {
-      description: 'IT Student gepassioneerd over het bouwen van praktische oplossingen met een professionele instelling en voortdurende verbetering.',
-      connect: 'Verbinding',
-      copyright: '&copy; 2026 Seppe Vanroy. Alle rechten voorbehouden.'
+      description: 'Tweedejaars APP/AI-student met interesse in webontwikkeling, praktische IT-support en duidelijke oplossingen.',
+      connect: 'Connecteer',
+      copyright: '&copy; 2026 Seppe Vanroy. Alle rechten voorbehouden.',
+      socialsLabel: 'Sociale profielen',
+      emailLabel: 'Stuur een e-mail naar Seppe',
+      githubLabel: 'Open GitHub profiel',
+      linkedinLabel: 'Open LinkedIn profiel'
     },
     skills: {
       eyebrow: 'VAARDIGHEDEN',
@@ -496,7 +504,7 @@ Object.assign(pageTranslations, {
         '.neo-window-top p': { text: 'Portfolio v2' },
         '.neo-kicker': { text: 'APP/AI Student' },
         '.neo-hero h1': { text: 'Hallo, ik ben Seppe Vanroy.' },
-        '.neo-text': { text: 'Ik ben een tweedejaarsstudent APP/AI en maak graag dingen die ook echt werken. Ik ben iemand die graag bijleert door te doen. Via projecten zoals MissionZebra, mijn portfolio en mijn ervaring met IT-ondersteuning bij Aurubis leer ik stap voor stap hoe ik ideeën kan omzetten in duidelijke en praktische oplossingen. Ik denk graag mee, zoek naar oplossingen wanneer iets niet meteen lukt en vooral het belangrijkste: mijn passie voor software ontwikkeling' },
+        '.neo-text': { text: 'Ik ben een tweedejaarsstudent APP/AI en maak graag dingen die ook echt werken. Ik leer graag door te doen. Via projecten zoals MissionZebra, mijn portfolio en mijn ervaring met IT-ondersteuning bij Aurubis leer ik stap voor stap hoe ik ideeën kan omzetten in duidelijke en praktische oplossingen. Ik denk graag mee, zoek naar oplossingen wanneer iets niet meteen lukt en wil vooral blijven groeien in softwareontwikkeling.' },
         '.neo-btn': { text: 'Lees Meer' },
         '.neo-link': { text: 'Contactformulier' },
         '.neo-projects h2': { text: 'Uitgelichte Projecten' },
@@ -507,9 +515,9 @@ Object.assign(pageTranslations, {
         '.neo-card:nth-child(3) h3': { text: 'Aurubis Screen Blanking' },
         '.neo-card:nth-child(3) p': { text: 'Een stageproject rond screen blanking voor rijdende voertuigen op de site.' },
         '.neo-card:nth-child(4) h3': { text: 'Poutrel' },
-        '.neo-card:nth-child(4) p': { text: 'Een skill-project waarin we voor een klant een volledige website/applicatie hebben gebouwd.' },
+        '.neo-card:nth-child(4) p': { text: 'Project semester 1 SKIL2: een Figma-websiteconcept voor een fictieve klant.' },
         '.neo-card:nth-child(5) h3': { text: 'K.V.V Rauw' },
-        '.neo-card:nth-child(5) p': { text: 'Een skill-project waarin we voor een klant een volledige website/applicatie hebben gebouwd.' },
+        '.neo-card:nth-child(5) p': { text: 'Project semester 2 SKIL2: een prototype omzetten naar een werkende website.' },
         '.internship-panel .panel-eyebrow': { text: 'Stagefocus' },
         '.internship-panel h2': { text: 'Stage in softwareontwikkeling' },
         '.internship-panel .internship-lead': { text: "Ik zoek een stage waar ik als APP/AI-student kan meewerken aan echte software: applicaties, backend-logica, data, API's of automatisatie." },
@@ -535,7 +543,7 @@ Object.assign(pageTranslations, {
         '.neo-window-top p': { text: 'Portfolio v2' },
         '.neo-kicker': { text: 'APP/AI Student' },
         '.neo-hero h1': { text: 'Hi, I am Seppe Vanroy.' },
-        '.neo-text': { text: 'I am a second-year APP/AI student and I enjoy making things that actually work. I am someone who likes learning by doing. Through projects such as MissionZebra, my portfolio, and my experience with IT support at Aurubis, I learn step by step how to turn ideas into clear and practical solutions. I like thinking along, looking for solutions when something does not work right away, and most importantly: my passion for software development' },
+        '.neo-text': { text: 'I am a second-year APP/AI student and I enjoy making things that actually work. I like learning by doing. Through projects such as MissionZebra, my portfolio, and my experience with IT support at Aurubis, I learn step by step how to turn ideas into clear and practical solutions. I like thinking along, looking for solutions when something does not work right away, and I mainly want to keep growing in software development.' },
         '.neo-btn': { text: 'Read More' },
         '.neo-link': { text: 'Email Me' },
         '.neo-projects h2': { text: 'Featured Projects' },
@@ -546,9 +554,9 @@ Object.assign(pageTranslations, {
         '.neo-card:nth-child(3) h3': { text: 'Aurubis Screen Blanking' },
         '.neo-card:nth-child(3) p': { text: 'An internship project around screen blanking for moving vehicles on site.' },
         '.neo-card:nth-child(4) h3': { text: 'Poutrel' },
-        '.neo-card:nth-child(4) p': { text: 'A skill project where we built a complete website/application for a client.' },
+        '.neo-card:nth-child(4) p': { text: 'SKIL2 semester 1 project: a Figma website concept for a fictional client.' },
         '.neo-card:nth-child(5) h3': { text: 'K.V.V Rauw' },
-        '.neo-card:nth-child(5) p': { text: 'A skill project where we built a complete website/application for a client.' },
+        '.neo-card:nth-child(5) p': { text: 'SKIL2 semester 2 project: converting a prototype into a working website.' },
         '.internship-panel .panel-eyebrow': { text: 'Internship focus' },
         '.internship-panel h2': { text: 'Software development internship' },
         '.internship-panel .internship-lead': { text: 'I am looking for an internship where I can work on real software as an APP/AI student: applications, backend logic, data, APIs, or automation.' },
@@ -679,9 +687,9 @@ Object.assign(pageTranslations, {
         '.hub-card:nth-child(3) h3': { text: 'Aurubis Screen Blanking' },
         '.hub-card:nth-child(3) p': { text: 'Een stageproject rond screen blanking voor rijdende voertuigen op de site.' },
         '.hub-card:nth-child(4) h3': { text: 'Poutrel' },
-        '.hub-card:nth-child(4) p': { text: 'Een skill-project waarin we voor een klant een volledige website/applicatie hebben gebouwd.' },
+        '.hub-card:nth-child(4) p': { text: 'Project semester 1 SKIL2: een Figma-websiteconcept voor een fictieve klant.' },
         '.hub-card:nth-child(5) h3': { text: 'K.V.V Rauw' },
-        '.hub-card:nth-child(5) p': { text: 'Een skill-project waarin we voor een klant een volledige website/applicatie hebben gebouwd.' },
+        '.hub-card:nth-child(5) p': { text: 'Project semester 2 SKIL2: een prototype omzetten naar een werkende website.' },
         '.hub-card:nth-child(1) span': { text: 'Open Project' },
         '.hub-card:nth-child(2) span': { text: 'Open Project' },
         '.hub-card:nth-child(3) span': { text: 'Open Project' },
@@ -704,9 +712,9 @@ Object.assign(pageTranslations, {
         '.hub-card:nth-child(3) h3': { text: 'Aurubis Screen Blanking' },
         '.hub-card:nth-child(3) p': { text: 'An internship project around screen blanking for moving vehicles on site.' },
         '.hub-card:nth-child(4) h3': { text: 'Poutrel' },
-        '.hub-card:nth-child(4) p': { text: 'A skill project where we built a complete website/application for a client.' },
+        '.hub-card:nth-child(4) p': { text: 'SKIL2 semester 1 project: a Figma website concept for a fictional client.' },
         '.hub-card:nth-child(5) h3': { text: 'K.V.V Rauw' },
-        '.hub-card:nth-child(5) p': { text: 'A skill project where we built a complete website/application for a client.' },
+        '.hub-card:nth-child(5) p': { text: 'SKIL2 semester 2 project: converting a prototype into a working website.' },
         '.hub-card:nth-child(1) span': { text: 'Open Project' },
         '.hub-card:nth-child(2) span': { text: 'Open Project' },
         '.hub-card:nth-child(3) span': { text: 'Open Project' },
@@ -809,6 +817,9 @@ pageTranslations['project-two.html'] = {
       '.project-steps li:nth-child(2)': { html: '<strong>Samenwerking:</strong> ouders en kinderen werken samen aan taken, schermtijd en gezinsmomenten.' },
       '.project-steps li:nth-child(3)': { html: '<strong>Validatie:</strong> uit onze enquête bleek dat veel ouders het probleem herkennen en het idee steunen.' },
       '.project-steps li:nth-child(4)': { html: '<strong>Ambitie:</strong> we willen lokaal testen met gezinnen en daarna verder groeien via scholen en ouderwerkingen.' },
+      '.project-role .eyebrow': { text: 'Mijn deel en leerpunten' },
+      '.project-role h2': { text: 'Wat ik zelf bijdroeg' },
+      '.project-role .project-copy': { text: "MissionZebra is een teamproject en persoonlijke realisatie buiten een specifiek ECTS-vak. Mijn rol lag bij het mee uitdenken van het concept, het scherpstellen van het probleem, het uitwerken van de waarde voor ouders en kinderen en het communiceren van het idee. Ik leerde hoe belangrijk validatie, duidelijke taakverdeling en pitchgericht denken zijn. Hard skills waren vooral app-concept, productlogica en UX-denken; soft skills waren samenwerken, overtuigend communiceren en feedback verwerken." },
       '.portfolio-section:last-child .eyebrow': { text: 'Doel' },
       '.portfolio-section:last-child h2': { text: 'Meer rust, plezier en kwaliTIJD' },
       '.portfolio-section:last-child .project-copy': { text: 'MissionZebra draait om evenwicht. De app helpt gezinnen om schermgebruik minder als strijd te zien en meer als hulpmiddel om samen afspraken te maken.' },
@@ -843,6 +854,9 @@ pageTranslations['project-two.html'] = {
       '.project-steps li:nth-child(2)': { html: '<strong>Cooperation:</strong> parents and children work together around tasks, screen time, and family moments.' },
       '.project-steps li:nth-child(3)': { html: '<strong>Validation:</strong> our survey showed that many parents recognize the problem and support the idea.' },
       '.project-steps li:nth-child(4)': { html: '<strong>Ambition:</strong> we want to test locally with families and grow through schools and parent organizations.' },
+      '.project-role .eyebrow': { text: 'My part and lessons' },
+      '.project-role h2': { text: 'What I contributed myself' },
+      '.project-role .project-copy': { text: 'MissionZebra is a team project and personal achievement outside a specific ECTS subject. My role was to help shape the concept, clarify the problem, define the value for parents and children, and communicate the idea. I learned how important validation, clear task division, and pitch-focused thinking are. Hard skills were mainly app concept, product logic, and UX thinking; soft skills were teamwork, convincing communication, and processing feedback.' },
       '.portfolio-section:last-child .eyebrow': { text: 'Goal' },
       '.portfolio-section:last-child h2': { text: 'More calm, fun, and quality time' },
       '.portfolio-section:last-child .project-copy': { text: 'MissionZebra is about balance. The app helps families see screen use less as a conflict and more as a tool for making agreements together.' },
@@ -929,44 +943,68 @@ pageTranslations['project-poetrel.html'] = {
   nl: {
     title: 'Seppe | Poutrel',
     selectors: {
-      '.project-hero .eyebrow': { text: 'Skill-project' },
+      '.project-hero .eyebrow': { text: 'Project semester 1 SKIL2' },
       '.project-hero h1': { text: 'Poutrel' },
-      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Poutrel is een skill-project waarin we in Figma een websiteconcept ontwierpen voor een fictieve klant.' },
-      '.hero-tags span:nth-child(1)': { text: 'Fictieve klant' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Poutrel is mijn project van semester 1 voor SKIL2. We ontwierpen in Figma een websiteconcept voor een fictieve klant, met aandacht voor structuur, stijl en gebruiksvriendelijkheid.' },
+      '.hero-tags span:nth-child(1)': { text: 'SKIL2 semester 1' },
       '.hero-tags span:nth-child(2)': { text: 'Figma' },
       '.hero-tags span:nth-child(3)': { text: 'Prototype' },
       '.hero-side-label': { text: 'Focus' },
       '.hero-side h3': { text: 'Websiteconcept in Figma' },
-      '.project-impact .eyebrow': { text: 'Aanpak' },
+      '.hero-facts li:nth-child(1)': { html: '<span>Vak</span> SKIL2' },
+      '.hero-facts li:nth-child(2)': { html: '<span>Type</span> Groepswerk' },
+      '.hero-facts li:nth-child(3)': { html: '<span>Mijn focus</span> Structuur en prototype' },
+      '.project-context .eyebrow': { text: 'Context en achtergrond' },
       '.project-impact h2': { text: 'Van klantidee naar Figma-ontwerp' },
-      '.project-impact-grid article:nth-child(1) h3': { text: 'Fictieve klant' },
-      '.project-impact-grid article:nth-child(1) p': { text: 'We vertaalden de stijl en noden van een fictieve klant naar een duidelijke website.' },
-      '.project-impact-grid article:nth-child(2) h3': { text: 'Figma' },
-      '.project-impact-grid article:nth-child(2) p': { text: 'Voor de ontwikkeling werkten we eerst een visueel ontwerp en structuur uit in Figma.' },
-      '.project-impact-grid article:nth-child(3) h3': { text: 'Prototype' },
-      '.project-impact-grid article:nth-child(3) p': { text: 'Het resultaat was een duidelijk websiteconcept/prototype, niet een uitgewerkte echte website.' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Vak' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'Dit project hoort bij SKIL2 semester 1 en draaide rond analyseren, ontwerpen en professioneel presenteren.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Opdracht' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'We moesten de noden van een fictieve klant vertalen naar een duidelijke website-structuur en visuele stijl.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Resultaat' },
+      '.project-impact-grid article:nth-child(3) p': { text: "Het eindresultaat was een klikbaar Figma-prototype dat de belangrijkste pagina's en flow toont." },
+      '.project-learning .eyebrow': { text: 'Realisaties en leerpunten' },
+      '.project-learning h2': { text: 'Wat ik maakte en leerde' },
+      '.project-steps li:nth-child(1)': { html: '<strong>Realisatie:</strong> ik werkte mee aan de pagina-indeling, navigatie en visuele opbouw van het prototype.' },
+      '.project-steps li:nth-child(2)': { html: '<strong>Hard skills:</strong> ik oefende met Figma, wireframes, layout, typografie en consistente componenten.' },
+      '.project-steps li:nth-child(3)': { html: '<strong>Soft skills:</strong> ik leerde beter overleggen, feedback verwerken en keuzes duidelijk uitleggen binnen een team.' },
+      '.project-steps li:nth-child(4)': { html: '<strong>Mijn aandeel:</strong> mijn focus lag op structuur, prototype-opbouw en het duidelijk maken van de gebruikersflow.' },
+      '.project-role .eyebrow': { text: 'Mijn deel' },
+      '.project-role h2': { text: 'Waar ik zelf aan bijdroeg' },
+      '.project-role .project-copy': { text: 'Binnen het groepswerk hielp ik om het idee concreet te maken in Figma. Ik dacht mee over de informatiearchitectuur, maakte onderdelen van het prototype duidelijker en zorgde ervoor dat het ontwerp logisch navigeerbaar bleef.' },
       '.panel-actions .btn-link': { text: 'Terug naar Projecten' }
     }
   },
   en: {
     title: 'Seppe | Poutrel',
     selectors: {
-      '.project-hero .eyebrow': { text: 'Skill project' },
+      '.project-hero .eyebrow': { text: 'SKIL2 semester 1 project' },
       '.project-hero h1': { text: 'Poutrel' },
-      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Poutrel is a skill project where we designed a website concept in Figma for a fictional client.' },
-      '.hero-tags span:nth-child(1)': { text: 'Fictional client' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'Poutrel is my semester 1 project for SKIL2. We designed a website concept in Figma for a fictional client, focusing on structure, style, and usability.' },
+      '.hero-tags span:nth-child(1)': { text: 'SKIL2 semester 1' },
       '.hero-tags span:nth-child(2)': { text: 'Figma' },
       '.hero-tags span:nth-child(3)': { text: 'Prototype' },
       '.hero-side-label': { text: 'Focus' },
       '.hero-side h3': { text: 'Website concept in Figma' },
-      '.project-impact .eyebrow': { text: 'Approach' },
+      '.hero-facts li:nth-child(1)': { html: '<span>Subject</span> SKIL2' },
+      '.hero-facts li:nth-child(2)': { html: '<span>Type</span> Group work' },
+      '.hero-facts li:nth-child(3)': { html: '<span>My focus</span> Structure and prototype' },
+      '.project-context .eyebrow': { text: 'Context and background' },
       '.project-impact h2': { text: 'From client idea to Figma design' },
-      '.project-impact-grid article:nth-child(1) h3': { text: 'Fictional client' },
-      '.project-impact-grid article:nth-child(1) p': { text: 'We translated the style and needs of a fictional client into a clear website.' },
-      '.project-impact-grid article:nth-child(2) h3': { text: 'Figma' },
-      '.project-impact-grid article:nth-child(2) p': { text: 'Before development, we created the visual design and structure in Figma.' },
-      '.project-impact-grid article:nth-child(3) h3': { text: 'Prototype' },
-      '.project-impact-grid article:nth-child(3) p': { text: 'The result was a clear website concept/prototype, not a fully developed real website.' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Subject' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'This project belongs to SKIL2 semester 1 and focused on analysis, design, and professional presentation.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Assignment' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'We had to translate the needs of a fictional client into a clear website structure and visual style.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Result' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'The final result was a clickable Figma prototype showing the most important pages and flow.' },
+      '.project-learning .eyebrow': { text: 'Realizations and lessons' },
+      '.project-learning h2': { text: 'What I made and learned' },
+      '.project-steps li:nth-child(1)': { html: '<strong>Realization:</strong> I helped with page layout, navigation, and visual structure of the prototype.' },
+      '.project-steps li:nth-child(2)': { html: '<strong>Hard skills:</strong> I practiced Figma, wireframes, layout, typography, and consistent components.' },
+      '.project-steps li:nth-child(3)': { html: '<strong>Soft skills:</strong> I learned to discuss ideas better, process feedback, and explain choices clearly in a team.' },
+      '.project-steps li:nth-child(4)': { html: '<strong>My part:</strong> my focus was structure, prototype setup, and making the user flow clear.' },
+      '.project-role .eyebrow': { text: 'My part' },
+      '.project-role h2': { text: 'What I contributed myself' },
+      '.project-role .project-copy': { text: 'In the group work, I helped make the idea concrete in Figma. I contributed to the information architecture, clarified parts of the prototype, and kept the design logically navigable.' },
       '.panel-actions .btn-link': { text: 'Back to Projects' }
     }
   }
@@ -976,44 +1014,68 @@ pageTranslations['project-kvv-rauw.html'] = {
   nl: {
     title: 'Seppe | K.V.V Rauw',
     selectors: {
-      '.project-hero .eyebrow': { text: 'Skill-project' },
+      '.project-hero .eyebrow': { text: 'Project semester 2 SKIL2' },
       '.project-hero h1': { text: 'K.V.V Rauw' },
-      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'K.V.V Rauw is een skill-project waarin we een aangeleverd ontwerp/prototype moesten omzetten naar een echte werkende website.' },
-      '.hero-tags span:nth-child(1)': { text: 'Klantproject' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'K.V.V Rauw is mijn project van semester 2 voor SKIL2. In dit project moesten we een aangeleverd ontwerp/prototype omzetten naar een echte werkende website.' },
+      '.hero-tags span:nth-child(1)': { text: 'SKIL2 semester 2' },
       '.hero-tags span:nth-child(2)': { text: 'Prototype' },
       '.hero-tags span:nth-child(3)': { text: 'Website' },
       '.hero-side-label': { text: 'Focus' },
       '.hero-side h3': { text: 'Van prototype naar website' },
-      '.project-impact .eyebrow': { text: 'Aanpak' },
+      '.hero-facts li:nth-child(1)': { html: '<span>Vak</span> SKIL2' },
+      '.hero-facts li:nth-child(2)': { html: '<span>Type</span> Groepswerk' },
+      '.hero-facts li:nth-child(3)': { html: '<span>Mijn focus</span> Frontend en afwerking' },
+      '.project-context .eyebrow': { text: 'Context en achtergrond' },
       '.project-impact h2': { text: 'Van ontwerp naar echte website' },
-      '.project-impact-grid article:nth-child(1) h3': { text: 'Aangeleverd ontwerp' },
-      '.project-impact-grid article:nth-child(1) p': { text: 'We kregen een ontwerp/prototype dat als basis diende voor de website.' },
-      '.project-impact-grid article:nth-child(2) h3': { text: 'Omzetting' },
-      '.project-impact-grid article:nth-child(2) p': { text: 'Daarna moesten we dat ontwerp zo goed mogelijk vertalen naar een echte werkende website.' },
-      '.project-impact-grid article:nth-child(3) h3': { text: 'Afwerking' },
-      '.project-impact-grid article:nth-child(3) p': { text: 'We letten op overzicht, gebruiksgemak en een resultaat dat betrouwbaar aanvoelt.' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Vak' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'Dit project hoort bij SKIL2 semester 2 en focust op realiseren, samenwerken en opleveren.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Opdracht' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'We kregen een prototype als basis en moesten dat vertalen naar een werkende website voor K.V.V Rauw.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Doel' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'De website moest overzichtelijk, bruikbaar en herkenbaar zijn voor bezoekers van de club.' },
+      '.project-learning .eyebrow': { text: 'Realisaties en leerpunten' },
+      '.project-learning h2': { text: 'Wat ik maakte en leerde' },
+      '.project-steps li:nth-child(1)': { html: '<strong>Realisatie:</strong> ik hielp bij het omzetten van het prototype naar HTML/CSS en het verbeteren van de pagina-opbouw.' },
+      '.project-steps li:nth-child(2)': { html: '<strong>Hard skills:</strong> ik oefende met responsive layout, nette CSS, structuur in HTML en visuele afwerking.' },
+      '.project-steps li:nth-child(3)': { html: '<strong>Soft skills:</strong> ik leerde nauwkeuriger afstemmen met teamleden en feedback sneller omzetten naar aanpassingen.' },
+      '.project-steps li:nth-child(4)': { html: '<strong>Mijn aandeel:</strong> mijn focus lag op frontend-uitwerking, controleren of onderdelen werkten en het verfijnen van de layout.' },
+      '.project-role .eyebrow': { text: 'Mijn deel' },
+      '.project-role h2': { text: 'Waar ik zelf aan bijdroeg' },
+      '.project-role .project-copy': { text: 'Ik werkte mee aan de technische omzetting van het ontwerp naar een echte website. Daarbij lette ik vooral op de structuur, de visuele overeenkomst met het prototype en de bruikbaarheid op verschillende schermgroottes.' },
       '.panel-actions .btn-link': { text: 'Terug naar Projecten' }
     }
   },
   en: {
     title: 'Seppe | K.V.V Rauw',
     selectors: {
-      '.project-hero .eyebrow': { text: 'Skill project' },
+      '.project-hero .eyebrow': { text: 'SKIL2 semester 2 project' },
       '.project-hero h1': { text: 'K.V.V Rauw' },
-      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'K.V.V Rauw is a skill project where we had to convert a provided design/prototype into a real working website.' },
-      '.hero-tags span:nth-child(1)': { text: 'Client project' },
+      '.project-hero .hero-main > p:not(.eyebrow)': { text: 'K.V.V Rauw is my semester 2 project for SKIL2. In this project, we had to convert a provided design/prototype into a real working website.' },
+      '.hero-tags span:nth-child(1)': { text: 'SKIL2 semester 2' },
       '.hero-tags span:nth-child(2)': { text: 'Prototype' },
       '.hero-tags span:nth-child(3)': { text: 'Website' },
       '.hero-side-label': { text: 'Focus' },
       '.hero-side h3': { text: 'From prototype to website' },
-      '.project-impact .eyebrow': { text: 'Approach' },
+      '.hero-facts li:nth-child(1)': { html: '<span>Subject</span> SKIL2' },
+      '.hero-facts li:nth-child(2)': { html: '<span>Type</span> Group work' },
+      '.hero-facts li:nth-child(3)': { html: '<span>My focus</span> Frontend and polish' },
+      '.project-context .eyebrow': { text: 'Context and background' },
       '.project-impact h2': { text: 'From design to real website' },
-      '.project-impact-grid article:nth-child(1) h3': { text: 'Provided design' },
-      '.project-impact-grid article:nth-child(1) p': { text: 'We received a design/prototype that served as the basis for the website.' },
-      '.project-impact-grid article:nth-child(2) h3': { text: 'Conversion' },
-      '.project-impact-grid article:nth-child(2) p': { text: 'After that, we had to translate the design as closely as possible into a real working website.' },
-      '.project-impact-grid article:nth-child(3) h3': { text: 'Polish' },
-      '.project-impact-grid article:nth-child(3) p': { text: 'We focused on clarity, ease of use, and a result that feels reliable.' },
+      '.project-impact-grid article:nth-child(1) h3': { text: 'Subject' },
+      '.project-impact-grid article:nth-child(1) p': { text: 'This project belongs to SKIL2 semester 2 and focuses on realization, teamwork, and delivery.' },
+      '.project-impact-grid article:nth-child(2) h3': { text: 'Assignment' },
+      '.project-impact-grid article:nth-child(2) p': { text: 'We received a prototype as a base and had to translate it into a working website for K.V.V Rauw.' },
+      '.project-impact-grid article:nth-child(3) h3': { text: 'Goal' },
+      '.project-impact-grid article:nth-child(3) p': { text: 'The website had to be clear, usable, and recognizable for visitors of the club.' },
+      '.project-learning .eyebrow': { text: 'Realizations and lessons' },
+      '.project-learning h2': { text: 'What I made and learned' },
+      '.project-steps li:nth-child(1)': { html: '<strong>Realization:</strong> I helped convert the prototype into HTML/CSS and improve the page structure.' },
+      '.project-steps li:nth-child(2)': { html: '<strong>Hard skills:</strong> I practiced responsive layout, clean CSS, HTML structure, and visual polish.' },
+      '.project-steps li:nth-child(3)': { html: '<strong>Soft skills:</strong> I learned to coordinate more precisely with teammates and turn feedback into changes faster.' },
+      '.project-steps li:nth-child(4)': { html: '<strong>My part:</strong> my focus was frontend implementation, checking if parts worked, and refining the layout.' },
+      '.project-role .eyebrow': { text: 'My part' },
+      '.project-role h2': { text: 'What I contributed myself' },
+      '.project-role .project-copy': { text: 'I helped with the technical conversion from design to real website. I focused especially on structure, visual match with the prototype, and usability across different screen sizes.' },
       '.panel-actions .btn-link': { text: 'Back to Projects' }
     }
   }
@@ -1045,6 +1107,9 @@ pageTranslations['project-helpse.html'] = {
       '.project-steps li:nth-child(2)': { html: '<strong>REST API:</strong> auth, tasks, applications en payments zijn verdeeld over duidelijke endpoints.' },
       '.project-steps li:nth-child(3)': { html: '<strong>Database:</strong> de basis bestaat uit users, tasks en applications met rollen, statussen en relaties.' },
       '.project-steps li:nth-child(4)': { html: '<strong>Stack:</strong> React, Vite, Tailwind CSS, Node.js, Express, Supabase, JWT, bcrypt en Stripe.' },
+      '.project-role .eyebrow': { text: 'Mijn deel en leerpunten' },
+      '.project-role h2': { text: 'Wat ik zelf uitwerkte' },
+      '.project-role .project-copy': { text: "Helpse is een persoonlijke realisatie buiten een specifiek ECTS-vak. Ik werkte vooral aan het concept, de frontend, de backend-structuur en de koppeling tussen gebruikers, taken en betalende toegang. Ik leerde sterker werken met REST API's, database-relaties, authenticatie en duidelijke user flows. Als soft skill groeide ik vooral in plannen, keuzes afbakenen en een groot idee opdelen in haalbare onderdelen." },
       '.portfolio-section:last-child .eyebrow': { text: 'Doel' },
       '.portfolio-section:last-child h2': { text: 'Gebouwd om studenten te helpen' },
       '.portfolio-section:last-child .project-copy': { text: 'Helpse is gebouwd om studenten sneller aan kleine betaalde jobs te helpen en tegelijk mensen in de buurt op een eenvoudige manier hulp te laten vinden.' },
@@ -1077,6 +1142,9 @@ pageTranslations['project-helpse.html'] = {
       '.project-steps li:nth-child(2)': { html: '<strong>REST API:</strong> auth, tasks, applications, and payments are split into clear endpoints.' },
       '.project-steps li:nth-child(3)': { html: '<strong>Database:</strong> the base consists of users, tasks, and applications with roles, statuses, and relations.' },
       '.project-steps li:nth-child(4)': { html: '<strong>Stack:</strong> React, Vite, Tailwind CSS, Node.js, Express, Supabase, JWT, bcrypt, and Stripe.' },
+      '.project-role .eyebrow': { text: 'My part and lessons' },
+      '.project-role h2': { text: 'What I built myself' },
+      '.project-role .project-copy': { text: 'Helpse is a personal achievement outside a specific ECTS subject. I mainly worked on the concept, frontend, backend structure, and the connection between users, tasks, and paid access. I learned to work better with REST APIs, database relations, authentication, and clear user flows. As a soft skill, I mainly grew in planning, defining choices, and splitting a large idea into achievable parts.' },
       '.portfolio-section:last-child .eyebrow': { text: 'Goal' },
       '.portfolio-section:last-child h2': { text: 'Built to help students' },
       '.portfolio-section:last-child .project-copy': { text: 'Helpse is built to help students find small paid jobs faster, while giving people nearby an easy way to find help.' },
@@ -1151,6 +1219,41 @@ const translatePage = (lang) => {
       }
     }
   });
+
+  const footer = trans.footer || {};
+  const footerLinks = [
+    ['.footer-links a[href="index.html"]', trans.nav?.home],
+    ['.footer-links a[href="projects.html"]', trans.nav?.projects],
+    ['.footer-links a[href="cv.html"]', trans.nav?.cv],
+    ['.footer-links a[href="contact.html"]', trans.nav?.contact]
+  ];
+
+  const setFooterText = (selector, value, asHtml = false) => {
+    if (value === undefined) return;
+    document.querySelectorAll(selector).forEach((element) => {
+      if (asHtml) {
+        element.innerHTML = value;
+      } else {
+        element.textContent = value;
+      }
+    });
+  };
+
+  const setFooterAttribute = (selector, attribute, value) => {
+    if (value === undefined) return;
+    document.querySelectorAll(selector).forEach((element) => {
+      element.setAttribute(attribute, value);
+    });
+  };
+
+  setFooterText('.footer-description', footer.description);
+  setFooterText('.footer-connect-label', footer.connect);
+  setFooterText('.footer-copyright', footer.copyright, true);
+  footerLinks.forEach(([selector, value]) => setFooterText(selector, value));
+  setFooterAttribute('.footer-socials', 'aria-label', footer.socialsLabel);
+  setFooterAttribute('.footer-socials a[href^="mailto:"]', 'aria-label', footer.emailLabel);
+  setFooterAttribute('.footer-socials a[href*="github.com"]', 'aria-label', footer.githubLabel);
+  setFooterAttribute('.footer-socials a[href*="linkedin.com"]', 'aria-label', footer.linkedinLabel);
 };
 
 const initializeLanguage = () => {
@@ -1561,6 +1664,15 @@ const initHomeEffects = () => {
   requestProgressUpdate();
   window.addEventListener('scroll', requestProgressUpdate, { passive: true });
   window.addEventListener('resize', requestProgressUpdate);
+};
+
+const initProgressDock = () => {
+  const header = document.querySelector('.site-header');
+  const progress = document.querySelector('.home-progress, .about-progress');
+
+  if (!header || !progress || progress.parentElement === header) return;
+
+  header.appendChild(progress);
 };
 
 const initReveal = () => {
@@ -2067,6 +2179,7 @@ const initPortfolioAI = () => {
   applyLanguage(currentLanguage);
 };
 
+initProgressDock();
 initHomePage();
 // Performance first: disable heavy animations on all pages
 try { initHomeEffects(); } catch (e) { console.error('initHomeEffects error:', e); }

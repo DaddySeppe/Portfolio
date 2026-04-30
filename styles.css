@@ -8686,13 +8686,16 @@ body.project-page .project-cover img {
   }
 }
 
-/* Keep the scroll progress indicator pinned to the viewport edge. */
-.home-progress,
-.about-progress {
-  top: 0 !important;
+/* Dock the scroll progress indicator to the header instead of letting it float. */
+.site-header .home-progress,
+.site-header .about-progress {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 0 !important;
   left: 0 !important;
-  right: auto !important;
+  right: 0 !important;
   width: 100% !important;
+  height: 3px !important;
   pointer-events: none;
   transform: none !important;
 }
