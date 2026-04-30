@@ -563,7 +563,7 @@ Object.assign(pageTranslations, {
         '#contact button[type="submit"]': { text: 'Send' },
         '.cta-hero .cta-eyebrow': { text: 'READY TO WORK TOGETHER?' },
         '.cta-hero h2': { text: 'Let us build something strong together' },
-        '.cta-hero .cta-content > p:not(.cta-eyebrow)': { text: 'Whether you have a project idea, technical questions, or just want to talk: I am ready.' },
+        '.cta-hero .cta-content > p:not(.cta-eyebrow)': { text: 'Whether you have a project idea, technical questions, or just want to ask something: feel free to send me a message!' },
         '.cta-btn-primary': { text: 'View My Work' },
         '.cta-btn-secondary': { text: 'Contact Me' }
       }

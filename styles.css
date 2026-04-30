@@ -7863,4 +7863,296 @@ body.project-page .project-cover img {
   object-position: center center !important;
 }
 
+/* Mobile polish: makes the homepage feel intentional on phone screens. */
+@media (max-width: 600px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    gap: 9px !important;
+    padding: 10px !important;
+  }
+
+  .site-header .brand {
+    font-size: 0.76rem !important;
+    letter-spacing: 0.15em !important;
+  }
+
+  .site-header .main-nav {
+    width: min(100%, 360px) !important;
+    max-width: calc(100vw - 20px) !important;
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    overflow: visible !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    padding: 5px !important;
+    border-radius: 12px !important;
+  }
+
+  .site-header .main-nav a {
+    min-width: 0 !important;
+    min-height: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6px 4px !important;
+    font-size: 0.61rem !important;
+    letter-spacing: 0.02em !important;
+    white-space: nowrap !important;
+  }
+
+  .site-header .language-switcher {
+    grid-column: 1 / -1 !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 5px 0 0 !important;
+    border-left: 0 !important;
+    border-top: 1px solid rgba(226, 232, 240, 0.18) !important;
+  }
+
+  body.home-page {
+    min-height: 100vh !important;
+    padding-bottom: 28px !important;
+  }
+
+  body.home-page .site-header {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    gap: 9px !important;
+    padding: 10px 10px 11px !important;
+  }
+
+  body.home-page .brand {
+    font-size: 0.76rem !important;
+    letter-spacing: 0.15em !important;
+  }
+
+  body.home-page .main-nav {
+    width: min(100%, 340px) !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+    padding: 5px !important;
+    border-radius: 12px !important;
+  }
+
+  body.home-page .main-nav a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 30px !important;
+    padding: 6px 4px !important;
+    font-size: 0.64rem !important;
+    letter-spacing: 0.02em !important;
+    white-space: nowrap !important;
+  }
+
+  body.home-page .main-nav a[href="contact.html"] {
+    display: none !important;
+  }
+
+  body.home-page .language-switcher {
+    grid-column: 1 / -1 !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 5px 0 0 !important;
+    border-left: 0 !important;
+    border-top: 1px solid rgba(226, 232, 240, 0.18) !important;
+  }
+
+  body.home-page .lang-btn {
+    min-width: 44px !important;
+    min-height: 28px !important;
+    padding: 5px 10px !important;
+    font-size: 0.68rem !important;
+  }
+
+  body.home-page .home-progress {
+    top: 96px !important;
+  }
+
+  body.home-page .neo-layout {
+    width: calc(100% - 24px) !important;
+    max-width: 420px !important;
+    margin-top: 120px !important;
+  }
+
+  body.home-page .neo-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  body.home-page .neo-hero {
+    min-height: auto !important;
+    padding: 28px !important;
+    border-radius: 12px !important;
+  }
+
+  body.home-page .neo-kicker {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  body.home-page .neo-hero h1 {
+    max-width: 10ch !important;
+    font-size: clamp(2.25rem, 13vw, 3.45rem) !important;
+    line-height: 0.98 !important;
+    text-wrap: balance;
+  }
+
+  body.home-page .neo-text {
+    font-size: 0.96rem !important;
+    line-height: 1.68 !important;
+  }
+
+  body.home-page .neo-actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  body.home-page .neo-btn,
+  body.home-page .neo-link {
+    width: 100% !important;
+    min-height: 46px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  body.home-page .neo-projects h2 {
+    font-size: 1.25rem !important;
+  }
+
+  body.home-page .neo-projects .neo-cards {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  body.home-page .neo-projects .neo-card {
+    padding: 12px !important;
+  }
+
+  body.home-page .neo-projects .neo-card h3 {
+    font-size: 1rem !important;
+  }
+
+  body.home-page .neo-projects .neo-card p {
+    font-size: 0.86rem !important;
+    line-height: 1.45 !important;
+  }
+
+  body.home-page .skills-categorized {
+    width: calc(100% - 24px) !important;
+    max-width: 420px !important;
+    margin: 38px auto 42px !important;
+    padding: 0 !important;
+  }
+
+  body.home-page .skills-header {
+    margin-bottom: 26px !important;
+  }
+
+  body.home-page .skills-header p {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.14em !important;
+  }
+
+  body.home-page .skills-header h2 {
+    font-size: clamp(2rem, 10vw, 2.75rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  body.home-page .skills-section {
+    gap: 22px !important;
+  }
+
+  body.home-page .skill-category-block {
+    padding: 18px !important;
+    border-radius: 18px !important;
+  }
+
+  body.home-page .skill-category-block h3 {
+    margin-bottom: 18px !important;
+    font-size: 1.15rem !important;
+    line-height: 1.18 !important;
+  }
+
+  body.home-page .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  body.home-page .tech-badge {
+    min-height: 112px !important;
+    padding: 14px 8px !important;
+    border-radius: 12px !important;
+  }
+
+  body.home-page .tech-logo,
+  body.home-page .tech-badge i,
+  body.home-page .tech-icon-svg {
+    width: 2.15rem !important;
+    height: 2.15rem !important;
+    font-size: 2.15rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  body.home-page .tech-badge span {
+    max-width: 100% !important;
+    font-size: 0.76rem !important;
+    line-height: 1.18 !important;
+    word-break: normal !important;
+    overflow-wrap: anywhere !important;
+    hyphens: none !important;
+  }
+
+  body.home-page .cta-hero {
+    width: calc(100% - 24px) !important;
+    max-width: 420px !important;
+    margin: 0 auto 16px !important;
+    padding: 34px 24px !important;
+    border-radius: 18px !important;
+  }
+
+  body.home-page .cta-hero h2 {
+    font-size: clamp(1.85rem, 9vw, 2.45rem) !important;
+    line-height: 1.08 !important;
+    text-wrap: balance;
+  }
+
+  body.home-page .cta-hero > div > p:not(.cta-eyebrow) {
+    font-size: 0.96rem !important;
+    line-height: 1.62 !important;
+  }
+
+  body.home-page .cta-button-group {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  body.home-page .cta-btn {
+    width: 100% !important;
+    min-height: 48px !important;
+    padding: 0.95rem 1rem !important;
+    border-radius: 12px !important;
+    font-size: 0.78rem !important;
+  }
+
+  body.home-page .ai-chat {
+    display: none !important;
+  }
+}
 
