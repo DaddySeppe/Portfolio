@@ -8686,3 +8686,14 @@ body.project-page .project-cover img {
   }
 }
 
+/* Keep the scroll progress indicator pinned to the viewport edge. */
+.home-progress,
+.about-progress {
+  top: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  width: 100% !important;
+  pointer-events: none;
+  transform: none !important;
+}
+
