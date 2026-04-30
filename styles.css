@@ -6437,12 +6437,16 @@ main {
   line-height: 1;
 }
 
-.tech-badge i {
+.tech-badge i,
+.tech-badge .soft-icon {
   font-size: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-bottom: 1rem;
   display: block;
   line-height: 1;
   color: rgba(34, 211, 238, 0.9);
+  fill: currentColor;
   transition: all 0.3s ease;
 }
 
@@ -6500,14 +6504,22 @@ main {
 .tech-badge.aws i { color: #FF9900; }
 .tech-badge.terminal i { color: #000000; }
 .tech-badge.agile i { color: #0078D4; }
-.tech-badge.soft-problem i { color: #facc15; }
-.tech-badge.soft-communication i { color: #38bdf8; }
-.tech-badge.soft-teamwork i { color: #22c55e; }
-.tech-badge.soft-critical i { color: #a78bfa; }
-.tech-badge.soft-adapt i { color: #2dd4bf; }
-.tech-badge.soft-ownership i { color: #fb7185; }
-.tech-badge.soft-detail i { color: #f97316; }
-.tech-badge.soft-planning i { color: #60a5fa; }
+.tech-badge.soft-problem i,
+.tech-badge.soft-problem .soft-icon { color: #facc15; }
+.tech-badge.soft-communication i,
+.tech-badge.soft-communication .soft-icon { color: #38bdf8; }
+.tech-badge.soft-teamwork i,
+.tech-badge.soft-teamwork .soft-icon { color: #22c55e; }
+.tech-badge.soft-critical i,
+.tech-badge.soft-critical .soft-icon { color: #a78bfa; }
+.tech-badge.soft-adapt i,
+.tech-badge.soft-adapt .soft-icon { color: #2dd4bf; }
+.tech-badge.soft-ownership i,
+.tech-badge.soft-ownership .soft-icon { color: #fb7185; }
+.tech-badge.soft-detail i,
+.tech-badge.soft-detail .soft-icon { color: #f97316; }
+.tech-badge.soft-planning i,
+.tech-badge.soft-planning .soft-icon { color: #60a5fa; }
 
 .tech-badge span {
   font-size: 0.9rem;
