@@ -1993,11 +1993,11 @@ h3,
 
   .home-progress,
   .about-progress {
-    top: 64px;
+    top: 0;
   }
 
   .about-progress {
-    top: 64px;
+    top: 0;
   }
 
   .main-nav {
@@ -2128,7 +2128,7 @@ h3,
 
   .home-progress,
   .about-progress {
-    top: 58px;
+    top: 0;
   }
 
   .portfolio-overlay {
@@ -8010,7 +8010,7 @@ body.project-page .project-cover img {
   }
 
   body.home-page .home-progress {
-    top: 96px !important;
+    top: 0 !important;
   }
 
   body.home-page .neo-layout {
@@ -8215,7 +8215,7 @@ body.project-page .project-cover img {
   }
 
   body:not(.home-page) .about-progress {
-    top: 124px !important;
+    top: 0 !important;
   }
 
   body:not(.home-page) .about-main,
@@ -8531,7 +8531,7 @@ body.project-page .project-cover img {
 
   .home-progress,
   .about-progress {
-    top: 108px !important;
+    top: 0 !important;
   }
 
   .home-page .neo-layout,
