@@ -1743,7 +1743,7 @@ const initContactForm = () => {
       badEmail: 'Vul een geldig e-mailadres in.',
       sending: 'Bericht wordt verzonden...',
       sent: 'Bericht verzonden. Ik neem snel contact op.',
-      fallback: 'Mailserver niet beschikbaar. Ik open je mailapp met het bericht ingevuld. Klik daar nog op verzenden.',
+      fallback: 'Online verzenden lukt even niet. Ik open je mailapp met het bericht ingevuld. Klik daar nog op verzenden.',
       genericError: 'Verzenden mislukt. Probeer opnieuw binnen enkele minuten.'
     },
     en: {
@@ -1752,7 +1752,7 @@ const initContactForm = () => {
       badEmail: 'Please enter a valid email address.',
       sending: 'Sending message...',
       sent: 'Message sent. I will reply soon.',
-      fallback: 'Mail server is not available. Opening your mail app with the message filled in. Please press send there.',
+      fallback: 'Online sending is not available right now. Opening your mail app with the message filled in. Please press send there.',
       genericError: 'Sending failed. Please try again in a few minutes.'
     }
   };
@@ -1799,7 +1799,7 @@ const initContactForm = () => {
       return;
     }
 
-    const endpoint = form.getAttribute('action') || 'api/contact.php';
+    const endpoint = form.getAttribute('data-endpoint') || form.getAttribute('action') || 'https://formsubmit.co/ajax/seppe.vanroy@telenet.be';
     const fallbackEmail = form.getAttribute('data-fallback-email') || 'seppe.vanroy@telenet.be';
     const fallbackHref = () => {
       const fallbackSubject = `Portfolio contact: ${subject}`;
@@ -1818,7 +1818,15 @@ const initContactForm = () => {
       setStatus(getMsg('fallback'), 'info');
       window.location.href = href;
     };
-    const payload = { name, email, subject, message, website };
+    const payload = {
+      name,
+      email,
+      subject,
+      message,
+      _subject: `Portfolio contact: ${subject}`,
+      _template: 'table',
+      _captcha: 'false'
+    };
     const idleButtonLabel = submitButton ? submitButton.textContent : '';
 
     if (submitButton) {
@@ -1832,10 +1840,10 @@ const initContactForm = () => {
       const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
           'Accept': 'application/json'
         },
-        body: JSON.stringify(payload)
+        body: new URLSearchParams(payload)
       });
 
       const raw = await response.text();
@@ -1847,14 +1855,13 @@ const initContactForm = () => {
         result = {};
       }
 
-      if (!response.ok || !result.success) {
+      if (!response.ok || result.success === false) {
         if (typeof result.fallback === 'string' && result.fallback.startsWith('mailto:')) {
           openFallback(result.fallback);
           return;
         }
 
-        openFallback();
-        return;
+        throw new Error(typeof result.message === 'string' ? result.message : getMsg('genericError'));
       }
 
       setStatus(getMsg('sent'), 'success');
