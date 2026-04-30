@@ -8448,77 +8448,71 @@ body.project-page .project-cover img {
     overflow-x: hidden;
   }
 
-  body {
-    padding-bottom: 96px !important;
-  }
-
   .site-header {
     position: sticky !important;
     top: 0 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 10px 12px !important;
-    min-height: 56px !important;
+    z-index: 30 !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    gap: 8px !important;
+    padding: 10px 10px 12px !important;
   }
 
   .brand {
     font-size: 0.8rem !important;
-    letter-spacing: 0.16em !important;
-  }
-
-  .language-switcher {
-    position: fixed !important;
-    top: 10px !important;
-    right: 10px !important;
-    z-index: 40 !important;
-    margin: 0 !important;
-    padding: 4px !important;
-    border: 1px solid rgba(226, 232, 240, 0.28) !important;
-    border-radius: 999px !important;
-    background: rgba(2, 6, 23, 0.86) !important;
-    border-left: 1px solid rgba(226, 232, 240, 0.28) !important;
-  }
-
-  .lang-btn {
-    min-width: 34px !important;
-    min-height: 26px !important;
-    padding: 4px 8px !important;
-    font-size: 0.64rem !important;
+    letter-spacing: 0.14em !important;
   }
 
   .main-nav {
-    position: fixed !important;
-    left: 8px !important;
-    right: 8px !important;
-    bottom: 10px !important;
-    z-index: 45 !important;
+    width: 100% !important;
+    max-width: 520px !important;
     display: grid !important;
-    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 6px !important;
-    padding: 8px !important;
-    border-radius: 14px !important;
-    overflow: hidden !important;
-    backdrop-filter: blur(10px) !important;
-    box-shadow: 0 12px 24px rgba(2, 6, 23, 0.45) !important;
+    padding: 6px !important;
+    border-radius: 12px !important;
+    overflow: visible !important;
+    position: static !important;
   }
 
   .main-nav a {
     min-height: 38px !important;
-    display: flex !important;
+    display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 6px 4px !important;
-    font-size: 0.62rem !important;
+    padding: 8px 6px !important;
+    font-size: 0.7rem !important;
     letter-spacing: 0.03em !important;
     text-align: center !important;
     white-space: nowrap !important;
     border-radius: 10px !important;
   }
 
+  .language-switcher {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    border-left: 0 !important;
+    border-top: 1px solid rgba(226, 232, 240, 0.24) !important;
+    margin: 0 !important;
+    padding: 8px 0 2px !important;
+    position: static !important;
+  }
+
+  .lang-btn {
+    min-width: 44px !important;
+    min-height: 30px !important;
+    padding: 6px 10px !important;
+    font-size: 0.66rem !important;
+    border-radius: 8px !important;
+  }
+
   .home-progress,
   .about-progress {
-    top: 56px !important;
+    top: 108px !important;
   }
 
   .home-page .neo-layout,
@@ -8526,12 +8520,11 @@ body.project-page .project-cover img {
   .hub-main,
   .project-main,
   .cv-main {
-    width: calc(100% - 18px) !important;
-    max-width: 470px !important;
-    margin-top: 10px !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    gap: 14px !important;
+    width: calc(100% - 20px) !important;
+    max-width: 560px !important;
+    margin-top: 0 !important;
+    padding: 118px 0 44px !important;
+    gap: 18px !important;
   }
 
   .home-page .neo-grid,
@@ -8550,7 +8543,7 @@ body.project-page .project-cover img {
   .contact-form-grid,
   .cv-page-hero {
     grid-template-columns: 1fr !important;
-    gap: 12px !important;
+    gap: 14px !important;
   }
 
   .home-page .neo-hero,
@@ -8568,8 +8561,8 @@ body.project-page .project-cover img {
   .contact-form-aside,
   .cv-page-hero,
   .hub-card {
-    padding: 16px !important;
-    border-radius: 14px !important;
+    padding: 20px !important;
+    border-radius: 16px !important;
   }
 
   .home-page .neo-hero h1,
@@ -8577,10 +8570,22 @@ body.project-page .project-cover img {
   .hub-hero h1,
   .project-page .project-hero h1,
   .hero-title-giant {
-    font-size: clamp(1.9rem, 9.6vw, 2.7rem) !important;
-    line-height: 1.04 !important;
+    font-size: clamp(2rem, 9vw, 2.95rem) !important;
+    line-height: 1.08 !important;
     letter-spacing: -0.01em !important;
     max-width: 100% !important;
+  }
+
+  .about-hero p,
+  .hub-hero p,
+  .project-copy,
+  .panel-card p,
+  .about-card p,
+  .project-card p,
+  .skill-card p,
+  .hub-card p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
   }
 
   .home-page .neo-hero-media,
@@ -8595,7 +8600,7 @@ body.project-page .project-cover img {
   .cta-buttons-group {
     display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 10px !important;
+    gap: 12px !important;
   }
 
   .neo-btn,
@@ -8609,7 +8614,7 @@ body.project-page .project-cover img {
 
   .home-page .neo-projects .neo-cards {
     grid-template-columns: 1fr !important;
-    gap: 10px !important;
+    gap: 12px !important;
   }
 
   .home-page .neo-projects .neo-card,
@@ -8617,7 +8622,7 @@ body.project-page .project-cover img {
   .hub-card:nth-child(4),
   .hub-card:nth-child(5) {
     grid-column: auto !important;
-    padding: 12px !important;
+    padding: 14px !important;
   }
 
   .hub-card img,
@@ -8630,21 +8635,26 @@ body.project-page .project-cover img {
     aspect-ratio: 16 / 10 !important;
     object-fit: cover !important;
   }
+
+  .home-atmosphere,
+  .about-atmosphere,
+  .focus-wheel {
+    display: none !important;
+  }
 }
 
 @media (max-width: 430px) {
   .main-nav {
-    left: 6px !important;
-    right: 6px !important;
-    gap: 4px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 6px !important;
     padding: 6px !important;
   }
 
   .main-nav a {
     min-height: 36px !important;
-    font-size: 0.57rem !important;
-    padding: 5px 2px !important;
-    letter-spacing: 0.01em !important;
+    font-size: 0.66rem !important;
+    padding: 7px 4px !important;
+    letter-spacing: 0.02em !important;
   }
 
   .home-page .neo-layout,
@@ -8652,7 +8662,8 @@ body.project-page .project-cover img {
   .hub-main,
   .project-main,
   .cv-main {
-    width: calc(100% - 12px) !important;
+    width: calc(100% - 14px) !important;
+    padding-top: 116px !important;
   }
 }
 
