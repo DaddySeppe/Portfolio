@@ -6464,17 +6464,6 @@ main {
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.soft-symbol {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  color: #061126;
-  background: linear-gradient(135deg, #67e8f9, #fbbf24);
-  font-weight: 900;
-  letter-spacing: 0;
-}
-
 .tech-icon-svg path {
   transition: fill 0.3s ease;
 }

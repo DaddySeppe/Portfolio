@@ -1743,7 +1743,7 @@ const initContactForm = () => {
       badEmail: 'Vul een geldig e-mailadres in.',
       sending: 'Bericht wordt verzonden...',
       sent: 'Bericht verzonden. Ik neem snel contact op.',
-      fallback: 'Server mail is nu niet beschikbaar. Je mailapp wordt geopend als fallback.',
+      fallback: 'Mailserver niet beschikbaar. Ik open je mailapp met het bericht ingevuld. Klik daar nog op verzenden.',
       genericError: 'Verzenden mislukt. Probeer opnieuw binnen enkele minuten.'
     },
     en: {
@@ -1752,7 +1752,7 @@ const initContactForm = () => {
       badEmail: 'Please enter a valid email address.',
       sending: 'Sending message...',
       sent: 'Message sent. I will reply soon.',
-      fallback: 'Server mail is not available right now. Opening your mail app as fallback.',
+      fallback: 'Mail server is not available. Opening your mail app with the message filled in. Please press send there.',
       genericError: 'Sending failed. Please try again in a few minutes.'
     }
   };
@@ -1800,6 +1800,24 @@ const initContactForm = () => {
     }
 
     const endpoint = form.getAttribute('action') || 'api/contact.php';
+    const fallbackEmail = form.getAttribute('data-fallback-email') || 'seppe.vanroy@telenet.be';
+    const fallbackHref = () => {
+      const fallbackSubject = `Portfolio contact: ${subject}`;
+      const fallbackBody = [
+        `Naam: ${name}`,
+        `E-mail: ${email}`,
+        `Onderwerp: ${subject}`,
+        '',
+        'Bericht:',
+        message
+      ].join('\n');
+
+      return `mailto:${fallbackEmail}?subject=${encodeURIComponent(fallbackSubject)}&body=${encodeURIComponent(fallbackBody)}`;
+    };
+    const openFallback = (href = fallbackHref()) => {
+      setStatus(getMsg('fallback'), 'info');
+      window.location.href = href;
+    };
     const payload = { name, email, subject, message, website };
     const idleButtonLabel = submitButton ? submitButton.textContent : '';
 
@@ -1831,20 +1849,18 @@ const initContactForm = () => {
 
       if (!response.ok || !result.success) {
         if (typeof result.fallback === 'string' && result.fallback.startsWith('mailto:')) {
-          setStatus(getMsg('fallback'), 'error');
-          window.location.href = result.fallback;
+          openFallback(result.fallback);
           return;
         }
 
-        const backendMessage = typeof result.error === 'string' ? result.error : '';
-        throw new Error(backendMessage || getMsg('genericError'));
+        openFallback();
+        return;
       }
 
       setStatus(getMsg('sent'), 'success');
       form.reset();
     } catch (error) {
-      const message = error instanceof Error && error.message ? error.message : getMsg('genericError');
-      setStatus(message, 'error');
+      openFallback();
     } finally {
       form.removeAttribute('aria-busy');
       if (submitButton) {
