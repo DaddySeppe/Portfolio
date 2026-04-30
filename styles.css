@@ -8443,160 +8443,98 @@ body.project-page .project-cover img {
 
 /* Mobile layout stabilization: final override layer for phone screens */
 @media (max-width: 700px) {
-  body,
-  html {
+  html,
+  body {
     overflow-x: hidden;
   }
 
+  body {
+    padding-bottom: 96px !important;
+  }
+
   .site-header {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    justify-items: center !important;
+    position: sticky !important;
+    top: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
     align-items: center !important;
-    gap: 8px !important;
-    padding: 10px 12px 12px !important;
+    padding: 10px 12px !important;
+    min-height: 56px !important;
   }
 
   .brand {
-    font-size: 0.78rem !important;
-    letter-spacing: 0.14em !important;
-  }
-
-  .main-nav {
-    width: 100% !important;
-    max-width: 420px !important;
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    justify-content: flex-start !important;
-    gap: 6px !important;
-    padding: 6px !important;
-    border-radius: 12px !important;
-    scrollbar-width: none;
-  }
-
-  .main-nav::-webkit-scrollbar {
-    display: none;
-  }
-
-  .main-nav a {
-    flex: 0 0 auto !important;
-    min-height: 34px !important;
-    padding: 8px 11px !important;
-    font-size: 0.7rem !important;
-    letter-spacing: 0.04em !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.16em !important;
   }
 
   .language-switcher {
-    border-left: 0 !important;
-    border-top: 1px solid rgba(226, 232, 240, 0.2) !important;
+    position: fixed !important;
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 40 !important;
     margin: 0 !important;
-    padding: 6px 0 0 !important;
-    width: 100% !important;
-    justify-content: center !important;
+    padding: 4px !important;
+    border: 1px solid rgba(226, 232, 240, 0.28) !important;
+    border-radius: 999px !important;
+    background: rgba(2, 6, 23, 0.86) !important;
+    border-left: 1px solid rgba(226, 232, 240, 0.28) !important;
   }
 
   .lang-btn {
-    min-height: 30px !important;
-    padding: 6px 12px !important;
+    min-width: 34px !important;
+    min-height: 26px !important;
+    padding: 4px 8px !important;
+    font-size: 0.64rem !important;
+  }
+
+  .main-nav {
+    position: fixed !important;
+    left: 8px !important;
+    right: 8px !important;
+    bottom: 10px !important;
+    z-index: 45 !important;
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    padding: 8px !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 12px 24px rgba(2, 6, 23, 0.45) !important;
+  }
+
+  .main-nav a {
+    min-height: 38px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6px 4px !important;
+    font-size: 0.62rem !important;
+    letter-spacing: 0.03em !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    border-radius: 10px !important;
   }
 
   .home-progress,
   .about-progress {
-    top: 118px !important;
+    top: 56px !important;
   }
 
-  .home-page .neo-layout {
-    margin-top: 144px !important;
-    width: calc(100% - 20px) !important;
-    max-width: 460px !important;
-  }
-
-  .home-page .neo-grid {
-    grid-template-columns: 1fr !important;
-    gap: 14px !important;
-  }
-
-  .home-page .neo-hero {
-    padding: 22px !important;
-    min-height: auto !important;
-  }
-
-  .home-page .neo-hero h1 {
-    font-size: clamp(1.95rem, 10vw, 2.9rem) !important;
-    line-height: 1.02 !important;
-    max-width: 100% !important;
-  }
-
-  .home-page .neo-actions {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 10px !important;
-  }
-
-  .home-page .neo-btn,
-  .home-page .neo-link {
-    width: 100% !important;
-    justify-content: center !important;
-    text-align: center !important;
-  }
-
-  .home-page .neo-hero-media {
-    display: none !important;
-  }
-
-  .home-page .neo-projects .neo-cards {
-    grid-template-columns: 1fr !important;
-    gap: 10px !important;
-  }
-
-  .home-page .neo-projects .neo-card {
-    padding: 12px !important;
-  }
-
+  .home-page .neo-layout,
   .about-main,
   .hub-main,
   .project-main,
   .cv-main {
-    width: calc(100% - 20px) !important;
-    max-width: 460px !important;
-    padding: 140px 0 40px !important;
-    gap: 16px !important;
+    width: calc(100% - 18px) !important;
+    max-width: 470px !important;
+    margin-top: 10px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    gap: 14px !important;
   }
 
-  .about-main > section,
-  .hub-main > section,
-  .project-main > section,
-  .cv-main > section {
-    margin: 0 !important;
-  }
-
-  .about-hero,
-  .hub-hero,
-  .project-hero,
-  .portfolio-section,
-  .timeline,
-  .signature-panel,
-  .about-card,
-  .project-card,
-  .skill-card,
-  .call-to-action-ultra,
-  .contact-form,
-  .contact-form-aside,
-  .cv-page-hero {
-    padding: 18px !important;
-    border-radius: 14px !important;
-  }
-
-  .about-hero h1,
-  .hub-hero h1,
-  .project-page .project-hero h1,
-  .hero-title-giant {
-    font-size: clamp(2rem, 9.5vw, 2.8rem) !important;
-    line-height: 1.05 !important;
-  }
-
+  .home-page .neo-grid,
   .project-grid,
   .skills-grid,
   .hub-grid,
@@ -8615,30 +8553,53 @@ body.project-page .project-cover img {
     gap: 12px !important;
   }
 
-  .hub-card,
-  .hub-card:nth-child(4),
-  .hub-card:nth-child(5) {
-    grid-column: auto !important;
-    padding: 12px !important;
+  .home-page .neo-hero,
+  .about-hero,
+  .hub-hero,
+  .project-hero,
+  .portfolio-section,
+  .timeline,
+  .signature-panel,
+  .about-card,
+  .project-card,
+  .skill-card,
+  .call-to-action-ultra,
+  .contact-form,
+  .contact-form-aside,
+  .cv-page-hero,
+  .hub-card {
+    padding: 16px !important;
+    border-radius: 14px !important;
   }
 
-  .hub-card img {
-    aspect-ratio: 16 / 10 !important;
-    width: 100% !important;
-    height: auto !important;
-    max-width: none !important;
-    max-height: none !important;
+  .home-page .neo-hero h1,
+  .about-hero h1,
+  .hub-hero h1,
+  .project-page .project-hero h1,
+  .hero-title-giant {
+    font-size: clamp(1.9rem, 9.6vw, 2.7rem) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.01em !important;
+    max-width: 100% !important;
   }
 
-  .cta-button-group,
-  .cta-buttons-group,
+  .home-page .neo-hero-media,
+  .ai-chat {
+    display: none !important;
+  }
+
+  .home-page .neo-actions,
   .panel-actions,
-  .cv-hero-actions {
+  .cv-hero-actions,
+  .cta-button-group,
+  .cta-buttons-group {
     display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 10px !important;
   }
 
+  .neo-btn,
+  .neo-link,
   .btn-link,
   .btn-cta {
     width: 100% !important;
@@ -8646,22 +8607,52 @@ body.project-page .project-cover img {
     justify-content: center !important;
   }
 
-  .ai-chat {
-    display: none !important;
+  .home-page .neo-projects .neo-cards {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .home-page .neo-projects .neo-card,
+  .hub-card,
+  .hub-card:nth-child(4),
+  .hub-card:nth-child(5) {
+    grid-column: auto !important;
+    padding: 12px !important;
+  }
+
+  .hub-card img,
+  .project-cover img,
+  .hero-side > .profile-slot.project-cover > img {
+    width: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important;
+    object-fit: cover !important;
   }
 }
 
-@media (max-width: 420px) {
-  .main-nav a {
-    font-size: 0.64rem !important;
-    padding: 8px 9px !important;
+@media (max-width: 430px) {
+  .main-nav {
+    left: 6px !important;
+    right: 6px !important;
+    gap: 4px !important;
+    padding: 6px !important;
   }
 
+  .main-nav a {
+    min-height: 36px !important;
+    font-size: 0.57rem !important;
+    padding: 5px 2px !important;
+    letter-spacing: 0.01em !important;
+  }
+
+  .home-page .neo-layout,
   .about-main,
   .hub-main,
   .project-main,
   .cv-main {
-    width: calc(100% - 16px) !important;
+    width: calc(100% - 12px) !important;
   }
 }
 
