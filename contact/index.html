@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="../" />
+<style>html, body { background: #020617; color: #e2e8f0; }</style>
+  <title>Seppe | Contact</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="description" content="Contacteer Seppe Vanroy voor stages, projecten, samenwerkingen of vragen via het contactformulier." />
+  <link rel="canonical" href="https://sv-solutions.be/contact.html" />
+  <link rel="stylesheet" href="styles.min.css?v=20260430.7" />
+</head>
+<body class="about-page hub-page contact-hub-page">
+  <div class="about-atmosphere" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">SEPPE</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="about.html" data-i18n="nav.about">Over Mij</a>
+      <a href="projects.html" data-i18n="nav.projects">Projecten</a>
+      <a href="cv.html" data-i18n="nav.cv">CV</a>
+      <a class="active" href="contact.html" data-i18n="nav.contact">Contact</a>
+      <div class="language-switcher">
+        <button class="lang-btn lang-btn-nl active" data-lang="nl" title="Nederlands">NL</button>
+        <button class="lang-btn lang-btn-en" data-lang="en" title="English">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="about-progress" aria-hidden="true">
+    <span id="aboutProgressBar"></span>
+  </div>
+
+  <main class="about-main hub-main">
+    <section class="about-hero reveal hub-hero">
+      <div class="hero-main">
+        <p class="eyebrow">Contact</p>
+        <h1>Laten we iets sterk bouwen</h1>
+        <p>
+          Heb je een vraag, stagevoorstel of projectidee?
+          Stuur gerust een bericht en ik antwoord zo snel mogelijk.
+        </p>
+      </div>
+    </section>
+
+    <section class="portfolio-section reveal hub-grid-wrap">
+      <p class="eyebrow">Directe Kanalen</p>
+      <h2>Kies de snelste manier om te connecteren</h2>
+      <div class="hub-grid contact-grid">
+        <a class="hub-card" href="mailto:seppe.vanroy@telenet.be" aria-label="Send an email to Seppe">
+          <h3>Email</h3>
+          <p>seppe.vanroy@telenet.be</p>
+          <span>Stuur E-mail</span>
+        </a>
+        <a class="hub-card" href="https://github.com/DaddySeppe" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile">
+          <h3>GitHub</h3>
+          <p>github.com/DaddySeppe</p>
+          <span>Bekijk Profiel</span>
+        </a>
+        <a class="hub-card" href="https://linkedin.com/in/seppe-vanroy-857680331" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile">
+          <h3>LinkedIn</h3>
+          <p>linkedin.com/in/seppe-vanroy-857680331</p>
+          <span>Connecteer</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="portfolio-section reveal contact-form-section">
+      <div class="contact-form-head">
+        <p class="eyebrow">Stuur een bericht</p>
+        <h2>Laat je gegevens achter en ik antwoord via e-mail</h2>
+        <p>Vertel kort waarvoor je mij wilt contacteren, dan neem ik via e-mail terug contact op.</p>
+      </div>
+
+      <div class="contact-form-layout">
+        <form class="contact-form neo-form" id="contactForm" action="https://formsubmit.co/seppe.vanroy@telenet.be" data-endpoint="https://formsubmit.co/ajax/seppe.vanroy@telenet.be" method="post" data-fallback-email="seppe.vanroy@telenet.be" novalidate>
+          <div class="contact-form-grid">
+            <label>
+              <span>Naam</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Jouw naam" required minlength="2" maxlength="80" />
+            </label>
+            <label>
+              <span>E-mail</span>
+              <input type="email" name="email" autocomplete="email" placeholder="Jouw e-mail" required maxlength="120" />
+            </label>
+          </div>
+
+          <label>
+            <span>Onderwerp</span>
+            <input type="text" name="subject" autocomplete="off" placeholder="Waarover gaat dit?" required minlength="3" maxlength="120" />
+          </label>
+
+          <label>
+            <span>Bericht</span>
+            <textarea name="message" rows="6" placeholder="Schrijf je bericht..." required minlength="10" maxlength="4000"></textarea>
+          </label>
+
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="contact-honeypot" />
+
+          <button type="submit">Verstuur bericht</button>
+          <p class="contact-form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="contact-form-aside">
+          <h3>Rechtstreeks naar inbox</h3>
+          <p>Berichten uit dit formulier worden verzonden naar <a href="mailto:seppe.vanroy@telenet.be">seppe.vanroy@telenet.be</a>.</p>
+          <ul>
+            <li>Ideaal voor stages en projectvragen</li>
+            <li>Antwoord meestal op dezelfde dag</li>
+            <li>GitHub en LinkedIn blijven ook beschikbaar</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="contact.min.js?v=20260430.1"></script>
+</body>
+</html>
