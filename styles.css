@@ -8156,3 +8156,276 @@ body.project-page .project-cover img {
   }
 }
 
+/* Mobile polish for every page outside the homepage. */
+@media (max-width: 600px) {
+  body:not(.home-page) {
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+  }
+
+  body:not(.home-page) .site-header {
+    padding: 10px 10px 12px !important;
+  }
+
+  body:not(.home-page) .site-header .main-nav {
+    width: min(100%, 360px) !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+  }
+
+  body:not(.home-page) .site-header .main-nav a {
+    min-height: 32px !important;
+    padding: 7px 5px !important;
+    font-size: 0.66rem !important;
+  }
+
+  body:not(.home-page) .site-header .language-switcher {
+    grid-column: 1 / -1 !important;
+  }
+
+  body:not(.home-page) .about-progress {
+    top: 124px !important;
+  }
+
+  body:not(.home-page) .about-main,
+  body:not(.home-page) .hub-main,
+  body:not(.home-page) .project-main,
+  body:not(.home-page) .cv-page-shell {
+    width: calc(100% - 24px) !important;
+    max-width: 420px !important;
+    margin-top: 144px !important;
+    padding: 0 !important;
+    gap: 22px !important;
+  }
+
+  body:not(.home-page) .about-main > section,
+  body:not(.home-page) .portfolio-section,
+  body:not(.home-page) .hub-hero,
+  body:not(.home-page) .project-hero,
+  body:not(.home-page) .cv-viewer,
+  body:not(.home-page) .call-to-action-ultra {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+  }
+
+  body:not(.home-page) .eyebrow,
+  body:not(.home-page) .section-eyebrow,
+  body:not(.home-page) .hero-eyebrow-mega,
+  body:not(.home-page) .cta-eyebrow {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.13em !important;
+  }
+
+  body:not(.home-page) .hub-hero h1,
+  body:not(.home-page).project-page .project-hero h1,
+  body:not(.home-page) .hero-title-giant,
+  body:not(.home-page) .cv-page-hero h1 {
+    font-size: clamp(2.15rem, 12vw, 3.4rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: 0 !important;
+    text-wrap: balance;
+  }
+
+  body:not(.home-page) .hub-hero p,
+  body:not(.home-page) .project-hero p,
+  body:not(.home-page) .hero-intro-text,
+  body:not(.home-page) .project-copy,
+  body:not(.home-page) .contact-form-head p,
+  body:not(.home-page) .cv-viewer-subtitle {
+    font-size: 0.97rem !important;
+    line-height: 1.65 !important;
+  }
+
+  body.about-page:not(.home-page) .about-hero-full {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    text-align: left !important;
+  }
+
+  body.about-page:not(.home-page) .hero-stats-ultra {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  body.about-page:not(.home-page) .stat-block {
+    min-height: auto !important;
+    padding: 16px !important;
+  }
+
+  body.about-page:not(.home-page) .hero-image-block {
+    order: -1 !important;
+    justify-self: center !important;
+  }
+
+  body.about-page:not(.home-page) .image-frame-container {
+    width: min(100%, 260px) !important;
+  }
+
+  body.about-page:not(.home-page) .skills-matrix,
+  body.about-page:not(.home-page) .experience-showcase,
+  body.about-page:not(.home-page) .showcase-right,
+  body:not(.home-page) .hub-grid,
+  body:not(.home-page) .project-impact-grid,
+  body:not(.home-page) .contact-form-layout,
+  body:not(.home-page) .contact-form-grid,
+  body:not(.home-page) .cv-page-hero {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  body.about-page:not(.home-page) .skill-card-large {
+    aspect-ratio: auto !important;
+    min-height: 0 !important;
+    padding: 20px !important;
+  }
+
+  body.about-page:not(.home-page) .section-header-centered h2,
+  body.about-page:not(.home-page) .showcase-text h2,
+  body:not(.home-page) .portfolio-section h2,
+  body:not(.home-page) .contact-form-head h2,
+  body:not(.home-page) .call-to-action-ultra h2 {
+    font-size: clamp(1.75rem, 8.5vw, 2.5rem) !important;
+    line-height: 1.12 !important;
+    text-wrap: balance;
+  }
+
+  body.about-page:not(.home-page) .exp-item {
+    grid-template-columns: 58px minmax(0, 1fr) !important;
+    padding: 14px !important;
+  }
+
+  body:not(.home-page) .hub-grid {
+    margin-top: 16px !important;
+  }
+
+  body:not(.home-page) .hub-card,
+  body:not(.home-page) .hub-card:nth-child(4),
+  body:not(.home-page) .hub-card:nth-child(5) {
+    grid-column: auto !important;
+    padding: 14px !important;
+    border-radius: 14px !important;
+  }
+
+  body:not(.home-page) .hub-card img {
+    width: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+    border-radius: 10px !important;
+  }
+
+  body:not(.home-page) .hub-card h3 {
+    font-size: 1.12rem !important;
+  }
+
+  body:not(.home-page) .hub-card p {
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+  }
+
+  body.contact-hub-page .contact-grid .hub-card {
+    padding: 18px !important;
+  }
+
+  body.contact-hub-page .contact-grid .hub-card p {
+    overflow-wrap: anywhere !important;
+  }
+
+  body.contact-hub-page .contact-form,
+  body.contact-hub-page .contact-form-aside {
+    padding: 18px !important;
+    border-radius: 16px !important;
+  }
+
+  body.contact-hub-page .contact-form input,
+  body.contact-hub-page .contact-form textarea {
+    min-width: 0 !important;
+    padding: 13px !important;
+  }
+
+  body.contact-hub-page .contact-form button {
+    width: 100% !important;
+    justify-self: stretch !important;
+    min-height: 48px !important;
+  }
+
+  body.project-page:not(.home-page) .project-hero {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  body.project-page:not(.home-page) .project-hero .hero-side {
+    margin-top: 0 !important;
+    padding: 18px 0 0 !important;
+    border-left: 0 !important;
+    border-top: 1px solid color-mix(in srgb, var(--project-accent) 48%, rgba(148, 163, 184, 0.4)) !important;
+  }
+
+  body.project-page:not(.home-page) .hero-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  body.project-page:not(.home-page) .hero-tags span {
+    font-size: 0.72rem !important;
+    padding: 7px 10px !important;
+  }
+
+  body.project-page:not(.home-page) .project-cover,
+  body.project-page:not(.home-page) .hero-side > .profile-slot.project-cover {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    transform: none !important;
+  }
+
+  body.project-page:not(.home-page) .project-cover img,
+  body.project-page:not(.home-page) .hero-side > .profile-slot.project-cover > img {
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  body.project-page:not(.home-page) .project-impact-grid article,
+  body.project-page:not(.home-page) .project-steps li {
+    padding: 16px !important;
+    border-radius: 14px !important;
+  }
+
+  body.project-page:not(.home-page) .project-steps li {
+    padding-left: 50px !important;
+  }
+
+  body.project-page:not(.home-page) .panel-actions,
+  body.cv-page .cv-hero-actions,
+  body.about-page:not(.home-page) .cta-buttons-group {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  body.project-page:not(.home-page) .btn-link,
+  body.cv-page .btn-link,
+  body.about-page:not(.home-page) .btn-cta {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  body.cv-page .cv-viewer-frame {
+    display: none !important;
+  }
+
+  body:not(.home-page) .ai-chat {
+    display: none !important;
+  }
+}
+
